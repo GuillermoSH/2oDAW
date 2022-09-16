@@ -1,0 +1,64 @@
+Comandos Vim:
+
+x = borrar
+i = insertar
+a = añadir
+dd = borrar línea hacia abajo
+dk = borrar linea hacia arriba
+D = borrar del caracter hacia delante
+w = movimiento de palabra en palabra hacia delante
+e = movimiento de palabra en palabra hacia delante pero al final de cada palabra
+b = movimiento de palabra en palabra hacia detras
+f(caracter) = busca el primer caracter hacia delante
+F(caracter) = busca el primer caracter hacia detras
+C = borrar y entrar en modo insercion
+cw = cambia la palabra donde este el cursor
+. = ejecuta el ultimo comando
+u = deshacer cambios
+Ctrl + R = redo
+G = ir al final
+gg = ir al principio
+y(yank) o yy = "y", copiar "yy", copiar la linea completa
+d o dd = "d", cortar "dd" cortar linea completa
+p o P = "p", pegar abajo "P", pegar arriba
+v = seleccionar en modo visual
+Ctrl + V = seleccionar columna
+< o > = modificar indentacion seleccion
+o = abrir linea por debajo
+O = abrir linea por encima
+% = va a la proxima aparicion del caracter de cierre ('(','[','{') donde se encuentra el cursor
+n = siguiente seleccion
+N = anterior seleccion
+cit = cambiar dentro de la etiqueta
+q(letra) = graba una macro y poner 'q' para cerrar la grabacion
+@(letra) = utiliza la macro grabada
+@@ = utiliza la ultima macro utilizada
+
+Contadores: se pueden aplicar a los comandos de vim directamente. Ejemplo "3dw", que es borrar las 3 siguientes palabras.
+
+:q = salir de vim
+:q! = salir de vim sin guardar cambios
+:wq = salir guardando cambios
+ZZ = salir guardando cambios si o si
+:! = invoca un comando de sistema
+:earlier = volver a un momento anterior
+:later (1m, 1h)= avanza en el tiempo
+:set wrap = ajustar una linea larga a la ventana
+:set unwrap = poner la frase en la misma linea
+:2,4(comando) = rangos para comandos 
+:set nu = enumera las lineas
+:set nonu = quita enumeracion
+:(numero) o (numero)G = va a la linea enumerada
+:3,9!sort = ordena de la linea 3 a la 9
+:% = coge todo el fichero
+:'<,'> = ejecuta el comando sobre la seleccion
+:r !(comando) = pone la informacion de un comando dentro del fichero que se esta editando
+"(letra de la a a la Z)y = guarda la seleccion en un portapapeles
+"(letra de la a a la z)p = pega el portapapeles
+:set hlsearch = highlght la busqueda
+/(cadena) = busca la primera ocurrencia de la cadena en el documento
+:s/(cadena vieja)/(cadena nueva)/ = sustituye la cadena vieja por la cadena nueva
+:%s/(cadena vieja)/(cadena nueva)/ = sustituye la cadena vieja por la cadena nueva en todo el documento
+:%s/(cadena vieja)/(cadena nueva)/g = sustituye la cadena vieja por la cadena nueva en todo el documento y todas las ocurrencias en las lineas
+:%s/[aeiou]/9/gi = sustituye los caracteres por el numero 9 ignorando si son mayusculas o minusculas
+
