@@ -1,0 +1,22 @@
+para la configuracion del launch.json es poner el puerto en el 9000
+
+el codigo php no aparece para el cliente
+
+
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <meta charset="utf-8"&/>
+        <title>Mi primer programa PHP</title>
+    </head>
+    <body>
+        <h1>Mi primer programa PHP</h1>
+        <?php
+            $a=1;
+            $a=1;
+            $suma=$a+$b;
+            echo "La suma de los valores es: ",$suma;
+        ?>
+    </body>
+</html>
+
