@@ -5,9 +5,12 @@
     box-sizing:border-box;
     font-family: Palatino, URW Palladio L, serif;
 }
-h1 {
-    color: #338c48;
-}
 h3 {
     color: #045600;
+}
+#enunciado,h1{
+    color: #338c48;
+}
+p{
+    font-weight: 600;
 }

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Palatino, URW Palladio L, serif;
+
+}
+h1 {
+    text-align: center;
+}
+#menu {
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    display: flex;
+    vertical-align: middle;
+    background-color: red;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+#izquierda {
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+#izquierda a {
+    line-height: 11.28571vh;
+    height: 14.28571%;
+    background-color: green;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 8vh;
+}
+
+#derecha {
+    float: left;
+    width: 40%;
+    margin-left: 8%;
+    text-align: center;
+}
+
+#derecha a {
+    line-height: 11.28571vh;
+    height: 14.28571%;
+    background-color: green;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 8vh;
+}

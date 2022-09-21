@@ -1,3 +1,4 @@
+<?php declare(strict_types=1);?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
             $suma+=$i;
         }
 
-        $media=$suma/($n2-$n1-1);
+        $media=$suma/($i-1);
 
         echo "La suma es: $suma.\n<br/>";
         echo "La media vale: $media";
