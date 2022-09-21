@@ -1,0 +1,13 @@
+@charset "UTF-8";
+*{
+    padding:0;
+    border:0;
+    box-sizing:border-box;
+    font-family: Palatino, URW Palladio L, serif;
+}
+h1 {
+    color: #338c48;
+}
+h3 {
+    color: #045600;
+}

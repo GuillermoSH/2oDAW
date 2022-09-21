@@ -1,7 +1,7 @@
-var suma=0;
+let suma = 0;
 
-for (var i=1;i<=10;i++) {
-    suma+=i;
+for (let i = 1; i <= 10; i++) {
+    suma += i;
 }
 
-document.getElementById("ejercicio2").innerHTML = suma;
+console.log(`La suma de los números entre 1 y 10 es: ${suma}`);
