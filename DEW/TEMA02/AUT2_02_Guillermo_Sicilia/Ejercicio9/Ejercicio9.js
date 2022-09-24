@@ -1,5 +1,5 @@
 function ejercicio9() {
-    let respuesta = parseInt(prompt("Introduzca un numero: "));
+    let respuesta = parseInt(prompt("Ejercicio9.-\n\nIntroduzca un numero: "));
     
     if (respuesta > 6 || respuesta < 0) {
         alert("¡¡Solo se contar de 0 a 6!!");

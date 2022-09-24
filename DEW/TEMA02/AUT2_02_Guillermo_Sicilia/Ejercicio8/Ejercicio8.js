@@ -1,5 +1,5 @@
 function pedirNumeros(letra) {
-    let resultado = Number(prompt(`Introduzca el valor de ${letra}: `))
+    let resultado = Number(prompt(`Ejercicio8.-\n\nIntroduzca el valor de ${letra}: `))
     return resultado;
 }
 

@@ -8,7 +8,7 @@ function ejercicio7() {
     let letrasPista = 0;
     
     for (let i = 2; i >= 0; i--) {
-        let respuesta = prompt(`¿Cuál es la capital de ${arrayPaises[indice]}?`);
+        let respuesta = prompt(`Ejercicio7.-\n\n¿Cuál es la capital de ${arrayPaises[indice]}?`);
     
         if (respuesta == capital) {
             alert("¡Has acertado, felicidades!");

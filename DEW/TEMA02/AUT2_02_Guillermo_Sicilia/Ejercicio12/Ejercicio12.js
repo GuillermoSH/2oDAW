@@ -1,5 +1,5 @@
 function ejercicio12() {
-    let pregunta = prompt("¿Desea convertir de F a C o de C a F?\n\nIntroduzca C si quiere convertir a Celsius o F si quiere convertir a Farenheit: ");
+    let pregunta = prompt("Ejercicio12.-\n\n¿Desea convertir de F a C o de C a F?\n\nIntroduzca C si quiere convertir a Celsius o F si quiere convertir a Farenheit: ");
     let unidad;
 
     if (pregunta != "C" && pregunta != "F") {
