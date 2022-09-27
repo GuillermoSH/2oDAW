@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css"/>
+    <title>Ejercicio1</title>
+</head>
+
+<body>
+    <h1>Ejercicio1</h1>
+    <table>
+        <tr>
+            <td>~ 2 > 3 + 2</td>
+            <td><button onclick="expresion(2>3+2,'2 > 3 + 2')">Resolver</button><br /></td>
+            <td id="explicacion1"></td>
+        </tr>
+        <tr>
+            <td>~ 1 + false + 3.5</td>
+            <td><button onclick="expresion(1+false+3.5,'1 + false + 3.5')">Resolver</button><br /></td>
+            <td id="explicacion2"></td>
+        </tr>
+        <tr>
+            <td>~ 4 * true + 2</td>
+            <td><button onclick="expresion(4*true+2,'4 * true + 2')">Resolver</button><br /></td>
+            <td id="explicacion3"></td>
+        </tr>
+        <tr>
+            <td>~ 5 / 0</td>
+            <td><button onclick="expresion(5/0,'5/0')">Resolver</button><br /></td>
+            <td id="explicacion4"></td>
+        </tr>
+        <tr>
+            <td>~ 10 > 2 > 0</td>
+            <td><button onclick="expresion(10>2>0,'10 > 2 > 0')">Resolver</button><br /></td>
+            <td id="explicacion5"></td>
+        </tr>
+        <tr>
+            <td>~ 15 < 3 * 10</td>
+            <td><button onclick="expresion(15<3*10,'15 < 3 * 10')">Resolver</button><br /></td>
+            <td id="explicacion6"></td>
+        </tr>
+        <tr>
+            <td>~ 3 * hola + 2</td>
+            <td><button onclick="expresionDif('3 * hola + 2','hola')">Resolver</button><br /></td>
+            <td id="explicacion7"></td>
+        </tr>
+        <tr>
+            <td>~ 5 / “hola”</td>
+            <td><button onclick="expresion(5/'hola','5 / “hola”')">Resolver</button><br /></td>
+            <td id="explicacion8"></td>
+        </tr>
+        <tr>
+            <td>~ π * 32</td>
+            <td><button onclick="expresionDif('π * 32','π')">Resolver</button><br /></td>
+            <td id="explicacion9"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">---</td>
+            <td style="text-align:center">---</td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="explicaciones()" style="width: 100%">Explicaciones</button></td>
+            <td><button onclick="borrarExplicaciones()" style="width: 100%">Borrar Explicaciones</button></td>
+        </tr>
+    </table>
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+    <script>
+        function expresion(sentencia, expresion) { // funcion para dar resultados sin errores
+            document.getElementById("resultado").innerHTML = `<b>${expresion} da:</b> ${sentencia}.`;
+        }
+        function expresionDif(expresion,variable) { // funcion para dar resultados con errores
+            document.getElementById("resultado").innerHTML = `<b>${expresion} da:</b> Uncaught ReferenceError: ${variable} is not defined.`
+        }
+        function explicaciones() {
+            document.getElementById("explicacion1").innerHTML = "Da 'false' porque 2 > (3 + 2) => 2 > 5 no es cierto.";
+            document.getElementById("explicacion2").innerHTML = "Da '4,5' porque false tiene como valor numérico 0, entonces quedaría como 1 + 0 + 3,5.";
+            document.getElementById("explicacion3").innerHTML = "Da '6' porque true tiene como valor numérico 1, entonces quedaría como 4 * 1 + 2.";
+            document.getElementById("explicacion4").innerHTML = "Da 'Infinity' ya que un número partido de 0 da infinito. Lo entenderás mejor pinchando <a href='https://es.wikipedia.org/wiki/Divisi%C3%B3n_por_cero'>aquí.</a>.";
+            document.getElementById("explicacion5").innerHTML = "Da 'true' porque 0 es menor a 2 y 2 es menor a 10.";
+            document.getElementById("explicacion6").innerHTML = "Da 'true' porque 15 es menor a (3 * 10) que es 30.";
+            document.getElementById("explicacion7").innerHTML = "Muestra ese mensaje de error ya que la variable 'hola' no está definida.";
+            document.getElementById("explicacion8").innerHTML = "Da 'NaN' porque 'hola' no es un número.";
+            document.getElementById("explicacion9").innerHTML = "Muestra ese mensaje de error ya que la variable 'π' no está definida.";
+        }
+        function borrarExplicaciones() { // funcion para "setear" los td de explicaciones a " "
+            for (let i = 1; i < 10; i++) {
+                document.getElementById(`explicacion${i}`).innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
