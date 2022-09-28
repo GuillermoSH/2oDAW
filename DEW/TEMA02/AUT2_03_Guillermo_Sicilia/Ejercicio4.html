@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 4</title>
+</head>
+
+<style>
+    #apartado {
+        width: 30vw;
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 4.-</h1>
+        <br />
+        <div>En el siguiente bucle while tenemos que tener cuidado porque hay operaciones que pueden dar error (no puede
+            haber raíces cuadradas de números negativos, ni divisiones por cero).<br />
+            <br />
+            let result = 1, arg1, arg2, res1, res2;<br />
+            <br />
+            while (result > 0) {<br />
+            arg1 = Math.random() - 0.5;<br />
+            res1 = Math.sqrt(arg1);<br />
+            arg2 = Math.random();<br />
+            res2 = res1/(arg1 + arg2);<br />
+            result = res1 + res2;<br />
+            console.log(result);<br />
+            }
+        </div><br />
+        <table>
+            <tr>
+                <td id="apartado">
+                    a) Cambia el bucle while usando continue y break para que si hay una raíz cuadrada de un número
+                    negativo directamente pase a la siguiente iteración. En el caso de haber una división por cero, el
+                    bucle debe detenerse inmediatamente.
+                </td>
+                <td style="width: 20px;"></td>
+                <td><button onclick="mostrarEjercicio(1)">Mostrar</button></td>
+            </tr>
+            <tr>
+                <td id="apartado">b) Prueba a realizar el apartado anterior sin usar ni continue ni break. ¿Es más
+                    sencillo?</td>
+                <td style="width: 20px;"></td>
+                <td><button onclick="mostrarEjercicio(2)">Mostrar</button></td>
+            </tr>
+            <tr>
+                <td id="apartado">c) Cambia el bucle while original para que se ejecute sin tener que asignar un valor
+                    inicial a la
+                    variable result.</td>
+                <td style="width: 20px;"></td>
+                <td><button onclick="mostrarEjercicio(3)">Mostrar</button></td>
+            </tr>
+        </table>
+        <br />
+        <h3>Resultado:</h3><br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function mostrarEjercicio(opcion) {
+            switch (opcion) {
+                case 1: mostrar1();
+                case 2: mostrar2();
+                case 3: mostrar3();
+            }
+        }
+
+        function mostrar1() {
+            let result = 1, arg1, arg2, res1, res2;
+
+            while (result > 0) {
+                arg1 = Math.random() - 0.5;
+                if (arg1 < 0) {
+                    continue;
+                }
+                res1 = Math.sqrt(arg1);
+                arg2 = Math.random();
+                if ((arg1 + arg2) == 0) {
+                    break;
+                }
+                res2 = res1 / (arg1 + arg2);
+                result = res1 + res2;
+                console.log(result);
+            }
+        }
+    </script>
+</body>
+
+</html>

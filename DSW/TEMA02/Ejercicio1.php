@@ -1,3 +1,4 @@
+<?php declare(strict_types=1); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,26 +9,16 @@
 </head>
 <body>    
     <?php
-        $filas = $_GET['filas'];
-        $columnas = $_GET['columnas'];
+        $filas = (int)$_GET['filas'];
+        $columnas = (int)$_GET['columnas'];
 
-        $array1[$filas][$columnas];
-        $array2[$filas][$columnas];
-
-        function inicializarArray($array) {
-            for ($i = 0; $i < $array.sizeof; $i++) {
-                for ($j = 0; $j < $array[0].sizeof; $j++) {
-                    $array[$i][$j] = $_GET['respuesta'];
-                }
-            }
-        }
-
-        function ponerMatriz($nombreArray) {
+        function ponerMatriz(string $nombreArray, int $filas, int $columnas) {
             for($f = 0; $f < $filas; $f++) {
                 echo "<tr>\n";
                 for($c = 0; $c < $columnas; $c++) {
+                    $valor=$f*$columnas+$c+1;
                     echo "<td>";
-                    echo "<input type='number' name='$nombreArray","[$f][]' size='5'/>";
+                    echo "<input type='number' name='$nombreArray","[$f][]' size='5' value='$valor'/>";
                     echo "</td>\n";
                 }
                 echo "</tr>\n";
@@ -41,7 +32,7 @@
                     <table>
                         <th>A</th>
                         <?php
-                            ponerMatriz("a");
+                            ponerMatriz("a",$filas,$columnas);
                         ?>
                     </table>
                 </td>
@@ -49,7 +40,7 @@
                     <table>
                         <th>B</th>
                         <?php
-                            ponerMatriz("b");
+                            ponerMatriz("b",$filas,$columnas);
                         ?>
                     </table>
                 </td>
