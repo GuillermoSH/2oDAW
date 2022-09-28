@@ -12,7 +12,7 @@ function ejercicio12() {
             unidad = "";
         }
 
-        if (pregunta == "F") {
+        if (pregunta == "C") {
             let farenheit = prompt("Introduzca SOLO los grados que desea convertir: ");
             alert(`${farenheit} F son: ${(farenheit - 32) * 5 / 9}${unidad}.`);
         } else {
