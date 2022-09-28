@@ -19,6 +19,8 @@ Este respositorio está dedicado a la subida de todo lo desarrollado dentro del 
 - [**:file_cabinet: DSW.**](/DSW) Desarrollo Web en Entorno Servidor
   - [**Tema01**](/DSW/TEMA01) Arquitecturas y herramientas de programación.
   - [**Tema02**](/DSW/TEMA02) Fundamentos de la insercción de código en páginas web.
-- **:link: OTROS REPOS DEL CURSO.**
-  - [**DPL22-23**](https://github.com/GuillermoSH/dpl22-23)
-    - [**git-work**](https://github.com/GuillermoSH/git-work)
+
+## Otros repos.-
+- **:rocket: DPL:**
+  - [**DPL22-23**](https://github.com/GuillermoSH/dpl22-23) Repositorio principal de tareas.
+    - [**git-work**](https://github.com/GuillermoSH/git-work) A1 de la UT1.
