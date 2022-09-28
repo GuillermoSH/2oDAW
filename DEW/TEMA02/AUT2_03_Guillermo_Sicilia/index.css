@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url(Imagenes/fondoIndex.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    height: 8vh;
+    display: table-cell;
+    width: 100vw;
+    vertical-align: middle;
+    background-color: rgba(0, 183, 255, 0.468);
+    font-size: 4vh;
+}
+
+main {
+    vertical-align: middle;
+    height: 84vh;
+}
+
+footer {
+    height: 8vh;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    
+    text-decoration: none;
+}
+
+table {
+    text-align: center;
+    border-spacing: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+}
+
+table td {
+    padding: 1.25vh;
+    background-color: rgba(0, 183, 255, 0.576);
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
