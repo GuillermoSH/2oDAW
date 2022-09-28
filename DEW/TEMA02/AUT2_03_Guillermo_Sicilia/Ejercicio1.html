@@ -5,74 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="subIndex.css" rel="stylesheet" type="text/css"/>
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
     <title>Ejercicio1</title>
 </head>
 
 <body>
-    <h1>Ejercicio1</h1>
-    <table>
-        <tr>
-            <td>~ 2 > 3 + 2</td>
-            <td><button onclick="expresion(2>3+2,'2 > 3 + 2')">Resolver</button><br /></td>
-            <td id="explicacion1"></td>
-        </tr>
-        <tr>
-            <td>~ 1 + false + 3.5</td>
-            <td><button onclick="expresion(1+false+3.5,'1 + false + 3.5')">Resolver</button><br /></td>
-            <td id="explicacion2"></td>
-        </tr>
-        <tr>
-            <td>~ 4 * true + 2</td>
-            <td><button onclick="expresion(4*true+2,'4 * true + 2')">Resolver</button><br /></td>
-            <td id="explicacion3"></td>
-        </tr>
-        <tr>
-            <td>~ 5 / 0</td>
-            <td><button onclick="expresion(5/0,'5/0')">Resolver</button><br /></td>
-            <td id="explicacion4"></td>
-        </tr>
-        <tr>
-            <td>~ 10 > 2 > 0</td>
-            <td><button onclick="expresion(10>2>0,'10 > 2 > 0')">Resolver</button><br /></td>
-            <td id="explicacion5"></td>
-        </tr>
-        <tr>
-            <td>~ 15 < 3 * 10</td>
-            <td><button onclick="expresion(15<3*10,'15 < 3 * 10')">Resolver</button><br /></td>
-            <td id="explicacion6"></td>
-        </tr>
-        <tr>
-            <td>~ 3 * hola + 2</td>
-            <td><button onclick="expresionDif('3 * hola + 2','hola')">Resolver</button><br /></td>
-            <td id="explicacion7"></td>
-        </tr>
-        <tr>
-            <td>~ 5 / “hola”</td>
-            <td><button onclick="expresion(5/'hola','5 / “hola”')">Resolver</button><br /></td>
-            <td id="explicacion8"></td>
-        </tr>
-        <tr>
-            <td>~ π * 32</td>
-            <td><button onclick="expresionDif('π * 32','π')">Resolver</button><br /></td>
-            <td id="explicacion9"></td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align:center">---</td>
-            <td style="text-align:center">---</td>
-        </tr>
-        <tr>
-            <td colspan="2"><button onclick="explicaciones()" style="width: 100%">Explicaciones</button></td>
-            <td><button onclick="borrarExplicaciones()" style="width: 100%">Borrar Explicaciones</button></td>
-        </tr>
-    </table>
-    <h3>Resultado:</h3>
-    <p id="resultado"></p>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br/>
+        <h1>Ejercicio1.-</h1>
+        <br/>
+        <table>
+            <tr>
+                <td>~ 2 > 3 + 2</td>
+                <td><button onclick="expresion(2>3+2,'2 > 3 + 2')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion1"></td>
+            </tr>
+            <tr>
+                <td>~ 1 + false + 3.5</td>
+                <td><button onclick="expresion(1+false+3.5,'1 + false + 3.5')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion2"></td>
+            </tr>
+            <tr>
+                <td>~ 4 * true + 2</td>
+                <td><button onclick="expresion(4*true+2,'4 * true + 2')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion3"></td>
+            </tr>
+            <tr>
+                <td>~ 5 / 0</td>
+                <td><button onclick="expresion(5/0,'5/0')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion4"></td>
+            </tr>
+            <tr>
+                <td>~ 10 > 2 > 0</td>
+                <td><button onclick="expresion(10>2>0,'10 > 2 > 0')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion5"></td>
+            </tr>
+            <tr>
+                <td>~ 15 < 3 * 10</td>
+                <td><button onclick="expresion(15<3*10,'15 < 3 * 10')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion6"></td>
+            </tr>
+            <tr>
+                <td>~ 3 * hola + 2</td>
+                <td><button onclick="expresionDif('3 * hola + 2','hola')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion7"></td>
+            </tr>
+            <tr>
+                <td>~ 5 / “hola”</td>
+                <td><button onclick="expresion(5/'hola','5 / “hola”')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion8"></td>
+            </tr>
+            <tr>
+                <td>~ π * 32</td>
+                <td><button onclick="expresionDif('π * 32','π')">Resolver</button><br /></td>
+                <td style="width: 20px"></td>
+                <td id="explicacion9"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">---</td>
+                <td style="width: 20px"></td>
+                <td style="text-align:center">---</td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="explicaciones()" style="width: 100%">Explicaciones</button></td>
+                <td style="width: 20px"></td>
+                <td><button onclick="borrarExplicaciones()" style="width: 100%">Borrar Explicaciones</button></td>
+            </tr>
+        </table>
+        <br/>
+        <h3>Resultado:</h3><br/>
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
     <script>
         function expresion(sentencia, expresion) { // funcion para dar resultados sin errores
             document.getElementById("resultado").innerHTML = `<b>${expresion} da:</b> ${sentencia}.`;
         }
-        function expresionDif(expresion,variable) { // funcion para dar resultados con errores
+        function expresionDif(expresion, variable) { // funcion para dar resultados con errores
             document.getElementById("resultado").innerHTML = `<b>${expresion} da:</b> Uncaught ReferenceError: ${variable} is not defined.`
         }
         function explicaciones() {
