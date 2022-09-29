@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 6.-</h1>
+        <br />
+        <div>
+            Genera una lista que contenga el cuadrado de los números pares y el cubo de los impares entre 1 y 100
+            (inclusive).
+        </div><br />
+        <div>
+            <button onclick="generarLista()">Generar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3><br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function generarLista() {
+            let lista = [];
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    lista[i - 1] = Math.pow(i, 2);
+                } else {
+                    lista[i - 1] = Math.pow(i, 3);
+                }
+            }
+            document.getElementById("resultado").innerHTML = listaToString(lista);
+        }
+
+        function listaToString(lista) {
+            let resultado="";
+
+            for (let i = 0; i < lista.length; i++) {
+                resultado += lista[i]+"\n";
+            }
+
+            return resultado
+        }
+    </script>
+</body>
+
+</html>
