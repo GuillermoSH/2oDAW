@@ -34,23 +34,57 @@
 
     <script>
         function generarLista() {
-            let lista = [];
+            let listaPares = [];
+            let listaImpares = [];
+            let j=0; // contador pares
+            let k=0; // contador impares
             for (let i = 1; i <= 100; i++) {
                 if (i % 2 == 0) {
-                    lista[i - 1] = Math.pow(i, 2);
+                    listaPares[j] = Math.pow(i, 2);
+                    j++;
                 } else {
-                    lista[i - 1] = Math.pow(i, 3);
+                    listaImpares[k] = Math.pow(i, 3);
+                    k++;
                 }
             }
-            document.getElementById("resultado").innerHTML = listaToString(lista);
+        
+            document.getElementById("resultado").innerHTML = listaToString(listaPares,listaImpares);
         }
 
-        function listaToString(lista) {
-            let resultado="";
+        function listaToString(listaPares, listaImpares) {
+            let resultado = "";
+            resultado += "<table>";
+            resultado += "<tr>";
+            resultado += '<td colspan="5"><h3>Resultados pares (elevados a 2)</h3></td>';
+            resultado += '<td style="width: 20px"></td>';
+            resultado += '<td colspan="5"><h3>Resultados impares (elevados a 3)</h3></td>';
+            resultado += "</tr>"
+            resultado += "<tr><td>"
 
-            for (let i = 0; i < lista.length; i++) {
-                resultado += lista[i]+"\n";
+            for (let pares = 0; pares < listaPares.length; pares++) {
+                resultado += `<div>${listaPares[pares]}</div>`;
+
+                if (pares%10==0 && pares<listaPares.length) {
+                    resultado += "</td><td>";
+                }
+
+                if (pares==listaPares.length) {
+                    resultado += "</td>"
+                }
             }
+            resultado += '<td style="width: 20px"></td><td>';
+            for (let impares = 0; impares < listaImpares.length; impares++) {
+                resultado += `<div>${listaImpares[impares]}</div>`;
+
+                if (impares%10==0 && impares<listaImpares.length) {
+                    resultado += "</td><td>";
+                }
+
+                if (impares==listaPares.length) {
+                    resultado += "</td>"
+                }
+            }
+            resultado += "</tr>";
 
             return resultado
         }
