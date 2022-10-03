@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="subIndex.css" rel="stylesheet" type="text/css" />
     <title>Ejercicio 6</title>
+    <style>
+        #tablaResultados {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +31,6 @@
         </div>
         <br />
         <br />
-        <h3>Resultado:</h3><br />
         <div id="resultado"></div>
     </main>
 
@@ -36,8 +42,8 @@
         function generarLista() {
             let listaPares = [];
             let listaImpares = [];
-            let j=0; // contador pares
-            let k=0; // contador impares
+            let j = 0; // contador pares
+            let k = 0; // contador impares
             for (let i = 1; i <= 100; i++) {
                 if (i % 2 == 0) {
                     listaPares[j] = Math.pow(i, 2);
@@ -47,40 +53,39 @@
                     k++;
                 }
             }
-        
-            document.getElementById("resultado").innerHTML = listaToString(listaPares,listaImpares);
+
+            document.getElementById("resultado").innerHTML = listaToString(listaPares, listaImpares);
         }
 
         function listaToString(listaPares, listaImpares) {
             let resultado = "";
-            resultado += "<table>";
+            resultado += '<table id="tablaResultados">';
             resultado += "<tr>";
-            resultado += '<td colspan="5"><h3>Resultados pares (elevados a 2)</h3></td>';
-            resultado += '<td style="width: 20px"></td>';
-            resultado += '<td colspan="5"><h3>Resultados impares (elevados a 3)</h3></td>';
-            resultado += "</tr>"
-            resultado += "<tr><td>"
+            resultado += '<td colspan="5"><h3>Resultados pares del 2 al 100 (elevados a 2):</h3></td>';
+            resultado += '<td colspan="5"><h3>Resultados impares del 1 al 99 (elevados a 3):</h3></td>';
+            resultado += "</tr>";
+            resultado += "<tr><td>";
 
-            for (let pares = 0; pares < listaPares.length; pares++) {
-                resultado += `<div>${listaPares[pares]}</div>`;
+            for (let pares = 1; pares <= listaPares.length; pares++) {
+                resultado += `<div style="text-align: center">${listaPares[pares - 1]}</div>`;
 
-                if (pares%10==0 && pares<listaPares.length) {
+                if (pares % 10 == 0 && pares < listaPares.length && pares > 9) {
                     resultado += "</td><td>";
                 }
 
-                if (pares==listaPares.length) {
-                    resultado += "</td>"
+                if (pares == listaPares.length) {
+                    resultado += "</td><td>"
                 }
             }
-            resultado += '<td style="width: 20px"></td><td>';
-            for (let impares = 0; impares < listaImpares.length; impares++) {
-                resultado += `<div>${listaImpares[impares]}</div>`;
 
-                if (impares%10==0 && impares<listaImpares.length) {
+            for (let impares = 1; impares <= listaImpares.length; impares++) {
+                resultado += `<div style="text-align: center">${listaImpares[impares - 1]}</div>`;
+
+                if (impares % 10 == 0 && impares < listaImpares.length && impares > 9) {
                     resultado += "</td><td>";
                 }
 
-                if (impares==listaPares.length) {
+                if (impares == listaPares.length) {
                     resultado += "</td>"
                 }
             }

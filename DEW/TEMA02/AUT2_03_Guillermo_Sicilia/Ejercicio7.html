@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 7</title>
+    <style>
+        #resultado {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 40vw;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 2vw;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 7.-</h1>
+        <br />
+        <div>
+            Muestra la fecha y hora actuales en formato: “DD/MM/YYYY hh:mm:ss TimeZone”
+        </div><br />
+        <div>
+            <button onclick="generarFecha()">Generar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function generarFecha() {
+            let fecha = new Date();
+            let dia, mes, anio, hora, min, seg, zonaHoraria;
+            dia = formatearFecha(fecha.getDate());
+            mes = formatearFecha(fecha.getMonth());
+            anio = fecha.getFullYear();
+            hora = formatearFecha(fecha.getHours());
+            min = formatearFecha(fecha.getMinutes());
+            seg = formatearFecha(fecha.getSeconds());
+            let fechaSplit = fecha.toString().split(" ");
+            zonaHoraria = fechaSplit[5];
+
+            let strFecha = dia + "/" + mes + "/" + anio + " " + hora + ":" + min + ":" + seg + " " + zonaHoraria;
+
+            document.getElementById("resultado").innerHTML = strFecha;
+        }
+
+        function formatearFecha(getter) {
+            if (getter < 10) {
+                return "0" + getter;
+            } else {
+                return getter;
+            }
+        }
+    </script>
+</body>
+
+</html>

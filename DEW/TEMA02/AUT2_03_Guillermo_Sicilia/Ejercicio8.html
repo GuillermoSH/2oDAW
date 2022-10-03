@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 8.-</h1>
+        <br />
+        <div>
+            Construye una fecha a partir del texto “02/04/2015”. Muestra la fecha con console.log, ¿qué obtienes? Prueba ahora con “2015-04-02”.¿Cómo podrías crear una fecha con el texto “April 02, 2015”?
+        </div><br />
+        <table>
+            <tr style="text-indent: 10px;">
+                <td>- "02/04/2015": </td>
+                <td><button onclick="comprobarFecha('02/04/2015',1)">Comprobar</button></td>
+                <td></td>
+                <td id="comprobacion1"></td>
+            </tr>
+            <tr style="text-indent: 10px;">
+                <td>- “2015-04-02”: </td>
+                <td><button onclick="comprobarFecha('2015-04-02',2)">Comprobar</button></td>
+                <td></td>
+                <td id="comprobacion2"></td>
+            </tr>
+            <tr style="text-indent: 10px;">
+                <td>- "April 02, 2015": </td>
+                <td><button onclick="comprobarFecha('April 02, 2015',3)">Comprobar</button></td>
+                <td></td>
+                <td id="comprobacion3"></td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado">Las salidas del programa se mostrarán por consola y por medio de los botones de comprobación. En el caso del tercer apartado se mostrará la solución también.</div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function comprobarFecha(fecha,numComprobacion) {
+            let resultado = new Date(fecha);
+            console.log(resultado);
+
+            if (numComprobacion == 3) {
+                resultado = "Simplemente creando un objeto Date() de JavaScript. Su salida es la siguiente: " + resultado;
+            }
+
+            document.getElementById(`comprobacion${numComprobacion}`).innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
