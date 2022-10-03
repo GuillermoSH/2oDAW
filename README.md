@@ -9,7 +9,7 @@ Este respositorio está dedicado a la subida de todo lo desarrollado dentro del 
   - [**Tema02**](/DEW/TEMA02) JavaScript.
     - [**AUT2_01**](/DEW/TEMA02/AUT2_01_Guillermo_Sicilia_Variables)
     - [**AUT2_02**](/DEW/TEMA02/AUT2_02_Guillermo_Sicilia)
-    - [**AUT2_03**](/DEW/TEMA03/AUT2_03_Guillermo_Sicilia)
+    - [**AUT2_03**](/DEW/TEMA02/AUT2_03_Guillermo_Sicilia)
   - [**Tema03**](/DEW/TEMA03) JQuery.
   - [**Tema04**](/DEW/TEMA04) Librerías JS (Angular vs React).
 - [**:desktop_computer: DOR.**](/DOR) Diseño de Interfaces Web
