@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 9</title>
+    <style>
+        #horas,
+        #min,
+        #seg {
+            width: 30px;
+            text-align: center;
+        }
+        #decimal {
+            width: 121px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 9.-</h1>
+        <br />
+        <div id="enunciado">
+            Implementar una función hdec2hms(x) que transforme una hora en formato decimal a su equivalente en formato
+            hh:mm:ss (en texto). Por ejemplo, 8.25 = “8:15:00” y 10.12 = “10:07:12”.Implementar también la función
+            inversa hms2hdec(h,m,s).
+        </div><br />
+        <table>
+            <tr>
+                <td>Introduzca la fecha en decimal:</td>
+                <td style="width: 5px"></td>
+                <td><input type="text" id="decimal" name="decimal" /></td>
+                <td><button onclick="hdec2hms(document.getElementById('decimal').value)">Resolver</button></td>
+            </tr>
+            <tr>
+                <td>Introduzca la fecha en el formato "hh:mm:ss":</td>
+                <td style="width: 5px"></td>
+                <td>
+                    <input type="text" id="horas" name="horas" /> :
+                    <input type="text" id="min" name="min" /> :
+                    <input type="text" id="seg" name="seg" />
+                </td>
+                <td><button
+                        onclick="hms2hdec(document.getElementById('horas').value,document.getElementById('min').value,document.getElementById('seg').value)">Resolver</button>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function hdec2hms(tiempoDecimal) {
+            tiempoDecimal = tiempoDecimal * 3600;
+            let horas = Math.floor(tiempoDecimal / (3600));
+            tiempoDecimal = tiempoDecimal - (horas * 3600);
+            let min = Math.floor(tiempoDecimal / 60);
+            tiempoDecimal = tiempoDecimal - (min * 60);
+            let seg = Math.floor(tiempoDecimal);
+
+            horas = formatoHora(horas);
+            min = formatoHora(min);
+            seg = formatoHora(seg);
+
+            document.getElementById("resultado").innerHTML = horas + ":" + min + ":" + seg;
+        }
+
+        function hms2hdec(h, m, s) {
+            let horas = parseInt(h);
+            let min = parseInt(m);
+            let seg = parseInt(s);
+
+            horas = horas + (min / 60) + (seg / 3600);
+
+            document.getElementById("resultado").innerHTML = "'"+h+":"+m+":"+s+"' son: "+horas+" h.";
+        }
+
+        function formatoHora(valor) {
+            if (valor < 10) {
+                return "0" + valor;
+            } else {
+                return valor;
+            }
+        }
+    </script>
+</body>
+
+</html>

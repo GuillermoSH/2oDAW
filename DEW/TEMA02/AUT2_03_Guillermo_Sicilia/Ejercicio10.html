@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 10.-</h1>
+        <br />
+        <div id="enunciado">
+            Como hemos visto, javascript, como muchos otros lenguajes, utilizan el “UNIX EPOCH” que cuenta el tiempo a
+            partir de la medianoche del 1 de enero de 1970. Sin embargo, hay otros tipos de fecha que tienen otro origen
+            del tiempo. Por ejemplo, la fecha juliana empieza a contabilizar el tiempo desde las 12:00 (mediodía) del 1
+            de enero de 4713 a.C., e indica el número de días (y fracciones) que han transcurrido desde ese momento. La
+            fecha juliana se suele utilizar para calcular el tiempo que ha transcurrido desde eventos que sucedieron en
+            la antigüedad y es aún ampliamente usada para fenómenos astronómicos e históricos lejanos. En la wikipedia
+            (https://es.wikipedia.org/wiki/Fecha_juliana) se puede encontrar la relación entre fecha juliana y tiempo
+            Unix (contado a partir desde 1/1/1970), siendo esta:<br />
+            <br />
+            fecha_juliana = tiempo_unix + 2440587.5<br />
+            <br />
+            Implementar una función que dada una fecha en texto (por ejemplo “2018-09-20”), devuelva la fecha juliana
+            equivalente.<br />
+            <br />
+            Para realizar la suma, ten en cuenta que la fecha juliana almacena días, mientras que el tiempo_unix en
+            javascript contiene milisegundos, por lo que hay que transformarlo en días. Por cierto, ¿de dónde crees que
+            ha salido el valor 2440587.5?
+        </div><br />
+        <table>
+            <tr>
+                <td>Indica la fecha que quiere pasar de Unix a Juliana: </td>
+                <td><input type="text" id="fechaUnix" name="fechaUnix"/></td>
+                <td><button onclick='obtenerFechaJuliana(document.getElementById("fechaUnix").value)'>Resolver</button></td>
+            </tr>
+        </table>
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function obtenerFechaJuliana(fechaUnix) {
+            let fecha = new Date(fechaUnix);
+            let fechaInicial = new Date("1-1-1970");
+            let segundosDiff = (fecha.getTime() - fechaInicial.getTime()) / 1000;
+
+            document.getElementById("resultado").innerHTML = (segundosDiff / 86400.0) + 2440587.5;
+        }
+    </script>
+</body>
+
+</html>
