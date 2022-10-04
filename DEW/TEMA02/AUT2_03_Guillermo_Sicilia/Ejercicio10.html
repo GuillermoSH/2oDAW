@@ -36,9 +36,10 @@
         </div><br />
         <table>
             <tr>
-                <td>Indica la fecha que quiere pasar de Unix a Juliana: </td>
-                <td><input type="text" id="fechaUnix" name="fechaUnix"/></td>
-                <td><button onclick='obtenerFechaJuliana(document.getElementById("fechaUnix").value)'>Resolver</button></td>
+                <td>Indica la fecha que quiere pasar de Unix a Juliana (mm-dd-yyyy o yyyy-mm-dd): </td>
+                <td><input type="text" id="fechaUnix" name="fechaUnix" /></td>
+                <td><button onclick='obtenerFechaJuliana(document.getElementById("fechaUnix").value)'>Resolver</button>
+                </td>
             </tr>
         </table>
         <br />
@@ -54,10 +55,18 @@
     <script>
         function obtenerFechaJuliana(fechaUnix) {
             let fecha = new Date(fechaUnix);
-            let fechaInicial = new Date("1-1-1970");
-            let segundosDiff = (fecha.getTime() - fechaInicial.getTime()) / 1000;
+            let y = fecha.getFullYear();
+            let m = fecha.getMonth();
+            if (fecha.getMonth() < 3) {
+                y = fecha.getFullYear() - 1;
+                m = fecha.getMonth() + 12;
+            }
+            let d = fecha.getDate() + (fecha.getHours() / 24) + (fecha.getMinutes() / 1440) + (fecha.getSeconds() / 86400);
+            let a = fecha.getFullYear() / 100;
+            let b = 2 - a + (a / 4);
+            let calculoDiaJuliano = ((365.25 * (y + 4716)) + (30.6001 * (m + 1)) + d + b - 1524.5).toFixed(2);
 
-            document.getElementById("resultado").innerHTML = (segundosDiff / 86400.0) + 2440587.5;
+            document.getElementById("resultado").innerHTML = "El día juliano de '" + fechaUnix + "' sería: " + calculoDiaJuliano;
         }
     </script>
 </body>

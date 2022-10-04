@@ -38,11 +38,15 @@ button {
     color: black;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: rgb(0, 183, 255);
 }
 
-input {
+input,
+select,
+option {
     color: black;
 }
 

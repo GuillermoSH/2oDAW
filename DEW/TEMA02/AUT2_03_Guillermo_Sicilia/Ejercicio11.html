@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 11</title>
+    <style>
+        input {
+            width: 50px;
+        }
+
+        strong {
+            color: rgb(0, 183, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 11.-</h1>
+        <br />
+        <div id="enunciado">
+            Cuando hablamos de ángulos, normalmente utilizamos los grados sexagesimales (se suelen representar como
+            “deg”, una circunferencia completa son 360º deg). Sin embargo, en trigonometría es más común utilizar los
+            radianes (“rad”, una circunferencia completa son 2π rad).<br />
+            <br />
+            De esta forma, 360º equivalen a 2π. Las funciones trigonométricas de javascript, como la mayoría de
+            lenguajes, trabajan en radianes, sin embargo en muchas ocasiones nosotros vamos a querer trabajaren grados.
+            Por ello, se pide:<br />
+            <br />
+            a) Implementar una función llamada deg2rad(x) que transforme de grados a radianes, y su inversa
+            rad2deg(x)<br />
+            <br />
+            b) Implementar una función sinDeg(x)que devuelva el seno del ángulo x y otra función cosDeg(x) que devuelva
+            el coseno del ángulo x (en ambos casos x está en grados).<br />
+            <br />
+            c) El seno y el coseno están relacionados por la siguiente ecuación: sin2x + cos2x = 1. Utilizar esta
+            relación para implementar una función sinDegAlt(x) que obtenga el seno de un ángulo x (en grados) usando
+            para ello la función cosDeg(x) anteriormente implementada. Implementar también la función inversa al
+            apartado anterior: cosDegAlt(x) usando para ello sinDeg(x)<br />
+        </div><br />
+        <br />
+        <div style="text-align: center">
+            <label for="option"><strong>Elija su opción: </strong></label>
+            <input type="number" id="grades" name="grades" />
+            <select id="option">
+                <option value="rad2deg">Rad a Deg</option>
+                <option value="deg2rad" selected>Deg a Rad</option>
+            </select>
+            <button onclick="selectOption()">Enviar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function selectOption() {
+            let option = document.querySelector("#option").value;
+            switch (option) {
+                case "rad2deg":
+                    printResults("rad"); break; 11
+                case "deg2rad":
+                    printResults("deg"); break;
+            }
+        }
+
+        function printResults(input) {
+            let deg, rad, resultado;
+
+            if (input == "rad") {
+                deg = rad2deg();
+                rad = document.getElementById("grades").value;
+                resultado = rad + " radianes son: " + deg + " grados sexagesimales:<br/><br/>"
+            } else {
+                rad = deg2rad();
+                deg = document.getElementById("grades").value;
+                resultado = deg + " grados sexagesimales son: " + rad + " radianes:<br/><br/>"
+            }
+
+            let cos = cosDeg(rad);
+            let sin = sinDeg(rad);
+
+            resultado += "<table>"
+            resultado += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") es: <strong>" + cos + "</strong></td></tr>";
+            resultado += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") es: <strong>" + sin + "</strong></td></tr>";
+
+            let sin2 = sinDegAlt(rad);
+            let cos2 = cosDegAlt(rad);
+
+            resultado += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + cos2 + "</strong></td> <td><button onclick='showCodeCos()'>Ver función</button></td></tr>";
+            resultado += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + sin2 + "</strong></td> <td><button onclick='showCodeSin()'>Ver función</button></td></tr>";
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+
+        function deg2rad() {
+            let deg = document.getElementById("grades").value;
+
+            return (deg * Math.PI / 180);
+        }
+
+        function rad2deg() {
+            let rad = document.getElementById("grades").value;
+
+            return (rad * 180 / Math.PI);
+        }
+
+        function sinDeg(x) {
+            return Math.sin(x);
+        }
+
+        function cosDeg(x) {
+            return Math.cos(x);
+        }
+
+        function sinDegAlt(x) {
+            return Math.sqrt(1 - (cosDeg(x) * cosDeg(x)));
+        }
+
+        /**
+         * La condicion del if es porque:
+         *    · cos(xπ) = (-1)^x, entonces si x es un multiplo entero de PI y si el valor de 'x/Math.PI'
+         * (que es lo mismo que x*π) es impar, el resultado de la raiz saldra negativo al ser un 
+         * exponente impar de -1.
+        */
+        function cosDegAlt(x) {
+            if (x % Math.PI == 0 && (x / Math.PI) % 2 != 0) {
+                return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));
+            }
+            return Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));
+        }
+
+        function showCodeCos() {
+            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x) {\n    if (x % Math.PI == 0 && (x / Math.PI) % 2 != 0) {\n        return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n    }\n    return Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n}");
+        }
+
+        function showCodeSin() {
+            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x) {\n    return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n}");
+        }
+    </script>
+</body>
+
+</html>
