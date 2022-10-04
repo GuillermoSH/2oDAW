@@ -29,15 +29,15 @@
 
             echo "<table>\n";
             echo "<tr>\n";
-            echo "<td>Numeros ganadores del sorteo:</td>\n"
+            echo "<td>Numeros ganadores del sorteo:</td>\n";
             echo "</tr>\n";
 
-            for($i =0;i<count($sorteo);$i++) {
+            for($i =0;$i<count($sorteo);$i++) {
                 echo "<tr>\n";
-                echo "<td>$sorteo[$i]</td>\n"
+                echo "<td>$sorteo[$i]</td>\n";
                 echo "</tr>\n";
             }
-            echo "</table>\n"
+            echo "</table>\n";
         }
     ?>
 </body>
