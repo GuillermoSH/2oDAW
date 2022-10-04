@@ -34,19 +34,17 @@ footer {
     height: 8vh;
 }
 
-button {
-    color: black;
-}
-
 h1,
 h2,
-h3 {
+h3,
+strong {
     color: rgb(0, 183, 255);
 }
 
 input,
 select,
-option {
+option,
+button {
     color: black;
 }
 

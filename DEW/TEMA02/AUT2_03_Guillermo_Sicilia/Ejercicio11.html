@@ -11,10 +11,6 @@
         input {
             width: 60px;
         }
-
-        strong {
-            color: rgb(0, 183, 255);
-        }
     </style>
 </head>
 
@@ -53,11 +49,6 @@
                 <option value="rad2deg">rad a Deg</option>
                 <option value="deg2rad">deg a Rad</option>
             </select>
-            <select id="formato">
-                <option value="none" selected disabled>Mostrar en...</option>
-                <option value="scienNotat">notación científica</option>
-                <option value="2decimals">mostrar 2 decimales</option>
-            </select>
             <button onclick="selectOption()">Enviar</button>
         </div>
         <br />
@@ -76,39 +67,42 @@
             let option = document.querySelector("#option").value;
             switch (option) {
                 case "rad2deg":
-                    printResults("rad"); break; 11
+                    printResults("rad"); break;
                 case "deg2rad":
                     printResults("deg"); break;
             }
         }
 
         function printResults(input) {
-            let deg, rad, resultado;
+            let deg, rad;
+            let numIterations = 50;
 
             if (input == "rad") {
                 deg = rad2deg();
                 rad = document.getElementById("grades").value;
-                resultado = rad + " radianes son: " + deg + " grados sexagesimales:<br/><br/>"
             } else {
                 rad = deg2rad();
                 deg = document.getElementById("grades").value;
-                resultado = deg + " grados sexagesimales son: " + rad + " radianes:<br/><br/>"
             }
 
-            let cos = cosDeg(rad);
-            let sin = sinDeg(rad);
+            let cos = cosDeg(rad, numIterations);
+            let sin = sinDeg(rad, numIterations);
+            let sin2 = sinDegAlt(rad, numIterations);
+            let cos2 = cosDegAlt(rad, numIterations);
 
-            resultado += "<table>"
-            resultado += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") es: <strong>" + cos + "</strong></td></tr>";
-            resultado += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") es: <strong>" + sin + "</strong></td></tr>";
+            if (input == "rad") {
+                result = rad + " radianes son: " + deg + " grados sexagesimales:<br/><br/>"
+            } else {
+                result = deg + " grados sexagesimales son: " + rad + " radianes:<br/><br/>"
+            }
 
-            let sin2 = sinDegAlt(rad);
-            let cos2 = cosDegAlt(rad);
+            result += "<table>"
+            result += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") es: <strong>" + cos + "</strong></td></tr>";
+            result += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") es: <strong>" + sin + "</strong></td></tr>";
+            result += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + cos2 + "</strong></td> <td><button onclick='showCodeCos()'>Ver función</button></td></tr>";
+            result += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + sin2 + "</strong></td> <td><button onclick='showCodeSin()'>Ver función</button></td></tr>";
 
-            resultado += "<tr><td style='margin-left: 20px'>• cos(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + cos2 + "</strong></td> <td><button onclick='showCodeCos()'>Ver función</button></td></tr>";
-            resultado += "<tr><td style='margin-left: 20px'>• sin(" + deg + ") calculado por 'sin^2(x) + cos^2(x) = 1': <strong>" + sin2 + "</strong></td> <td><button onclick='showCodeSin()'>Ver función</button></td></tr>";
-
-            document.getElementById("resultado").innerHTML = resultado;
+            document.getElementById("resultado").innerHTML = result;
         }
 
         function deg2rad() {
@@ -123,16 +117,45 @@
             return (rad * 180 / Math.PI);
         }
 
-        function sinDeg(x) {
-            return Math.sin(x);
+        /**
+         * Calculo del factorial de un numero introducido
+         */
+        function factorial(x) {
+            if (x <= 1) {
+                return 1;
+            }
+            return x * factorial(x - 1);
         }
 
-        function cosDeg(x) {
-            return Math.cos(x);
+        /**
+         * Calculo del seno y coseno por las formulas de las series de Taylor 
+         */
+        function sinDeg(x, numIterations) {
+            let taylor = 0;
+            let numerator, denominator;
+
+            for (let i = 0; i < numIterations; i++) {
+                numerator = ((-1) ** i);
+                denominator = factorial((2 * i) + 1);
+                taylor += (numerator / denominator) * (x ** ((2 * i) + 1));
+            }
+            return taylor;
         }
 
-        function sinDegAlt(x) {
-            return Math.sqrt(1 - (cosDeg(x) * cosDeg(x)));
+        function cosDeg(x, numIterations) {
+            let taylor = 0;
+            let numerator, denominator;
+
+            for (let i = 0; i < numIterations; i++) {
+                numerator = ((-1) ** i);
+                denominator = factorial((2 * i));
+                taylor += (numerator / denominator) * (x ** ((2 * i)));
+            }
+            return taylor;
+        }
+
+        function sinDegAlt(x, numIterations) {
+            return Math.sqrt(1 - (cosDeg(x, numIterations) * cosDeg(x, numIterations)).toFixed(6));
         }
 
         /**
@@ -140,20 +163,20 @@
          *    · cos(xπ) = (-1)^x, entonces si x es un multiplo entero de PI y si el valor de 'x/Math.PI'
          * (que es lo mismo que x*π) es impar, el resultado de la raiz saldra negativo al ser un 
          * exponente impar de -1.
-        */
-        function cosDegAlt(x) {
+         */
+        function cosDegAlt(x, numIterations) {
             if (x % Math.PI == 0 && (x / Math.PI) % 2 != 0) {
-                return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));
+                return -Math.sqrt(1 - (sinDeg(x, numIterations) * sinDeg(x, numIterations)).toFixed(6));
             }
-            return Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));
+            return Math.sqrt(1 - (sinDeg(x, numIterations) * sinDeg(x, numIterations)).toFixed(6));
         }
 
         function showCodeCos() {
-            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x) {\n    if (x % Math.PI == 0 && (x / Math.PI) % 2 != 0) {\n        return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n    }\n    return Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n}");
+            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x, numIterations) {\n    if (x % Math.PI == 0 && (x / Math.PI) % 2 != 0) {\n        return -Math.sqrt(1 - (sinDeg(x, numIterations) * sinDeg(x, numIterations)));\n    }\n    return Math.sqrt(1 - (sinDeg(x, numIterations) * sinDeg(x, numIterations)));\n}");
         }
 
         function showCodeSin() {
-            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x) {\n    return -Math.sqrt(1 - (sinDeg(x) * sinDeg(x)));\n}");
+            alert("Ejercicio 11.-\n\nfunction cosDegAlt(x, numIterations) {\n    return -Math.sqrt(1 - (sinDeg(x, numIterations) * sinDeg(x, numIterations)));\n}");
         }
     </script>
 </body>

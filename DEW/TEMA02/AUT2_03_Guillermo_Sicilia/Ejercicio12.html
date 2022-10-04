@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 12</title>
+    <style>
+        #resultTable {
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            text-align: center;
+            width:140px;
+        }
+        #tdCounters {
+            width: 100px;
+            text-align: left;
+            text-indent: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 12.-</h1>
+        <br />
+        <div id="enunciado">
+            Programa que pida una frase y devuelve el número de cada una de las vocales que contiene. (nº de a's, de
+            e's, etc.)
+        </div><br />
+        <div>
+            <label>Introduzca la frase a analizar: </label>
+            <input type="text" id="phrase" name="phrase" />
+            <button onclick="phraseAnalysis()">Analizar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function phraseAnalysis() {
+            let phrase = "" + document.getElementById("phrase").value;
+            let vocalsCounters = [0,0,0,0,0];
+            let result;
+
+            for (let i = 0; i < phrase.length; i++) {
+                let vocal = phrase.charAt(i);
+
+                switch (vocal) {
+                    case "A": case "a":
+                        vocalsCounters[0]+=1; break;
+                    case "E": case "e":
+                        vocalsCounters[1]+=1; break;
+                    case "I": case "i":
+                        vocalsCounters[2]+=1; break;
+                    case "O": case "o":
+                        vocalsCounters[3]+=1; break;
+                    case "U": case "u":
+                        vocalsCounters[4]+=1; break;
+                }
+            }
+
+            result = "<table id='resultTable'>";
+            result += "<tr><td id='tdCounters'><strong>Nº de A: </strong></td><td>"+vocalsCounters[0]+"</td></tr>";
+            result += "<tr><td id='tdCounters'><strong>Nº de E: </strong></td><td>"+vocalsCounters[1]+"</td></tr>";
+            result += "<tr><td id='tdCounters'><strong>Nº de I: </strong></td><td>"+vocalsCounters[2]+"</td></tr>";
+            result += "<tr><td id='tdCounters'><strong>Nº de O: </strong></td><td>"+vocalsCounters[3]+"</td></tr>";
+            result += "<tr><td id='tdCounters'><strong>Nº de U: </strong></td><td>"+vocalsCounters[4]+"</td></tr>";
+            result += "</table>";
+
+            document.getElementById("resultado").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
