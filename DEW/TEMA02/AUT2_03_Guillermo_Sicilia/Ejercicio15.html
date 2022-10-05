@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 15</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 15.-</h1>
+        <br />
+        <div id="enunciado">
+            Programa que tenga una función que le pasemos un vector de N elementos y rota sus componentes un lugar hacia su derecha. Teniendo en cuenta que el último componente debe desplazarse al primer lugar.
+        </div><br />
+        <div>
+            <label>Introduzca su vector con tantos elementos como desee separados por espacios: </label>
+            <input type="text" id="vector" name="vector" />
+            <button onclick="reverse()">Analizar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function reverse() {
+            let vector = document.getElementById("vector").value;
+            let reversedVector = vector.split(" ").reverse().join(" ");
+
+            document.getElementById("resultado").innerHTML = reversedVector;
+        }
+    </script>
+</body>
+
+</html>
