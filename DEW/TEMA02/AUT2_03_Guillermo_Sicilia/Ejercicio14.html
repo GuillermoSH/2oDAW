@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 14</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 14.-</h1>
+        <br />
+        <div id="enunciado">
+            Programa que lee una frase y averigua si es “palíndroma”. Una frase es palíndroma si se lee igual de
+            izquierda a derecha que de derecha a izquierda (sin considerar los espacios en blanco). Ejemplo: “le saco
+            sus ocas el”, “dabale arroz a la zorra el abad”.
+        </div><br />
+        <div>
+            <label>Introduzca su posible palíndromo: </label>
+            <input type="text" id="phrase" name="phrase" />
+            <button onclick="phraseAnalysis()">Analizar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function phraseAnalysis() {
+            let phrase = document.getElementById("phrase").value;
+            let isPalin = isPalindrome(phrase);
+            let result;
+
+            if (isPalin) {
+                result = "Pues sí, tenias razón. ¡Es un palíndromo!"
+            } else {
+                result = "Te equivocabas, no es un palíndromo..."
+            }
+
+            document.getElementById("resultado").innerHTML = result;
+        }
+
+        function isPalindrome(string) {
+            let isPalindrome = true;
+            let hasSpaces = string.includes(" ");
+
+            hasSpaces ? string = string.replaceAll(" ", "") : string = string;
+
+            for (let rightCounter = string.length, leftCounter = 0; leftCounter < parseInt(string.length / 2); leftCounter++, rightCounter--) {
+                if (string.charAt(rightCounter) != string.charAt(leftCounter)) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            return isPalindrome;
+        }
+    </script>
+</body>
+
+</html>

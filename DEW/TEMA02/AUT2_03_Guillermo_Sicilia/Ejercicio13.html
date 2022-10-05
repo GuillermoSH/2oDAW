@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 13</title>
+</head>
+
+<body>
+    <header>AUT2_03_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 13.-</h1>
+        <br />
+        <div id="enunciado">
+            Haz un programa que dado un número del 1 al 99, lo muestre escrito en letras. Por ejemplo, dado el 35
+            debería mostrarse treinta y cinco.
+        </div><br />
+        <div>
+            <label>Introduzca un numero: </label>
+            <input type="number" id="number" name="number" />
+            <button onclick="numberToString()">Lanzar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3>
+        <br />
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script>
+        function numberToString() {
+            let number = document.getElementById("number").value;
+            let numberAnalysis = "" + number;
+            let numberStr = "";
+            let units = ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"];
+            let specialTens = ["once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete", "dieciocho", "diecinueve"];
+            let tens = ["diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"];
+
+            if (numberAnalysis.length == 2) {
+                if (number < 20) {
+                    if (number == 10) {
+                        numberStr = tens[0];
+                    } else {
+                        numberStr = specialTens[number - 11];
+                    }
+                } else {
+                    if (Number.isInteger(number / 10)) {
+                        numberStr = tens[Number(numberAnalysis.substring(0, 1)) - 1]
+                    } else {
+                        if (number < 30) {
+                            numberStr = "veinti" + units[Number(numberAnalysis.substring(1, 2)) - 1]
+                        } else {
+                            numberStr = tens[Number(numberAnalysis.substring(0, 1)) - 1] + " y " + units[Number(numberAnalysis.substring(1, 2)) - 1]
+                        }
+                    }
+                }
+            } else {
+                numberStr = units[number - 1];
+            }
+
+            document.getElementById("resultado").innerHTML = numberStr;
+        }
+    </script>
+</body>
+
+</html>
