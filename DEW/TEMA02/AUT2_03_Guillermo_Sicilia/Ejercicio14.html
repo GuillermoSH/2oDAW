@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="subIndex.css" rel="stylesheet" type="text/css" />
     <title>Ejercicio 14</title>
+    <style>
+        #resultTable {
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            text-align: center;
+            width:fit-content;
+            padding-left:10px;
+            padding-right:10px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,6 +42,7 @@
         <br />
         <h3>Resultado:</h3>
         <br />
+        <br />
         <div id="resultado"></div>
     </main>
 
@@ -40,29 +54,36 @@
         function phraseAnalysis() {
             let phrase = document.getElementById("phrase").value;
             let isPalin = isPalindrome(phrase);
-            let result;
+            let result = "<table id='resultTable'><tr><td>";
 
             if (isPalin) {
-                result = "Pues sí, tenias razón. ¡Es un palíndromo!"
+                result += "<b>Pues sí, tenias razón. ¡Es un palíndromo!</b>"
             } else {
-                result = "Te equivocabas, no es un palíndromo..."
+                result += "<b>Te equivocabas, no es un palíndromo...</b>"
             }
+
+            result += "</td></tr></table>";
 
             document.getElementById("resultado").innerHTML = result;
         }
 
-        function isPalindrome(string) {
-            let isPalindrome = true;
-            let hasSpaces = string.includes(" ");
+        function reverse(string) {
+            return string.split("").reverse().join("");
+        }
 
+        function isPalindrome(string) {
+            let isPalindrome = false;
+            let hasSpaces = string.includes(" ");
             hasSpaces ? string = string.replaceAll(" ", "") : string = string;
 
-            for (let rightCounter = string.length, leftCounter = 0; leftCounter < parseInt(string.length / 2); leftCounter++, rightCounter--) {
-                if (string.charAt(rightCounter) != string.charAt(leftCounter)) {
-                    isPalindrome = false;
-                    break;
-                }
+            let midLen = parseInt(string.length / 2);
+            let leftStr = string.substring(0, midLen);
+            let rightStr = string.substring(string.length, midLen + 1);
+
+            if (leftStr == reverse(rightStr)) {
+                isPalindrome = true;
             }
+
             return isPalindrome;
         }
     </script>
