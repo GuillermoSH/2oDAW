@@ -1,70 +1,64 @@
-@charset "UTF-8";
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Consolas, monaco, monospace;
+    background: rgb(109, 64, 139);
+    color: white;
 }
 
 header {
-    color: white;
-    overflow: auto;
+    display: table-cell;
+    height: 15vh;
     width: 100vw;
-    height: 12vh;
-    background: rgb(15, 0, 31);
-    background: linear-gradient(180deg, rgba(15, 0, 31, 1) 0%, rgba(56, 0, 85, 1) 37%, rgba(96, 0, 148, 0.8575805322128851) 66%, rgba(128, 0, 255, 0.2721463585434174) 85%, rgba(128, 0, 255, 0) 100%);
+    vertical-align: middle;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.header-logo {
-    height: 8vh;
-    margin-right: 0.60vw;
-    margin-top: 0.60vh;
-}
-
-.menu-btn {
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    border: 0;
-    font-size: 4vh;
-    margin-left: 1vw;
-    padding-top:1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    border-radius: 10px;
-}
-
-.menu-btn:hover {
-    background-color: rgba(165, 165, 165, 0.416);
+.name-box {
+    vertical-align: middle;
+    width: 50%;
+    text-align: left;
+    font-size: 8vh;
+    margin-left: 2vw;
 }
 
 .logo-box {
-    width: 15%;
+    width: 50%;
     text-align: right;
+    margin-right: 2vw;
 }
 
-.btn-box {
-    width: 15%;
-    text-align: left;
-}
-
-.title-box {
-    width: 70%;
-    text-align: center;
-}
-
-.header-table {
+.header-container {
     width: 100%;
+    height: 100%;
+    display: flex;
 }
 
-.header-title {
-    font-size: 5vh;
+.logo-img {
+    height: 10vh;
 }
 
 main {
+    vertical-align: middle;
+    width: 100vw;
+    height: 90vh;
+}
+
+.main-container {
     width: 100%;
-    margin-left: 6vw;
-    margin-right: 6vw;
-    margin-top: 2vh;
+    height: 50%;
+    border-spacing: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+}
+
+.slogan {
+    
+}
+
+.about_us-btn {
+    
 }

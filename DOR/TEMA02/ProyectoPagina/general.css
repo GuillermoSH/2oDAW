@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monaco, monospace;
+}
+
+header {
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    background: rgb(31, 0, 73);
+    background: linear-gradient(180deg, rgba(31, 0, 73, 1) 0%, rgba(68, 0, 167, 0.8953782196472339) 82%, rgba(147, 0, 255, 0.6572829815519958) 100%);
+    display: flex;
+}
+
+.header-logo {
+    height: 8vh;
+    margin-left: 0.6vw;
+}
+
+.menu-btn {
+    font-size: 4vh;
+    margin-left: 1vw;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.menu-btn:hover {
+    background-color: rgba(165, 165, 165, 0.416);
+}
+
+.login-btn:hover {
+    background: rgba(49, 0, 122, 0.895);
+    transition: ease-in-out 0.3s;
+    -webkit-box-shadow: 0px 0px 6px 3px rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 6px 3px rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 3px rgb(255, 255, 255);
+    color: white;
+}
+
+.login-btn {
+    color: rgba(68, 0, 167, 0.8953782196472339);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    font-size: 2vh;
+    border-radius: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right: 2vw;
+}
+
+.login-btn,
+.menu-btn {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: 0;
+}
+
+.logo-box {
+    width: 15%;
+    text-align: left;
+}
+
+.login-box {
+    width: 15%;
+    text-align: center;
+}
+
+.btn-box {
+    width: 15%;
+    text-align: left;
+}
+
+.title-box {
+    width: 70%;
+    text-align: center;
+}
+
+.header-table {
+    width: 100%;
+}
+
+.header-title {
+    font-size: 4vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2vh;
+    font-size: 2vh;
+}
+
+nav table tr {
+    width: 70vw;
+}
+
+nav table tr td {
+    width: 20%;
+    text-align: center;
+}
+
+.home-btn,
+.about_us-btn,
+.contact_us-btn,
+.streaming-btn,
+.resources-btn {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.active-btn {
+    background-color: white;
+    color: rgba(68, 0, 167, 0.8953782196472339);
+    padding: 0.5vh;
+    border-radius: 10px 10px 0px 0px;
+}
+
+i[class^='fa'],
+div[class*='fa'] {
+    font-size: 2vh;
+}
+
+a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.nav-table {
+    width: 100%;
+    background: rgb(147, 0, 255, 0.657);
+}
+
+main {
+    width: 100%;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 2vh;
+}
