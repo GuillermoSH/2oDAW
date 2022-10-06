@@ -10,7 +10,7 @@ header {
     width: 100vw;
     height: 10vh;
     background: rgb(31, 0, 73);
-    background: linear-gradient(180deg, rgba(31, 0, 73, 1) 0%, rgba(68, 0, 167, 0.8953782196472339) 82%, rgba(147, 0, 255, 0.6572829815519958) 100%);
+    background: linear-gradient(180deg, rgba(31, 0, 73, 1) 0%, rgba(109, 64, 139, 1) 72%, rgba(109, 64, 139) 100%);
     display: flex;
 }
 
@@ -85,8 +85,8 @@ header {
 }
 
 .header-title {
-    font-size: 4vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vh;
+    font-family: 'Bank Gothic', sans-serif;
 }
 
 nav {
@@ -115,7 +115,7 @@ nav table tr td {
 
 .active-btn {
     background-color: white;
-    color: rgba(68, 0, 167, 0.8953782196472339);
+    color: rgba(109, 64, 139);
     padding: 0.5vh;
     border-radius: 10px 10px 0px 0px;
 }
@@ -133,7 +133,7 @@ a {
 
 .nav-table {
     width: 100%;
-    background: rgb(147, 0, 255, 0.657);
+    background: rgb(109, 64, 139);
 }
 
 main {
