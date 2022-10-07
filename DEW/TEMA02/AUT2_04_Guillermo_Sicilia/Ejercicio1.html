@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <header>AUT2_04_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 1.-</h1>
+        <br />
+        <div id="enunciado">
+            Queremos generar una aplicación para simular un servidor DHCP muy ‘basto’, queremos que el programa genere
+            una IP válida de uno de los grupos de IPs que nos solicite el usuario.<br />
+            El programa Pregunta al usuario que ‘clase de IP’ quiere y le devolverá una IP con números aleatorios de la
+            clase solicitada. Debes dividir las acciones en funciones distintas ( mínimo 2). Recordamos que podremos
+            usar la siguiente tabla para determinarlo según el rango de la
+            dirección IPv4.
+        </div><br />
+        <table class="IPv4-table">
+            <tr class="title-row">
+                <td class="long-td-column">Rango de direcciones IPv4</td>
+                <td class="short-td-column">Clase</td>
+            </tr>
+            <tr>
+                <td>0.0.0.0 - 126.255.255.255</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>127.0.0.0 - 191.255.255.255</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>192.0.0.0 - 223.255.255.255</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>224.0.0.0 - 239.255.255.255</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>240.0.0.0 - 255.255.255.255</td>
+                <td>E</td>
+            </tr>
+        </table>
+        <br />
+        <div style="text-align: center">
+            <label for="class"><strong>Elija la clase de IP a generar: </strong></label>
+            <select id="class">
+                <option value="none" selected disabled>Clase...</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+            <button onclick="getOption()">Enviar</button>
+        </div>
+        <br />
+        <br />
+        <h3>Resultado:</h3><br />
+        <div id="resultado"></div>
+
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script src="Ejercicio1.js"></script>
+</body>
+
+</html>

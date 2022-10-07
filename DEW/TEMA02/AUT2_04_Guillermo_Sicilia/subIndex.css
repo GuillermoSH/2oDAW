@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url(Imagenes/fondoSubIndex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    height: 8vh;
+    display: table-cell;
+    width: 100vw;
+    vertical-align: middle;
+    background-color: rgba(21, 255, 0, 0.468);
+    font-size: 4vh;
+}
+
+main {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 84vh;
+}
+
+footer {
+    height: 8vh;
+}
+
+h1,
+h2,
+h3,
+strong {
+    color: rgb(10, 212, 3);
+}
+
+input,
+select,
+option,
+button {
+    color: black;
+}
+
+#vueltaInicio {
+    background-color: rgb(21, 255, 0, 0.468);
+    text-align: center;
+    width: 12vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+#vueltaInicio a {
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+#enunciado {
+    text-align: justify;
+}
+
+.IPv4-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(154, 255, 145, 0.368);
+}
+
+.title-row {
+    background-color: rgb(21, 255, 0, 0.468);
+}
+
+.long-td-column {
+    width: 300px;
+}
+
+.short-td-column {
+    width: 60px;
+}
