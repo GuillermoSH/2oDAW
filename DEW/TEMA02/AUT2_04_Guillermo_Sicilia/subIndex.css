@@ -9,9 +9,10 @@
 }
 
 body {
-    background-image: url(Imagenes/fondoSubIndex.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Imagenes/fondoSubIndex.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
@@ -83,4 +84,20 @@ button {
 
 .short-td-column {
     width: 60px;
+}
+
+#num1, #num2 {
+    width: 55px;
+}
+
+.result-table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(21, 255, 0, 0.468);
+    border-radius: 10px;
+}
+
+.result-table td {
+    width: 40px;
+    text-align: center;
 }

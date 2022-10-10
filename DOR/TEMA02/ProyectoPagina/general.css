@@ -12,6 +12,8 @@ header {
     background: rgb(31, 0, 73);
     background: linear-gradient(180deg, rgba(31, 0, 73, 1) 0%, rgba(109, 64, 139, 1) 72%, rgba(109, 64, 139) 100%);
     display: flex;
+    position: fixed;
+    top: 0;
 }
 
 .header-logo {
@@ -93,6 +95,9 @@ nav {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 2vh;
     font-size: 2vh;
+    position: fixed;
+    top: 10vh;
+    width: 100vw;
 }
 
 nav table tr {
@@ -110,7 +115,7 @@ nav table tr td {
 .streaming-btn,
 .resources-btn {
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .active-btn {
@@ -137,8 +142,61 @@ a {
 }
 
 main {
-    width: 100%;
+    padding-top: 10vh;
     margin-left: 6vw;
     margin-right: 6vw;
     margin-top: 2vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    ;
+}
+
+.text-paragraph {
+    text-indent: 40px;
+    text-align: justify;
+}
+
+.text-paragraph a {
+    text-decoration: none;
+    color: rgb(109, 64, 139);
+}
+
+.about_us-logo-img {
+    width: 30%;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.twitch-imgs {
+    border-radius: 5px;
+    height: 4vh;
+}
+
+.center-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_us-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 8vh;
+}
+
+.grid-item {
+    margin-left: 10vw;
+}
+
+.social-icons {
+    text-align: left;
+    text-decoration: none;
+    color: rgb(109, 64, 139);
+    font-size: 4vh;
 }

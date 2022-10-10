@@ -22,6 +22,9 @@ Este respositorio está dedicado a la subida de todo lo desarrollado dentro del 
   - [**Tema01**](/DSW/TEMA01) Arquitecturas y herramientas de programación.
   - [**Tema02**](/DSW/TEMA02) Fundamentos de la insercción de código en páginas web.
   - [**Tema03**](/DSW/TEMA03) Programación basada en lenguaje de marcas con código embebido.
+  - [**Tema04**](/DSW/TEMA04) Desarrollo de aplicaciones Web utilizando código embebido.
+  - [**Tema05**](/DSW/TEMA05) Utilización de Tecnicas de Acceso a Datos.
+  - [**Tema06**](/DSW/TEMA06) POO en PHP. Patrón MVC.
 
 ## Otros repos.-
 - **:rocket: DPL:**

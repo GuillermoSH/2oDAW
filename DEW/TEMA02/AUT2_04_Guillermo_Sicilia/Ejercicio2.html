@@ -18,50 +18,27 @@
         <br />
 
         <div id="enunciado">
-            Escribe un programa que pida una nota y muestre en una ventana emergente la siguiente información:<br /><br />
-            a. Si la nota está entre 0 y 5 el mensaje indicará: Suspenso<br />
-            b. Si la nota está entre 5 y 7 el mensaje indicará: Aprobado<br />
-            c. Si la nota está entre 7 y 9 el mensaje indicará: Notable<br />
-            d. Si la nota está entre 9 y 10 el mensaje indicará: Sobresaliente<br />
-            e. Si no se introduce un número real: ERROR! – Indique un número del rango 0 a 10<br />
-            f. Si es un número que no está comprendido entre 0 y 10: ERROR! – Indique un número del rango 0 a 10
+            Realiza un programa para escribir todos los números impares entre dos números A y B introducidos por teclado. Antes habrá que comprobar cuál de los dos números A y B es mayor.
         </div>
 
         <br />
-        <button onclick="lanzarPrograma()">Lanzar Programa</button>
+        <div style="text-align: center">
+            <label for="option"><strong>Introduzca 2 numeros: </strong></label>
+            <input type="number" id="num1" name="num1" />
+            <input type="number" id="num2" name="num2" />
+            <button onclick="launchProgram()">Enviar</button>
+        </div>
         <br /><br />
 
         <h3>Resultado:</h3><br />
-        <div id="resultado">Se mostrará por alertas.</div>
+        <div id="resultado"></div>
     </main>
 
     <footer>
         <div id="vueltaInicio"><a href="index.html">INICIO</div>
     </footer>
 
-    <script>
-        function lanzarPrograma() {
-            let nota = prompt("Ejercicio 2.-\n\nIntroduzca su nota:");
-
-            if (Number.isInteger(Number(nota))) {
-                if (nota >= 0 && nota < 5) {
-                    alert("Ejercicio 2.-\n\nSuspenso 😬");
-                } else if (nota >= 5 && nota < 7) {
-                    alert("Ejercicio 2.-\n\nAprobado 🙂");
-                } else if (nota >= 7 && nota < 9) {
-                    alert("Ejercicio 2.-\n\nNotable 😄");
-                } else if (nota == 9 || nota == 10) {
-                    alert("Ejercicio 2.-\n\nSobresaliente 😍")
-                } else {
-                    alert("Ejercicio 2.-\n\nIndique un número del rango 0 a 10.");
-                    lanzarPrograma();
-                }
-            } else {
-                alert("Ejercicio 2.-\n\nIndique un número del rango 0 a 10.");
-                lanzarPrograma();
-            }
-        }
-    </script>
+    <script src="Ejercicio2.js"></script>
 </body>
 
 </html>
