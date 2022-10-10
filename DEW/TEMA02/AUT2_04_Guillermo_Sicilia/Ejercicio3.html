@@ -16,35 +16,14 @@
         <h1>Ejercicio 3.-</h1>
         <br/>
         <div id="enunciado">
-            Conversión de variables:  ¿Qué generan los siguientes códigos?
+            Realiza un programa que pida números por teclado hasta que nos
+            introduzcan un número menor que 1 o mayor que 50, momento en el que se invertirán los
+            elementos dentro del array. Mostrar el array invertido. Se valorará el uso de 1 solo array para todo
+            el programa.
         </div><br/>
-        <table>
-            <tr>
-                <td>~ parseInt("15")</td>
-                <td style="width: 20px"></td>
-                <td><button onclick="expresion(parseInt('15'),`parseInt('15')`)">Resolver</button><br /></td>
-            </tr>
-            <tr>
-                <td>~ parseInt("15.5")</td>
-                <td style="width: 20px"></td>
-                <td><button onclick="expresion(parseInt('15.5'),`parseInt('15.5')`)">Resolver</button><br /></td>
-            </tr>
-            <tr>
-                <td>~ parseInt(15.5)</td>
-                <td style="width: 20px"></td>
-                <td><button onclick="expresion(parseInt(15.5),'parseInt(15.5)')">Resolver</button><br /></td>
-            </tr>
-            <tr>
-                <td>~ parseInt("true")</td>
-                <td style="width: 20px"></td>
-                <td><button onclick="expresion(parseInt('true'),`parseInt('true')`)">Resolver</button><br /></td>
-            </tr>
-            <tr>
-                <td>~ parseInt(true)</td>
-                <td style="width: 20px"></td>
-                <td><button onclick="expresion(parseInt(true),'parseInt(true)')">Resolver</button><br /></td>
-            </tr>
-        </table>
+        <div class="align-center">
+            <button onclick="getNumber()">Lanzar Programa</button><br/>
+        </div>
         <br/>
         <h3>Resultado:</h3><br/>
         <div id="resultado"></div>
@@ -54,11 +33,7 @@
         <div id="vueltaInicio"><a href="index.html">INICIO</div>
     </footer>
 
-    <script>
-        function expresion(sentencia,expresion) {
-            document.getElementById("resultado").innerHTML = `<b>${expresion} da:</b> ${sentencia}.`
-        }
-    </script>
+    <script src="Ejercicio3.js"></script>
 </body>
 
 </html>

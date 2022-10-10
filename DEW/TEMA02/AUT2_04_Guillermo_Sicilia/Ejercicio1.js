@@ -32,6 +32,9 @@ function formatIP(IParray) {
     return IParray[0] + "." + IParray[1] + "." + IParray[2] + "." + IParray[3];
 }
 
+/**
+ * Funcion para obtener la opcion seleccionada por el usuario para mostrar el resultado.
+ */
 function getOption() {
     let option = document.querySelector("#class").value;
     let result = "La IP de la clase <strong>'" + option + "'</strong> es: ";

@@ -5,8 +5,9 @@
  */
 
 /**
- * Toma dos números, los intercambia si están en el orden incorrecto, genera una matriz de números
- * impares entre ellos y luego formatea esa matriz en una tabla.
+ * Toma dos números, los intercambia si están en el orden incorrecto,
+ * genera una matriz de números impares entre ellos y luego formatea 
+ * esa matriz en una tabla.
  */
 function launchProgram() {
     let min = parseInt(document.getElementById("num1").value);
@@ -24,6 +25,14 @@ function launchProgram() {
     document.getElementById("resultado").innerHTML = result;
 }
 
+/**
+ * Genera los números impares entre min y max, y los almacena en un array.
+ * 
+ * @param {int} min valor min del rango a generar impares.
+ * @param {int} max valor max del rango a generar impares.
+ * 
+ * @returns array de impares.
+ */
 function generateOdds(min, max) {
     let odds = [];
 
@@ -38,6 +47,15 @@ function generateOdds(min, max) {
     return odds;
 }
 
+/**
+ * Funcion que devuelve un string de una tabla a insertar
+ * en el html para mostrar los impares en un formato mas
+ * adecuado.
+ * 
+ * @param {Array} odds array de impares.
+ * 
+ * @returns tabla con numeros impares por cada celda.
+ */
 function formatTable(odds) {
     let result = "<table class='result-table'><tr>";
 

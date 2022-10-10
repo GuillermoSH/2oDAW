@@ -97,7 +97,15 @@ button {
     border-radius: 10px;
 }
 
+.align-center {
+    text-align: center;
+}
+
 .result-table td {
     width: 40px;
     text-align: center;
+}
+
+#phrase {
+    width: 40vw;
 }
