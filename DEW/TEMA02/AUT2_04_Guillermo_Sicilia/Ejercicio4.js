@@ -34,6 +34,7 @@ function countLetters(phrase) {
             case "A":
             case "a":
             case "á":
+            case "Á":
                 letterCounters[0] += 1;
                 break;
             case "B":
