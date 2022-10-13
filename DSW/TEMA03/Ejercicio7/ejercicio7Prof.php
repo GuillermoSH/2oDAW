@@ -36,11 +36,42 @@
 
             echo "</table>\n";
             
-        } elseif ($_POST['btnTextoCsv']) {
+        } elseif (isset($_POST['btnTextoCsv'])) {
+            $contenidoCsv=$_POST['txtCsv'];
+            $lineas=explode("\n",$contenidoCsv);
 
-        } else {
+            echo "<table>\n";
+            echo "<thead>\n";
 
+            lineaCsvToTr($lineas[0],"th");
+
+            echo "</thead>\n";
+            echo "<tbody>\n";
+
+            for ($i = 1; $i < count($lineas); $i++) {
+                lineaCsvToTr($lineas[$i]);
+            }
+
+            echo "</tbody>\n";
+            echo "</table>\n";
+        } elseif (isset($_POST['btnSubirImagen'])) {
+            
         }
     ?>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="ficheroCsv">Fichero csv:</label>
+        <input type="file" name="ficheroCsv"/><br/>
+        <button type="submit" name="btnFicheroCsv">Subir fichero</button>
+    </form>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="txtCsv">Texto csv:</label>
+        <textarea name="txtCsv" rows="20" cols="80"></textarea><br/>
+        <button type="submit" name="btnTextoCsv">Enviar fichero</button>
+    </form>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="fImagen">Fichero de imagen a subir:</label>
+        <input type="file" name="fImagen" accept="image/*"/><br/>
+        <button type="submit" name="btnSubirImagen">Enviar fichero</button>
+    </form>
 </body>
 </html>
