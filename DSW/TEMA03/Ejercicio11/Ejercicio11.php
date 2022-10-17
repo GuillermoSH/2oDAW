@@ -22,7 +22,7 @@ es 120.
 </head>
 
 <body>
-    <h1>Ejercicio 11.-</h1>
+    <h1>Ejercicio 11: Juego de la Brisca.-</h1>
     <?php
 
     $palo = ["bastos", "copas", "espadas", "oros"];
@@ -44,25 +44,23 @@ es 120.
     } while (count($baraja) < 10);
 
     echo "<table>\n";
-    echo "<tr>\n";
+    echo "        <tr>\n";
 
     for ($i = 0; $i < count($baraja); $i++) {
-        echo "<td>";
-        echo '<img src="imagenesBaraja/', $palosRandom[$i], '/', $baraja[$i], '.png"/>';
-        echo "</td>";
+        echo "           <td><img src='barajaEspa/", $palosRandom[$i], "/", $baraja[$i], ".png'/></td>\n";
     }
 
-    echo "</tr>\n";
-    echo "<tr>\n";
-    echo '<td>Puntuación final:' . calcularValores($valorCartas, $valores) . '</td>';
-    echo "</tr>\n";
-    echo "</table>\n";
+    echo "        </tr>\n";
+    echo "        <tr>\n";
+    echo "           <td>Puntuación total:" . calcularValores($valorCartas, $valores) . "</td>\n";
+    echo "        </tr>\n";
+    echo "    </table>\n";
 
     function calcularValores(array $valorCartas, array $valores)
     {
         $suma = 0;
         for ($i = 0; $i < count($valorCartas); $i++) {
-            $suma += $valores[$valorCartas];
+            $suma += $valores[$valorCartas[$i]];
         }
         return $suma;
     }
