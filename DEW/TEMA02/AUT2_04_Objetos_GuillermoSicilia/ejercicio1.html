@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <title>Ejercicio 1</title>
+    <style>
+        #x,
+        #y,
+        #movement {
+            width: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="result"></div>
-    <button onclick="launchProgram()">Lanzar Juego</button>
+    <header>AUT2_04_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 1.-</h1>
+        <br />
+        <div id="enunciado">
+            Queremos crear un objeto llamado bola que guarde: <br /><br />
+            · <strong>Coordenadas x e y:</strong> las coordenadas horizontal y vertical donde comienza la bola en la
+            pantalla. Esto puede oscilar entre 0 (esquina superior izquierda) y el ancho y alto de la ventana del
+            navegador (esquina inferior derecha)- 600.<br />
+            · <strong>velocidad horizontal y vertical (velX y velY):</strong> a cada bola se le asigna una velocidad
+            horizontal y vertical; en términos reales, estos valores se agregan regularmente a los valores de las
+            coordenadas x / y cuando animamos las bolas, para moverlas tanto en cada cuadro.<br />
+            · <strong>color:</strong> cada bola tiene un color.<br />
+            · <strong>tamaño:</strong> cada bola tiene un tamaño: este es su radio, en píxeles.<br /><br />
+            Esta 'bola' tendrá un método 'dibuja' donde vamos a mostrar las coordenadas de la bola, y otro método
+            'mover', donde la bola va a avanzar y tomará la nueva posición ( x e y ) de x+velX.
+        </div><br />
+        <div class="align-center">
+            <label for="x">Posición inicial X: </label>
+            <input type="number" id="x" name="x">
+            <label for="y">, posición inicial Y: </label>
+            <input type="number" id="y" name="y">
+            <label for="y">, desplazar: </label>
+            <input type="number" id="movement" name="movement">
+            <button onclick="launchProgram()">Lanzar Juego</button>
+        </div>
+        <br />
+        <h3>Resultado:</h3><br />
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
     <script src="ejercicio1.js"></script>
 </body>
+
 </html>

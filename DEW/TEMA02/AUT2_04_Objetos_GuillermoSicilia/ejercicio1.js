@@ -1,5 +1,5 @@
 function launchProgram() {
-    class bola {
+    class Bola {
         constructor(x = 0, y = 0, velx = 0, vely = 0, color, size = 20) {
             this.x = x;
             this.y = y;
@@ -10,26 +10,32 @@ function launchProgram() {
         }
     
         dibujar() {
-            let counter = 0;
-            return `Coordenadas bola ${counter++} de color ${this.color}:<br/>~ x: ${this.x}<br/>~ y: ${this.y}`
+            const div = document.getElementById("result");
+            const printHead = document.createTextNode(`Coordenadas bola de color ${this.color}:`);
+            const printX = document.createTextNode(`~ x: ${this.x}`);
+            const printY = document.createTextNode(`~ y: ${this.y}`);
+            div.appendChild(printHead);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(printX);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(printY);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(document.createElement("br"));
         }
     
         mover(velx = this.velx) {
             this.vely = velx;
             this.x += velx;
-            this.y += this.x;
+            this.y += this.vely;
         }
     }
+    document.getElementById("result").innerHTML = "";
+    let x = parseInt(document.getElementById("x").value);
+    let y = parseInt(document.getElementById("y").value);
+    let movement = parseInt(document.getElementById("movement").value);
     
-    const bola1 = new bola(3,1,0,0,"roja");
-    const div = document.getElementById("result");
-    const bola1Print = document.createTextNode(bola1.dibujar());
-    div.appendChild(bola1Print);
-    bola1.mover(2);
-    div.appendChild(bola1Print);
-
-    const bola2 = new bola(1,14,0,0,"amarillo");
-    document.getElementById("result").innerHTML = bola2.dibujar();
-    document.getElementById("result").innerHTML = bola2.mover(4);
-    document.getElementById("result").innerHTML = bola2.dibujar(); 
+    const bola = new Bola(x,y,0,0,"roja");
+    bola.dibujar();
+    bola.mover(movement);
+    bola.dibujar();
 }
