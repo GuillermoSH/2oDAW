@@ -6,9 +6,9 @@ function openNewWindow() {
     let width = 400;
     let left = (screen.width - width) / 2;
     let top = (screen.height - height) / 2;
-    let features = `height=${height},width=${width},top=${top},left=${left},popup`;
+    let features = `height=${height},width=${width},top=${top},left=${left}`;
 
-    newWindow = window.open(url, "New Window", features);
+    newWindow = window.open(url, "", features);
 }
 
 function closeNewWindow() {

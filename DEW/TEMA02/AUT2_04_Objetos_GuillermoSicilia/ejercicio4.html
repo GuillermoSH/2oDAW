@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="subIndex.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ejercicio 4</title>
+    <style>
+        .fa {
+            color: black;
+        }
+
+        select {
+            font-size: 30px;
+        }
+
+        option {
+            font-size: 30px;
+        }
+
+        b {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>AUT2_04_Guillermo_Sicilia</header>
+    <main>
+        <br />
+        <h1>Ejercicio 4.-</h1>
+        <br />
+        <div id="enunciado">
+            Hacer Piedra, Papel, Tijera en el que participe el usuario.
+        </div><br />
+        <div class="align-center">
+            <label for="opcion">Elija su opción: </label>
+            <select id="opcion">
+                <option value="0">🪨</option>
+                <option value="1">🧻</option>
+                <option value="2">✂️</option>
+                <option value="3">🦎</option>
+                <option value="4">🖖</option>
+            </select>
+            <button onclick="juego()">Lanzar Juego</button>
+        </div>
+        <br />
+        <h3>Resultado:</h3><br />
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <div id="vueltaInicio"><a href="index.html">INICIO</div>
+    </footer>
+
+    <script src="ejercicio4.js"></script>
+</body>
+
+</html>
