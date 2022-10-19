@@ -17,8 +17,6 @@
             } else {
                 echo "Error en usuario y/o contraseña";
             }
-        } else {
-            
         }
     ?>
 </body>
