@@ -7,10 +7,22 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
-    <button onclick="openNewWindow()">Abrir Ventana</button>
-    <button onclick="closeNewWindow()">Cerrar Ventana</button>
-    <button onclick="enlargeNewWindow(30)">Ampliar Ventana</button>
-    <button onclick="reduceNewWindow(30)">Reducir Ventana</button>
+    <h1>Ejercicio 1.-</h1>
+    <form action="">
+        <input type="button" onclick="openNewWindow()" value="Abrir Ventana"/>
+        <input type="button" onclick="closeNewWindow()" value="Cerrar Ventana"/>
+        <input type="button" onclick="enlargeNewWindow()" value="Ampliar Ventana"/>
+        <input type="button" onclick="reduceNewWindow()" value="Reducir Ventana"/>
+        <br/>
+        <br/>
+        <label for="x">Posicion X:</label>
+        <input type="number" id="x"></input>
+        <br/>
+        <label for="y">Posicion Y:</label>
+        <input type="number" id="y"></input>
+        <br/>
+        <input type="button" onclick="moveNewWindow()" value="Mover Ventana"/>
+    </form>
     <script src="ejercicio1.js"></script>
 </body>
 </html>
