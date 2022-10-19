@@ -1,7 +1,7 @@
 class Juego {
     constructor() {
         this.opciones = ["piedra", "papel", "tijeras", "lagarto", "spock"];
-        this.emojis = ["🪨","🧻","✂️","🦎","🖖"];
+        this.emojis = ["✊","🧻","✂️","🦎","🖖"];
         this.jugador1 = this.preguntarNombre();
         this.jugador2 = "IA";
         this.puntosJ1 = 0;

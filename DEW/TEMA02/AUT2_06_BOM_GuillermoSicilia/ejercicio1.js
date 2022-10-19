@@ -15,6 +15,28 @@ function closeNewWindow() {
     if (newWindow != null) {
         newWindow.close();
     } else {
-        console.log("No hay ventana que cerrar")
+        console.log("No hay ventana que cerrar.")
+    }
+}
+
+function enlargeNewWindow(px) {
+    let newWidth = newWindow.innerWidth + px;
+    let newHeight = newWindow.innerHeight + px;
+
+    if (newWidth < screen.width && newHeight < screen.height) {
+        newWindow.resizeTo(newWidth, newHeight);
+    } else {
+        console.log("No se puede aumentar más la ventana.")
+    }
+}
+
+function reduceNewWindow(px) {
+    let newWidth = newWindow.innerWidth - px;
+    let newHeight = newWindow.innerHeight - px;
+    
+    if (newWidth > screen.width && newHeight > screen.height) {
+        newWindow.resizeTo(newWidth, newHeight);
+    } else {
+        console.log("No se puede reducir más la ventana.")
     }
 }
