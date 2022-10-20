@@ -12,18 +12,35 @@
     <form action="Ejercicio1.php" method="post" enctype="multipart/form-data">
         <table>
             <tr>
-                <td><label for="nombre">Nombre: </label><input type="text" id="nombre" /> </td>
-                <td><label for="ap1">Apellidos: </label><input type="text" id="ap1" /> </td>
-                <td><input type="text" id="ap2" /> </td>
+                <td>
+                    <label for="nombre">Nombre: </label><input type="text" id="nombre" />
+                </td>
+                <td>
+                    <label for="ap1">Apellidos: </label><input type="text" id="ap1" />
+                </td>
+                <td>
+                    <input type="text" id="ap2" />
+                </td>
             </tr>
             <tr>
-                <td><label for="user">Usuario: </label><input type="text" id="juanlo" /> </td>
-                <td><label for="email">Email: </label><input type="text" id="email" /> </td>
+                <td>
+                    <label for="user">Usuario: </label><input type="text" id="juanlo" />
+                </td>
+                <td>
+                    <label for="email">Email: </label><input type="text" id="email" />
+                </td>
             </tr>
             <tr>
-                <td><label for="pass">Contraseña: </label><input type="password" id="pass" /> </td>
-                <td><label for="passConfirm">Confirmar contraseña: </label><input type="password" id="passConfirm" /> </td>
-                <td><button type="submit" value="Enviar" name="enviar">Enviar</button></td>
+                <td>
+                    <label for="pass">Contraseña: </label><input type="password" id="pass" />
+                </td>
+                <td>
+                    <label for="passConfirm">Confirmar contraseña: </label>
+                    <input type="password" id="passConfirm" />
+                </td>
+                <td>
+                    <button type="submit" value="Enviar" name="enviar">Enviar</button>
+                </td>
             </tr>
         </table>
     </form>
@@ -45,7 +62,7 @@
         $email = $_POST['email'];
 
         if ($pass != $passConfirm) {
-            echo "<script> alert('Error01:\n\nLas contraseñas no coinciden.'); </script>";
+            echo "<script> alert('Error01:\\n\\nLas contraseñas no coinciden.'); </script>";
             exit;
         }
 
@@ -64,7 +81,7 @@
         } else {
             while ($linea = fgets($fdbaseDatos)) {
                 if (verifyExistingUser($linea, $usuario)) {
-                    echo "<script> alert('Error02:\n\nEste usuario ya está registrado.'); </script>";
+                    echo "<script> alert('Error02:\\n\\nEste usuario ya está registrado.'); </script>";
                     exit;
                 }
             }
