@@ -30,9 +30,9 @@
     <?php
     function verifyExistingUser(string $usuariojson, array $registro)
     {
-        $usuariof = json_decode($usuariojson);
+        $usuariof = (array)json_decode($usuariojson);
 
-        return $usuariof['usuario'] != $registro . ['usuario'];
+        return $usuariof['user'] == $registro['user'];
     }
 
     if (isset($_POST["Enviar"])) {
