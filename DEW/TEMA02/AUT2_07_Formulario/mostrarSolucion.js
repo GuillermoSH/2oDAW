@@ -1,0 +1,7 @@
+function imprimeSolucion() {
+    let solucionIndexJs = '<h2>Fichero Principal:</h2><br/>import{ imprimirInformacion } from "./libreria.js";<br/><br/>"use strict";<br/>const personas = [<br/>    { nombre: "Antonio", apellido: "Hernández" },<br/>    { nombre: "Marta", apellido: "Pérez" },<br/>    { nombre: "Alejandro", apellido: "Matos" },<br/>    { nombre: "Macarena", apellido: "Cabrera" },<br/>    { nombre: "Lucía", apellido: "García" }<br/>];<br/><br/>let resultado = "";<br/><br/>personas.forEach(persona => {<br/>    resultado += imprimirInformacion(persona) + "<br/>";<br/>});<br/>document.getElementById("resultado").innerHTML = resultado;<br/><br/>'
+    let solucionLibreriaJs = '<h2>Fichero Libreria Importada:</h2><br/>let contador = 0;<br/><br/>export function imprimirInformacion(persona) {<br/>    contador++;<br/>    if (contador < 10) {<br/>        return "Usuario 0" + contador + ": su nombre es " + [persona.nombre, persona.apellido].join(" ") + ".";<br/>    }<br/>    return "Usuario " + contador + ": su nombre es " + [persona.nombre, persona.apellido].join(" ") + ".";<br/>}'
+
+    document.getElementById("solucionFicheroIndex").innerHTML = solucionIndexJs;
+    document.getElementById("solucionFicheroLibreria").innerHTML = solucionLibreriaJs;
+}
