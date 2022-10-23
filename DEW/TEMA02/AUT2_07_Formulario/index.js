@@ -1,6 +1,6 @@
 import { imprimirInformacion } from "./libreria.js";
 
-'use strict';
+"use strict";
 const personas = [
     { nombre: "Antonio", apellido: "Hernández" },
     { nombre: "Marta", apellido: "Pérez" },
@@ -11,7 +11,9 @@ const personas = [
 
 let resultado = "";
 
+resultado += "<div class='container-resultado'>";
 personas.forEach(persona => {
     resultado += imprimirInformacion(persona) + "<br/>";
 });
+resultado += "</div>";
 document.getElementById("resultado").innerHTML = resultado;
