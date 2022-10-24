@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 10vw 1fr 10vw;
+    grid-template-rows: 10vh minmax(30px, 5vh) 1fr 15vh;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    height: 10vh;
+    width: 100vw;
+    background: rgb(0, 71, 255);
+    background: linear-gradient(315deg, rgba(0, 71, 255, 1) 7%, rgb(255, 102, 0) 40%, rgba(255, 255, 255, 1) 55%);
+    position: fixed;
+    /* Grid hijos */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.logo {
+    align-self: center;
+}
+
+.logo img {
+    margin-left: 1vw;
+    height: 8vh;
+}
+
+.slogan {
+    color: white;
+    font-size: 0.9vw;
+    letter-spacing: 0.5vw;
+    align-self: center;
+    justify-self: center;
+}
+
+nav {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    border: 0.2vw solid black;
+    background-color: white;
+    font-weight: bolder;
+    position: fixed;
+    width: 100vw;
+    height: 30px;
+    top: 10vh;
+    /* Grid hijos */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black
+}
+
+.buscador {
+    height: 80%;
+    width: 60%;
+    border-radius: 20px;
+    text-indent: 1vw;
+}
+
+main {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+main h1 {
+    color: rgb(255, 102, 0);
+    font-size: 40px;
+    text-indent: 2vw;
+}
+
+.container-productos {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.container-productos img {
+    width: 60%;
+}
+
+.container-procesadores,
+.container-ram,
+.container-perifericos,
+.container-placas-base {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.ram,
+.procesadores,
+.perifericos,
+.placas-base {
+    width: 100%;
+    height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(255, 102, 0);
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+footer {
+    grid-row: 4/5;
+    grid-column: 1/4;
+    height: 15vh;
+    background-color: rgb(0, 71, 255);
+    color: white;
+    display: grid;
+    justify-items: center;
+}
+
+.container-footer {
+    width: 80%;
+    height: 100%;
+    /* Grid hijos */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+}
+
+footer h3 {
+    text-indent: 7vw;
+    justify-self: start;
+}
+
+.sobre-nosotros {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.preguntas {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.sobre-nosotros, .preguntas {
+    width: 50%;
+    justify-self: center;
+    align-self: flex-start;
+}
