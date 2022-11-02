@@ -1,0 +1,24 @@
+label {
+    width: 150px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+input {
+    float: left;
+}
+
+input,
+select {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    background-color: burlywood;
+    width: 350px;
+}
+
+.error {
+    border: solid 2px #ff0000;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Recorrer Objetos</title>
+</head>
+
+<body>
+    <div id="solucion"></div>
+    <button onclick="mostrar()">Mostrar resultado</button>
+
+    <script>
+        function esMayor(edad) {
+            return edad > 18;
+        }
+        
+        function mostrar() {
+            let solucion = [];
+            let persona = {
+                nombre: "María",
+                apellido: "Pérez",
+                dni: "12345678Z",
+                edad: 17,
+                mayorDeEdad: null,
+                contacto: [659483268, "mariaperez@correo.es"]
+            }
+            persona.mayorDeEdad=esMayor(persona.edad);
+
+            let array = Object.keys(persona);
+
+            for (let x = 0; x < array.length; x++) {
+                solucion.push(persona[array[x]]);
+            }
+
+            let resultado = "<strong>Resultado del ejercicio:</strong><br/><br/>[";
+            solucion.forEach(persona => {
+                resultado += "'" + persona + "',";
+            });
+            resultado = resultado.substring(0, resultado.length - 1) + "]<br/><br/>";
+
+            document.getElementById("solucion").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

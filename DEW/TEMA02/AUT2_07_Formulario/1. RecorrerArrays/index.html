@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Recorrer Arrays</title>
+</head>
+
+<body>
+    <div id="solucion"></div>
+    <button onclick="mostrar()">Mostrar resultado</button>
+
+    <script>
+        function mostrar() {
+            const html = ["Kevin", "Pablo", "Viti", "Tomás"];
+            const css = ["Pablo", "Guillermo", "Viti"];
+            let solucion = [];
+            
+            for (let x = 0; x < html.length; x++) {
+                if (css.includes(html[x])) {
+                    solucion.push(html[x]);
+                }
+            }
+            
+            let resultado = "<strong>Resultado del ejercicio:</strong><br/><br/>[";
+            solucion.forEach(persona => {
+                resultado += "'" + persona + "',";
+            });
+            resultado = resultado.substring(0,resultado.length-1)+"]<br/><br/>";
+
+            document.getElementById("solucion").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
