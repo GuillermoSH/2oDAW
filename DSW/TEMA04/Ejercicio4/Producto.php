@@ -2,9 +2,11 @@
     class Producto
     {
         // private $id, $nombre, $precio, $descripcion, $urlImagen, $stock;
-        private $atributos = ["id"=>0,"nombre"=>"","precio"=>0,"descripcion"=>"","urlImagen"=>"","stock"=>0];
+        private $atributos = ["id"=>0,"nombre"=>"","precio"=>0,"descripcion"=>"",
+        "urlImagen"=>"","stock"=>0];
 
-        public function __construct($id, $nombre, $precio, $descripcion="", $urlImagen="", $stock=0)
+        public function __construct(int $id, string $nombre, float $precio,
+        string $descripcion="", string $urlImagen="", int $stock=0)
         {
             $this->id=$id;
             $this->nombre=$nombre;
@@ -17,7 +19,7 @@
         public function __set($propiedad, $valor)
         {
             if ($propiedad=="id" && $valor<1) {
-                throw new Exception("El id no es válido");
+                throw new InvalidArgumentException("El id no es válido");
             }
             $this->atributos[$propiedad]=$valor;
         }
@@ -29,6 +31,6 @@
 
         public function __toString()
         {
-            return "Producto: ".json_encode($this->atributos,JSON_UNESCAPED_UNICODE);
+            return "Producto: ".json_encode($this->atributos, JSON_UNESCAPED_UNICODE);
         }
     }
