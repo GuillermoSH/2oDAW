@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Solicitud Viaje en Barco</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    
+<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+<body>
+
+    <div class="checkout">
+        <div>
+            <p class="title"> Travel request </p>
+        </div>
+        <form class="form" autocomplete="off" novalidate>
+        <fieldset>
+            <label for="in_name">Name</label>
+            <input type="num" id="in_name" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_surname">
+            <label for="in_surname">Surname</label>
+            <input type="num" id="in_surname" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_dni">
+            <label for="in_dni">DNI/NIE</label>
+            <input type="num" id="in_dni_nie" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_postalcode">
+            <label for="in_postalcode">Postal code</label>
+            <div class="select">
+            <select id="in_postalcode">
+                <option selected>38400</option>
+                <option>38311</option>
+                <option>38450</option>
+                <option>Otro</option>
+            </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label for="btn_submit">Others ...</label>
+            <input type="text" id="btn_submit" />
+        </fieldset>
+        <fieldset id="errors"></fieldset>
+        <button class="btn" onclick="launch()">submit</button>
+        </form>
+    </div>
+    <script src="formulario.js"></script>
+</body>
+</html>
