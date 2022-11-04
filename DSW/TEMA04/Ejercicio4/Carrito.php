@@ -8,6 +8,7 @@
         /**
          * Si el producto ya está en el carrito, aumente la cantidad, de lo contrario, agréguelo al
          * carrito.
+         * 
          * @param Producto producto El producto a añadir al carrito.
          * @param int cantidad La cantidad del producto a añadir al carrito.
          */
@@ -25,7 +26,9 @@
 
         /**
          * Elimina el producto del array.
+         * 
          * @param Producto producto El producto a eliminar.
+         * @return bool dependiendo de si existe o no el producto.
          */
         public function borrar(Producto $producto):bool
         {
@@ -38,6 +41,7 @@
 
         /**
          * Decrementa la cantidad de un producto en el carrito.
+         * 
          * @param Producto producto El producto a añadir al carrito.
          * @param int cantidad La cantidad de producto a agregar.
          */
@@ -56,15 +60,42 @@
         }
 
         /**
-         * Devuelve el coste total de todos los productos del carrito
-         * @return int El costo total de todos los productos en el carrito.
+         * Devuelve el coste total de todos los productos del carrito.
+         * 
+         * @return float El costo total de todos los productos en el carrito.
          */
-        public function getCosteTotal()
+        public function getCosteTotal():float
         {
             $total = 0;
             foreach ($this->productos as $producto) {
                 $total += $producto->precio*$producto->cantidad;
             }
             return $total;
+        }
+
+        /**
+         * Devuelve el valor de la propiedad privada.
+         * 
+         * @return array La gama de productos.
+         */
+        public function getListaProductos():array
+        {
+            return $this->productos;
+        }
+
+        /**
+         * La función `__toString()` es un método mágico que se llama cuando
+         * el objeto se usa en un contexto de cadena.
+         * 
+         * @return string El contenido de la matriz.
+         */
+        public function __toString():string
+        {
+            // return "Carro: ".json_encode($this->productos,JSON_UNESCAPED_UNICODE);
+            ob_start();
+            print_r($this->productos);
+            $content=ob_get_contents();
+            ob_end_clean();
+            return $content;
         }
     }
