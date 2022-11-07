@@ -1,3 +1,9 @@
+<?php
+    declare(strict_types=1);
+    require_once("Carrito.php");
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,11 +21,25 @@
         </div>
         <div class="main">
             <div class="catalogo" id="catalogo">
-                <?php require_once("Catalogo.php") ?>
+                <h2>Productos</h2>
+                <br/>
+                <?php require_once("Catalogo.php"); ?>
             </div>
             <div class="carrito" id="carrito">
                 <h2>Carrito</h2>
-                <?php require_once("Carrito.php") ?>
+                <br/>
+                <?php require_once("Carrito.php");
+                $carrito = new Carrito();
+
+                if (isset($_POST['comprar'])) {
+                    $carrito->aniadir($_POST['comprar']);
+                    $listaProductos = $carrito->getListaProductos();
+
+                    foreach ($listaProductos as $producto) {
+                        echo $producto;
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>

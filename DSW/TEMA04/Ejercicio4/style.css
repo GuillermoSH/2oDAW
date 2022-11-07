@@ -47,7 +47,7 @@
 }
 
 .catalogo h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid rgb(53, 53, 53);
 }
 
 .catalogo .detalles {
@@ -60,5 +60,5 @@
 }
 
 .carrito h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid rgb(53, 53, 53);
 }

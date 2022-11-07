@@ -15,7 +15,7 @@
         require_once("../recursos/librerias/funciones/funcionesAuxImagenes.php");
         function cartaAleatoria() {
             $palos = ["bastos","copas","espadas","oros"];
-            return [$palos[rand(0,3)],rand[(1,12)]];
+            return [$palos[rand(0,3),rand(1,12)]];
         }
         function valorCarta($carta) {
             $valores = [0,11,0,10,0,0,0,0,0,0,2,3,4];

@@ -6,8 +6,6 @@
         new Producto(3, "Visconti van Gogh", 180, "El roller en sí utiliza el diseño de dieciocho facetas de Visconti, cuyos numerosos bordes realzan los vivos colores de la pluma. Viene con las cajas originales y la correspondiente garantía.", "imagenes/visconti.png", 0)
     ];
 
-    echo "<h2>Productos</h2>";
-    echo "<br/>";
     foreach ($productos as $producto) {
         echo "<h3>$producto->nombre</h3>";
         echo "<img src='$producto->urlImagen'>";
