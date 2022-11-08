@@ -50,13 +50,17 @@
     border-bottom: 4px solid rgb(53, 53, 53);
 }
 
-.catalogo .detalles {
+.detalles {
     margin: 15px 0 15px 0;
+    text-align: justify;
 }
 
 .carrito {
     grid-area: carrito;
     margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20px;
 }
 
 .carrito h2 {

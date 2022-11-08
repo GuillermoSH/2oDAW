@@ -12,6 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>La Estilográfica</title>
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,7 +49,7 @@
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="detalle.js"></script>
 </body>
 
 </html>
