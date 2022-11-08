@@ -1,18 +1,45 @@
-function validation(element, expReg) {
-    if (expReg.test(element.value)) {
-        element.setAttribute("style", "border-color: red;");
+function validation(element) {
+    const noDigits = /\d/;
+    
+    if (element == "name") {
+        element = document.getElementById("in_name");
+
+    } else {
+        element = document.getElementById("in_surname");
+    }
+
+    if (noDigits.test(element.value) || element.value == "") {
+        element.setAttribute("style", "border: 2px solid red;");
         return false;
     }
+    element.setAttribute("style", "border: 2px solid yellowgreen;");
     return true;
 }
 
-function nifNieValidation(nifNie, dniRegex, nieRegex) {
+function nifNieValidation() {
+    let nifNie = document.getElementById("in_dni_nie");
+    const dniRegex = /^\d{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
+    const nieRegex = /^[XYZ]\d{7}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;
+
     if (dniRegex.test(nifNie.value)) {
-        return letterCheck(nifNie.value);
+        if (letterCheck(nifNie.value)) {
+            nifNie.setAttribute("style", "border: 2px solid yellowgreen;");
+            return true;
+        } else {
+            nifNie.setAttribute("style", "border: 2px solid red;");
+            return false;
+        }
     } else if (nieRegex.test(nifNie.value)) {
         nifNie.replace(/^X/, "0").replace(/^Y/, "1").replace(/^Z/, "2");
-        return letterCheck(nifNie.value);
+        if (letterCheck(nifNie.value)) {
+            nifNie.setAttribute("style", "border: 2px solid yellowgreen;");
+            return true;
+        } else {
+            nifNie.setAttribute("style", "border: 2px solid red;");
+            return false;
+        }
     } else {
+        nifNie.setAttribute("style", "border: 2px solid red;");
         return false;
     }
 }
@@ -25,21 +52,23 @@ function letterCheck(dni) {
     return validLetters.charAt(charIndex) === letter;
 }
 
+function show(element) {
+    let tag = document.getElementById(element);
+    let select = document.getElementById("postalCodeSelect");
+
+    if(select.value == "Other...") {
+        tag.classList.remove("hidden");
+    } else {
+        tag.classList.add("hidden");
+    }
+}
+
 function launch() {
     event.preventDefault();
-    let name = document.getElementById("in_name");
-    let surname = document.getElementById("in_surname");
-    let dni_nie = document.getElementById("in_dni_nie");
-    let errors = document.getElementById("errors");
 
-    const noDigits = /\d/;
-    if (!validation(name, noDigits)) errors += " · Name: mustn't contain digits.";
-    if (!validation(surname, noDigits)) errors += " · Surname: mustn't contain digits.";
-
-    const dniRegex = /^\d{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
-    const nieRegex = /^[XYZ]\d{7}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;
-    if (!nifNieValidation(dni_nie, dniRegex, nieRegex)) {
-        errors += " · Dni/Nie: invalid identification.";
-        dni_nie.setAttribute("style", "border-color: red;");
+    if (!(validation("name") && validation("surname") && nifNieValidation())) {
+        alert("Campos incompletos o incorrectos");
+    } else {
+        console.log()
     }
 }

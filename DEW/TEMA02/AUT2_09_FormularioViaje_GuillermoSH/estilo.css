@@ -116,6 +116,9 @@ font-family: 'Open Sans', sans-serif !important;
   right: 10px;
   pointer-events: none;
 }
+.hidden {
+  display: none !important;
+}
 .form fieldset .select select {
   appearance: none;
   position: absolute;
