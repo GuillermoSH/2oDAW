@@ -41,12 +41,12 @@
     grid-area: main;
 }
 
-.catalogo {
+.container-catalogo {
     grid-area: catalogo;
     margin: 1rem;
 }
 
-.catalogo h2 {
+.container-catalogo h2 {
     border-bottom: 4px solid rgb(53, 53, 53);
 }
 
@@ -55,7 +55,7 @@
     text-align: justify;
 }
 
-.carrito {
+.carrito-container {
     grid-area: carrito;
     margin: 1rem;
     display: grid;
@@ -63,6 +63,6 @@
     grid-template-rows: 1fr 20px;
 }
 
-.carrito h2 {
+.carrito-container h2 {
     border-bottom: 4px solid rgb(53, 53, 53);
 }

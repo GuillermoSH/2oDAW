@@ -5,16 +5,3 @@
         new Producto(2, "Parker Duofold International", 406, "La pluma estilográfica Parker Duofold Classic Black International CT es ideal como regalo para todos en todo tipo de ocasiones, como cumpleaños o como regalo de Navidad.", "imagenes/parker.png", 0),
         new Producto(3, "Visconti van Gogh", 180, "El roller en sí utiliza el diseño de dieciocho facetas de Visconti, cuyos numerosos bordes realzan los vivos colores de la pluma. Viene con las cajas originales y la correspondiente garantía.", "imagenes/visconti.png", 0)
     ];
-
-    foreach ($productos as $producto) {
-        echo "<h3>$producto->nombre</h3>";
-        echo "<img src='$producto->urlImagen'>";
-        echo "<div><strong>Precio:</strong> ",$producto->precio,"€</div>";
-        echo "<div class='oculto detalles' id='detalles$producto->id'> · $producto->descripcion</div>";
-        echo "<form action='' method='post' enctype='multipart/form-data'>";
-        echo "    <input type='hidden' id='idProd_$producto->id' name='idProd' value='$producto->id'/>";
-        echo "    <button type='submit'>Comprar</button>";
-        echo "    <button type='button' onclick='mostrarOcultarDetalle($producto->id)' id='btn_detalle$producto->id'>Detalles</button>";
-        echo "</form>";
-        echo "<br/><hr/><br/>";
-    }
