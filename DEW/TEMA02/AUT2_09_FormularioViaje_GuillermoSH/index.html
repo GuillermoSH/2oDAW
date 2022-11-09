@@ -23,7 +23,7 @@
 
 <body>
 
-    <div class="checkout">
+    <div class="checkout" id="checkout">
         <div>
             <p class="title">Travel request</p>
         </div>
@@ -31,24 +31,24 @@
         <form class="form" autocomplete="off" novalidate>
             <!-- Name, surname and DNI/NIE info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_name">Name</label>
                     <input type="num" id="in_name" class="input-form" maxlength="15" required onkeyup="validation('name')"/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_surname">Surname</label>
                     <input type="num" id="in_surname" class="input-form" maxlength="15" required onkeyup="validation('surname')"/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_dni">DNI/NIE</label>
                     <input type="num" id="in_dni_nie" class="input-form" maxlength="9" required onkeyup="nifNieValidation()"/>
                 </div>
             </div>
             <!-- Postal code info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_postalcode">Postal code</label>
-                    <div class="select" required onchange="show('in_otherPostalCode')">
+                    <div class="select" required onchange="showPostalCode()">
                         <select id="postalCodeSelect">
                             <option selected>38400</option>
                             <option>38311</option>
@@ -61,71 +61,71 @@
             </div>
             <!-- Phones and resident info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_telephone">Telephone</label>
                     <input type="num" id="in_telephone" class="input-form" maxlength="10" required/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_mobilephone">Mobilephone</label>
                     <input type="num" id="in_mobilephone" class="input-form" maxlength="10" required/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_resident">Resident</label>
-                    <input type="checkbox" id="in_resident" class="input-form" maxlength="10" value="yes"/>
+                    <input type="radio" id="in_resident" class="radio-input" maxlength="10" value="yes"/>
                 </div>
             </div>
-            <!-- Date, number of people and emai info -->
+            <!-- Date, number of people and email info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_date">Go Date</label>
                     <input type="text" id="in_date" class="input-form" maxlength="10" required/>
                 </div>
-                <div class="col-3 d-flex flex-column">
+                <div class="col-3">
                     <label for="in_numPeople">Number of people</label>
                     <input type="number" id="in_numPeople" class="input-form" maxlength="2" required/>
                 </div>
-                <div class="col-5 d-flex flex-column">
+                <div class="col-5">
                     <label for="in_email">Email</label>
                     <input type="text" id="in_email" class="input-form" required/>
                 </div>
             </div>
             <!-- Social media info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_socialMedia">Social Media</label>
-                    <input type="checkbox" id="in_socialMedia" class="input-form" />
+                    <input type="radio" id="in_socialMedia" class="radio-input" onclick="showSocialMedia()"/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_instagram" class="hidden">Instagram</label>
                     <input type="text" id="in_instagram" class="input-form hidden"/>
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_facebook" class="hidden">Facebook</label>
                     <input type="text" id="in_facebook" class="input-form hidden"/>
                 </div>
             </div>
             <!-- Vehicle info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_vehicle">Vehicle</label>
-                    <input type="radio" id="in_vehicle" class="input-form" value="yes" />
+                    <input type="radio" id="in_vehicle" class="radio-input" value="yes" />
                 </div>
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_brand" class="hidden">Brand</label>
                     <input type="text" id="in_brand" class="input-form hidden" maxlength="20" />
                 </div>
-                <div class="col-4 d-flex flex-column hidden">
+                <div class="col-4">
                     <label for="in_model" class="hidden">Model</label>
                     <input type="text" id="in_model" class="input-form hidden" />
                 </div>
             </div>
             <!-- IP and reason info -->
             <div class="row">
-                <div class="col-4 d-flex flex-column">
+                <div class="col-4">
                     <label for="in_ip">IP</label>
                     <input type="text" id="in_ip" class="input-form" maxlength="15" required/>
                 </div>
-                <div class="col-8 d-flex flex-column">
+                <div class="col-8">
                     <label for="in_reason">Reason</label>
                     <input type="text" id="in_reason" class="input-form" required/>
                 </div>

@@ -52,15 +52,26 @@ function letterCheck(dni) {
     return validLetters.charAt(charIndex) === letter;
 }
 
-function show(element) {
-    let tag = document.getElementById(element);
+function showPostalCode() {
+    let tag = document.getElementById("in_otherPostalCode");
     let select = document.getElementById("postalCodeSelect");
+    let checkout = document.getElementById("checkout");
 
     if(select.value == "Other...") {
         tag.classList.remove("hidden");
+        checkout.style.height = "63vh";
     } else {
         tag.classList.add("hidden");
+        checkout.style.height = "59vh";
     }
+}
+
+function showSocialMedia() {
+    let insta = document.getElementById("in_instagram");
+    let face = document.getElementById("in_facebook");
+
+    insta.classList.remove("hidden");
+    face.classList.remove("hidden");
 }
 
 function launch() {
