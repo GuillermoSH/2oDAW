@@ -47,7 +47,7 @@
             <!-- Postal code info -->
             <div class="row">
                 <div class="col-4">
-                    <label for="in_postalcode">Postal code</label>
+                    <label for="postalCodeSelect">Postal code</label>
                     <div class="select" required onchange="showPostalCode()">
                         <select id="postalCodeSelect">
                             <option selected>38400</option>
@@ -56,18 +56,21 @@
                             <option>Other...</option>
                         </select>
                     </div>
-                    <input type="text" id="in_otherPostalCode" class="hidden" />
+                </div>
+                <div class="col-4 hidden" id="otherPostalCode">
+                    <label for="in_otherPostalCode">Other...</label>
+                    <input type="text" id="in_otherPostalCode" maxlength="5" onkeyup="postalCodeValidation()"/>
                 </div>
             </div>
             <!-- Phones and resident info -->
             <div class="row">
                 <div class="col-4">
                     <label for="in_telephone">Telephone</label>
-                    <input type="num" id="in_telephone" class="input-form" maxlength="10" required/>
+                    <input type="num" id="in_telephone" class="input-form" maxlength="13" required onkeyup="phoneValidation('telephone')"/>
                 </div>
                 <div class="col-4">
                     <label for="in_mobilephone">Mobilephone</label>
-                    <input type="num" id="in_mobilephone" class="input-form" maxlength="10" required/>
+                    <input type="num" id="in_mobilephone" class="input-form" maxlength="10" required onkeyup="phoneValidation('mobilephone')"/>
                 </div>
                 <div class="col-4">
                     <label for="in_resident">Resident</label>
@@ -95,28 +98,28 @@
                     <label for="in_socialMedia">Social Media</label>
                     <input type="radio" id="in_socialMedia" class="radio-input" onclick="showSocialMedia()"/>
                 </div>
-                <div class="col-4">
-                    <label for="in_instagram" class="hidden">Instagram</label>
-                    <input type="text" id="in_instagram" class="input-form hidden"/>
+                <div class="col-4 hidden" id="instagram">
+                    <label for="in_instagram">Instagram</label>
+                    <input type="text" id="in_instagram" class="input-form"/>
                 </div>
-                <div class="col-4">
-                    <label for="in_facebook" class="hidden">Facebook</label>
-                    <input type="text" id="in_facebook" class="input-form hidden"/>
+                <div class="col-4 hidden" id="facebook">
+                    <label for="in_facebook">Facebook</label>
+                    <input type="text" id="in_facebook" class="input-form"/>
                 </div>
             </div>
             <!-- Vehicle info -->
             <div class="row">
                 <div class="col-4">
                     <label for="in_vehicle">Vehicle</label>
-                    <input type="radio" id="in_vehicle" class="radio-input" value="yes" />
+                    <input type="radio" id="in_vehicle" class="radio-input" value="yes" onclick="showVehicleInfo()"/>
                 </div>
-                <div class="col-4">
-                    <label for="in_brand" class="hidden">Brand</label>
-                    <input type="text" id="in_brand" class="input-form hidden" maxlength="20" />
+                <div class="col-4 hidden" id="brand">
+                    <label for="in_brand">Brand</label>
+                    <input type="text" id="in_brand" class="input-form" maxlength="20" />
                 </div>
-                <div class="col-4">
-                    <label for="in_model" class="hidden">Model</label>
-                    <input type="text" id="in_model" class="input-form hidden" />
+                <div class="col-4 hidden" id="model">
+                    <label for="in_model">Model</label>
+                    <input type="text" id="in_model" class="input-form" />
                 </div>
             </div>
             <!-- IP and reason info -->

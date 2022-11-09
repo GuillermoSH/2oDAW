@@ -18,10 +18,10 @@ body {
     margin: 10px auto 50%;
     position: relative;
     width: 70vw;
-    height: 59vh;
+    height: 57vh;
     background: white;
     border-radius: 15px;
-    padding: 20px 45px 30px;
+    padding: 0px 20px 0px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
 }
 
