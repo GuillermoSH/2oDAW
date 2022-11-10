@@ -29,24 +29,28 @@
         </div>
 
         <form class="form" autocomplete="off" novalidate>
-            <!-- Name, surname and DNI/NIE info -->
+            <!-- Name, surname, DNI/NIE and residence info -->
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <label for="in_name">Name</label>
-                    <input type="num" id="in_name" class="input-form" maxlength="15" required onkeyup="validation('name')"/>
+                    <input type="num" id="in_name" class="input-form" maxlength="15" required onkeyup="nameSurnameValidation('name')"/>
                 </div>
                 <div class="col-4">
                     <label for="in_surname">Surname</label>
-                    <input type="num" id="in_surname" class="input-form" maxlength="15" required onkeyup="validation('surname')"/>
+                    <input type="num" id="in_surname" class="input-form" maxlength="15" required onkeyup="nameSurnameValidation('surname')"/>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <label for="in_dni">DNI/NIE</label>
                     <input type="num" id="in_dni_nie" class="input-form" maxlength="9" required onkeyup="nifNieValidation()"/>
                 </div>
+                <div class="col-2">
+                    <label for="in_resident">Resident</label>
+                    <input type="radio" id="in_resident" class="radio-input" maxlength="10" value="yes"/>
+                </div>
             </div>
-            <!-- Postal code info -->
+            <!-- Postal code and phones info -->
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                     <label for="postalCodeSelect">Postal code</label>
                     <div class="select" required onchange="showPostalCode()">
                         <select id="postalCodeSelect">
@@ -57,82 +61,80 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-4 hidden" id="otherPostalCode">
+                <div class="col-2 hidden" id="otherPostalCode">
                     <label for="in_otherPostalCode">Other...</label>
                     <input type="text" id="in_otherPostalCode" maxlength="5" onkeyup="postalCodeValidation()"/>
                 </div>
-            </div>
-            <!-- Phones and resident info -->
-            <div class="row">
                 <div class="col-4">
                     <label for="in_telephone">Telephone</label>
-                    <input type="num" id="in_telephone" class="input-form" maxlength="13" required onkeyup="phoneValidation('telephone')"/>
+                    <input type="num" id="in_telephone" class="input-form" maxlength="14" required onkeyup="phoneValidation('telephone')"/>
                 </div>
                 <div class="col-4">
                     <label for="in_mobilephone">Mobilephone</label>
                     <input type="num" id="in_mobilephone" class="input-form" maxlength="10" required onkeyup="phoneValidation('mobilephone')"/>
                 </div>
-                <div class="col-4">
-                    <label for="in_resident">Resident</label>
-                    <input type="radio" id="in_resident" class="radio-input" maxlength="10" value="yes"/>
-                </div>
             </div>
-            <!-- Date, number of people and email info -->
+            <!-- Date, number of people, email and IP info -->
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                     <label for="in_date">Go Date</label>
-                    <input type="text" id="in_date" class="input-form" maxlength="10" required/>
+                    <input type="text" id="in_date" class="input-form" maxlength="10" required onkeyup="dateValidation()"/>
                 </div>
-                <div class="col-3">
-                    <label for="in_numPeople">Number of people</label>
+                <div class="col-2">
+                    <label for="in_numPeople">People travelling</label>
                     <input type="number" id="in_numPeople" class="input-form" maxlength="2" required/>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                     <label for="in_email">Email</label>
-                    <input type="text" id="in_email" class="input-form" required/>
+                    <input type="text" id="in_email" class="input-form" required onkeyup="emailValidation()"/>
+                </div>
+                <div class="col-4">
+                    <label for="in_ip">IP</label>
+                    <input type="text" id="in_ip" class="input-form" maxlength="15" required onkeyup="ipv4Ipv6Validation()"/>
                 </div>
             </div>
             <!-- Social media info -->
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                     <label for="in_socialMedia">Social Media</label>
                     <input type="radio" id="in_socialMedia" class="radio-input" onclick="showSocialMedia()"/>
                 </div>
                 <div class="col-4 hidden" id="instagram">
                     <label for="in_instagram">Instagram</label>
-                    <input type="text" id="in_instagram" class="input-form"/>
+                    <input type="text" id="in_instagram" class="input-form" onkeyup="instaTwitterValidation('in_instagram')"/>
                 </div>
-                <div class="col-4 hidden" id="facebook">
-                    <label for="in_facebook">Facebook</label>
-                    <input type="text" id="in_facebook" class="input-form"/>
+                <div class="col-4 hidden" id="twitter">
+                    <label for="in_twitter">Twitter</label>
+                    <input type="text" id="in_twitter" class="input-form" onkeyup="instaTwitterValidation('in_twitter')"/>
                 </div>
             </div>
             <!-- Vehicle info -->
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                     <label for="in_vehicle">Vehicle</label>
                     <input type="radio" id="in_vehicle" class="radio-input" value="yes" onclick="showVehicleInfo()"/>
                 </div>
-                <div class="col-4 hidden" id="brand">
+                <div class="col-3 hidden" id="plate">
+                    <label for="in_plate">Car number plate</label>
+                    <input type="text" id="in_plate" class="input-form" onkeyup="carPlateValidation()"/>
+                </div>
+                <div class="col-3 hidden" id="brand">
                     <label for="in_brand">Brand</label>
-                    <input type="text" id="in_brand" class="input-form" maxlength="20" />
+                    <input type="text" id="in_brand" class="input-form"/>
                 </div>
                 <div class="col-4 hidden" id="model">
                     <label for="in_model">Model</label>
                     <input type="text" id="in_model" class="input-form" />
                 </div>
             </div>
-            <!-- IP and reason info -->
+            <!-- Reason info -->
             <div class="row">
-                <div class="col-4">
-                    <label for="in_ip">IP</label>
-                    <input type="text" id="in_ip" class="input-form" maxlength="15" required/>
-                </div>
-                <div class="col-8">
+                <div class="col-12">
                     <label for="in_reason">Reason</label>
                     <input type="text" id="in_reason" class="input-form" required/>
                 </div>
             </div>
+
             <div class="row p-2 d-flex justify-content-center">
                 <div class="col-2">
                     <input type="button" class="btn" onclick="launch()" value="SUBMIT" />

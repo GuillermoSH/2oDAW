@@ -11,14 +11,14 @@ body {
 }
 
 body {
-    background: linear-gradient(50deg, #f3c680, rgba(161, 227, 226, 1));
+    background: linear-gradient(50deg, #777673, rgb(0, 0, 0));
 }
 
 .checkout {
     margin: 10px auto 50%;
     position: relative;
     width: 70vw;
-    height: 57vh;
+    height: 50vh;
     background: white;
     border-radius: 15px;
     padding: 0px 20px 0px;
@@ -27,11 +27,12 @@ body {
 
 .title {
     display: block;
+    padding-top: 10px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, .6);
     text-align: center;
     font-weight: bold;
-    color: #3d8291;
+    color: #4288de;
     font-size: 24px !important;
     font-family: 'Open Sans', sans-serif !important;
 }
@@ -43,34 +44,32 @@ body {
 .form label {
     display: block;
     text-transform: uppercase;
-    font-size: 11px;
     color: rgba(0, 0, 0, .6);
-    margin-bottom: 5px;
     font-weight: bold;
-    color: #3d8291;
-    font-size: 12px !important;
+    color: #000000;
+    font-size: 10px !important;
     font-family: 'Open Sans', sans-serif !important;
 }
 
 .form input {
     width: 100%;
-    height: 38px;
+    height: 30px;
     color: #333;
-    padding: 10px;
     border-radius: 5px;
     font-size: 15px;
     outline: none !important;
-    color: #3d8291;
+    color: #5a5a5a;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .form .radio-input {
-    height: 20px;
-    margin-top: 8px;
+    height: 15px;
+    margin-top: 6px;
     border: none;
     box-shadow: none;
 }
+
 
 .form .select {
     clear: none;
@@ -82,7 +81,8 @@ body {
 
 .btn {
     /*display: block;*/
-    background: #bded7d !important;
+    background: #7db1ed !important;
+    color: white !important;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bolder !important;
