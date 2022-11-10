@@ -1,3 +1,62 @@
+class Client {
+    constructor(name = "", surname = "", dni = "", postalCode = "", telephone = "", mobilephone = "", departureDate = "", email = "", carPlate = "", reason = "") {
+        this.completeName = name + " " + surname;
+        this.dni = dni;
+        this.postalCode = postalCode;
+        this.contactPhones = telephone + " " + mobilephone;
+        this.departureDate = departureDate;
+        this.email = email;
+        this.carPlate = carPlate;
+        this.reason = reason;
+        this.letterCounter = 0;
+    }
+
+    setCompleteName(name,surname) {
+        this.completeName = name + " " + surname;
+    }
+
+    setDni(dni) {
+        this.dni = dni;
+    }
+
+    setPostalCode(postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    setPhones(telephone, mobilephone) {
+        this.contactPhones = telephone + " " + mobilephone;
+    }
+
+    setGoDate(date) {
+        this.departureDate = date;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
+    setCarPlate(carPlate) {
+        this.carPlate = carPlate;
+    }
+
+    setReason(reason) {
+        this.reason = reason.replace(/\s+/g, " ").trim();
+        this.letterCount = this.reason.join(" ").length;
+    }
+
+    toString() {
+        let result = "";
+        result += "Client " + this.completeName + ":\n";
+        result += "\t· DNI/NIE: " + this.dni + ".\n";
+        result += "\t· Postal code: " + this.postalCode + ".\n";
+        result += "\t· Contact phones: " + this.contactPhones.split(" ")[0] + " and " + this.contactPhones.split(" ")[1] + ".\n";
+        result += "\t· Departure date: " + this.departureDate + ".\n";
+        result += "\t· Email: " + this.email + ".\n";
+        result += "\t· Car plate: " + this.carPlate + ".\n";
+        result += "\t· Reason: " + this.reason + ".\n";
+    }
+}
+
 /**
  * It checks if the name or surname field contains digits or is empty. If it does, it sets the border
  * to red, otherwise it sets it to yellowgreen.
@@ -177,7 +236,7 @@ function ipv4Ipv6Validation() {
  * @returns a boolean value.
  */
 function instaTwitterValidation(socialMediaType) {
-    const regex = /^\@[\w_-]+$/;
+    const regex = /^\@[\w_-]{1,15}$/;
     let socialMedia = document.getElementById(socialMediaType);
     
     if (!regex.test(socialMedia.value) || socialMedia.value == "") {
@@ -238,9 +297,21 @@ function showVehicleInfo() {
 function launch() {
     event.preventDefault();
 
-    if (!(validation("name") && validation("surname") && nifNieValidation() && phoneValidation("telephone") && phoneValidation("mobilephone") && peopleTravelling() && postalCodeValidation() && dateValidation() && emailValidation() && ipv4Ipv6Validation())) {
+    if (!(nameSurnameValidation("name") && validation("surname") && nifNieValidation() && phoneValidation("telephone") && phoneValidation("mobilephone") && peopleTravelling() && postalCodeValidation() && dateValidation() && emailValidation() && ipv4Ipv6Validation())) {
         alert("Campos incompletos o incorrectos");
     } else {
         alert("Too correcto manito");
+        let name = document.getElementById("in_name").value;
+        let surname = document.getElementById("in_surname").value;
+        let dni = document.getElementById("in_dni_nie").value;
+        let postalCode = document.getElementById("in_otherPostalCode").value;
+        let telephone = document.getElementById("in_telephone").value;
+        let mobilephone = document.getElementById("in_mobilephone").value;
+        let departureDate = document.getElementById("in_date").value;
+        let email = document.getElementById("in_email").value;
+        let carPlate = document.getElementById("in_plate").value;
+        let reason = document.getElementById("in_reason").value;
+        let cliente = new Cliente(name,surname,dni,postalCode,telephone,mobilephone,departureDate,email,carPlate,reason);
+        console.log(cliente);
     }
 }
