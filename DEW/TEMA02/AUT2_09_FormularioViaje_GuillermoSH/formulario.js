@@ -7,7 +7,7 @@ class Client {
         this.departureDate = departureDate;
         this.email = email;
         this.carPlate = carPlate;
-        this.reason = setReason(reason);
+        this.reason = reason;
         this.letterCounter = 0;
     }
 
@@ -41,7 +41,7 @@ class Client {
 
     setReason(reason) {
         this.reason = reason.replace(/\s+/g, " ").trim();
-        this.letterCount = this.reason.join(" ").length;
+        this.letterCount = this.reason.replace(" ","").length;
     }
 
     toString() {
@@ -54,6 +54,7 @@ class Client {
         result += "\t· Email: " + this.email + ".\n";
         result += "\t· Car plate: " + this.carPlate + ".\n";
         result += "\t· Reason: " + this.reason + ".\n";
+        return result;
     }
 }
 
@@ -187,7 +188,7 @@ function peopleTravelling() {
  * @returns a boolean value.
  */
 function dateValidation() {
-    const regex = /^\d{2}\/\d{2}\/\d{4}$/;
+    const regex = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/2\d{3}$/;
     let date = document.getElementById("in_date");
 
     if (!regex.test(date.value) || date.value == "") {
@@ -254,7 +255,7 @@ function instaTwitterValidation(socialMediaType) {
  * @returns a boolean value.
  */
 function carPlateValidation() {
-    const regex = /^\d{4}\-[A-Z]{3}/;
+    const regex = /^\d{4}\-[A-Z]{3}$/;
     let carPlate = document.getElementById("in_plate");
 
     if (!regex.test(carPlate.value) || carPlate.value == "") {
@@ -301,5 +302,20 @@ function launch() {
         alert("Campos incompletos o incorrectos");
     } else {
         alert("Too correcto manito");
+        let name = document.getElementById("in_name").value;
+        let surname = document.getElementById("in_surname").value;
+        let departureDate = document.getElementById("in_date").value;
+        let email = document.getElementById("in_email").value;
+        let carPlate = document.getElementById("in_plate").value;
+        let reason = document.getElementById("in_reason").value;
+        let dni = document.getElementById("in_dni_nie").value;
+        let telephone = document.getElementById("in_telephone").value;
+        let mobilephone = document.getElementById("in_mobilephone").value;
+        let postalCode = document.getElementById("in_otherPostalCode").value;
+
+        let client = new Client(name,surname,dni,postalCode,telephone,mobilephone,departureDate,email,carPlate);
+        client.setReason(reason);
+
+        console.log(client.toString());
     }
 }
