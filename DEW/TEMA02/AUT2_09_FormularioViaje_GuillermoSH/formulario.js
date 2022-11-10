@@ -301,18 +301,5 @@ function launch() {
         alert("Campos incompletos o incorrectos");
     } else {
         alert("Too correcto manito");
-        let name = document.getElementById("in_name").value;
-        let surname = document.getElementById("in_surname").value;
-        let dni = document.getElementById("in_dni_nie").value;
-        let postalCode = document.getElementById("in_otherPostalCode").value;
-        let telephone = document.getElementById("in_telephone").value;
-        let mobilephone = document.getElementById("in_mobilephone").value;
-        let departureDate = document.getElementById("in_date").value;
-        let email = document.getElementById("in_email").value;
-        let carPlate = document.getElementById("in_plate").value;
-        let reason = document.getElementById("in_reason").value;
-
-        let client = new Client(name,surname,dni,postalCode,telephone,mobilephone,departureDate,email,carPlate,reason);
-        console.log(client.toString());
     }
 }
