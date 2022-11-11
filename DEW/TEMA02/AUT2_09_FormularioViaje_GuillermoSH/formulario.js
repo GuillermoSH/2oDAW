@@ -1,4 +1,30 @@
+/**
+ * Program for trip client form validation
+ * 
+ * @author Guillermo Sicilia Hernández 2oDAW
+ * @version 0.5
+ */
+
+/**
+ * It's a class that represents a client with all the info required. 
+ */
 class Client {
+    /**
+     * The constructor function is a function that is called when an object is created from a class.
+     * 
+     * @param [name] - String
+     * @param [surname] - String
+     * @param [dni] - ID number
+     * @param [postalCode] - "", telephone: "", mobilephone: "", departureDate: "", email: "",
+     * carPlate: "", reason: ""
+     * @param [telephone] - string
+     * @param [mobilephone] - "",
+     * @param [departureDate] - "2019-01-01"
+     * @param [email] - email address
+     * @param [carPlate] - "", reason: "", departureDate: "", email: "", contactPhones: "", postalCode:
+     * "", dni: "", completeName: ""
+     * @param [reason] - the reason for the visit
+     */
     constructor(name = "", surname = "", dni = "", postalCode = "", telephone = "", mobilephone = "", departureDate = "", email = "", carPlate = "", reason = "") {
         this.completeName = name + " " + surname;
         this.dni = dni;
@@ -11,6 +37,8 @@ class Client {
         this.letterCounter = 0;
     }
 
+    
+    /* Setting the values of the attributes of the class. */
     setCompleteName(name,surname) {
         this.completeName = name + " " + surname;
     }
@@ -39,11 +67,31 @@ class Client {
         this.carPlate = carPlate;
     }
 
+    /**
+     * It takes a string, removes all the extra spaces, and then counts the number of words in the
+     * string
+     * 
+     * @param reason - The reason for the ban.
+     */
     setReason(reason) {
-        this.reason = reason.replace(/\s+/g, " ").trim();
-        this.letterCount = this.reason.replace(" ","").length;
+        this.reason = reason.replace(/\s+/, " ").trim();
+        this.wordCount = this.reason.match(/\S+/g).length;
     }
 
+    /**
+     * This function returns the word count of the text.
+     * 
+     * @returns The wordCount variable is being returned.
+     */
+    getWordCount() {
+        return this.wordCount;
+    }
+
+    /**
+     * Override of the function toString().
+     * 
+     * @returns The info in a certain format
+     */
     toString() {
         let result = "";
         result += "Client " + this.completeName + ":\n";
@@ -67,46 +115,62 @@ class Client {
  */
 function nameSurnameValidation(element) {
     const noDigits = /\d/;
+    let error;
 
     if (element == "name") {
         element = document.getElementById("in_name");
+        error = document.getElementById("name_error");
     } else {
         element = document.getElementById("in_surname");
+        error = document.getElementById("surname_error");
     }
 
     if (noDigits.test(element.value) || element.value == "") {
+        error.innerHTML = "Error: Mustn't contain digits."
         element.setAttribute("style", "border: 2px solid red;");
         return false;
     }
     element.setAttribute("style", "border: 2px solid yellowgreen;");
+    error.innerHTML = "";
     return true;
 }
 
+/**
+ * It checks that either NIF or NIE input is correct by validating the regex and checking the
+ * letter introduced corresponds to the number.
+ * 
+ * @returns a boolean value.
+ */
 function nifNieValidation() {
     let nifNie = document.getElementById("in_dni_nie");
     const dniRegex = /^\d{8}[TRWAGMYFPDXBNJZSQVHLCKET]$/i;
     const nieRegex = /^[XYZ]?\d{5,8}[A-Z]$/;
 
-    if (dniRegex.test(nifNie.value)) {
+    if (dniRegex.test(nifNie.value)) { // nif validation + error log
         if (letterCheck(nifNie.value)) {
             nifNie.setAttribute("style", "border: 2px solid yellowgreen;");
+            document.getElementById("dni_error").innerHTML = "";
             return true;
         } else {
             nifNie.setAttribute("style", "border: 2px solid red;");
+            document.getElementById("dni_error").innerHTML = "Error: DNI/NIE invalid.";
             return false;
         }
-    } else if (nieRegex.test(nifNie.value)) {
+    } else if (nieRegex.test(nifNie.value)) { // nie validation + error log
         let valueNifNie = nifNie.value.replace("X", 0).replace("Y", 1).replace("Z", 2);
         console.log(valueNifNie);
         if (letterCheck(valueNifNie)) {
             nifNie.setAttribute("style", "border: 2px solid yellowgreen;");
+            document.getElementById("dni_error").innerHTML = "";
             return true;
         } else {
             nifNie.setAttribute("style", "border: 2px solid red;");
+            document.getElementById("dni_error").innerHTML = "Error: DNI/NIE invalid.";
             return false;
         }
     } else {
         nifNie.setAttribute("style", "border: 2px solid red;");
+        document.getElementById("dni_error").innerHTML = "Error: DNI/NIE invalid.";
         return false;
     }
 }
@@ -114,6 +178,7 @@ function nifNieValidation() {
 /**
  * It takes the first 8 digits of the DNI, divides them by 23, and then checks if the remainder matches
  * the last digit of the DNI.
+ * 
  * @param dni - The DNI number to check.
  * @returns a boolean value.
  */
@@ -125,15 +190,22 @@ function letterCheck(dni) {
     return validLetters.charAt(charIndex) === letter;
 }
 
+/**
+ * If the postal code is a number, is not empty and matches the format, then it's valid
+ * 
+ * @returns a boolean value.
+ */
 function postalCodeValidation() {
     const validCP = /^(?:0[1-9]\d{3}|[1-4]\d{4}|5[0-2]\d{3})$/;
     let postalCode = document.getElementById("in_otherPostalCode");
 
     if (!validCP.test(postalCode.value) || postalCode.value == "") {
+        document.getElementById("postalCode_error").innerHTML = "Error: must contain 5 numbers.";
         postalCode.setAttribute("style", "border: 2px solid red;");
         return false;
     }
     postalCode.setAttribute("style", "border: 2px solid yellowgreen;");
+    document.getElementById("postalCode_error").innerHTML = "";
     return true;
 }
 
@@ -145,9 +217,13 @@ function postalCodeValidation() {
  */
 function phoneValidation(phoneType) {
     let regex;
+    let errorDiv;
+    let errorLog;
     
     if (phoneType == "telephone") {
         phoneType = document.getElementById("in_telephone");
+        errorDiv = document.getElementById("telephone_error");
+        errorLog = "Error: must be (+34/0034) 9XX XXX XXX.";
         if (phoneType.value.substr(0,3) == "+34" || phoneType.value.substr(0,4) == "0034") {
             regex =  /^(\+34|0034)[ -]?9\d{8}|^9\d{8}$/; // internacional
         } else {
@@ -155,14 +231,18 @@ function phoneValidation(phoneType) {
         }
     } else {
         phoneType = document.getElementById("in_mobilephone");
+        errorDiv = document.getElementById("mobilephone_error");
+        errorLog = "Error: must be (6,7,8)XX XXX XXX.";
         regex = /^[6-8]\d{8}$/;
     }
     
     if (!regex.test(phoneType.value) || phoneType.value == "") {
+        errorDiv.innerHTML = errorLog;
         phoneType.setAttribute("style", "border: 2px solid red;");
         return false;
     }
     phoneType.setAttribute("style", "border: 2px solid yellowgreen;");
+    errorDiv.innerHTML = "";
     return true;
 }
 
@@ -173,12 +253,15 @@ function phoneValidation(phoneType) {
  */
 function peopleTravelling() {
     let numPeople = document.getElementById("in_numPeople");
+    const regex = /([1-9]|[1-9]\d)$/;
 
-    if (numPeople == "") {
+    if (!regex.test(numPeople.value) || numPeople.value == "") {
         numPeople.setAttribute("style", "border: 2px solid red;");
+        document.getElementById("numPeople_error").innerHTML = "Error: must be greater than 0.";
         return false;
     }
     numPeople.setAttribute("style", "border: 2px solid yellowgreen;");
+    document.getElementById("numPeople_error").innerHTML = "";
     return true;
 }
 
@@ -188,26 +271,37 @@ function peopleTravelling() {
  * @returns a boolean value.
  */
 function dateValidation() {
-    const regex = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/2\d{3}$/;
+    const regex = /^(0[1-9]|[1-2]\d|3[0-1])\/(0[1-9]|1[0-2])\/2\d{3}$/;
     let date = document.getElementById("in_date");
 
     if (!regex.test(date.value) || date.value == "") {
         date.setAttribute("style", "border: 2px solid red;");
+        document.getElementById("date_error").innerHTML = "Error: must be like XX/XX/XXXX.";
         return false;
     }
     date.setAttribute("style", "border: 2px solid yellowgreen;");
+    document.getElementById("date_error").innerHTML = "";
     return true;
 }
 
+/**
+ * It checks that the email format is like:
+ *   '____@____.xx' or '____@____.xxx'
+ * Furthermore, it can only have '.' or '-' as special characters.
+ * 
+ * @returns a boolean value.
+ */
 function emailValidation() {
-    const regex = /^\w+([.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     let email = document.getElementById("in_email");
 
     if (!regex.test(email.value) || email.value == "") {
         email.setAttribute("style", "border: 2px solid red;");
+        document.getElementById("email_error").innerHTML = "Error: must have @domain.xxx or @domain.xx. Special characters allowed are '.' or '-'.";
         return false;
     }
     email.setAttribute("style", "border: 2px solid yellowgreen;");
+    document.getElementById("email_error").innerHTML = "";
     return true;
 }
 
@@ -223,9 +317,11 @@ function ipv4Ipv6Validation() {
 
     if (!regex.test(ip.value) || ip.value == "") {
         ip.setAttribute("style","border: 2px solid red;");
+        document.getElementById("ip_error").innerHTML = "Error: formats are IPV4 X.X.X.X and IPV6 X:X:X:X:X:X:X:X.";
         return false;
     }
     ip.setAttribute("style","border: 2px solid yellowgreen");
+    document.getElementById("ip_error").innerHTML = "";
     return true;
 }
 
@@ -241,10 +337,12 @@ function instaTwitterValidation(socialMediaType) {
     let socialMedia = document.getElementById(socialMediaType);
     
     if (!regex.test(socialMedia.value) || socialMedia.value == "") {
+        document.getElementById(socialMediaType.substr(3) + "_error").innerHTML = "Error: must be '@accountName'.";
         socialMedia.setAttribute("style","border: 2px solid red;");
         return false;
     }
     socialMedia.setAttribute("style","border: 2px solid yellowgreen");
+    document.getElementById(socialMediaType.substr(3) + "_error").innerHTML = "";
     return true;
 }
 
@@ -260,12 +358,39 @@ function carPlateValidation() {
 
     if (!regex.test(carPlate.value) || carPlate.value == "") {
         carPlate.setAttribute("style","border: 2px solid red;");
+        document.getElementById("carPlate_error").innerHTML = "Error: must be '0000-XXX'.";
         return false;
     }
     carPlate.setAttribute("style","border: 2px solid yellowgreen");
+    document.getElementById("carPlate_error").innerHTML = "";
     return true;
 }
 
+function reasonValidation() {
+    const regExpPrincipio = /^([A-Z]|\s+[A-Z])/;
+    const regExpFecha = /(0[1-9]|[1-2]\d|3[0-1])\/(0[1-9]|1[0-2])\/2\d{3}/;
+    let reason = document.getElementById("in_reason");
+
+    if (!regExpPrincipio.test(reason.value)) {
+        document.getElementById("reason_error").innerHTML = "Error: must start with capital letter.";
+        reason.setAttribute("style","border: 2px solid red;");
+        return false;
+    }
+
+    if (regExpFecha.test(reason.value)) {
+        console.log("\n ------------ REASON LOG -----------\n-- Date: " + regExpFecha.exec(reason.value).toString().substring(0,10) + "--\n");
+    } else {
+        console.log("\n ------------ REASON LOG -----------\n-- Reason doesn't contain a date --\n")
+    }
+
+    document.getElementById("reason_error").innerHTML = "";
+    reason.setAttribute("style","border: 2px solid yellowgreen");
+    return true;
+}
+
+/**
+ * Function to show other postal code option in the form by changing display attribute
+ */
 function showPostalCode() {
     let tag = document.getElementById("otherPostalCode");
     let select = document.getElementById("postalCodeSelect");
@@ -277,6 +402,9 @@ function showPostalCode() {
     }
 }
 
+/**
+ * Function to show instagram and twitter inputs in the form by changing display attribute
+ */
 function showSocialMedia() {
     let insta = document.getElementById("instagram");
     let twitter = document.getElementById("twitter");
@@ -285,6 +413,9 @@ function showSocialMedia() {
     twitter.classList.remove("hidden");
 }
 
+/**
+ * Function to show vehicle info inputs in the form by changing display attribute
+ */
 function showVehicleInfo() {
     let brand = document.getElementById("brand");
     let model = document.getElementById("model");
@@ -295,13 +426,15 @@ function showVehicleInfo() {
     plate.classList.remove("hidden");
 }
 
+/**
+ * It validates all inputs requires are filled and with the correct format.
+ */
 function launch() {
     event.preventDefault();
 
     if (!(nameSurnameValidation("name") && nameSurnameValidation("surname") && nifNieValidation() && phoneValidation("telephone") && phoneValidation("mobilephone") && peopleTravelling() && postalCodeValidation() && dateValidation() && emailValidation() && ipv4Ipv6Validation())) {
-        alert("Campos incompletos o incorrectos");
+        alert("Some fields are incorrect or are not filled. Change them and then resend the form.\n\nThanks you.\n\nDeveloper team ♡");
     } else {
-        alert("Too correcto manito");
         let name = document.getElementById("in_name").value;
         let surname = document.getElementById("in_surname").value;
         let departureDate = document.getElementById("in_date").value;
@@ -311,11 +444,18 @@ function launch() {
         let dni = document.getElementById("in_dni_nie").value;
         let telephone = document.getElementById("in_telephone").value;
         let mobilephone = document.getElementById("in_mobilephone").value;
-        let postalCode = document.getElementById("in_otherPostalCode").value;
+        let otherPostalCode = document.getElementById("in_otherPostalCode").value;
+        let postalCode = document.getElementById("postalCodeSelect").value;
 
-        let client = new Client(name,surname,dni,postalCode,telephone,mobilephone,departureDate,email,carPlate);
+        let client;
+        
+        if (postalCode == "Other...") {
+            client = new Client(name,surname,dni,otherPostalCode,telephone,mobilephone,departureDate,email,carPlate);
+        } else {
+            client = new Client(name,surname,dni,postalCode,telephone,mobilephone,departureDate,email,carPlate);
+        }
+        
         client.setReason(reason);
-
         console.log(client.toString());
     }
 }
