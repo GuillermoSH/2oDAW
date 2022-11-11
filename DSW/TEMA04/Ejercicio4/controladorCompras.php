@@ -11,12 +11,15 @@ if (isset($_SESSION['carrito'])) {
 } else {
     $carrito = new Carrito();
 }
+$listaProductos = getListaProductos();
+$listaProductosCarro = $carrito->getListaProductos();
+$costeTotalCarro = $carrito->getCosteTotal();
 
 if (isset($_POST['idProd'])) {
     $producto = null;
     $idProd = $_POST['idProd'];
 
-    foreach ($productos as $prod) {
+    foreach ($listaProductos as $prod) {
         if ($prod->id == $idProd) {
             $producto = $prod;
             break;
@@ -34,10 +37,6 @@ if (isset($_POST['idProd'])) {
     }
 }
 
-$productos = getListaProductos();
-
-$listaProductosCarro = $carrito->getListaProductos();
-$costeTotalCarro = $carrito->getCosteTotal();
 
 require_once("vistaCompras.php");
 
