@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href=" ">
+    <title>Ejercicio 3</title>
+    <style>
+        .yellow {
+            background-color: rgb(255, 255, 0);
+            height: 10vh;
+        }
+
+        @media all and (max-width: 576px) {
+            .header {
+                background-color: rgb(255, 146, 133);
+                height: 11vh;
+            }
+            .first {
+                background-color: rgb(255, 0, 0);
+                height: 23vh;
+            }
+            .third {
+                background-color: rgb(255, 0, 0);
+                height: 23vh;
+            }
+            .second {
+                background-color: rgb(0, 255, 255);
+                height: 23vh;
+            }
+        }
+        @media screen and (min-width: 576px) and (max-width: 768px) {
+            .header {
+                background-color: rgb(0, 255, 255);
+                height: 10vh;
+            }
+            .first {
+                background-color: rgb(255, 0, 0);
+                height: 45vh;
+            }
+            .second {
+                background-color: rgb(255, 0, 0);
+                height: 45vh;
+            }
+            .third {
+                background-color: rgb(0, 255, 0);
+                height: 25vh;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .header {
+                background-color: rgb(0, 255, 0);
+                height: 10vh;
+            }
+            .first {
+                background-color: rgb(255, 0, 0);
+                height: 80vh;
+            }
+            .second {
+                background-color: rgb(255, 0, 0);
+                height: 80vh;
+            }
+            .third {
+                background-color: rgb(255, 0, 0);
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header col d-flex align-items-center justify-content-center justify-content-sm-start">
+                <em>Header</em>
+            </div>
+        </div>
+        <div class="row">
+            <div class="display-1 first col-12 col-sm-6 col-md-4 d-flex align-items-center justify-content-md-center align-items-md-start">
+                <strong>1</strong>
+            </div>
+            <div class="display-1 second col-12 col-sm-6 col-md-4 d-flex align-items-center justify-content-center justify-content-sm-end justify-content-md-center align-items-md-start">
+                <strong>2</strong>
+            </div>
+            <div class="display-1 third col-12 col-sm-12 col-md-4 d-flex align-items-center justify-content-end justify-content-sm-center align-items-md-start">
+                <strong>3</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="yellow col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end">
+                <em>Footer 1</em>
+            </div>
+            <div class="yellow col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
+                <em>Footer 2</em>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
