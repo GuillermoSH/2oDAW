@@ -1,0 +1,47 @@
+h1 {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zonaJuego {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+}
+
+.letra {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    background-color: aquamarine;
+    border: 2px solid cadetblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letra:hover {
+    background-color: darkcyan;
+    border: 2px solid cadetblue;
+    color: white;
+}
+
+.containerLetras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.palabraAdivinar {
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.hidden {
+    display: none;
+}
