@@ -41,13 +41,21 @@ body {
     display: none !important;
 }
 
+.errors {
+    margin-left: 3px;
+    color: red;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+}
+
 .form label {
     display: block;
     text-transform: uppercase;
     color: rgba(0, 0, 0, .6);
     font-weight: bold;
     color: #000000;
-    font-size: 10px !important;
+    font-size: 10px;
     font-family: 'Open Sans', sans-serif !important;
 }
 
