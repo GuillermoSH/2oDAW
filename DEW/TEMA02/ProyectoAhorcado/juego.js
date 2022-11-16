@@ -1,5 +1,75 @@
-const palabras = ["Parque Jurasico", "Star Wars", "Cars", "Buscando a Nemo", "La Sirenita", "El bueno, el feo y el malo"];
-let palabraAdivinar = palabras[parseInt(Math.random() * palabras.length)];
+const jsonPeliculas = {
+    "peliculasYseries": [
+        {
+            "Titulo": "Avatar"
+        },
+        {
+            "Titulo": "Soy leyenda"
+        },
+        {
+            "Titulo": "Vengadores"
+        },
+        {
+            "Titulo": "Interstellar"
+        },
+        {
+            "Titulo": "Cars"
+        },
+        {
+            "Titulo": "Buscando a Nemo"
+        },
+        {
+            "Titulo": "Star Wars"
+        },
+        {
+            "Titulo": "Los Simpson"
+        },
+        {
+            "Titulo": "Andor"
+        },
+        {
+            "Titulo": "Star Wars Clone Wars"
+        },
+        {
+            "Titulo": "Top Gear"
+        },
+        {
+            "Titulo": "Iron Man"
+        },
+        {
+            "Titulo": "Spider-Man"
+        },
+        {
+            "Titulo": "Uncharted"
+        },
+        {
+            "Titulo": "Parque Jurasico"
+        },
+        {
+            "Titulo": "El hombre del norte"
+        },
+        {
+            "Titulo": "Shazam"
+        },
+        {
+            "Titulo": "Predator La Presa"
+        },
+        {
+            "Titulo": "Dune"
+        },
+        {
+            "Titulo": "El proyecto Adam"
+        },
+        {
+            "Titulo": "La llegada"
+        },
+        {
+            "Titulo": "Pocoyo"
+        }
+    ]
+}
+
+let palabraAdivinar = jsonPeliculas.peliculasYseries[parseInt(Math.random() * jsonPeliculas.peliculasYseries.length)].Titulo;
 let adivinanza = palabraAdivinar.replaceAll(/\w/g, "_");
 let intentos = 6;
 
@@ -32,13 +102,13 @@ function comprobarVictoria(letra) {
         divAvance.innerHTML = "🥰 ¡Has ganado! 😍";
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
-    } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
-        divAvance.innerHTML = "Te quedan " + intentos + " intentos.";
-        intentos--;
     } else if (intentos == 0) {
         divAvance.innerHTML = "☹️ ¡Has perdido! ☹️";
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
+    } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
+        divAvance.innerHTML = "Te quedan " + intentos + " intentos.";
+        intentos--;
     }
 }
 
