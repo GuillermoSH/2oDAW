@@ -1,8 +1,78 @@
+* {
+    font-family: 'Rusty Hooks', sans-serif;
+}
+
+body {
+    background-image: url(./imagenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: top;
+}
+
+.icono img {
+    height: 6vh;
+    margin: 0px 10px 10px 10px;
+}
+
 h1 {
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.avance-container {
+    height: 60px;
+    position: relative;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.avance-container::after {
+    content: '';
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-image: conic-gradient(transparent,transparent,rgb(255,185,56));
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.avance-container::before {
+    content: '';
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-image: conic-gradient(transparent,transparent,orangered);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.avance-container span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: black;
+    z-index: 1;
+}
+
+.avance-container .avance {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1.5vw;
 }
 
 .zonaJuego {
@@ -13,11 +83,13 @@ h1 {
 }
 
 .letra {
+    font-weight: bolder;
     height: 50px;
     width: 50px;
     font-size: 30px;
-    background-color: aquamarine;
-    border: 2px solid cadetblue;
+    background-color: rgb(255, 185, 56);
+    border: 2px solid orangered;
+    box-shadow: -2px 2px rgba(55, 55, 55, 0.712);
 
     display: flex;
     align-items: center;
@@ -25,9 +97,24 @@ h1 {
 }
 
 .letra:hover {
-    background-color: darkcyan;
-    border: 2px solid cadetblue;
-    color: white;
+    background-color: rgb(255, 224, 166);
+    border: 2px solid orangered;
+    box-shadow: -3px 3px rgba(55, 55, 55, 0.712);
+    animation: ease-in;
+    transition: 0.5s;
+}
+
+.letra:disabled {
+    background-color: rgb(130, 84, 0);
+    color: rgb(66, 48, 13);
+    height: 44px;
+    width: 44px;
+    border: 2px solid transparent;
+}
+
+.letra:disabled:hover {
+    box-shadow: -2px 2px rgba(55, 55, 55, 0.712);
+    background-color: rgb(130, 84, 0);
 }
 
 .containerLetras {
@@ -35,11 +122,12 @@ h1 {
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    align-items: center;
 }
 
 .palabraAdivinar {
-    font-size: 20px;
-    letter-spacing: 10px;
+    font-size: 30px;
+    letter-spacing: 5px;
 }
 
 .hidden {
