@@ -11,7 +11,7 @@ class DAOProducto
      * 
      * @return bool El retorno es un valor booleano.
      */
-    public static function borrarProducto(int $id):bool
+    public static function borrarProducto(int $id): bool
     {
         $sql = "DELETE FROM producto WHERE id = '$id'";
         return BaseDAO::consulta($sql);
@@ -24,7 +24,7 @@ class DAOProducto
      * 
      * @return bool La consulta está siendo devuelta.
      */
-    public static function modificarProducto(Producto $producto):bool
+    public static function modificarProducto(Producto $producto): bool
     {
         $sql = "UPDATE producto SET descripcion = '$producto->descripcion',nombre = '$producto->nombre',
         precio = $producto->precio,imagen = '$producto->imagen' WHERE id = $producto->id";
@@ -38,9 +38,9 @@ class DAOProducto
      * 
      * @return bool El resultado de la consulta.
      */
-    public static function insertarProducto(Producto $producto):bool
+    public static function insertarProducto(Producto $producto): bool
     {
-        if ($producto->id==0) {
+        if ($producto->id == 0) {
             $id = "null";
         } else {
             $id = $producto->id;
@@ -50,7 +50,50 @@ class DAOProducto
         return BaseDAO::consulta($sql);
     }
 
-    public static function getPaginaProducto($numPag,$tamPag=10) {
-        
+    public static function buscarProducto(int $id): ?Producto
+    {
+        $resultado = BaseDAO::consulta("SELECT * FROM producto WHERE id='$id'");
+        if ($resultado->num_rows == 0) {
+            return null;
+        }
+        return Producto::getProducto($resultado->fetch_assoc);
+    }
+
+    /**
+     * Devuelve una matriz de objetos Producto, cada uno de los cuales se crea a partir de una fila en
+     * la base de datos.
+     * 
+     * @param numPag El número de página que desea obtener.
+     * @param tamPag El número de elementos por página.
+     */
+    public static function getPaginaProducto($numPag, $tamPag = 10): array
+    {
+        $listaProductos = [];
+        $indice = $tamPag * ($numPag - 1);
+        $sql = "SELECT * FROM producto LIMIT $indice,$tamPag";
+        $resultado = BaseDAO::consulta($sql);
+
+
+        while (($producto = $resultado->fetch_assoc()) != null) {
+            $listaProductos[$producto['id']] = Producto::getProducto($producto);
+        }
+
+        return  $listaProductos;
+    }
+
+    /**
+     * Devuelve el número de productos en la base de datos.
+     * 
+     * @return int El número de productos en la base de datos.
+     */
+    public static function numProductos(): int
+    {
+        $resultado = BaseDAO::consulta("SELECT COUNT(*) AS numProductos FROM producto");
+        return intval($resultado->fetch_assoc()['numProductos']);
+    }
+
+    public static function numPags(int $tamPag): int
+    {
+        return ceil(DAOProducto::numProductos() / $tamPag);
     }
 }

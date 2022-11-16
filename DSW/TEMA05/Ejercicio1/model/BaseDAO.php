@@ -18,14 +18,15 @@ class BaseDAO
         return $conexion;
     }
 
+    
     /**
-     * Ejecuta una consulta y devuelve el resultado.
+     * Se conecta a la base de datos y ejecuta la consulta.
      * 
      * @param string sql La consulta SQL a ejecutar.
      * 
-     * @return bool El resultado de la consulta.
+     * @return bool | mysqli_result El resultado de la consulta.
      */
-    public static function consulta(string $sql):bool
+    public static function consulta(string $sql):bool | mysqli_result
     {
         $conexion = self::getConexion();
         $resultado = $conexion->query($sql);
