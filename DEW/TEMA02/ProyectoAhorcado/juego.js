@@ -77,22 +77,25 @@ document.getElementById("palabraAdivinar").innerHTML = adivinanza;
 
 function jugarLetra(letra) {
     if (adivinanza != palabraAdivinar) {
-        let desglocePalabra = palabraAdivinar.split("");
-        let desgloceAdivinanza = adivinanza.split("");
-
-        for (let i = 0; i < palabraAdivinar.length; i++) {
-            if (desglocePalabra[i] == letra.toUpperCase() || desglocePalabra[i] == letra.toLowerCase()) {
-                desgloceAdivinanza[i] = palabraAdivinar.charAt(i);
-            }
-        }
-        document.getElementById(letra).disabled = true;
-
-        adivinanza = desgloceAdivinanza.join("");
+        comprobarLetra(letra);
 
         comprobarVictoria(letra);
 
+        document.getElementById(letra).disabled = true;
         document.getElementById("palabraAdivinar").innerHTML = adivinanza;
     }
+}
+
+function comprobarLetra(letra) {
+    let desglocePalabra = palabraAdivinar.split("");
+    let desgloceAdivinanza = adivinanza.split("");
+
+    for (let i = 0; i < palabraAdivinar.length; i++) {
+        if (desglocePalabra[i] == letra.toUpperCase() || desglocePalabra[i] == letra.toLowerCase()) {
+            desgloceAdivinanza[i] = palabraAdivinar.charAt(i);
+        }
+    }
+    adivinanza = desgloceAdivinanza.join("");
 }
 
 function comprobarVictoria(letra) {

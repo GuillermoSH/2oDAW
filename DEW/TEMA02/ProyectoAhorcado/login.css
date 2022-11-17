@@ -1,0 +1,29 @@
+* {
+    font-family: 'Rusty Hooks', sans-serif;
+}
+
+body {
+    background-image: url(./imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+form {
+    height: 500px;
+    width: 400px;
+    background-color: antiquewhite;
+    box-shadow: inset 0px 0px 40px 5px #444;
+    border-radius: 20px;
+}
+
+.form-floating input {
+    width: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
