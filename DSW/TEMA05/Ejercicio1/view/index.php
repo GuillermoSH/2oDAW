@@ -1,3 +1,7 @@
+<?php
+    declare(strict_types=1); 
+    require_once("../model/DAOProducto.php")
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +12,24 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
-    <div>
-        <?php require_once("vistaProductos.php"); ?>
-    </div>
+    <h1>Catálogo de Productos - Imprenta S.A.</h1>
+    <table>
+        <tr><th>ID</th><th>Descripción</th><th>Nombre</th><th>Precio</th><th>Imagen</th></tr>
+        <?php 
+            $paginaProductos=DAOProducto::getPaginaProducto(1);
+            foreach ($paginaProductos as $producto) {
+                echo "<tr>
+                    <td><input type='text' value='$producto->id' maxlength='6' size='6' readonly/></td>
+                    <td><input type='text' value='$producto->descripcion' maxlength='512' size='40' readonly/></td>
+                    <td><input type='text' value='$producto->nombre' maxlength='40' size='40' readonly/></td>
+                    <td><input type='number' value='$producto->precio' maxlength='11' size='40' readonly/></td>
+                    <td><input type='text' value='$producto->imagen' maxlength='40' size='40' readonly/></td>
+                    <td><button id='btnEliminar$producto->id'>Eliminar</button></td>
+                    <td><button id='btnModificar$producto->id'>Modificar</button></td>
+                </tr>";
+            }
+        ?>
+    </table>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

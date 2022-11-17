@@ -1,6 +1,6 @@
 <?php
-require_once("BaseDAO.php");
-require_once("Producto.php");
+require_once(__DIR__."/BaseDAO.php");
+require_once(__DIR__."/Producto.php");
 
 class DAOProducto
 {
