@@ -12,8 +12,9 @@ body {
 form {
     height: 500px;
     width: 400px;
-    background-color: antiquewhite;
-    box-shadow: inset 0px 0px 40px 5px #444;
+    background-color: black;
+    color: white;
+    box-shadow: inset 0px 0px 40px 5px #888;
     border-radius: 20px;
 }
 
@@ -22,8 +23,18 @@ form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.form-floating label {
+    color: orangered;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .centrado {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btnLogin {
+    margin-top: 120px;
 }
