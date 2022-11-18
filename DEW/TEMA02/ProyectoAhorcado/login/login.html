@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/rusty-hooks" rel="stylesheet">
+    <link rel="icon" href="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- REGISTRARSE -->
+        <div class="container__form container--registrarse">
+            <form action="#" class="form" id="form1">
+                <h2 class="titulo__form">Registrarse</h2>
+                <input type="text" id="usuarioReg" placeholder="Usuario" class="input" />
+                <input type="password" id="contraseniaReg" placeholder="Contraseña" class="input" />
+                <input type="password" id="contrasenia2Reg" placeholder="Repetir contraseña" class="input" />
+                <button class="btn" id="btnRegistrarse">Registrarse</button>
+            </form>
+        </div>
+        <!-- INICIAR SESION -->
+        <div class="container__form container--login">
+            <form action="#" class="form" id="form2">
+                <h2 class="titulo__form">Iniciar Sesión</h2>
+                <input type="text" id="usuarioLog" placeholder="Usuario" class="input" />
+                <input type="password" id="contraseniaLog" placeholder="Contraseña" class="input" />
+                <button class="btn" id="btnLogin">Iniciar Sesión</button>
+            </form>
+        </div>
+        <!-- OVERLAY -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--izquierda">
+                    <button class="btn" id="login">Iniciar Sesión</button>
+                </div>
+                <div class="overlay__panel overlay--derecha">
+                    <button class="btn" id="registrarse">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-main="script" src="require.js"></script>
+</body>
+</html>
