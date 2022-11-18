@@ -14,11 +14,11 @@ class Producto
      * @param float precio El precio del producto.
      * @param string imagen La imagen del producto.
      */
-    public function __construct(int $id, string $nombre, string $descripcion, float $precio, string $imagen)
+    public function __construct(int $id, string $descripcion, string $nombre, float $precio, string $imagen)
     {
         $this->id = $id;
+        $this->descripcion = $descripcion;
         $this->nombre = $nombre;
-        $this->atributos['descripcion'] = $descripcion;
         $this->precio = $precio;
         $this->imagen = $imagen;
     }
