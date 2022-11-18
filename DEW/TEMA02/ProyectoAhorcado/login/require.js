@@ -1,4 +1,7 @@
-/* LECTURA Y ESCRITURA DE JSON PARA VALIDACION DE USUARIOS 
+export { leerJson, escribirJson };
+
+/* LECTURA Y ESCRITURA DE JSON PARA VALIDACION DE USUARIOS */
+const config = require("./users.json");
 const fs = require('fs');
 let f = new Date();
 let fechaActualStr = formatearFecha(f.getDate()) + "/" + formatearFecha(f.getMonth()) + "/" + f.getFullYear() + "-" + formatearFecha(f.getHours()) + ":" + formatearFecha(f.getMinutes()) + ":" + formatearFecha(f.getSeconds());
@@ -10,12 +13,12 @@ function formatearFecha(numero) {
     return numero;
 }
 
-export function leerJson() {
+function leerJson() {
     let data;
 
     fs.readFile('./users.json', 'utf-8', (err, jsonString) => {
         if (err) {
-            fs.writeFile('./sesion.log', JSON.stringify(fechaActualStr + "__Error leyendo user.json ", null, 2), err => {
+            fs.writeFile('./logs/sesion.log', JSON.stringify(fechaActualStr + "__Error leyendo user.json ", null, 2), err => {
                 if (err) {
                     console.log("Error al escribir logs.");
                 }
@@ -28,14 +31,14 @@ export function leerJson() {
     return data;
 }
 
-export function escribirJson(nuevoUsuario) {
+function escribirJson(nuevoUsuario) {
     fs.writeFile('./users.json', JSON.stringify(nuevoUsuario, null, 2), err => {
         if (err) {
-            fs.writeFile('./sesion.log', JSON.stringify(fechaActualStr + "__Error escribiendo user.json ", null, 2), err => {
+            fs.writeFile('./logs/sesion.log', JSON.stringify(fechaActualStr + "__Error escribiendo user.json ", null, 2), err => {
                 if (err) {
                     console.log("Error al escribir logs.");
                 }
             });
         }
     });
-} */
+}

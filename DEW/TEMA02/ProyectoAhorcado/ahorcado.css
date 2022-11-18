@@ -1,12 +1,18 @@
-* {
+:root {
+    --principal: #0b2042;
+    --secundario: #19486e;
+    --terciario: #b5d6e4;
+    --blanco: #e9e9e9;
+
     font-family: 'Rusty Hooks', sans-serif;
 }
 
 body {
     background-image: url(./imagenes/fondo2.jpg);
     background-repeat: no-repeat;
-    background-size: 1920px 1080px;
     background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .icono img {
@@ -22,21 +28,26 @@ h1 {
 }
 
 .btnCerrarSesion {
-    background-color: rgb(11, 36, 77);
-    color: white;
-    border: 4px solid white;
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    transition: 0.3s;
+	background-color: var(--principal);
+	background-image: linear-gradient(90deg, var(--principal) 0%, var(--secundario) 74%);
+	border-radius: 20px;
+	border: 2px solid var(--principal);
+	color: var(--blanco);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 }
 
-.btnCerrarSesion:hover {
-    background-color: white;
-    color: rgb(11, 36, 77);
-    border: 2px solid rgb(11, 36, 77);
-    transition: 0.3s;
-    box-shadow: 0px 0px 20px 0px #444;
+.btnCerrarSesion:active {
+	transform: scale(0.95);
+}
+
+.btnCerrarSesion:focus {
+	outline: none;
 }
 
 .avance-container {
@@ -55,9 +66,9 @@ h1 {
     width: 700px;
     height: 700px;
     position: absolute;
-    background-image: conic-gradient(transparent,white,transparent, orange);
-    animation: animate 8s linear infinite;
-    animation-delay: -4s;
+    background-image: conic-gradient(transparent,var(--terciario),transparent, var(--blanco),transparent);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
 }
 
 .avance-container::before {
@@ -65,8 +76,8 @@ h1 {
     width: 700px;
     height: 700px;
     position: absolute;
-    background-image: conic-gradient(transparent,orange,transparent, white);
-    animation: animate 8s linear infinite;
+    background-image: conic-gradient(transparent,var(--blanco),transparent, var(--terciario),transparent);
+    animation: animate 6s linear infinite;
 }
 
 @keyframes animate{
@@ -106,34 +117,31 @@ h1 {
     height: 50px;
     width: 50px;
     font-size: 30px;
-    background-color: rgb(255, 185, 56);
-    border: 2px solid orangered;
-    box-shadow: -2px 2px 10px 2px rgba(55, 55, 55, 0.712);
-    transition: 0.3s;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0px 3px 0px 2px #19486ea9;
+    background-color: var(--blanco);
+    border: 2px solid #bebebe;
 }
 
 .letra:hover {
-    background-color: rgb(255, 224, 166);
-    border: 2px solid orangered;
-    box-shadow: -3px 3px rgba(55, 55, 55, 0.712);
-    transition: 0.3s;
+    background-color: #bebebe;
+    border: 2px solid #838383
+}
+
+.letra:active {
+    transform: scale(0.95);
 }
 
 .letra:disabled {
-    background-color: rgb(130, 84, 0);
-    color: rgb(66, 48, 13);
-    height: 44px;
-    width: 44px;
-    border: 2px solid transparent;
+    background-color: var(--principal);
+    color: var(--principal);
 }
 
 .letra:disabled:hover {
-    box-shadow: -2px 2px rgba(55, 55, 55, 0.712);
-    background-color: rgb(130, 84, 0);
+    border: 2px solid #bebebe;
+}
+
+.letra:disabled:active {
+    transform: none;
 }
 
 .containerLetras {
@@ -157,20 +165,33 @@ h1 {
     margin-left: 20px;
 }
 
-.btnVolverInicio, .btnNuevaPartida{
+.btnVolverInicio {
     text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    color:rgb(11, 36, 77);
-    border-radius: 10px;
-    border: 4px solid rgb(11, 36, 77);
-    transition: 0.3s;
 }
 
-.btnVolverInicio:hover, .btnNuevaPartida:hover {
-    background-color: rgb(11, 36, 77);
-    color: white;
-    border-color: white;
-    transition: 0.3s;
-    box-shadow: 0px 0px 20px 0px #444;
+.btnVolverInicio:hover {
+    color: var(--blanco);
+}
+
+.btnVolverInicio, .btnNuevaPartida {
+	background-color: var(--principal);
+	background-image: linear-gradient(90deg, var(--principal) 0%, var(--secundario) 74%);
+	border-radius: 20px;
+	border: 2px solid var(--principal);
+	color: var(--blanco);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.btnVolverInicio:active, .btnNuevaPartida:active {
+	transform: scale(0.95);
+}
+
+.btnVolverInicio:focus, .btnNuevaPartida:focus {
+	outline: none;
 }
