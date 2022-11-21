@@ -1,0 +1,154 @@
+:root {
+    --principal: #0b2042;
+    --secundario: #19486e;
+    --terciario: #b5d6e4;
+    --blanco: #e9e9e9;
+}
+
+body {
+    background-image: url(../imagenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 2fr 1fr 10vh;
+}
+
+.container__header {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono img {
+    height: 6vh;
+    align-self: center;
+    margin: 10px 10px 10px 10px;
+}
+
+h1 {
+    font-family: 'Short Stack', cursive;
+    font-weight: bolder;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__adivinanza {
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.palabraAdivinar {
+    font-size: 30px;
+    letter-spacing: 5px;
+    border: 3px solid var(--blanco);
+    background-image: linear-gradient(135deg, var(--secundario) 20%, var(--principal) 50%, var(--secundario) 80%);
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
+    box-shadow: 0 0 13px 1px var(--principal), inset 0 0 13px 1px var(--terciario);
+    color: var(--blanco);
+}
+
+.container__letras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
+}
+
+.letra {
+    font-weight: bolder;
+    border-radius: 5px;
+    height: 55px;
+    width: 55px;
+    font-size: 30px;
+    box-shadow: 0px 3px 0px 2px #19486ea9;
+    background-color: var(--blanco);
+    border: 2px solid #bebebe;
+}
+
+.letra:hover {
+    background-color: #bebebe;
+    border: 2px solid #838383
+}
+
+.letra:active {
+    transform: scale(0.95);
+}
+
+.letra:disabled {
+    background-color: var(--principal);
+    color: var(--principal);
+}
+
+.letra:disabled:hover {
+    border: 2px solid #bebebe;
+}
+
+.letra:disabled:active {
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.container__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnNuevaPartida {
+    margin-left: 30px;
+    padding: 0.7rem 2.5rem;
+}
+
+.button {
+	background-image: linear-gradient(140deg, var(--blanco) 0%, var(--terciario) 50%, var(--secundario) 100%);
+	border-radius: 20px;
+	border: 2px solid var(--principal);
+	color: var(--principal);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.7rem 2rem;
+	text-transform: uppercase;
+	transition: transform 60ms ease-in;
+}
+
+.button:active {
+	transform: scale(0.95);
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 0 var(--secundario), inset 0 0 8px 0 var(--terciario);
+    border: 2px solid var(--blanco);
+}

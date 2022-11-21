@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="juego1J.css">
+    <link rel="icon" href="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <title>Juego del ahorcado</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__header">
+            <div class="icono">
+                <img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto" />
+            </div>
+            <h1>AHORK2</h1>
+            <div class="icono">
+                <img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto" />
+            </div>
+        </div>
+        <div class="container__adivinanza">
+            <div class="avance" id="avance"></div>
+            <div class="palabraAdivinar" id="palabraAdivinar"></div>
+        </div>
+        <div class="container__letras">
+            <div class="letras">
+                <button id="A" class="letra" onclick="jugarLetra('A')">A</button>
+                <button id="B" class="letra" onclick="jugarLetra('B')">B</button>
+                <button id="C" class="letra" onclick="jugarLetra('C')">C</button>
+                <button id="D" class="letra" onclick="jugarLetra('D')">D</button>
+                <button id="E" class="letra" onclick="jugarLetra('E')">E</button>
+                <button id="F" class="letra" onclick="jugarLetra('F')">F</button>
+                <button id="G" class="letra" onclick="jugarLetra('G')">G</button>
+                <button id="H" class="letra" onclick="jugarLetra('H')">H</button>
+                <button id="I" class="letra" onclick="jugarLetra('I')">I</button>
+                <button id="J" class="letra" onclick="jugarLetra('J')">J</button>
+                <button id="K" class="letra" onclick="jugarLetra('K')">K</button>
+                <button id="L" class="letra" onclick="jugarLetra('L')">L</button>
+                <button id="M" class="letra" onclick="jugarLetra('M')">M</button>
+                <button id="N" class="letra" onclick="jugarLetra('N')">N</button>
+                <button id="Ñ" class="letra" onclick="jugarLetra('Ñ')">Ñ</button>
+                <button id="O" class="letra" onclick="jugarLetra('O')">O</button>
+                <button id="P" class="letra" onclick="jugarLetra('P')">P</button>
+                <button id="Q" class="letra" onclick="jugarLetra('Q')">Q</button>
+                <button id="R" class="letra" onclick="jugarLetra('R')">R</button>
+                <button id="S" class="letra" onclick="jugarLetra('S')">S</button>
+                <button id="T" class="letra" onclick="jugarLetra('T')">T</button>
+                <button id="U" class="letra" onclick="jugarLetra('U')">U</button>
+                <button id="V" class="letra" onclick="jugarLetra('V')">V</button>
+                <button id="W" class="letra" onclick="jugarLetra('W')">W</button>
+                <button id="X" class="letra" onclick="jugarLetra('X')">X</button>
+                <button id="Y" class="letra" onclick="jugarLetra('Y')">Y</button>
+                <button id="Z" class="letra" onclick="jugarLetra('Z')">Z</button>
+            </div>
+        </div>
+        <div class="container__btn">
+            <button id="btnVolverInicio" class="button">Volver al inicio</button>
+            <button id="btnNuevaPartida" class="button hidden">Nueva partida</button>
+        </div>
+    </div>
+
+    <script src="juego1J.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/rusty-hooks" rel="stylesheet">
     <link rel="icon" href="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif">
     <title>Login</title>
 </head>
@@ -14,22 +13,25 @@
     <div class="container">
         <!-- REGISTRARSE -->
         <div class="container__form container--registrarse">
-            <form action="#" class="form" id="form1">
-                <h2 class="titulo__form">Registrarse</h2>
-                <input type="text" id="usuarioReg" placeholder="Usuario" class="input" />
-                <input type="password" id="contraseniaReg" placeholder="Contraseña" class="input" />
-                <input type="password" id="contrasenia2Reg" placeholder="Repetir contraseña" class="input" />
+            <div class="form">
+                <h2 class="titulo__form" id="titulo-reg">Registrarse</h2>
+                <input type="text" id="usuarioReg" placeholder="Usuario" class="input" required />
+                <input type="password" id="contraseniaReg" placeholder="Contraseña" class="input" required />
+                <input type="password" id="contrasenia2Reg" placeholder="Repetir contraseña" class="input" required />
+                <div class="error__form" id="errorReg"></div>
+                <div class="exito__form" id="exitoReg"></div>
                 <button class="btn" id="btnRegistrarse">Registrarse</button>
-            </form>
+            </div>
         </div>
         <!-- INICIAR SESION -->
         <div class="container__form container--login">
-            <form action="#" class="form" id="form2">
-                <h2 class="titulo__form">Iniciar Sesión</h2>
-                <input type="text" id="usuarioLog" placeholder="Usuario" class="input" />
-                <input type="password" id="contraseniaLog" placeholder="Contraseña" class="input" />
+            <div class="form">
+                <h2 class="titulo__form" id="titulo-log">Iniciar Sesión</h2>
+                <input type="text" id="usuarioLog" placeholder="Usuario" class="input" required />
+                <input type="password" id="contraseniaLog" placeholder="Contraseña" class="input" required />
+                <div class="error__form" id="errorLog"></div>
                 <button class="btn" id="btnLogin">Iniciar Sesión</button>
-            </form>
+            </div>
         </div>
         <!-- OVERLAY -->
         <div class="container__overlay">
@@ -47,4 +49,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

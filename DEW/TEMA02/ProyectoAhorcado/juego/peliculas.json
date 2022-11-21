@@ -1,0 +1,130 @@
+{
+    "peliculasYseries": [
+        {
+            "Titulo": "Avatar",
+            "Fecha de salida": "18 Dec 2009",
+            "Duracion": "162 min",
+            "Genero": "Acción, Aventura, Fantasía",
+            "Director": "James Cameron",
+            "Sinopsis": "Entramos en el mundo Avatar de la mano de Jake Sully, un ex-Marine en silla de ruedas, que ha sido reclutado para viajar a Pandora, donde existe un mineral raro y muy preciado que puede solucionar la crisis energética existente en la Tierra.",
+            "Imagen": "https://pics.filmaffinity.com/Avatar-208925608-large.jpg"
+        },
+        {
+            "Titulo": "Soy leyenda",
+            "Fecha de salida": "14 Dec 2007",
+            "Duracion": "101 min",
+            "Genero": "Drama, Horror, Ciencia Ficción",
+            "Director": "Francis Lawrence",
+            "Sinopsis": "Año 2012. Robert Neville es un brillante científico, que, sin embargo, no ha podido impedir la expansión de un incurable virus creado por el hombre. Neville, inexplicablemente inmune al contagio, es el último superviviente humano de la ciudad de Nueva York y, quizá, del mundo. Pero Neville no está completamente solo. Víctimas mutantes de la plaga merodean en las sombras, vigilando cada uno de los movimientos del científico y esperando que cometa un error fatal para beber su sangre.",
+            "Imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/04/soy-leyenda_0.jpg?itok=NS58nujY"
+        },
+        {
+            "Titulo": "Vengadores",
+            "Fecha de salida": "04 May 2012",
+            "Duracion": "143 min",
+            "Genero": "Acción, Ciencia Ficción, Thriller",
+            "Director": "Joss Whedon",
+            "Sinopsis": "El director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial.",
+            "Imagen": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/2/2b/The_Avengers_Poster.png/revision/latest?cb=20150610135853&path-prefix=es"
+        },
+        {
+            "Titulo": "Interstellar",
+            "Fecha de salida": "07 Nov 2014",
+            "Duracion": "169 min",
+            "Genero": "Aventura, Drama, Ciencia Ficción",
+            "Director": "Christopher Nolan",
+            "Sinopsis": "Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.",
+            "Imagen": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT_RccL1NBnzoF49rygF-O0YRB2-kIsi_u2OY4nhmV9hRCWbHok"
+        },
+        {
+            "Titulo": "Juego de Tronos",
+            "Fecha de salida": "17 Apr 2011",
+            "Duracion": "56 min",
+            "Genero": "Aventura, Drama, Fantasía",
+            "Director": "David Benioff, D.B. Weiss",
+            "Sinopsis": "Juego de tronos es la historia de la lucha por un trono, el trono de hierro, forjado con las espadas de los enemigos vencidos. Siete son los reinos de Poniente y muchas las casas que se disputarán la corona: los herederos, los exiliados, los despojados y los actuales regentes.",
+            "Imagen": "https://pics.filmaffinity.com/Juego_de_Tronos_Serie_de_TV-293142110-mmed.jpg"
+        },
+        {
+            "Titulo": "Beetlejuice",
+            "Fecha de salida": "26 de febrero de 1987",
+            "Duracion": "97 min",
+            "Genero": "Comedia, Aventura",
+            "Director": "Peter Faiman",
+            "Sinopsis": "Un matrimonio de fantasmas contrata a Beetlejuice, un especialista en asustar mortales, para que ahuyente a los nuevos propietarios de su casa.",
+            "Imagen": "https://pics.filmaffinity.com/Bitelch_s-121077102-large.jpg"
+        },
+        {
+            "Titulo": "Cocodrilo Dundee",
+            "Fecha de salida": "22 de julio de 1988",
+            "Duracion": "92 min",
+            "Genero": "Comedia, Fantasía",
+            "Director": "Tim Burton",
+            "Sinopsis": "Michael Dundee es un rudo cazador de cocodrilos que, por su original filosofía de la vida, es considerado como un héroe. Sue Charlton, una reportera de Nueva York, decide ir a Australia para visitarle.",
+            "Imagen": "https://es.web.img3.acsta.net/pictures/14/03/10/10/12/005795.jpg"
+        },
+        {
+            "Titulo": "Valkyrie",
+            "Fecha de salida": "25 de diciembre de 2008",
+            "Duracion": "121 min",
+            "Genero": "Drama, Thriller, Histórica",
+            "Director": "Bryan Singer",
+            "Sinopsis": "El coronel Claus Von Stauffenberg, un aristócrata alemán, regresa de África gravemente herido en combate y, tras unirse a la resistencia alemana, se convierte en el cerebro de la Operación Valkiria, cuyo objetivo es derrocar el régimen nazi.",
+            "Imagen": "https://pics.filmaffinity.com/Valkiria-995851902-large.jpg"
+        },
+        {
+            "Titulo": "Ratatouille",
+            "Fecha de salida": "3 de agosto de 2007",
+            "Duracion": "111 min",
+            "Genero": "Animación, Comedia, Familiar",
+            "Director": "Brad Bird, Jan Pinkava",
+            "Sinopsis": "Remy es una rata que aprecia la buena comida y tiene un paladar bastante sofisticado. Su sueño es convertirse algún día en un gran chef francés a pesar de la oposición de su familia. El destino lleva a Remy a las alcantarillas de París, donde su situación no puede ser mejor, ya que se encuentra justo debajo de uno de los restaurantes más finos de París. El roedor se sentirá en el lugar perfecto para convertir su sueño en una realidad.",
+            "Imagen": "https://www.lavanguardia.com/peliculas-series/images/movie/poster/2007/6/w1280/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg"
+        },
+        {
+            "Titulo": "Memento",
+            "Fecha de salida": "19 de enero de 2001",
+            "Duracion": "113 min",
+            "Genero": "Misterio, Thriller",
+            "Director": "Christopher Nolan",
+            "Sinopsis": "Leonard es un investigador de una agencia de seguros cuya memoria está irreversiblemente dañada por culpa de un golpe en la cabeza, al intentar evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. A causa del golpe, ha perdido la memoria reciente, los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar y vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.",
+            "Imagen": "https://pics.filmaffinity.com/Memento-230609861-large.jpg"
+        },
+        {
+            "Titulo": "Stardust",
+            "Fecha de salida": "26 de octubre de 2007",
+            "Duracion": "127 min",
+            "Genero": "Aventura, Familiar, Fantasía",
+            "Director": "Matthew Vaughn",
+            "Sinopsis": "El adolescente Tristán atraviesa un muro que le lleva al reino mágico de Stormhold para regalar a su amada una estrella caída del firmamento.",
+            "Imagen": "https://pics.filmaffinity.com/Stardust-983044080-large.jpg"
+        },
+        {
+            "Titulo": "Planeta 51",
+            "Fecha de salida": "27 de noviembre de 2009",
+            "Duracion": "91 min",
+            "Genero": "Aventura, Animación, Comedia",
+            "Director": "Jorge Blanco, Javier Abad, Marcos Martínez",
+            "Sinopsis": "Un astronauta americano, el Capitán Charles 'Chuck' Baker, llega a un planeta en donde los habitantes son pequeños seres de color verde y orejas puntiagudas que viven pacíficamente, y que están atrapados en los años cincuenta cuyo único miedo es ser invadidos por alienígenas, como el astronauta que acaba de llegar. Chuck junto con sus acompañantes tendrán que hacerse hueco entre los habitantes, hasta que formen parte del Museo Espacial de Invasores Alienígenas.",
+            "Imagen": "https://pics.filmaffinity.com/Planet_51_Planeta_51-658764744-large.jpg"
+        },
+        {
+            "Titulo": "Django desencadenado",
+            "Fecha de salida": "18 de enero de 2013",
+            "Duracion": "165 min",
+            "Genero": "Drama, Western",
+            "Director": "Quentin Tarantino",
+            "Sinopsis": "Un antiguo esclavo une sus fuerzas con un cazador de recompensas alemán que lo libera y ayuda a cazar a los criminales más buscados del Sur, todo ello con la esperanza de encontrar a su esposa perdida hace mucho tiempo.",
+            "Imagen": "https://pics.filmaffinity.com/Django_desencadenado-858231343-large.jpg"
+        },
+        {
+            "Titulo": "Pulp Fiction",
+            "Fecha de salida": "13 de enero de 1995",
+            "Duracion": "154 min",
+            "Genero": "Drama, Crimen",
+            "Director": "Quentin Tarantino",
+            "Sinopsis": "Historias de dos matones, un boxeador y una pareja de atracadores de poca monta envueltos en una violencia espectacular e irónica.",
+            "Imagen": "https://pics.filmaffinity.com/Pulp_Fiction-210382116-mmed.jpg"
+        }
+    ]
+}
