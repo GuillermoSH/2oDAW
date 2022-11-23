@@ -1,113 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset= "UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="juego2J.css">
     <link rel="icon" href="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif">
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
-    <title>Juego del ahorcado</title>
+    <title>AHORK2</title>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6 d-flex justify-content-center align-items-center">
-                <div class="icono"><img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto"/></div>
-                <h1>AHORK2</h1>
-                <div class="icono"><img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto"/></div>
+    <div class="container">
+        <div class="container__header">
+            <div class="icono">
+                <img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto" />
+            </div>
+            <h1>AHORK2</h1>
+            <div class="icono">
+                <img src="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif" alt="Gif emoji muerto" />
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="row">
-                    <div class="col">
-                        <div class="avance-container">
-                            <span></span>
-                            <div class="avance" id="avance"></div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container__adivinanza">
+            <canvas id="canvasAhorcado"></canvas>
+            <div class="palabraAdivinar" id="palabraAdivinar"></div>
+        </div>
+        <div class="container__letras">
+            <div class="letras">
+                <button id="A" class="letra" onclick="jugarLetra('A')">A</button>
+                <button id="B" class="letra" onclick="jugarLetra('B')">B</button>
+                <button id="C" class="letra" onclick="jugarLetra('C')">C</button>
+                <button id="D" class="letra" onclick="jugarLetra('D')">D</button>
+                <button id="E" class="letra" onclick="jugarLetra('E')">E</button>
+                <button id="F" class="letra" onclick="jugarLetra('F')">F</button>
+                <button id="G" class="letra" onclick="jugarLetra('G')">G</button>
+                <button id="H" class="letra" onclick="jugarLetra('H')">H</button>
+                <button id="I" class="letra" onclick="jugarLetra('I')">I</button>
+                <button id="J" class="letra" onclick="jugarLetra('J')">J</button>
+                <button id="K" class="letra" onclick="jugarLetra('K')">K</button>
+                <button id="L" class="letra" onclick="jugarLetra('L')">L</button>
+                <button id="M" class="letra" onclick="jugarLetra('M')">M</button>
+                <button id="N" class="letra" onclick="jugarLetra('N')">N</button>
+                <button id="Ñ" class="letra" onclick="jugarLetra('Ñ')">Ñ</button>
+                <button id="O" class="letra" onclick="jugarLetra('O')">O</button>
+                <button id="P" class="letra" onclick="jugarLetra('P')">P</button>
+                <button id="Q" class="letra" onclick="jugarLetra('Q')">Q</button>
+                <button id="R" class="letra" onclick="jugarLetra('R')">R</button>
+                <button id="S" class="letra" onclick="jugarLetra('S')">S</button>
+                <button id="T" class="letra" onclick="jugarLetra('T')">T</button>
+                <button id="U" class="letra" onclick="jugarLetra('U')">U</button>
+                <button id="V" class="letra" onclick="jugarLetra('V')">V</button>
+                <button id="W" class="letra" onclick="jugarLetra('W')">W</button>
+                <button id="X" class="letra" onclick="jugarLetra('X')">X</button>
+                <button id="Y" class="letra" onclick="jugarLetra('Y')">Y</button>
+                <button id="Z" class="letra" onclick="jugarLetra('Z')">Z</button>
             </div>
-            <div class="col zonaJuego">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="palabraAdivinar" id="palabraAdivinar"></div>
-                    </div>
-                </div>
-                <div class="row m-5">
-                    <div class="col containerLetras">
-                        <button id="A" class="letra" onclick="jugarLetra('A')">A</button>
-                        <button id="B" class="letra" onclick="jugarLetra('B')">B</button>
-                        <button id="C" class="letra" onclick="jugarLetra('C')">C</button>
-                        <button id="D" class="letra" onclick="jugarLetra('D')">D</button>
-                        <button id="E" class="letra" onclick="jugarLetra('E')">E</button>
-                        <button id="F" class="letra" onclick="jugarLetra('F')">F</button>
-                        <button id="G" class="letra" onclick="jugarLetra('G')">G</button>
-                        <button id="H" class="letra" onclick="jugarLetra('H')">H</button>
-                        <button id="I" class="letra" onclick="jugarLetra('I')">I</button>
-                        <button id="J" class="letra" onclick="jugarLetra('J')">J</button>
-                        <button id="K" class="letra" onclick="jugarLetra('K')">K</button>
-                        <button id="L" class="letra" onclick="jugarLetra('L')">L</button>
-                        <button id="M" class="letra" onclick="jugarLetra('M')">M</button>
-                        <button id="N" class="letra" onclick="jugarLetra('N')">N</button>
-                        <button id="Ñ" class="letra" onclick="jugarLetra('Ñ')">Ñ</button>
-                        <button id="O" class="letra" onclick="jugarLetra('O')">O</button>
-                        <button id="P" class="letra" onclick="jugarLetra('P')">P</button>
-                        <button id="Q" class="letra" onclick="jugarLetra('Q')">Q</button>
-                        <button id="R" class="letra" onclick="jugarLetra('R')">R</button>
-                        <button id="S" class="letra" onclick="jugarLetra('S')">S</button>
-                        <button id="T" class="letra" onclick="jugarLetra('T')">T</button>
-                        <button id="U" class="letra" onclick="jugarLetra('U')">U</button>
-                        <button id="V" class="letra" onclick="jugarLetra('V')">V</button>
-                        <button id="W" class="letra" onclick="jugarLetra('W')">W</button>
-                        <button id="X" class="letra" onclick="jugarLetra('X')">X</button>
-                        <button id="Y" class="letra" onclick="jugarLetra('Y')">Y</button>
-                        <button id="Z" class="letra" onclick="jugarLetra('Z')">Z</button>
-                    </div>
-                </div>
-                <div class="row m-5">
-                    <div class="col containerLetras">
-                        <button id="A" class="letra" onclick="jugarLetra('A')">A</button>
-                        <button id="B" class="letra" onclick="jugarLetra('B')">B</button>
-                        <button id="C" class="letra" onclick="jugarLetra('C')">C</button>
-                        <button id="D" class="letra" onclick="jugarLetra('D')">D</button>
-                        <button id="E" class="letra" onclick="jugarLetra('E')">E</button>
-                        <button id="F" class="letra" onclick="jugarLetra('F')">F</button>
-                        <button id="G" class="letra" onclick="jugarLetra('G')">G</button>
-                        <button id="H" class="letra" onclick="jugarLetra('H')">H</button>
-                        <button id="I" class="letra" onclick="jugarLetra('I')">I</button>
-                        <button id="J" class="letra" onclick="jugarLetra('J')">J</button>
-                        <button id="K" class="letra" onclick="jugarLetra('K')">K</button>
-                        <button id="L" class="letra" onclick="jugarLetra('L')">L</button>
-                        <button id="M" class="letra" onclick="jugarLetra('M')">M</button>
-                        <button id="N" class="letra" onclick="jugarLetra('N')">N</button>
-                        <button id="Ñ" class="letra" onclick="jugarLetra('Ñ')">Ñ</button>
-                        <button id="O" class="letra" onclick="jugarLetra('O')">O</button>
-                        <button id="P" class="letra" onclick="jugarLetra('P')">P</button>
-                        <button id="Q" class="letra" onclick="jugarLetra('Q')">Q</button>
-                        <button id="R" class="letra" onclick="jugarLetra('R')">R</button>
-                        <button id="S" class="letra" onclick="jugarLetra('S')">S</button>
-                        <button id="T" class="letra" onclick="jugarLetra('T')">T</button>
-                        <button id="U" class="letra" onclick="jugarLetra('U')">U</button>
-                        <button id="V" class="letra" onclick="jugarLetra('V')">V</button>
-                        <button id="W" class="letra" onclick="jugarLetra('W')">W</button>
-                        <button id="X" class="letra" onclick="jugarLetra('X')">X</button>
-                        <button id="Y" class="letra" onclick="jugarLetra('Y')">Y</button>
-                        <button id="Z" class="letra" onclick="jugarLetra('Z')">Z</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <button id="btnVolverInicio" class="btnVolverInicio">Volver al inicio</button>
-                        <button id="btnNuevaPartida" class="btnNuevaPartida hidden">Nueva partida</button>
-                    </div>
-                </div>
+        </div>
+        <div class="container__btn">
+            <button id="btnVolverInicio" class="button">Volver al inicio</button>
+            <button id="btnNuevaPartida" class="button hidden">Nueva partida</button>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="infoPelicula" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="titulo-modal"></h2>
+            </div>
+            <div class="modal-body" id="body-modal">
+                <div class="portada" id="portada"></div>
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script src="producto.js"></script>
+    <script src="canvasAhorcado.js"></script>
     <script src="juego2J.js"></script>
 </body>
+
 </html>

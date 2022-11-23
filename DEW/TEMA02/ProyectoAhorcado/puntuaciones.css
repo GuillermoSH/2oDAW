@@ -12,6 +12,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    animation: transitionIn 0.7s ease-in-out;
+}
+
+@keyframes transitionIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .container-fluid {

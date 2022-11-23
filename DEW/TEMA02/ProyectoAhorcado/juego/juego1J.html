@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="juego1J.css">
     <link rel="icon" href="https://media.giphy.com/media/H3rF5knfzncQtu1SzL/giphy.gif">
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
-    <title>Juego del ahorcado</title>
+    <title>AHORK2</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="container__adivinanza">
-            <div class="avance" id="avance"></div>
+            <canvas id="canvasAhorcado"></canvas>
             <div class="palabraAdivinar" id="palabraAdivinar"></div>
         </div>
         <div class="container__letras">
@@ -62,6 +62,21 @@
         </div>
     </div>
 
+    <!-- MODAL -->
+    <div id="infoPelicula" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="titulo-modal"></h2>
+            </div>
+            <div class="modal-body" id="body-modal">
+                <div class="portada" id="portada"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="producto.js"></script>
+    <script src="canvasAhorcado.js"></script>
     <script src="juego1J.js"></script>
 </body>
 

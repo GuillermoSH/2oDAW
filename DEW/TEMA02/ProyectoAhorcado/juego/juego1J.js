@@ -1,49 +1,15 @@
-class Producto {
-    constructor(titulo, fechaSalida, duracion, genero, director, sinopsis, imagen) {
-        this.titulo = titulo;
-        this.fechaSalida = fechaSalida;
-        this.duracion = duracion;
-        this.genero = genero;
-        this.director = director;
-        this.sinopsis = sinopsis;
-        this.imagen = imagen;
-    }
-
-    setInfo(array) {
-        this.titulo = array[0];
-        this.fechaSalida = array[1];
-        this.duracion = array[2];
-        this.genero = array[3];
-        this.director = array[4];
-        this.sinopsis = array[5];
-        this.imagen = array[6];
-    }
-
-    getInfo() {
-        return [this.titulo,this.fechaSalida,this.duracion,this.genero,this.director,this.sinopsis,this.imagen];
-    }
-}
-
-const divProducto = document.getElementById("infoProducto");
-
-fetch("./peliculas.json")
-    .then(res => res.json())
-    .then(data => {
-        let info = data.peliculasYseries[parseInt(Math.random() * data.peliculasYseries.length)];
-        //[info.Titulo,info.Anio,info["Fecha de salida"],info.Duracion,info.Genero,info.Director,info.Sinopsis,info.Imagen]);
-        sessionStorage.setItem("producto",JSON.stringify(info));
-    });
-
-let infoProducto = JSON.parse(sessionStorage.getItem("producto"));
+/*----------------------- INICIALIZAR PRODUCTO -----------------------*/
 let producto = new Producto();
-producto.setInfo([infoProducto.Titulo,infoProducto.Anio,infoProducto["Fecha de salida"],infoProducto.Duracion,infoProducto.Genero,infoProducto.Director,infoProducto.Sinopsis,infoProducto.Imagen]);
 
-let palabraAdivinar = producto.getInfo()[0].toString();
-console.log(palabraAdivinar)
-let adivinanza = palabraAdivinar.replaceAll(/\w/g, "_");
-let intentos = 6;
+/*------------------------ INICIALIZAR DIBUJO ------------------------*/
+let ahorcado = new DibujoAhorcado();
 
+/*------------------ INICIALIZAR PALABRA A ADIVINAR ------------------*/
+let intentos = 5;
+let palabraAdivinar = producto.getTitulo();
+let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]/g, "_");
 document.getElementById("palabraAdivinar").innerHTML = adivinanza;
+
 
 /**
  * Funcion principal para comprobar mediante {@link comprobarLetra()} si la letra
@@ -90,19 +56,23 @@ function comprobarLetra(letra) {
  * @param {char} letra que se ha clickado.
  */
 function comprobarVictoria(letra) {
-    let divAvance = document.getElementById("avance");
-
     if (adivinanza == palabraAdivinar) {
-        divAvance.innerHTML = "🥰 ¡Has ganado! 😍";
+        lanzarModal("🥰 ¡Has ganado! 😍");
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
+        document.getElementById("canvasAhorcado").style.border = "3px solid yellowgreen";
+        document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px green";
         apuntarGanada();
     } else if (intentos == 0) {
-        divAvance.innerHTML = "☹️ ¡Has perdido! ☹️";
+        lanzarModal("☹️ ¡Has perdido! ☹️");
+        ahorcado.dibujarAhorcado(intentos);
+        adivinanza = palabraAdivinar;
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
+        document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
+        document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
     } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
-        divAvance.innerHTML = "Te quedan " + intentos + " intentos.";
+        ahorcado.dibujarAhorcado(intentos);
         intentos--;
     }
 }
@@ -122,7 +92,7 @@ function terminarPartida() {
 function apuntarGanada() {
     let jugador = sessionStorage.getItem("J1");
     let info = JSON.parse(localStorage.getItem(jugador));
-    info.partidasGanadas = info.partidasGanadas+1;
+    info.partidasGanadas = info.partidasGanadas + 1;
     localStorage.setItem(jugador, JSON.stringify(info));
 }
 
@@ -133,3 +103,46 @@ btnNuevaPartida.addEventListener("click", () => window.location.reload());
 /*-------------------------- VOLVER AL INICIO --------------------------*/
 const btnVolverInicio = document.getElementById("btnVolverInicio");
 btnVolverInicio.addEventListener("click", () => window.location.replace("../index.html"));
+
+/*--------------------------- CANVAS AHORCADO --------------------------*/
+window.addEventListener("load", () => {
+    ahorcado.dibujoInicial();
+});
+
+/*------------------------ MODAL PELICULA/SERIE ------------------------*/
+const modal = document.getElementById("infoPelicula");
+const span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+/**
+ * Crea una ventana modal con la información del producto.
+ * 
+ * @param string - si se ha ganado o no.
+ */
+function lanzarModal(string) {
+    modal.style.display = "block";
+
+    document.getElementById("titulo-modal").innerHTML = string;
+    let infoPelicula = "<br/><strong>Título:</strong> " + producto.getTitulo() + "<br/>";
+    infoPelicula += "<strong>Fecha de salida:</strong> " + producto.getFechaSalida() + "<br/>";
+    infoPelicula += "<strong>Duración:</strong> " + producto.getDuracion() + "<br/>";
+    infoPelicula += "<strong>Género:</strong> " + producto.getGenero() + "<br/>";
+    infoPelicula += "<strong>Director/a:</strong> " + producto.getDirector() + "<br/>";
+    infoPelicula += "<strong>Sinopsis:</strong> " + producto.getSinopsis();
+
+    let img = document.createElement("img");
+    const modalBody = document.getElementById("body-modal");
+    img.src = producto.getImagen();
+    img.height = "250";
+    img.width = "175";
+
+    document.getElementById("portada").appendChild(img);
+    modalBody.innerHTML += infoPelicula;
+}

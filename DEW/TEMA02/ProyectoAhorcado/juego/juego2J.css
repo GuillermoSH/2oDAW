@@ -1,10 +1,8 @@
 :root {
-    --principal: #0b2042;
+    --principal: #132239;
     --secundario: #19486e;
     --terciario: #b5d6e4;
     --blanco: #e9e9e9;
-
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -13,11 +11,28 @@ body {
     background-position: top;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 2fr 1fr 10vh;
+}
+
+.container__header {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icono img {
     height: 6vh;
-    margin: 0px 10px 10px 10px;
+    align-self: center;
+    margin: 10px 10px 10px 10px;
 }
 
 h1 {
@@ -29,98 +44,56 @@ h1 {
     align-items: center;
 }
 
-.btnCerrarSesion {
-	background-color: var(--principal);
-	background-image: linear-gradient(90deg, var(--principal) 0%, var(--secundario) 74%);
-	border-radius: 20px;
-	border: 2px solid var(--principal);
-	color: var(--blanco);
-	cursor: pointer;
-	font-size: 0.8rem;
-	font-weight: bold;
-	letter-spacing: 0.1rem;
-	padding: 0.9rem 2rem;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-    margin-right: 30px;
+.container__adivinanza {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.btnCerrarSesion:active {
-	transform: scale(0.95);
+canvas {
+    background-color: var(--blanco);
+    border: 3px solid var(--principal);
+    border-radius: 7px;
+    box-shadow: 0 0 20px 2px var(--principal);
 }
 
-.btnCerrarSesion:focus {
-	outline: none;
+
+.palabraAdivinar {
+    font-size: 30px;
+    letter-spacing: 5px;
+    border: 3px solid var(--blanco);
+    background-image: linear-gradient(135deg, var(--secundario) 20%, var(--principal) 50%, var(--secundario) 80%);
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
+    box-shadow: 0 0 13px 1px var(--principal), inset 0 0 13px 1px var(--terciario);
+    color: var(--blanco);
 }
 
-.avance-container {
-    height: 60px;
-    position: relative;
-    background-color: rgba(0,0,0,0.75);
-    border-radius: 20px;
+.container__letras {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
-.avance-container::after {
-    content: '';
-    width: 700px;
-    height: 700px;
-    position: absolute;
-    background-image: conic-gradient(transparent,var(--terciario),transparent, var(--blanco),transparent);
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
-}
-
-.avance-container::before {
-    content: '';
-    width: 700px;
-    height: 700px;
-    position: absolute;
-    background-image: conic-gradient(transparent,var(--blanco),transparent, var(--terciario),transparent);
-    animation: animate 6s linear infinite;
-}
-
-@keyframes animate{
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.avance-container span {
-    position: absolute;
-    inset: 5px;
-    border-radius: 16px;
-    background-color: black;
-    z-index: 1;
-}
-
-.avance-container .avance {
-    position: relative;
-    z-index: 2;
-    color: white;
-    font-size: 1.5vw;
-}
-
-.zonaJuego {
+.letras {
     display: flex;
-    flex-direction: column;
-    height: 80vh;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
 }
 
 .letra {
     font-weight: bolder;
     border-radius: 5px;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     font-size: 30px;
-    box-shadow: 0px 3px 0px 2px #19486ea9;
+    box-shadow: 0px 3px 10px 2px #19486ea9;
     background-color: var(--blanco);
     border: 2px solid #bebebe;
 }
@@ -131,7 +104,8 @@ h1 {
 }
 
 .letra:active {
-    transform: scale(0.95);
+    transform: translateY(4px);
+    box-shadow: 0px 2px 0px 0px #19486ea9;
 }
 
 .letra:disabled {
@@ -145,55 +119,163 @@ h1 {
 
 .letra:disabled:active {
     transform: none;
-}
-
-.containerLetras {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.palabraAdivinar {
-    font-size: 30px;
-    letter-spacing: 5px;
+    box-shadow: 0px 3px 10px 2px #19486ea9;
 }
 
 .hidden {
     display: none;
 }
 
-.btnNuevaPartida {
-    margin-left: 20px;
+.container__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btnVolverInicio {
-    text-decoration: none;
+#btnNuevaPartida {
+    margin-left: 30px;
+    padding: 0.7rem 2.5rem;
 }
 
-.btnVolverInicio:hover {
+.button {
+    background-image: linear-gradient(140deg, var(--blanco) 0%, var(--terciario) 50%, var(--secundario) 100%);
+    border-radius: 20px;
+    border: 2px solid var(--principal);
     color: var(--principal);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.7rem 2rem;
+    text-transform: uppercase;
+    transition: transform 60ms ease-in;
 }
 
-.btnVolverInicio, .btnNuevaPartida {
-	background-image: linear-gradient(140deg, var(--blanco) 0%, var(--terciario) 50%, var(--secundario) 100%);
-	border-radius: 20px;
-	border: 2px solid var(--principal);
-	color: var(--principal);
-	cursor: pointer;
-	font-size: 0.8rem;
-	font-weight: bold;
-	letter-spacing: 0.1rem;
-	padding: 0.9rem 2rem;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+.button:active {
+    transform: scale(0.95);
 }
 
-.btnVolverInicio:active, .btnNuevaPartida:active {
-	transform: scale(0.95);
+.button:focus {
+    outline: none;
 }
 
-.btnVolverInicio:focus, .btnNuevaPartida:focus {
-	outline: none;
+.button:hover {
+    box-shadow: 0 0 10px 0 var(--secundario), inset 0 0 8px 0 var(--terciario);
+    border: 2px solid var(--blanco);
+}
+
+/*----------------------- MODAL -----------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../imagenes/fondo2.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 0;
+    width: 760px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.4), 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 10px;
+    border: 3px solid var(--principal);
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    text-align: center;
+    background-color: var(--principal);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.modal-header h2 {
+    width: 100%;
+    margin-left: 27.36px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    text-align: justify;
+    color: var(--blanco);
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+
+.modal-body strong {
+    color: rgb(255, 205, 106);
+}
+
+.portada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.portada img {
+    border-radius: 5px;
+    box-shadow: 0 6px 20px 0px var(--blanco);
+}
+
+.modal-footer {
+    padding: 2px 16px;
 }
