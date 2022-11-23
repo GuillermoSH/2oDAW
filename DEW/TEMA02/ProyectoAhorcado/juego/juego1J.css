@@ -275,7 +275,3 @@ canvas {
     border-radius: 5px;
     box-shadow: 0 6px 20px 0px var(--blanco);
 }
-
-.modal-footer {
-    padding: 2px 16px;
-}

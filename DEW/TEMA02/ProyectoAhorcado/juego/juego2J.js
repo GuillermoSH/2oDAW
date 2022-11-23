@@ -8,6 +8,8 @@ let ahorcado = new DibujoAhorcado();
 let intentos = 5;
 let palabraAdivinar = producto.getTitulo();
 let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]/g, "_");
+let turno = ["J1", "J2"][parseInt(Math.random())];
+console.log(turno);
 document.getElementById("palabraAdivinar").innerHTML = adivinanza;
 
 
@@ -56,23 +58,28 @@ function comprobarLetra(letra) {
  * @param {char} letra que se ha clickado.
  */
 function comprobarVictoria(letra) {
+    let ganador;
     if (adivinanza == palabraAdivinar) {
-        lanzarModal("🥰 ¡Has ganado! 😍");
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid yellowgreen";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px green";
-        apuntarGanada();
+        turno == "J1" ? ganador = "J1" : ganador = "J2";
+        lanzarModal("🥰 ¡Gana " + sessionStorage.getItem(ganador) + "! 😍");
+        apuntarGanada(ganador);
     } else if (intentos == 0) {
-        lanzarModal("☹️ ¡Has perdido! ☹️");
         ahorcado.dibujarAhorcado(intentos);
         adivinanza = palabraAdivinar;
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
+        turno == "J1" ? ganador = "J2" : ganador = "J1";
+        lanzarModal("🥰 ¡Gana " + sessionStorage.getItem(ganador) + "! 😍");
+        apuntarGanada(ganador);
     } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
         ahorcado.dibujarAhorcado(intentos);
+        turno == "J1" ? turno = "J2" : turno = "J1";
         intentos--;
     }
 }
@@ -89,8 +96,8 @@ function terminarPartida() {
     }
 }
 
-function apuntarGanada() {
-    let jugador = sessionStorage.getItem("J1");
+function apuntarGanada(ganador) {
+    let jugador = sessionStorage.getItem(ganador);
     let info = JSON.parse(localStorage.getItem(jugador));
     info.partidasGanadas = info.partidasGanadas + 1;
     localStorage.setItem(jugador, JSON.stringify(info));

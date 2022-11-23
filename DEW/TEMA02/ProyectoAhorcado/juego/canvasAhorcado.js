@@ -1,6 +1,6 @@
 class DibujoAhorcado {
     dibujarAhorcado(intentos) {
-        const canvas = document.querySelector("#canvasAhorcado")
+        const canvas = document.querySelector("#canvasAhorcado");
         const ctx = canvas.getContext("2d");
         switch (intentos) {
             case 5:

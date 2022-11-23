@@ -51,4 +51,5 @@ btnResetear.addEventListener("click", () => {
     });
 });
 
+
 // TODO: modal para resetear puntuaciones
