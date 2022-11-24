@@ -12,6 +12,7 @@ class Producto {
             });
         let infoProducto = JSON.parse(sessionStorage.getItem("producto"));
         this.setInfo([infoProducto.Titulo, infoProducto["Fecha de salida"], infoProducto.Duracion, infoProducto.Genero, infoProducto.Director, infoProducto.Sinopsis, infoProducto.Imagen]);
+        window.location.reload();
     }
 
     /**
