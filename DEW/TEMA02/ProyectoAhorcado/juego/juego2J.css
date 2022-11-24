@@ -53,6 +53,23 @@ h1 {
     flex-direction: column;
 }
 
+.container__canvasYturnos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-J1, .container-J2 {
+    min-width: 150px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 canvas {
     background-color: var(--blanco);
     border: 3px solid var(--principal);

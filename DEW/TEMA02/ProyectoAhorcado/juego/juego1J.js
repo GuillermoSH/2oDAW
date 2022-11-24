@@ -63,6 +63,7 @@ function comprobarVictoria(letra) {
         document.getElementById("canvasAhorcado").style.border = "3px solid yellowgreen";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px green";
         apuntarGanada();
+        apuntarJugada();
     } else if (intentos == 0) {
         lanzarModal("☹️ ¡Has perdido! ☹️");
         ahorcado.dibujarAhorcado(intentos);
@@ -71,6 +72,7 @@ function comprobarVictoria(letra) {
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
+        apuntarJugada();
     } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
         ahorcado.dibujarAhorcado(intentos);
         intentos--;
@@ -89,10 +91,25 @@ function terminarPartida() {
     }
 }
 
+/**
+ * Funcion para modificar el localStorage del jugador online y añadirle la
+ * partida ganada.
+ */
 function apuntarGanada() {
     let jugador = sessionStorage.getItem("J1");
     let info = JSON.parse(localStorage.getItem(jugador));
     info.partidasGanadas = info.partidasGanadas + 1;
+    localStorage.setItem(jugador, JSON.stringify(info));
+}
+
+/**
+ * Funcion para modificar el localStorage del jugador online y añadirle la
+ * partida jugada.
+ */
+function apuntarJugada() {
+    let jugador = sessionStorage.getItem("J1");
+    let info = JSON.parse(localStorage.getItem(jugador));
+    info.partidasJugadas = info.partidasJugadas + 1;
     localStorage.setItem(jugador, JSON.stringify(info));
 }
 

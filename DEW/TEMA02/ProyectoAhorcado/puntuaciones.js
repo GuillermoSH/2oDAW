@@ -17,8 +17,10 @@ let contador = 3;
 arrayJugadores.forEach(jugador => {
     let fila = document.createElement("tr");
     let colUsuario = document.createElement("td");
-    let colPartidas = document.createElement("td");
-    let colSeparacion = document.createElement("td");
+    let colGanadas = document.createElement("td");
+    let colJugadas = document.createElement("td");
+    let colSeparacion1 = document.createElement("td");
+    let colSeparacion2 = document.createElement("td");
 
     switch(contador) {
         case 3: colUsuario.appendChild(document.createTextNode("🥇 "+ jugador.usuario + ": ")); break;
@@ -29,13 +31,18 @@ arrayJugadores.forEach(jugador => {
 
     contador--;
 
-    colPartidas.appendChild(document.createTextNode(jugador.partidasGanadas));
+    colGanadas.appendChild(document.createTextNode(jugador.partidasGanadas));
+    colJugadas.appendChild(document.createTextNode(jugador.partidasJugadas));
     colUsuario.classList.add("jugadores");
-    colPartidas.classList.add("partidas");
-    colSeparacion.classList.add("separacion");
+    colGanadas.classList.add("partidas");
+    colJugadas.classList.add("partidas");
+    colSeparacion1.classList.add("separacion");
+    colSeparacion2.classList.add("separacion");
     fila.appendChild(colUsuario);
-    fila.appendChild(colSeparacion);
-    fila.appendChild(colPartidas);
+    fila.appendChild(colSeparacion1);
+    fila.appendChild(colGanadas);
+    fila.appendChild(colSeparacion2);
+    fila.appendChild(colJugadas);
     tablaPuntuacion.appendChild(fila);
 });
 
@@ -46,10 +53,8 @@ btnResetear.addEventListener("click", () => {
     claves.forEach(clave => {
         let info = JSON.parse(localStorage.getItem(clave));
         info.partidasGanadas = 0;
+        info.partidasJugadas = 0;
         localStorage.setItem(clave, JSON.stringify(info));
         window.location.reload();
     });
 });
-
-
-// TODO: modal para resetear puntuaciones

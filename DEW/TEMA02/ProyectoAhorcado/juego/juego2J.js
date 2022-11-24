@@ -8,9 +8,16 @@ let ahorcado = new DibujoAhorcado();
 let intentos = 5;
 let palabraAdivinar = producto.getTitulo();
 let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]/g, "_");
-let turno = ["J1", "J2"][parseInt(Math.random())];
-console.log(turno);
 document.getElementById("palabraAdivinar").innerHTML = adivinanza;
+
+/*------------------- INICIALIZAR TURNO JUGADORES --------------------*/
+let turno = (Math.random() > 0.4999999999999) ? "J1" : "J2";
+document.getElementById("turno-J1").innerHTML = "J1: " + sessionStorage.getItem("J1");
+document.getElementById("turno-J2").innerHTML = "J2: " + sessionStorage.getItem("J2");
+const containerJ1 = document.getElementById("turno-J1");
+const containerJ2 = document.getElementById("turno-J2");
+mostrarTurno();
+
 
 
 /**
@@ -58,28 +65,25 @@ function comprobarLetra(letra) {
  * @param {char} letra que se ha clickado.
  */
 function comprobarVictoria(letra) {
-    let ganador;
     if (adivinanza == palabraAdivinar) {
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid yellowgreen";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px green";
-        turno == "J1" ? ganador = "J1" : ganador = "J2";
-        lanzarModal("🥰 ¡Gana " + sessionStorage.getItem(ganador) + "! 😍");
-        apuntarGanada(ganador);
+        lanzarModal("🥰 ¡Gana " + sessionStorage.getItem(turno) + "! 😍");
+        apuntarGanada(turno);
+        apuntarJugada();
     } else if (intentos == 0) {
         ahorcado.dibujarAhorcado(intentos);
-        adivinanza = palabraAdivinar;
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
-        turno == "J1" ? ganador = "J2" : ganador = "J1";
-        lanzarModal("🥰 ¡Gana " + sessionStorage.getItem(ganador) + "! 😍");
-        apuntarGanada(ganador);
+        apuntarJugada();
     } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
         ahorcado.dibujarAhorcado(intentos);
-        turno == "J1" ? turno = "J2" : turno = "J1";
+        turno = (turno == "J1") ? "J2" : "J1";
+        mostrarTurno();
         intentos--;
     }
 }
@@ -96,11 +100,63 @@ function terminarPartida() {
     }
 }
 
+/**
+ * Funcion para darle la partida ganada al jugador actual en el turno, sumandolo
+ * a la variable partidasGanadas dentro de su JSON.
+ * 
+ * @param {string} ganador - de la ronda.
+ */
 function apuntarGanada(ganador) {
     let jugador = sessionStorage.getItem(ganador);
     let info = JSON.parse(localStorage.getItem(jugador));
     info.partidasGanadas = info.partidasGanadas + 1;
     localStorage.setItem(jugador, JSON.stringify(info));
+}
+
+/**
+ * Funcion para darle la partida jugada a los jugadores loggeados, sumandolo
+ * a la variable partidasJugadas dentro de sus JSONs.
+ */
+function apuntarJugada() {
+    let J1 = sessionStorage.getItem("J1");
+    let J2 = sessionStorage.getItem("J2");
+    let infoJ1 = JSON.parse(localStorage.getItem(J1));
+    let infoJ2 = JSON.parse(localStorage.getItem(J2));
+
+    infoJ1.partidasJugadas = infoJ1.partidasJugadas + 1;
+    localStorage.setItem(J1, JSON.stringify(infoJ1));
+
+    infoJ2.partidasJugadas = infoJ2.partidasJugadas + 1;
+    localStorage.setItem(J2, JSON.stringify(infoJ2));
+}
+
+/**
+ * Si el turno es J1, entonces el color de fondo del contenedorJ1 se establece en #ff4733, la sombra del
+ * cuadro se establece en el recuadro 0 0 10px 0 #e9e9e9, 0 0 10px 2px, y el borde se establece en 2px
+ * sólido #e9e9e9.
+ * Si el turno es J2, entonces el color de fondo del contenedorJ1 se establece en #848484, la sombra del
+ * cuadro se establece en 0 0 10px 0 #222 y el borde se establece en 2px sólido #222.
+ * Si el turno es J2, el color de fondo del contenedorJ2 se establece en #ff9500, la sombra del cuadro
+ * se establece en el recuadro 0 0 10px 0 #e9e9e9, 0 0 10px 2px, y el borde se establece en 2px sólido
+ * #e9e9e9.
+ */
+function mostrarTurno() {
+    console.log(turno);
+    if (turno == "J1") {
+        containerJ1.style.backgroundColor = "#ff4733";
+        containerJ1.style.boxShadow = "inset 0 0 8px 0 #e9e9e9, 0 0 10px 2px";
+        containerJ1.style.border = "2px solid #e9e9e9";
+        containerJ2.style.background = "#848484";
+        containerJ2.style.boxShadow = "0 0 10px 0 #222";
+        containerJ2.style.border = "2px solid #222";
+    } else {
+        containerJ1.style.backgroundColor = "#848484";
+        containerJ1.style.boxShadow = "0 0 10px 0 #222";
+        containerJ1.style.border = "2px solid #222";
+        containerJ2.style.background = "#ff9500";
+        containerJ2.style.boxShadow = "inset 0 0 8px 0 #e9e9e9, 0 0 10px 2px";
+        containerJ2.style.border = "2px solid #e9e9e9";
+    }
 }
 
 /*---------------------------- NUEVA PARTIDA ---------------------------*/

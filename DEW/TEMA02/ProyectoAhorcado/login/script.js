@@ -77,7 +77,7 @@ function comprobarLogin() {
  *  - Las contrasenias no coincidan
  */
 function comprobarRegistro() {
-    const jsonUsuario = { "usuario": usuarioReg.value, "contrasenia": contraseniaReg.value, "partidasGanadas": 0}
+    const jsonUsuario = { "usuario": usuarioReg.value, "contrasenia": contraseniaReg.value, "partidasGanadas": 0, "partidasJugadas": 0}
 
     if (localStorage.getItem(usuarioReg.value) != null) {
         errorReg.innerHTML = "El usuario ya existe."
