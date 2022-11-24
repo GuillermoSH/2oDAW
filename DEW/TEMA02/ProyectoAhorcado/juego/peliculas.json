@@ -2,79 +2,223 @@
     "peliculasYseries": [
         {
             "Titulo": "Avatar",
-            "Fecha de salida": "18 de diciembre de 2009",
+            "Fecha de salida": "18 de Diciembre de 2009",
             "Duracion": "162 min",
             "Genero": "Acción, Aventura, Fantasía",
             "Director": "James Cameron",
             "Sinopsis": "Entramos en el mundo Avatar de la mano de Jake Sully, un ex-Marine en silla de ruedas, que ha sido reclutado para viajar a Pandora, donde existe un mineral raro y muy preciado que puede solucionar la crisis energética existente en la Tierra.",
-            "Imagen": "https://pics.filmaffinity.com/Avatar-208925608-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tXmTHdrZgNsULqCbThK2Dt2X9Wt.jpg"
+        },
+        {
+            "Titulo": "ONE PIECE FILM RED",
+            "Fecha de salida": "3 de Noviembre de 2022",
+            "Duracion": "115 min",
+            "Genero": "Animación, Aventura, Acción, Fantasía",
+            "Director": "Goro Taniguchi",
+            "Sinopsis": "Uta — la cantante más querida del mundo. Su voz, con la que canta mientras oculta su verdadera identidad, ha sido descrita como de otro mundo. Ella aparecerá en público por primera vez en un concierto en vivo. A medida que el lugar se llena con todo tipo de fanáticos de Uta: piratas emocionados, la Armada observando de cerca y los Sombreros de Paja liderados por Luffy que simplemente vinieron a disfrutar de su actuación sonora, la voz que todo el mundo ha estado esperando está a punto de resonar. La historia comienza con el impactante hecho de que ella es la hija de Shanks.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4ovEtMHpv1UKDJB6Wq69DB4q8xG.jpg"
+        },
+        {
+            "Titulo": "Pesadilla antes de Navidad",
+            "Fecha de salida": "2 de Diciembre de 1994",
+            "Duracion": "75 min",
+            "Genero": "Fantasía, Animación, Familia",
+            "Director": "Henry Selick",
+            "Sinopsis": "Cuando Jack Skellington, el Señor de Halloween, descubre la Navidad, se queda fascinado y decide mejorarla. Sin embargo, su visión de la festividad es totalmente contraria al espíritu navideño. Sus planes incluyen el secuestro de Santa Claus y la introducción de cambios bastante macabros. Sólo su novia Sally es consciente del error que está cometiendo.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fRrhrNBQzsppxOpN8GO1RFIxp6X.jpg"
+        },
+        {
+            "Titulo": "Black Adam",
+            "Fecha de salida": "21 de Noviembre de 2022",
+            "Duracion": "124 min",
+            "Genero": "Acción, Fantasía, Ciencia ficción",
+            "Director": "Jaume Collet-Serra",
+            "Sinopsis": "Casi 5.000 años después de haber sido dotado de los poderes omnipotentes de los antiguos dioses -y encarcelado con la misma rapidez-, Black Adam es liberado de su tumba terrenal, listo para desatar su forma única de justicia en el mundo moderno.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mPTzXksC8HcAj6EM6WjZFJVJEzF.jpg"
+        },
+        {
+            "Titulo": "Dragon Ball Super Super Hero",
+            "Fecha de salida": "2 de Septiembre de 2022",
+            "Duracion": "100 min",
+            "Genero": "Animación, Ciencia ficción, Acción",
+            "Director": "Tetsuro Kodama",
+            "Sinopsis": "Son Goku destruyó en su momento al Ejército Red Ribbon. Ahora, ciertos individuos han decidido continuar con su legado y han creado a los androides definitivos: Gamma 1 y Gamma 2. Estos dos androides se autoproclaman superhéroes y deciden atacar a Piccolo y a Gohan. ¿Cuál es el objetivo del Nuevo Ejército Red Ribbon? Ante un peligro inminente, ¡llega el momento del despertar del Superhéroe!",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg"
+        },
+        {
+            "Titulo": "Sonic La pelicula",
+            "Fecha de salida": "1 de Febrero de 2022",
+            "Duracion": "122 min",
+            "Genero": "Acción, Aventura, Familia, Comedia",
+            "Director": "Jeff Fowler",
+            "Sinopsis": "Después de establecerse en Green Hills, Sonic se muere por demostrar que tiene madera de auténtico héroe, pero Robotnik regresa con nuevo compañero Knuckles, en busca de una esmeralda que tiene el poder de destruir civilizaciones, pero Sonic no está solo, le ayudará Tails.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJiHVM0A3OXDVxl4Z6a7ihMPHfm.jpg"
+        },
+        {
+            "Titulo": "Guardianes de la Noche Tren infinito",
+            "Fecha de salida": "23 de Abril de 2021",
+            "Duracion": "117 min",
+            "Genero": "Animación, Acción, Aventura, Fantasía",
+            "Director": "Haruo Sotozaki",
+            "Sinopsis": "Tanjiro y sus compañeros se unen al Pilar de las Llamas Kyojuro Rengoku para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8t29MfbEkEZixjVbjRkqI5NyFR4.jpg"
+        },
+        {
+            "Titulo": "Venom Habra Matanza",
+            "Fecha de salida": "15 de Noviembre de 2021",
+            "Duracion": "97 min",
+            "Genero": "Ciencia ficción, Acción, Aventura",
+            "Director": "Andy Serkis",
+            "Sinopsis": "Eddie Brock y su simbionte Venom todavía están intentando descubrir cómo vivir juntos cuando un preso que está en el corredor de la muerte se infecta con un simbionte propio.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0j9rHYpRML7dKm5xw9e97HTDJF.jpg"
+        },
+        {
+            "Titulo": "Harry Potter y la piedra filosofal",
+            "Fecha de salida": "30 de Noviembre de 2001",
+            "Duracion": "152 min",
+            "Genero": "Aventura, Fantasía",
+            "Director": "Chris Columbus",
+            "Sinopsis": "Harry Potter es un huérfano que vive con sus desagradables tíos, los Dursley, y su repelente primo Dudley. Se acerca su undécimo cumpleaños y tiene pocas esperanzas de recibir algún regalo, ya que nunca nadie se acuerda de él. Sin embargo, pocos días antes de su cumpleaños, una serie de misteriosas cartas dirigidas a él y escritas con una estridente tinta verde rompen la monotonía de su vida: Harry es un mago y sus padres también lo eran.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/roKMM6S9DRGFNujmvqlk8l5YbN3.jpg"
+        },
+        {
+            "Titulo": "Black Panther",
+            "Fecha de salida": "16 de Febrero de 2018",
+            "Duracion": "134 min",
+            "Genero": "Acción, Aventura, Ciencia ficción",
+            "Director": "Ryan Coogler",
+            "Sinopsis": "Después de los acontecimientos de Capitán América: Civil War, T'Challa vuelve a casa, la nación aislada y muy avanzada tecnológicamente de Wakanda, para ser proclamado Rey. Pero la reaparición de un viejo enemigo pone a prueba el temple de T'Challa como Rey y Black Panther ya que se ve arrastrado a un conflicto que pone en peligro todo el destino de Wakanda y del mundo.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qjarBufG0iUqr1IvJUK8AJnpTIR.jpg"
+        },
+        {
+            "Titulo": "SpiderMan No Way Home",
+            "Fecha de salida": "16 de Diciembre de 2021",
+            "Duracion": "148 min",
+            "Genero": "Acción, Aventura, Ciencia ficción",
+            "Director": "Jon Watts",
+            "Sinopsis": "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/miZFgV81xG324rpUknQX8dtXuBl.jpg"
+        },
+        {
+            "Titulo": "Bleach",
+            "Fecha de salida": "2004",
+            "Duracion": "24-25 min/episodio",
+            "Genero": "Action & Adventure, Animación, Sci-Fi & Fantasy",
+            "Director": "Pierrot",
+            "Sinopsis": "La serie narra las aventuras de Ichigo Kurosaki, un adolescente que tiene la facultad de interactuar con los espíritus. Una noche, Ichigo se encuentra con una shinigami —personificación japonesa del Dios de la muerte— llamada Rukia Kuchiki, quien se sorprende que pueda verla. Sin embargo, su conversación es interrumpida por la aparición de un hollow, un espíritu maligno. Después de que Rukia fuera gravemente herida al tratar de proteger a Ichigo, esta intenta traspasarle parte de sus poderes a Ichigo para que pueda enfrentarse al hollow en igualdad de condiciones. No obstante, Ichigo sin darse cuenta los absorbe casi por completo y logra vencer con facilidad al espíritu.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg"
+        },
+        {
+            "Titulo": "Smallville",
+            "Fecha de salida": "2001",
+            "Duracion": "43 min/episodio",
+            "Genero": "Sci-Fi & Fantasy, Action & Adventure, Drama",
+            "Director": "Warner",
+            "Sinopsis": "Serie que narra los inicios de Superman -Clark Kent- en su pueblo natal, Smallville. Allí vivía con sus padres, estudiaba en el instituto local y conoció a su primera novia, Lana Lang, y a su futuro rival, Lex Luthor.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUhJGETy2sec4vEkiqJ9eGeIywc.jpg"
+        },
+        {
+            "Titulo": "La Casa de Papel",
+            "Fecha de salida": "2017",
+            "Duracion": "70 min/episodio",
+            "Genero": "Crimen, Drama",
+            "Director": "Álex Pina",
+            "Sinopsis": "Un enigmático personaje llamado el Profesor planea algo grande: llevar a cabo el mayor atraco de la historia. Para ello recluta una banda de ocho personas que reúnen un único requisito, ninguno tiene nada que perder. Cinco meses de reclusión memorizando cada paso, cada detalle, cada probabilidad… y por fin, once días de encierro en la Fábrica Nacional de Moneda, rodeados de cuerpos de policía y con decenas de rehenes en su poder para saber si su apuesta suicida será todo o nada.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z01Dc0Ly2GmCpLe6Scx4d3dPP1S.jpg"
+        },
+        {
+            "Titulo": "Modern Family",
+            "Fecha de salida": "2009",
+            "Duracion": "25 min/episodio",
+            "Genero": "Comedia",
+            "Director": "Christopher Lloyd,Steven Levitan",
+            "Sinopsis": "Narrada desde la perspectiva de un documental, la serie ofrece un panorama honesto y divertido sobre la vida de varias familias, en donde se presentan la relación entre padres e hijos, diferencias generacionales y culturales.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z01Dc0Ly2GmCpLe6Scx4d3dPP1S.jpg"
+        },
+        {
+            "Titulo": "Big Bang",
+            "Fecha de salida": "2007",
+            "Duracion": "22 min/episodio",
+            "Genero": "Comedia",
+            "Director": "Chuck Lorre",
+            "Sinopsis": "Leonard y Sheldon son dos cerebros privilegiados que comparten piso. Aunque los dos, doctores en Física, son capaces de calcular las probabilidades de existencia de otros mundos, no saben cómo relacionarse con los demás, especialmente con las chicas. Penny, una vecina recién llegada, es el polo opuesto a los dos amigos, de modo que su llegada altera la tranquila vida sentimental de Leonard y el desorden obsesivo-compulsivo de Sheldon.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2bDQWCvFxRGhdvThTJvVxueEoLl.jpg"
+        },
+        {
+            "Titulo": "Arcane",
+            "Fecha de salida": "2021",
+            "Duracion": "39 min/episodio",
+            "Genero": "Animación, Sci-Fi & Fantasy, Action & Adventure, Drama",
+            "Director": "Christian Linke,Alex Yee",
+            "Sinopsis": "Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg"
         },
         {
             "Titulo": "Soy leyenda",
-            "Fecha de salida": "14 de diciembre de 2007",
+            "Fecha de salida": "14 de Diciembre de 2007",
             "Duracion": "101 min",
             "Genero": "Drama, Horror, Ciencia Ficción",
             "Director": "Francis Lawrence",
             "Sinopsis": "Año 2012. Robert Neville es un brillante científico, que, sin embargo, no ha podido impedir la expansión de un incurable virus creado por el hombre. Neville, inexplicablemente inmune al contagio, es el último superviviente humano de la ciudad de Nueva York y, quizá, del mundo. Pero Neville no está completamente solo. Víctimas mutantes de la plaga merodean en las sombras, vigilando cada uno de los movimientos del científico y esperando que cometa un error fatal para beber su sangre.",
-            "Imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/04/soy-leyenda_0.jpg?itok=NS58nujY"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pO1SrJgf5BumqcIRkYviSGIFdmX.jpg"
         },
         {
             "Titulo": "Vengadores",
-            "Fecha de salida": "04 de mayo de 2012",
+            "Fecha de salida": "04 de Mayo de 2012",
             "Duracion": "143 min",
             "Genero": "Acción, Ciencia Ficción, Thriller",
             "Director": "Joss Whedon",
-            "Sinopsis": "El director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial.",
-            "Imagen": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/2/2b/The_Avengers_Poster.png/revision/latest?cb=20150610135853&path-prefix=es"
+            "Sinopsis": "El Director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial.",
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ugX4WZJO3jEvTOerctAWJLinujo.jpg"
         },
         {
             "Titulo": "Interstellar",
-            "Fecha de salida": "07 de noviembre de 2014",
+            "Fecha de salida": "07 de Noviembre de 2014",
             "Duracion": "169 min",
             "Genero": "Aventura, Drama, Ciencia Ficción",
             "Director": "Christopher Nolan",
             "Sinopsis": "Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.",
-            "Imagen": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT_RccL1NBnzoF49rygF-O0YRB2-kIsi_u2OY4nhmV9hRCWbHok"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg"
         },
         {
             "Titulo": "Juego de Tronos",
-            "Fecha de salida": "17 de abril de 2011",
+            "Fecha de salida": "17 de Abril de 2011",
             "Duracion": "56 min",
             "Genero": "Aventura, Drama, Fantasía",
             "Director": "David Benioff, D.B. Weiss",
             "Sinopsis": "Juego de tronos es la historia de la lucha por un trono, el trono de hierro, forjado con las espadas de los enemigos vencidos. Siete son los reinos de Poniente y muchas las casas que se disputarán la corona: los herederos, los exiliados, los despojados y los actuales regentes.",
-            "Imagen": "https://pics.filmaffinity.com/Juego_de_Tronos_Serie_de_TV-293142110-mmed.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z9gCSwIObDOD2BEtmUwfasar3xs.jpg"
         },
         {
             "Titulo": "Beetlejuice",
-            "Fecha de salida": "26 de febrero de 1987",
+            "Fecha de salida": "26 de Febrero de 1987",
             "Duracion": "97 min",
             "Genero": "Comedia, Aventura",
-            "Director": "Peter Faiman",
+            "Director": "Tim Burton",
             "Sinopsis": "Un matrimonio de fantasmas contrata a Beetlejuice, un especialista en asustar mortales, para que ahuyente a los nuevos propietarios de su casa.",
-            "Imagen": "https://pics.filmaffinity.com/Bitelch_s-121077102-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Ap36MvDZbfX0vzPsNeYqYv29rrK.jpg"
         },
         {
             "Titulo": "Cocodrilo Dundee",
-            "Fecha de salida": "22 de julio de 1988",
+            "Fecha de salida": "22 de Julio de 1988",
             "Duracion": "92 min",
             "Genero": "Comedia, Fantasía",
             "Director": "Tim Burton",
             "Sinopsis": "Michael Dundee es un rudo cazador de cocodrilos que, por su original filosofía de la vida, es considerado como un héroe. Sue Charlton, una reportera de Nueva York, decide ir a Australia para visitarle.",
-            "Imagen": "https://es.web.img3.acsta.net/pictures/14/03/10/10/12/005795.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q0Msbpvpe6yuvIUCyJuBbQ9UhUj.jpg"
         },
         {
             "Titulo": "Valkyrie",
-            "Fecha de salida": "25 de diciembre de 2008",
+            "Fecha de salida": "25 de Diciembre de 2008",
             "Duracion": "121 min",
             "Genero": "Drama, Thriller, Histórica",
             "Director": "Bryan Singer",
             "Sinopsis": "El coronel Claus Von Stauffenberg, un aristócrata alemán, regresa de África gravemente herido en combate y, tras unirse a la resistencia alemana, se convierte en el cerebro de la Operación Valkiria, cuyo objetivo es derrocar el régimen nazi.",
-            "Imagen": "https://pics.filmaffinity.com/Valkiria-995851902-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jDARt52DH7Tiw5jL0xrrDnqPFZp.jpg"
         },
         {
             "Titulo": "Ratatouille",
-            "Fecha de salida": "3 de agosto de 2007",
+            "Fecha de salida": "3 de Agosto de 2007",
             "Duracion": "111 min",
             "Genero": "Animación, Comedia, Familiar",
             "Director": "Brad Bird, Jan Pinkava",
@@ -83,48 +227,39 @@
         },
         {
             "Titulo": "Memento",
-            "Fecha de salida": "19 de enero de 2001",
+            "Fecha de salida": "19 de Enero de 2001",
             "Duracion": "113 min",
             "Genero": "Misterio, Thriller",
             "Director": "Christopher Nolan",
             "Sinopsis": "Leonard es un investigador de una agencia de seguros cuya memoria está irreversiblemente dañada por culpa de un golpe en la cabeza, al intentar evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. A causa del golpe, ha perdido la memoria reciente, los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar y vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.",
-            "Imagen": "https://pics.filmaffinity.com/Memento-230609861-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neHrQLVfT3KPqvv30pNPyRb6chQ.jpg"
         },
         {
             "Titulo": "Stardust",
-            "Fecha de salida": "26 de octubre de 2007",
+            "Fecha de salida": "26 de Octubre de 2007",
             "Duracion": "127 min",
             "Genero": "Aventura, Familiar, Fantasía",
             "Director": "Matthew Vaughn",
             "Sinopsis": "El adolescente Tristán atraviesa un muro que le lleva al reino mágico de Stormhold para regalar a su amada una estrella caída del firmamento.",
-            "Imagen": "https://pics.filmaffinity.com/Stardust-983044080-large.jpg"
-        },
-        {
-            "Titulo": "Planeta 51",
-            "Fecha de salida": "27 de noviembre de 2009",
-            "Duracion": "91 min",
-            "Genero": "Aventura, Animación, Comedia",
-            "Director": "Jorge Blanco, Javier Abad, Marcos Martínez",
-            "Sinopsis": "Un astronauta americano, el Capitán Charles 'Chuck' Baker, llega a un planeta en donde los habitantes son pequeños seres de color verde y orejas puntiagudas que viven pacíficamente, y que están atrapados en los años cincuenta cuyo único miedo es ser invadidos por alienígenas, como el astronauta que acaba de llegar. Chuck junto con sus acompañantes tendrán que hacerse hueco entre los habitantes, hasta que formen parte del Museo Espacial de Invasores Alienígenas.",
-            "Imagen": "https://pics.filmaffinity.com/Planet_51_Planeta_51-658764744-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/73JmdwtJyFQyKem7QHlDzmadNef.jpg"
         },
         {
             "Titulo": "Django desencadenado",
-            "Fecha de salida": "18 de enero de 2013",
+            "Fecha de salida": "18 de Enero de 2013",
             "Duracion": "165 min",
             "Genero": "Drama, Western",
             "Director": "Quentin Tarantino",
             "Sinopsis": "Un antiguo esclavo une sus fuerzas con un cazador de recompensas alemán que lo libera y ayuda a cazar a los criminales más buscados del Sur, todo ello con la esperanza de encontrar a su esposa perdida hace mucho tiempo.",
-            "Imagen": "https://pics.filmaffinity.com/Django_desencadenado-858231343-large.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/naaYX64yMGzEFsATOFQDaxxQWbJ.jpg"
         },
         {
             "Titulo": "Pulp Fiction",
-            "Fecha de salida": "13 de enero de 1995",
+            "Fecha de salida": "13 de Enero de 1995",
             "Duracion": "154 min",
             "Genero": "Drama, Crimen",
             "Director": "Quentin Tarantino",
             "Sinopsis": "Historias de dos matones, un boxeador y una pareja de atracadores de poca monta envueltos en una violencia espectacular e irónica.",
-            "Imagen": "https://pics.filmaffinity.com/Pulp_Fiction-210382116-mmed.jpg"
+            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg"
         }
     ]
 }

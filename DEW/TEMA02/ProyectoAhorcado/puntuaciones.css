@@ -32,8 +32,7 @@ body {
 .container-puntuaciones {
     background-color: var(--principal);
     height: fit-content;
-    width: 500px;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     color: var(--blanco);
     border-radius: 1.5rem;
     box-shadow: 0px 0px 10px 4px var(--principal), inset 0px 0px 10px 0px var(--terciario);
