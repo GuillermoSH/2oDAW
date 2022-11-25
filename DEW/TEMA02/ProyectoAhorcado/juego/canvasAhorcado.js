@@ -3,7 +3,7 @@ class DibujoAhorcado {
         const canvas = document.querySelector("#canvasAhorcado");
         const ctx = canvas.getContext("2d");
         switch (intentos) {
-            case 5:
+            case 6:
                 ctx.beginPath(); // cabeza
                 ctx.arc(200, 117, 20, Math.PI * 2, false);
                 ctx.stroke();
@@ -22,7 +22,7 @@ class DibujoAhorcado {
                 ctx.stroke();
                 ctx.closePath();
                 break;
-            case 4:
+            case 5:
                 ctx.beginPath(); // cuerpo
                 ctx.lineWidth = 4;
                 ctx.moveTo(200, 135);
@@ -30,14 +30,14 @@ class DibujoAhorcado {
                 ctx.stroke();
                 ctx.closePath();
                 break;
-            case 3:
+            case 4:
                 ctx.beginPath(); // brazo izq
                 ctx.moveTo(200, 155);
                 ctx.lineTo(150, 185);
                 ctx.stroke();
                 ctx.closePath();
                 break;
-            case 2:
+            case 3:
                 ctx.beginPath(); // brazo der
                 ctx.moveTo(200, 155);
                 ctx.lineTo(250, 185);
@@ -57,7 +57,7 @@ class DibujoAhorcado {
                 ctx.stroke();
                 ctx.closePath();
                 break;
-            case 1:
+            case 2:
                 ctx.beginPath(); // pierna izq
                 ctx.lineWidth = 4;
                 ctx.moveTo(200, 230);
@@ -65,7 +65,7 @@ class DibujoAhorcado {
                 ctx.stroke();
                 ctx.closePath();
                 break;
-            case 0:
+            case 1:
                 ctx.beginPath(); // pierna der
                 ctx.lineWidth = 4;
                 ctx.moveTo(200, 230);

@@ -28,3 +28,6 @@ btnCerrarSesion.addEventListener("click", () => {
     sessionStorage.removeItem("J2");
     window.location.reload();
 });
+
+/*-------------------- CORRECCION FALLO CON FETCH ---------------------*/
+document.cookie = "loaded=false";

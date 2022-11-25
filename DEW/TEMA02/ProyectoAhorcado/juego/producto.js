@@ -4,12 +4,19 @@ class Producto {
      * objeto creado dentro de una clase.
      */
     constructor() {
-        fetch("./peliculas.json")
-            .then(res => res.json())
-            .then(data => {
-                let info = data.peliculasYseries[parseInt(Math.random() * data.peliculasYseries.length)];
-                sessionStorage.setItem("producto", JSON.stringify(info));
-            });
+        fetch("peliculas.json")
+        .then(res => res.json())
+        .then(data => {
+            let info = data.peliculasYseries[parseInt(Math.random() * data.peliculasYseries.length)];
+            sessionStorage.setItem("producto",JSON.stringify(info));
+        });
+        
+        // arreglo fetch
+        if (document.cookie == "loaded=false") {
+            document.cookie = "loaded=true";
+            window.location.reload();
+        }
+
         let infoProducto = JSON.parse(sessionStorage.getItem("producto"));
         this.setInfo([infoProducto.Titulo, infoProducto["Fecha de salida"], infoProducto.Duracion, infoProducto.Genero, infoProducto.Director, infoProducto.Sinopsis, infoProducto.Imagen]);
     }

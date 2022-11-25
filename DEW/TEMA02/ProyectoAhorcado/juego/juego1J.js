@@ -5,9 +5,9 @@ let producto = new Producto();
 let ahorcado = new DibujoAhorcado();
 
 /*------------------ INICIALIZAR PALABRA A ADIVINAR ------------------*/
-let intentos = 5;
+let intentos = 6;
 let palabraAdivinar = producto.getTitulo();
-let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]/g, "_");
+let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]|ñ/g, "_");
 document.getElementById("palabraAdivinar").innerHTML = adivinanza;
 
 
@@ -24,7 +24,8 @@ function jugarLetra(letra) {
     if (adivinanza != palabraAdivinar) {
         comprobarLetra(letra);
 
-        comprobarVictoria(letra);
+        comprobarIntentos(letra);
+        comprobarVictoria();
 
         document.getElementById(letra).disabled = true;
         document.getElementById("palabraAdivinar").innerHTML = adivinanza;
@@ -52,16 +53,14 @@ function comprobarLetra(letra) {
 /**
  * Funcion que comprueba si se ha completado la palabra que se tenia que adivinar y da
  * la victoria al jugador que esta jugando.
- * 
- * @param {char} letra que se ha clickado.
  */
-function comprobarVictoria(letra) {
+function comprobarVictoria() {
     if (adivinanza == palabraAdivinar) {
         lanzarModal("🥰 ¡Has ganado! 😍");
-        terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
         document.getElementById("canvasAhorcado").style.border = "3px solid yellowgreen";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px green";
+        terminarPartida();
         apuntarGanada();
         apuntarJugada();
     } else if (intentos == 0) {
@@ -73,7 +72,16 @@ function comprobarVictoria(letra) {
         document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
         apuntarJugada();
-    } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
+    }
+}
+
+/**
+ * Funcion para quitar intentos al jugador y representar el canvas del ahorcado conforme
+ * se vaya fallando letras en la palabra.
+ * @param {char} letra - introducida por el usuario. 
+ */
+function comprobarIntentos(letra) {
+    if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
         ahorcado.dibujarAhorcado(intentos);
         intentos--;
     }

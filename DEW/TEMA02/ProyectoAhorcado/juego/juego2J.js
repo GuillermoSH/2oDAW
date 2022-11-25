@@ -5,9 +5,9 @@ let producto = new Producto();
 let ahorcado = new DibujoAhorcado();
 
 /*------------------ INICIALIZAR PALABRA A ADIVINAR ------------------*/
-let intentos = 5;
+let intentos = 6;
 let palabraAdivinar = producto.getTitulo();
-let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]/g, "_");
+let adivinanza = palabraAdivinar.replaceAll(/[a-z]|[A-Z]|ñ/g, "_");
 document.getElementById("palabraAdivinar").innerHTML = adivinanza;
 
 /*------------------- INICIALIZAR TURNO JUGADORES --------------------*/
@@ -33,7 +33,8 @@ function jugarLetra(letra) {
     if (adivinanza != palabraAdivinar) {
         comprobarLetra(letra);
 
-        comprobarVictoria(letra);
+        comprobarIntentos(letra);
+        comprobarVictoria();
 
         document.getElementById(letra).disabled = true;
         document.getElementById("palabraAdivinar").innerHTML = adivinanza;
@@ -64,7 +65,7 @@ function comprobarLetra(letra) {
  * 
  * @param {char} letra que se ha clickado.
  */
-function comprobarVictoria(letra) {
+function comprobarVictoria() {
     if (adivinanza == palabraAdivinar) {
         terminarPartida();
         document.getElementById("btnNuevaPartida").classList.remove("hidden");
@@ -80,10 +81,20 @@ function comprobarVictoria(letra) {
         document.getElementById("canvasAhorcado").style.border = "3px solid orangered";
         document.getElementById("canvasAhorcado").style.boxShadow = "0 0 10px 2px red";
         apuntarJugada();
-    } else if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
-        ahorcado.dibujarAhorcado(intentos);
-        turno = (turno == "J1") ? "J2" : "J1";
+    } else {
         mostrarTurno();
+    }
+}
+
+/**
+ * Funcion para quitar intentos al jugador, representar el canvas del ahorcado conforme
+ * se vaya fallando letras en la palabra y cambia el turno entre jugadores.
+ * @param {char} letra - introducida por el usuario. 
+ */
+function comprobarIntentos(letra) {
+    if (intentos > 0 && !(palabraAdivinar.includes(letra.toUpperCase()) || palabraAdivinar.includes(letra.toLowerCase()))) {
+        turno = (turno == "J1") ? "J2" : "J1";
+        ahorcado.dibujarAhorcado(intentos);
         intentos--;
     }
 }
@@ -141,7 +152,6 @@ function apuntarJugada() {
  * #e9e9e9.
  */
 function mostrarTurno() {
-    console.log(turno);
     if (turno == "J1") {
         containerJ1.style.backgroundColor = "#ff4733";
         containerJ1.style.boxShadow = "inset 0 0 8px 0 #e9e9e9, 0 0 10px 2px";
