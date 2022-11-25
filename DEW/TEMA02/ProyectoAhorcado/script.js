@@ -30,4 +30,4 @@ btnCerrarSesion.addEventListener("click", () => {
 });
 
 /*-------------------- CORRECCION FALLO CON FETCH ---------------------*/
-document.cookie = "loaded=false";
+sessionStorage.setItem("loaded","false");

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: login/script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: login/script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const btnLoginAnimacion = document.getElementById("login");
+const btnRegistrarseAnimacion = document.getElementById("registrarse");
+const container = document.querySelector(".container");
+const errorLog = document.getElementById("errorLog");
+const errorReg = document.getElementById("errorReg");
+const exitoReg = document.getElementById("exitoReg");
+const btnLogin = document.getElementById("btnLogin");
+const btnRegistrarse = document.getElementById("btnRegistrarse");
+let usuarioLog = document.getElementById("usuarioLog");
+let usuarioReg = document.getElementById("usuarioReg");
+let contraseniaReg = document.getElementById("contraseniaReg");
+let contrasenia2Reg = document.getElementById("contrasenia2Reg");
+let contraseniaLog = document.getElementById("contraseniaLog");
+
+
+/*--------- FUNCIONALIDAD DESPLAZAMIENTO LOGIN Y REGISTRARSE ----------*/
+btnLoginAnimacion.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+    usuarioReg.value = "";
+    contraseniaReg.value = "";
+    contrasenia2Reg.value = "";
+});
+
+btnRegistrarseAnimacion.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+    usuarioLog.value = "";
+    contraseniaLog.value = "";
+});
+
+/*------------------ QUITAR ERRORES Y SUCCESS ONFOCUS -----------------*/
+usuarioLog.addEventListener("focus", () => errorLog.innerHTML = exitoReg.innerHTML = "");
+contraseniaLog.addEventListener("focus", () => errorLog.innerHTML = exitoReg.innerHTML = "");
+usuarioReg.addEventListener("focus", () => errorReg.innerHTML = exitoReg.innerHTML = "");
+contraseniaReg.addEventListener("focus", () => errorReg.innerHTML = exitoReg.innerHTML = "");
+contrasenia2Reg.addEventListener("focus", () => errorReg.innerHTML = exitoReg.innerHTML = "");
+
+/*--------------------------- LOGIN USUARIO ---------------------------*/
+btnLogin.addEventListener("click", () => comprobarLogin());
+
+/*------------------------- REGISTRAR USUARIO -------------------------*/
+btnRegistrarse.addEventListener("click", () => comprobarRegistro());
+
+/*---- CAMBIO DE TITULO DEPENDIENDO DE JUGADOR QUE QUIERA LOGGEARSE ---*/
+let jugador = sessionStorage.getItem("J1") ? "J2" : "J1";
+if (sessionStorage.getItem("J1")) {
+    document.getElementById("titulo-log").innerHTML = "Iniciar Sesión J2";
+}
+
+/**
+ * Funcion de comprobacion de campos de la parte de login. Aparecera un mensaje de
+ * error en el formulario en caso de que:
+ *  - El usuario no exista
+ *  - Los campos no esten rellenos
+ *  - La combinacion de usuario/contrasenia no coincidan
+ */
+function comprobarLogin() {
+	if (localStorage.getItem(usuarioLog.value) == null &amp;&amp; usuarioLog.value != "") {
+        errorLog.innerHTML = "El usuario no existe.";
+    } else if (usuarioLog.value == "") {
+        errorLog.innerHTML = "Los campos deben ser rellenados."
+    } else if (JSON.parse(localStorage.getItem(usuarioLog.value)).contrasenia != contraseniaLog.value) {
+        errorLog.innerHTML = "La combinación usuario/contraseña es incorrecta.";
+    } else if (jugador == "J2" &amp;&amp; usuarioLog.value == sessionStorage.getItem("J1")) {
+        errorLog.innerHTML = "Este usuario ya ha iniciado sesión.";
+    } else {
+        sessionStorage.setItem(jugador, usuarioLog.value);
+        jugador == "J1" ? window.location.replace("../index.html") : window.location.replace("../juego/juego2J.html");
+    }
+}
+
+/**
+ * Funcion de comprobacion de campos de la parte de registro. Aparecera un mensaje de
+ * error en el formulario en caso de que:
+ *  - El usuario ya exista
+ *  - Los campos no esten rellenos
+ *  - La contrasenia no cumpla el formato
+ *  - Las contrasenias no coincidan
+ */
+function comprobarRegistro() {
+    const jsonUsuario = { "usuario": usuarioReg.value, "contrasenia": contraseniaReg.value, "partidasGanadas": 0, "partidasJugadas": 0}
+
+    if (localStorage.getItem(usuarioReg.value) != null) {
+        errorReg.innerHTML = "El usuario ya existe."
+    } else if (usuarioReg.value == "") {
+        errorReg.innerHTML = "Campo usuario está vacío."
+    } else if (contraseniaReg.value == "") {
+        errorReg.innerHTML = "Campo contraseña está vacío."
+    } else if (!comprobarContrasenia()) {
+        errorReg.innerHTML = "La contraseña debe tener al menos un digito y una mayúscula."
+    } else if (contrasenia2Reg.value != contraseniaReg.value) {
+        errorReg.innerHTML = "Ambas contraseñas deben coincidir.";
+    } else {
+        localStorage.setItem(usuarioReg.value, JSON.stringify(jsonUsuario));
+        errorReg.innerHTML = "";
+        usuarioReg.value = contraseniaReg.value = contrasenia2Reg.value = "";
+        exitoReg.innerHTML = "Usuario dado de alta. Ahora inicie sesión.";
+    }
+}
+
+/**
+ * Si la expresión regular coincide con la contrasenia, devuelve verdadero.
+ * 
+ * @returns un valor booleano.
+ */
+function comprobarContrasenia() {
+    const regex = /(^[A-Z]+\w*)|(^\w*[A-Z]+\w*$)/gm;
+
+    return regex.test(contraseniaReg.value);
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Producto.html">Producto</a></li></ul><h3>Global</h3><ul><li><a href="global.html#apuntarGanada">apuntarGanada</a></li><li><a href="global.html#apuntarJugada">apuntarJugada</a></li><li><a href="global.html#comprobarContrasenia">comprobarContrasenia</a></li><li><a href="global.html#comprobarIntentos">comprobarIntentos</a></li><li><a href="global.html#comprobarLetra">comprobarLetra</a></li><li><a href="global.html#comprobarLogin">comprobarLogin</a></li><li><a href="global.html#comprobarRegistro">comprobarRegistro</a></li><li><a href="global.html#comprobarVictoria">comprobarVictoria</a></li><li><a href="global.html#jugarLetra">jugarLetra</a></li><li><a href="global.html#lanzarModal">lanzarModal</a></li><li><a href="global.html#mostrarTurno">mostrarTurno</a></li><li><a href="global.html#terminarPartida">terminarPartida</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Fri Nov 25 2022 16:56:02 GMT+0000 (hora estándar de Europa occidental)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
