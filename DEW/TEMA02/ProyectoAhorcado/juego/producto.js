@@ -5,7 +5,7 @@ class Producto {
      */
     constructor() {
         fetch("peliculas.json")
-        .then(res => res.json())
+        .then(response => response.json())
         .then(data => {
             let info = data.peliculasYseries[parseInt(Math.random() * data.peliculasYseries.length)];
             sessionStorage.setItem("producto",JSON.stringify(info));
