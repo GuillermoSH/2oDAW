@@ -13,7 +13,7 @@
     $result = pg_query($connection, "SELECT * FROM places");
 
     while (($row = pg_fetch_assoc($result)) != null) {
-        echo "<div>$row</div>";
+        echo "<div>".implode(" ",$row)."</div>\n";
     }
     ?>
 </body>
