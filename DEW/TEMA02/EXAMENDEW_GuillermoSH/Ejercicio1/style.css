@@ -1,0 +1,71 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 1fr;
+}
+
+.header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.container-articulos {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 20px;
+    background-color: rgb(169, 216, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 20px;
+    border-radius: 1rem;
+}
+
+.container-cesta {
+    margin: 20px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: rgb(169, 216, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#btnAgregar {
+    margin-top: 20px;
+    padding: 0.7rem 4rem;
+    background-color: rgb(255, 212, 131);
+    border-radius: 1rem;
+    border: 2px solid orange;
+}
+
+.container-articulos h2 {
+    margin-right: 200px;
+}
+
+.container-articulos div {
+    margin-left: 20px;
+}
+
+.container-articulos div div {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#cesta {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#cesta div div {
+    width: 250px;
+}
+
+#totalCesta {
+    margin-left: 40px;
+}
