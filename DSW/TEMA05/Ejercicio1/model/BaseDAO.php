@@ -1,6 +1,7 @@
 <?php
 class BaseDAO
 {
+    private static $lastAffectedRows;
     /**
      * Crea un nuevo objeto MySQLi, que es una clase de PHP que representa una conexión a una base de
      * datos MySQL
@@ -17,7 +18,6 @@ class BaseDAO
     
         return $conexion;
     }
-
     
     /**
      * Se conecta a la base de datos y ejecuta la consulta.
@@ -30,7 +30,18 @@ class BaseDAO
     {
         $conexion = self::getConexion();
         $resultado = $conexion->query($sql);
+        self::$lastAffectedRows = $conexion->affected_rows;
         $conexion->close();
         return $resultado;
+    }
+
+    /**
+     * Devuelve el número de filas afectadas por la última consulta
+     * 
+     * @return int El número de filas afectadas por la última instrucción SQL.
+     */
+    public static function getLastAffectedRows()
+    {
+        return self::$lastAffectedRows;
     }
 }

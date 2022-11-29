@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 require_once("../model/DAOProducto.php")
 ?>
@@ -66,7 +65,7 @@ require_once("../model/DAOProducto.php")
             let confirmar = confirm("¿Estás seguro de que quieres eliminar el producto: " + id + "?")
             if (confirmar) {
                 let form = document.createElement("form");
-                form.setAttribute("action", "../controller/productos/modificacion.php");
+                form.setAttribute("action", "../controller/productos/eliminar.php");
                 form.setAttribute("method", "post");
                 form.setAttribute("enctype", "multipart/form-data");
                 let input = document.createElement("input");
@@ -91,7 +90,7 @@ require_once("../model/DAOProducto.php")
                     }
                 }
             );
-            location.reload();
+            window.location.reload();
         }
     </script>
 </head>
