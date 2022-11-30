@@ -99,7 +99,7 @@
         }
 
         $BBDD = "./temperaturas.json";
-        $fdBBDD = fopen($BBDD, "r");
+        $fdBBDD = fopen($BBDD, "r"); // json_decode(file_get_contents($BBDD),true);
         $header = fgets($fdBBDD);
         while ($linea = fgets($fdBBDD)) {
             $info = obtenerDatosLinea($linea);
