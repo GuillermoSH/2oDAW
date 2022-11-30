@@ -1,28 +1,26 @@
-<?php declare(strict_types=1); ?>
+<?php 
+    $contador = 0;
+    $dia = getdate()['mday'];
+    $mes = getdate()['mon'];
+    $anio = getdate()['year'];
+    $hora = getdate()['hours'];
+    $min = getdate()['minutes'];
+    $seg = getdate()['seconds'];
+    if (intval($min) < 10) {
+        $min = "0".$min;
+    }
+    $fecha = $dia."/".$mes."/".$anio." ".$hora.":".$min.":".$seg;
+    if (isset($_COOKIE['ultimaVisita'])) {
+        $ultimaVisita= $_COOKIE['ultimaVisita'];
+        $numUltVisita=$_COOKIE['contador'];
+        $numUltVisitaTranscurridas= $contador-$numUltVisita;
+
+    }
+    setcookie("ultimaVisita",$fecha);
+    setcookie("contador",intval($contador)+1);
+?>
 <!DOCTYPE html>
-<?php
-        function menorAdiez($fecha) {
-            if ($fecha < 10) {
-                return "0".$fecha;
-            } else {
-                return $fecha;
-            }
-        }
-        $contador++;
-        $anteriorVisita = $_COOKIE['timeStampUltimaVisita'];
-        $dia = menorAdiez(getdate()['mday']);
-        $mes = menorAdiez(getdate()['mon']);
-        $anio = getdate()['year'];
-        $hours = menorAdiez(getdate()['hours']);
-        $min = menorAdiez(getdate()['minutes']);
-        $seg = menorAdiez(getdate()['secounds']);
-
-        $ultimaVisita = "$dia/$mes/$anio $horas:$min:$seg";
-
-        setcookie("timeStampUltimaVisita", $ultimaVisita, time() + 365 * 24 * 60 * 60);
-        setcookie("numVisitas", $contador, time() + 365 * 24 * 60 * 60);
-    ?>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,9 +28,15 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Ejercicio 2</h1>
     <?php
-        echo $_COOKIE['timeStapUltimaVisita']."\n";
-        echo $_COOKIE['numVisitas'];
+    if (isset($num)) {
+        # code...
+    }
+        echo $_COOKIE['ultimaVisita']."<br>";
+        echo $_COOKIE['contador'];
+
+
     ?>
 </body>
 </html>
