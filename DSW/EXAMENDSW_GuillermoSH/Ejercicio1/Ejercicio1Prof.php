@@ -50,7 +50,7 @@
 
         function mediaMes(array $datos):float
         {
-            $sumaTotal = array_reduce($datos, fn($a, $b) => $a + $b);
+            $sumaTotal = array_sum($datos);
             return round($sumaTotal/count($datos), 2);
         }
 
