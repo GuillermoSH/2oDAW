@@ -5,7 +5,7 @@ class Producto {
      */
     constructor() {
         this.leerJSON("peliculas.json");
-        const peliculas = JSON.parse(sessionStorage.getItem("peliculas")).peliculasYseries;
+        const peliculas = sessionStorage.getItem("peliculas").peliculasYseries;
         const infoProducto = peliculas[Math.ceil(Math.random() * (peliculas.length - 1))];
         this.setInfo([infoProducto.Titulo, infoProducto["Fecha de salida"], infoProducto.Duracion, infoProducto.Genero, infoProducto.Director, infoProducto.Sinopsis, infoProducto.Imagen]);
     }
