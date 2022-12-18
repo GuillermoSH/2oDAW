@@ -1,5 +1,6 @@
 /*----------------------- INICIALIZAR PRODUCTO -----------------------*/
 let producto = new Producto();
+producto.leerJSON();
 
 /*------------------------ INICIALIZAR DIBUJO ------------------------*/
 let ahorcado = new DibujoAhorcado();

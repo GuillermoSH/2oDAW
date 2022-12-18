@@ -1,22 +1,12 @@
 class Producto {
-    /**
-     * La función constructora es una función especial que se utiliza para crear e inicializar un
-     * objeto creado dentro de una clase.
-     */
-    constructor() {
-        this.leerJSON("peliculas.json");
-        const peliculas = sessionStorage.getItem("peliculas").peliculasYseries;
-        const infoProducto = peliculas[Math.ceil(Math.random() * (peliculas.length - 1))];
+    leerJSON() {
+        $.getJSON("./peliculas.json")
+            .done(function (resultado) {
+                let pelicula = resultado[Math.ceil(Math.random() * resultado.length)];
+                sessionStorage.setItem("producto", JSON.stringify(pelicula))
+            });
+        const infoProducto = JSON.parse(sessionStorage.getItem("producto"));
         this.setInfo([infoProducto.Titulo, infoProducto["Fecha de salida"], infoProducto.Duracion, infoProducto.Genero, infoProducto.Director, infoProducto.Sinopsis, infoProducto.Imagen]);
-    }
-
-    leerJSON(url = '') {
-        fetch(url).then(response => {
-            return response.json();
-        })
-        .then(data => { 
-            sessionStorage.setItem("peliculas", JSON.stringify(data))
-        });
     }
 
     /**

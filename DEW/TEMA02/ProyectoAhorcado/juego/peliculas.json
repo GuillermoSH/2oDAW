@@ -1,427 +1,425 @@
-{
-    "peliculasYseries": [
-        {
-            "Titulo": "Avatar",
-            "Fecha de salida": "18 de diciembre de 2009",
-            "Duracion": "162 min",
-            "Genero": "Acción, Aventura, Fantasía",
-            "Director": "James Cameron",
-            "Sinopsis": "Entramos en el mundo Avatar de la mano de Jake Sully, un ex-Marine en silla de ruedas, que ha sido reclutado para viajar a Pandora, donde existe un mineral raro y muy preciado que puede solucionar la crisis energética existente en la Tierra.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tXmTHdrZgNsULqCbThK2Dt2X9Wt.jpg"
-        },
-        {
-            "Titulo": "ONE PIECE FILM RED",
-            "Fecha de salida": "3 de noviembre de 2022",
-            "Duracion": "115 min",
-            "Genero": "Animación, Aventura, Acción, Fantasía",
-            "Director": "Goro Taniguchi",
-            "Sinopsis": "Uta — la cantante más querida del mundo. Su voz, con la que canta mientras oculta su verdadera identidad, ha sido descrita como de otro mundo. Ella aparecerá en público por primera vez en un concierto en vivo. A medida que el lugar se llena con todo tipo de fanáticos de Uta: piratas emocionados, la Armada observando de cerca y los Sombreros de Paja liderados por Luffy que simplemente vinieron a disfrutar de su actuación sonora, la voz que todo el mundo ha estado esperando está a punto de resonar. La historia comienza con el impactante hecho de que ella es la hija de Shanks.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4ovEtMHpv1UKDJB6Wq69DB4q8xG.jpg"
-        },
-        {
-            "Titulo": "Pesadilla antes de Navidad",
-            "Fecha de salida": "2 de diciembre de 1994",
-            "Duracion": "75 min",
-            "Genero": "Fantasía, Animación, Familia",
-            "Director": "Henry Selick",
-            "Sinopsis": "Cuando Jack Skellington, el Señor de Halloween, descubre la Navidad, se queda fascinado y decide mejorarla. Sin embargo, su visión de la festividad es totalmente contraria al espíritu navideño. Sus planes incluyen el secuestro de Santa Claus y la introducción de cambios bastante macabros. Sólo su novia Sally es consciente del error que está cometiendo.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fRrhrNBQzsppxOpN8GO1RFIxp6X.jpg"
-        },
-        {
-            "Titulo": "Black Adam",
-            "Fecha de salida": "21 de noviembre de 2022",
-            "Duracion": "124 min",
-            "Genero": "Acción, Fantasía, Ciencia ficción",
-            "Director": "Jaume Collet-Serra",
-            "Sinopsis": "Casi 5.000 años después de haber sido dotado de los poderes omnipotentes de los antiguos dioses -y encarcelado con la misma rapidez-, Black Adam es liberado de su tumba terrenal, listo para desatar su forma única de justicia en el mundo moderno.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mPTzXksC8HcAj6EM6WjZFJVJEzF.jpg"
-        },
-        {
-            "Titulo": "Dragon Ball Super Super Hero",
-            "Fecha de salida": "2 de septiembre de 2022",
-            "Duracion": "100 min",
-            "Genero": "Animación, Ciencia ficción, Acción",
-            "Director": "Tetsuro Kodama",
-            "Sinopsis": "Son Goku destruyó en su momento al Ejército Red Ribbon. Ahora, ciertos individuos han decidido continuar con su legado y han creado a los androides definitivos: Gamma 1 y Gamma 2. Estos dos androides se autoproclaman superhéroes y deciden atacar a Piccolo y a Gohan. ¿Cuál es el objetivo del Nuevo Ejército Red Ribbon? Ante un peligro inminente, ¡llega el momento del despertar del Superhéroe!",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg"
-        },
-        {
-            "Titulo": "Sonic La pelicula",
-            "Fecha de salida": "1 de febrero de 2022",
-            "Duracion": "122 min",
-            "Genero": "Acción, Aventura, Familia, Comedia",
-            "Director": "Jeff Fowler",
-            "Sinopsis": "Después de establecerse en Green Hills, Sonic se muere por demostrar que tiene madera de auténtico héroe, pero Robotnik regresa con nuevo compañero Knuckles, en busca de una esmeralda que tiene el poder de destruir civilizaciones, pero Sonic no está solo, le ayudará Tails.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJiHVM0A3OXDVxl4Z6a7ihMPHfm.jpg"
-        },
-        {
-            "Titulo": "Guardianes de la Noche Tren infinito",
-            "Fecha de salida": "23 de abril de 2021",
-            "Duracion": "117 min",
-            "Genero": "Animación, Acción, Aventura, Fantasía",
-            "Director": "Haruo Sotozaki",
-            "Sinopsis": "Tanjiro y sus compañeros se unen al Pilar de las Llamas Kyojuro Rengoku para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8t29MfbEkEZixjVbjRkqI5NyFR4.jpg"
-        },
-        {
-            "Titulo": "Venom Habra Matanza",
-            "Fecha de salida": "15 de noviembre de 2021",
-            "Duracion": "97 min",
-            "Genero": "Ciencia ficción, Acción, Aventura",
-            "Director": "Andy Serkis",
-            "Sinopsis": "Eddie Brock y su simbionte Venom todavía están intentando descubrir cómo vivir juntos cuando un preso que está en el corredor de la muerte se infecta con un simbionte propio.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0j9rHYpRML7dKm5xw9e97HTDJF.jpg"
-        },
-        {
-            "Titulo": "Harry Potter y la piedra filosofal",
-            "Fecha de salida": "30 de noviembre de 2001",
-            "Duracion": "152 min",
-            "Genero": "Aventura, Fantasía",
-            "Director": "Chris Columbus",
-            "Sinopsis": "Harry Potter es un huérfano que vive con sus desagradables tíos, los Dursley, y su repelente primo Dudley. Se acerca su undécimo cumpleaños y tiene pocas esperanzas de recibir algún regalo, ya que nunca nadie se acuerda de él. Sin embargo, pocos días antes de su cumpleaños, una serie de misteriosas cartas dirigidas a él y escritas con una estridente tinta verde rompen la monotonía de su vida: Harry es un mago y sus padres también lo eran.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/roKMM6S9DRGFNujmvqlk8l5YbN3.jpg"
-        },
-        {
-            "Titulo": "Black Panther",
-            "Fecha de salida": "16 de febrero de 2018",
-            "Duracion": "134 min",
-            "Genero": "Acción, Aventura, Ciencia ficción",
-            "Director": "Ryan Coogler",
-            "Sinopsis": "Después de los acontecimientos de Capitán América: Civil War, T'Challa vuelve a casa, la nación aislada y muy avanzada tecnológicamente de Wakanda, para ser proclamado Rey. Pero la reaparición de un viejo enemigo pone a prueba el temple de T'Challa como Rey y Black Panther ya que se ve arrastrado a un conflicto que pone en peligro todo el destino de Wakanda y del mundo.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qjarBufG0iUqr1IvJUK8AJnpTIR.jpg"
-        },
-        {
-            "Titulo": "SpiderMan No Way Home",
-            "Fecha de salida": "16 de diciembre de 2021",
-            "Duracion": "148 min",
-            "Genero": "Acción, Aventura, Ciencia ficción",
-            "Director": "Jon Watts",
-            "Sinopsis": "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/miZFgV81xG324rpUknQX8dtXuBl.jpg"
-        },
-        {
-            "Titulo": "Bleach",
-            "Fecha de salida": "5 de octubre de 2004",
-            "Duracion": "24-25 min/episodio",
-            "Genero": "Acción, Aventura, Animación, Ciencia ficción, Fantasía",
-            "Director": "Pierrot",
-            "Sinopsis": "La serie narra las aventuras de Ichigo Kurosaki, un adolescente que tiene la facultad de interactuar con los espíritus. Una noche, Ichigo se encuentra con una shinigami —personificación japonesa del Dios de la muerte— llamada Rukia Kuchiki, quien se sorprende que pueda verla. Sin embargo, su conversación es interrumpida por la aparición de un hollow, un espíritu maligno. Después de que Rukia fuera gravemente herida al tratar de proteger a Ichigo, esta intenta traspasarle parte de sus poderes a Ichigo para que pueda enfrentarse al hollow en igualdad de condiciones. No obstante, Ichigo sin darse cuenta los absorbe casi por completo y logra vencer con facilidad al espíritu.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg"
-        },
-        {
-            "Titulo": "Smallville",
-            "Fecha de salida": "16 de octubre de 2001",
-            "Duracion": "43 min/episodio",
-            "Genero": "Ciencia ficción, Fantasía, Acción, Aventura, Drama",
-            "Director": "Warner",
-            "Sinopsis": "Serie que narra los inicios de Superman -Clark Kent- en su pueblo natal, Smallville. Allí vivía con sus padres, estudiaba en el instituto local y conoció a su primera novia, Lana Lang, y a su futuro rival, Lex Luthor.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUhJGETy2sec4vEkiqJ9eGeIywc.jpg"
-        },
-        {
-            "Titulo": "La Casa de Papel",
-            "Fecha de salida": "2 de mayo de 2017",
-            "Duracion": "70 min/episodio",
-            "Genero": "Crimen, Drama",
-            "Director": "Álex Pina",
-            "Sinopsis": "Un enigmático personaje llamado el Profesor planea algo grande: llevar a cabo el mayor atraco de la historia. Para ello recluta una banda de ocho personas que reúnen un único requisito, ninguno tiene nada que perder. Cinco meses de reclusión memorizando cada paso, cada detalle, cada probabilidad… y por fin, once días de encierro en la Fábrica Nacional de Moneda, rodeados de cuerpos de policía y con decenas de rehenes en su poder para saber si su apuesta suicida será todo o nada.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z01Dc0Ly2GmCpLe6Scx4d3dPP1S.jpg"
-        },
-        {
-            "Titulo": "Modern Family",
-            "Fecha de salida": "23 de septiembre de 2009",
-            "Duracion": "25 min/episodio",
-            "Genero": "Comedia",
-            "Director": "Christopher Lloyd,Steven Levitan",
-            "Sinopsis": "Narrada desde la perspectiva de un documental, la serie ofrece un panorama honesto y divertido sobre la vida de varias familias, en donde se presentan la relación entre padres e hijos, diferencias generacionales y culturales.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gabjqvbqXsg4KL5JaBoPKPipiys.jpg"
-        },
-        {
-            "Titulo": "The Big Bang Theory",
-            "Fecha de salida": "24 de septiembre de 2007",
-            "Duracion": "22 min/episodio",
-            "Genero": "Comedia",
-            "Director": "Chuck Lorre",
-            "Sinopsis": "Leonard y Sheldon son dos cerebros privilegiados que comparten piso. Aunque los dos, doctores en Física, son capaces de calcular las probabilidades de existencia de otros mundos, no saben cómo relacionarse con los demás, especialmente con las chicas. Penny, una vecina recién llegada, es el polo opuesto a los dos amigos, de modo que su llegada altera la tranquila vida sentimental de Leonard y el desorden obsesivo-compulsivo de Sheldon.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2bDQWCvFxRGhdvThTJvVxueEoLl.jpg"
-        },
-        {
-            "Titulo": "Arcane",
-            "Fecha de salida": "6 de noviembre de 2021",
-            "Duracion": "39 min/episodio",
-            "Genero": "Animación, Ciencia ficción, Fantasía, Acción, Aventura, Drama",
-            "Director": "Christian Linke,Alex Yee",
-            "Sinopsis": "Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg"
-        },
-        {
-            "Titulo": "Soy leyenda",
-            "Fecha de salida": "14 de diciembre de 2007",
-            "Duracion": "101 min",
-            "Genero": "Drama, Horror, Ciencia Ficción",
-            "Director": "Francis Lawrence",
-            "Sinopsis": "Año 2012. Robert Neville es un brillante científico, que, sin embargo, no ha podido impedir la expansión de un incurable virus creado por el hombre. Neville, inexplicablemente inmune al contagio, es el último superviviente humano de la ciudad de Nueva York y, quizá, del mundo. Pero Neville no está completamente solo. Víctimas mutantes de la plaga merodean en las sombras, vigilando cada uno de los movimientos del científico y esperando que cometa un error fatal para beber su sangre.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pO1SrJgf5BumqcIRkYviSGIFdmX.jpg"
-        },
-        {
-            "Titulo": "Vengadores",
-            "Fecha de salida": "04 de mayo de 2012",
-            "Duracion": "143 min",
-            "Genero": "Acción, Ciencia Ficción, Thriller",
-            "Director": "Joss Whedon",
-            "Sinopsis": "El Director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ugX4WZJO3jEvTOerctAWJLinujo.jpg"
-        },
-        {
-            "Titulo": "Interstellar",
-            "Fecha de salida": "07 de noviembre de 2014",
-            "Duracion": "169 min",
-            "Genero": "Aventura, Drama, Ciencia Ficción",
-            "Director": "Christopher Nolan",
-            "Sinopsis": "Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg"
-        },
-        {
-            "Titulo": "Juego de Tronos",
-            "Fecha de salida": "17 de abril de 2011",
-            "Duracion": "56 min/episodio",
-            "Genero": "Aventura, Drama, Fantasía",
-            "Director": "David Benioff, D.B. Weiss",
-            "Sinopsis": "Juego de tronos es la historia de la lucha por un trono, el trono de hierro, forjado con las espadas de los enemigos vencidos. Siete son los reinos de Poniente y muchas las casas que se disputarán la corona: los herederos, los exiliados, los despojados y los actuales regentes.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z9gCSwIObDOD2BEtmUwfasar3xs.jpg"
-        },
-        {
-            "Titulo": "Beetlejuice",
-            "Fecha de salida": "26 de febrero de 1987",
-            "Duracion": "97 min",
-            "Genero": "Comedia, Aventura",
-            "Director": "Tim Burton",
-            "Sinopsis": "Un matrimonio de fantasmas contrata a Beetlejuice, un especialista en asustar mortales, para que ahuyente a los nuevos propietarios de su casa.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Ap36MvDZbfX0vzPsNeYqYv29rrK.jpg"
-        },
-        {
-            "Titulo": "Cocodrilo Dundee",
-            "Fecha de salida": "22 de julio de 1988",
-            "Duracion": "92 min",
-            "Genero": "Comedia, Fantasía",
-            "Director": "Tim Burton",
-            "Sinopsis": "Michael Dundee es un rudo cazador de cocodrilos que, por su original filosofía de la vida, es considerado como un héroe. Sue Charlton, una reportera de Nueva York, decide ir a Australia para visitarle.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q0Msbpvpe6yuvIUCyJuBbQ9UhUj.jpg"
-        },
-        {
-            "Titulo": "Valkyrie",
-            "Fecha de salida": "25 de diciembre de 2008",
-            "Duracion": "121 min",
-            "Genero": "Drama, Thriller, Histórica",
-            "Director": "Bryan Singer",
-            "Sinopsis": "El coronel Claus Von Stauffenberg, un aristócrata alemán, regresa de África gravemente herido en combate y, tras unirse a la resistencia alemana, se convierte en el cerebro de la Operación Valkiria, cuyo objetivo es derrocar el régimen nazi.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jDARt52DH7Tiw5jL0xrrDnqPFZp.jpg"
-        },
-        {
-            "Titulo": "Ratatouille",
-            "Fecha de salida": "3 de agosto de 2007",
-            "Duracion": "111 min",
-            "Genero": "Animación, Comedia, Familiar",
-            "Director": "Brad Bird, Jan Pinkava",
-            "Sinopsis": "Remy es una rata que aprecia la buena comida y tiene un paladar bastante sofisticado. Su sueño es convertirse algún día en un gran chef francés a pesar de la oposición de su familia. El destino lleva a Remy a las alcantarillas de París, donde su situación no puede ser mejor, ya que se encuentra justo debajo de uno de los restaurantes más finos de París. El roedor se sentirá en el lugar perfecto para convertir su sueño en una realidad.",
-            "Imagen": "https://www.lavanguardia.com/peliculas-series/images/movie/poster/2007/6/w1280/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg"
-        },
-        {
-            "Titulo": "Memento",
-            "Fecha de salida": "19 de enero de 2001",
-            "Duracion": "113 min",
-            "Genero": "Misterio, Thriller",
-            "Director": "Christopher Nolan",
-            "Sinopsis": "Leonard es un investigador de una agencia de seguros cuya memoria está irreversiblemente dañada por culpa de un golpe en la cabeza, al intentar evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. A causa del golpe, ha perdido la memoria reciente, los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar y vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neHrQLVfT3KPqvv30pNPyRb6chQ.jpg"
-        },
-        {
-            "Titulo": "Stardust",
-            "Fecha de salida": "26 de octubre de 2007",
-            "Duracion": "127 min",
-            "Genero": "Aventura, Familiar, Fantasía",
-            "Director": "Matthew Vaughn",
-            "Sinopsis": "El adolescente Tristán atraviesa un muro que le lleva al reino mágico de Stormhold para regalar a su amada una estrella caída del firmamento.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/73JmdwtJyFQyKem7QHlDzmadNef.jpg"
-        },
-        {
-            "Titulo": "Django desencadenado",
-            "Fecha de salida": "18 de enero de 2013",
-            "Duracion": "165 min",
-            "Genero": "Drama, Western",
-            "Director": "Quentin Tarantino",
-            "Sinopsis": "Un antiguo esclavo une sus fuerzas con un cazador de recompensas alemán que lo libera y ayuda a cazar a los criminales más buscados del Sur, todo ello con la esperanza de encontrar a su esposa perdida hace mucho tiempo.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/naaYX64yMGzEFsATOFQDaxxQWbJ.jpg"
-        },
-        {
-            "Titulo": "Pulp Fiction",
-            "Fecha de salida": "13 de enero de 1995",
-            "Duracion": "154 min",
-            "Genero": "Drama, Crimen",
-            "Director": "Quentin Tarantino",
-            "Sinopsis": "Historias de dos matones, un boxeador y una pareja de atracadores de poca monta envueltos en una violencia espectacular e irónica.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg"
-        },
-        {
-            "Titulo": "Mad Max: Furia en la carretera",
-            "Fecha de salida": "15 de mayo de 2015",
-            "Duracion": "120 min",
-            "Genero": "Acción, Aventura, Ciencia ficción",
-            "Director": "George Miller",
-            "Sinopsis": "Tras la guerra termonuclear que ha convertido a la Tierra en un páramo, el antiguo policía Max Rockatansky, atormentado por los espíritus de aquellos a los que no pudo proteger, se ha convertido en un hombre con un solo instinto: sobrevivir. Sin embargo, se ve arrastrado a formar parte de un grupo que huye a través del desierto en un War Rig. Enfurecido, el Señor de la Guerra moviliza a todas sus bandas y persigue implacablemente a Max.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3Q5WUmVGMyiTDHA83koBoKpTtx3.jpg"
-        },
-        {
-            "Titulo": "R.I.P.D 2: La rebelion de los condenados",
-            "Fecha de salida": "15 de noviembre de 2022",
-            "Duracion": "102 min",
-            "Genero": "Fantasía, Acción, Comedia, Crimen ",
-            "Director": "Paul Leyden",
-            "Sinopsis": "Tras perder la vida en un enfrentamiento con una banda de matones, el sheriff Roy Pulsipher recibe una segunda oportunidad al unirse al Departamento de Descanso en Paz, que se encarga de enviar las almas perdidas al infierno.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oJJWjiMKExSi241NpKUqVIxWfH6.jpg"
-        },
-        {
-            "Titulo": "El viaje de Chihiro",
-            "Fecha de salida": "25 de noviembre de 2002",
-            "Duracion": "122 min",
-            "Genero": " Animación, Familia, Fantasía ",
-            "Director": "Hayao Miyazaki",
-            "Sinopsis": "Chihiro es una niña de diez años caprichosa y testaruda que cree que el universo entero debe someterse a sus deseos. Camino de su nuevo hogar junto a sus padres, una idea que la enfurece, la familia se equivoca de camino y aparece al final de un misterioso callejón sin salida, donde topan con un extraño edificio con un largo pasaje que los conduce a un pueblo fantasmal donde los espera un magnífico banquete.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vlsi5iZcfDChKNGNvRp7Zp3SULH.jpg"
-        },
-        {
-            "Titulo": "La milla verde",
-            "Fecha de salida": "12 de febrero de 2000",
-            "Duracion": "189 min",
-            "Genero": "Fantasía, Drama, Crimen",
-            "Director": "Frank Darabont",
-            "Sinopsis": "Paul Edgecomb es un funcionario de prisiones que vigila \"la milla verde\", el pasillo de linóleo que los condenados a muerte recorren hasta llegar a la silla eléctrica. John Coffey, un gigantesco convicto acusado de violar y asesinar a dos niñas de nueve años, está esperando su inminente ejecución. Tras una personalidad ingenua, John esconde un don sobrenatural con el que contagia su sentido de espiritualidad y humanidad a todos sus compañeros de prisión.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aBQiJRxGRrX0mXFMjxyzWYFtEnf.jpg"
-        },
-        {
-            "Titulo": "Breaking Bad",
-            "Fecha de salida": "20 de enero de 2008",
-            "Duracion": "45 min/episodio",
-            "Genero": "Drama",
-            "Director": "Vince Gilligan",
-            "Sinopsis": "Tras cumplir 50 años, Walter White (Bryan Cranston), un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable. Casado con Skyler (Anna Gunn) y con un hijo discapacitado (RJ Mitte), la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno (Aaron Paul), fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg"
-        },
-        {
-            "Titulo": "Fullmetal Alchemist: Brotherhood",
-            "Fecha de salida": "5 de abril de 2009",
-            "Duracion": "25 min/episodio",
-            "Genero": "Acción, Aventura, Animación, Ciencia ficción, Fantasía",
-            "Director": "Yasuhiro Irie",
-            "Sinopsis": "Edward y Alphonse Elric son dos hermanos en busca de la piedra filosofal. Viven en un mundo donde la alquimia se utiliza como arma. Una dolorosa pérdida empuja a los hermanos Elric a realizar un prohibido experimento que acaba de forma inesperada y llevándose por el camino el cuerpo de Alphonse y algunas partes del de Edward. Así, con el alma del primero a salvo en una armadura y las extremidades del segundo convertidas en metal, los hermanos confían en que la piedra filosofal les otorgará el poder y las respuestas necesarias para recuperar lo perdido.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iAld03IP69UEpqQbVWoRBvjqkqX.jpg"
-        },
-        {
-            "Titulo": "El bueno, el feo y el malo",
-            "Fecha de salida": "7 de agosto de 1968",
-            "Duracion": "161 min",
-            "Genero": "Western",
-            "Director": "Sergio Leone",
-            "Sinopsis": "Durante la Guerra de Secesión, tres cazadores de recompensas se lanzan a la búsqueda de un tesoro que ninguno de los tres truhanes puede localizar sin la ayuda de los otros dos. Tuco sabe que el tesoro se encuentra en un cementerio, mientras que Joe conoce el nombre inscrito en la tumba que lo esconde. Mientras tanto, Sentenza no duda en matar a mujeres y niños para conseguir su meta. De esta forma, los tres hombres colaboran en apariencia, pero al final intentarán eliminarse mutuamente.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg"
-        },
-        {
-            "Titulo": "Forrest Gump",
-            "Fecha de salida": "23 de septiembre de 1994",
-            "Duracion": "142 min",
-            "Genero": "Comedia, Drama, Romance",
-            "Director": "Robert Zemeckis",
-            "Sinopsis": "Forrest Gump es un chico con deficiencias mentales no muy profundas y con alguna incapacidad motora que, a pesar de todo, llegará a convertirse, entre otras cosas, en un héroe durante la Guerra del Vietnam. Su persistencia y bondad le llevarán a conseguir una gran fortuna, ser objeto del clamor popular y a codearse con las más altas esferas sociales y políticas del país. Siempre sin olvidar a Jenny, su gran amor desde que era niño.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/azV6hV99lYkdhydsQbJCI6FqMl4.jpg"
-        },
-        {
-            "Titulo": "El señor de los anillos: El retorno del rey",
-            "Fecha de salida": "17 de diciembre de 2003",
-            "Duracion": "202 min",
-            "Genero": "Aventura, Fantasía, Acción",
-            "Director": "Peter Jackson",
-            "Sinopsis": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg"
-        },
-        {
-            "Titulo": "La vida es bella",
-            "Fecha de salida": "26 de febrero de 1999",
-            "Duracion": "117 min",
-            "Genero": "Comedia, Drama",
-            "Director": "Roberto Benigni",
-            "Sinopsis": "En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo, en la Toscana, con la intención de abrir una librería. Allí conoce a la encantadora Dora y, a pesar de que es la prometida del fascista Rodolfo, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a1B39Y1yAo3BE9ULkzkk6hOknBQ.jpg"
-        },
-        {
-            "Titulo": "La tumba de las luciernagas",
-            "Fecha de salida": "10 de octubre de 2003",
-            "Duracion": "95 min",
-            "Genero": "Animación, Drama, Bélica",
-            "Director": "Isao Takahata",
-            "Sinopsis": "Verano de 1945. La aviación estadounidense somete las ciudades japonesas a continuos ataques aéreos. En uno de ellos, una incursión con bombas incendiarias convierte la ciudad de Kōbe en un infierno humeante, para los dos protagonistas (Seita, de 14 años, y su hermanita Setsuko, de 5). El joven Seita y su pequeña hermana Setsuko son hijos de un oficial de la marina japonesa. Durante la Segunda Guerra Mundial, ambos viven con su madre, pero un día, tras un bombardeo, ellos se retrasan y no consiguen llegar al búnker donde ella los espera.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ufXfPXN5Yr4tS1oawcXdTr3oXw4.jpg"
-        },
-        {
-            "Titulo": "Alguien volo sobre el nido del cuco",
-            "Fecha de salida": "7 de octubre de 1976",
-            "Duracion": "133 min",
-            "Genero": "Drama",
-            "Director": "Miloš Forman",
-            "Sinopsis": "Randle McMurphy (Jack Nicholson), un violador de espíritu libre, que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dZkOmsEXqce6KgH84ibIW9xJhb6.jpg"
-        },
-        {
-            "Titulo": "Spider-Man: Un nuevo universo",
-            "Fecha de salida": "21 de diciembre de 2018",
-            "Duracion": "133 min",
-            "Genero": "Acción, Aventura, Animación, Ciencia ficción",
-            "Director": "Rodney Rothman",
-            "Sinopsis": "En un universo paralelo donde Peter Parker ha muerto, un joven de secundaria llamado Miles Morales es el nuevo Spider-Man. Sin embargo, cuando el líder mafioso Wilson Fisk (a.k.a Kingpin) construye el \"Super Colisionador\" trae a una versión alternativa de Peter Parker que tratará de enseñarle a Miles como ser un mejor Spider-Man. Pero no será el único Spider Man en entrar a este universo: 4 versiones alternas de Spider-Man aparecerán y buscarán regresar a su universo antes de que toda la realidad se colapse.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xRMZikjAHNFebD1FLRqgDZeGV4a.jpg"
-        },
-        {
-            "Titulo": "En el bosque de la luz de las luciernagas",
-            "Fecha de salida": "17 de septiembre de 2011",
-            "Duracion": "45 min",
-            "Genero": "Romance, Animación, Fantasía",
-            "Director": "Takahiro Omori",
-            "Sinopsis": "Cuando era pequeña, Hotaru se perdió en el bosque cerca del lugar donde va todos los veranos, la casa de su tío. Allí tuvo un extraño encuentro con Gin que la ayuda a encontrar el camino de vuelta. Gin es un joven que lleva una máscara blanca y que, debido a un hechizo, no puede ser tocado por ningún humano. Ella empieza a visitarlo todos los veranos según va creciendo, mientras espera la llegada del verano, para que su tiempo juntos continúe.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xE763r1dnYji0gOxrSxBtzyouSf.jpg"
-        },
-        {
-            "Titulo": "El castillo ambulante",
-            "Fecha de salida": "3 de abril de 2006",
-            "Duracion": "120 min",
-            "Genero": "Fantasía, Animación, Aventura",
-            "Director": "Hayao Miyazaki",
-            "Sinopsis": "Sophie es una joven de 18 años que trabaja sin descanso en la tienda de sombreros de la familia. En uno de sus frecuentes paseos conoce al enigmático mago Howl, lo que despierta la ira de la Bruja del Páramo, que odia a Howl con todas sus fuerzas. Cuando Sophie vuelve a la tienda, la Bruja se hace pasar por una clienta para acercarse a ella y lanzarle un hechizo… ¡que convierte a Sophie en una anciana de 90 años! Sophie, que no puede revelar su auténtica identidad, recurre a Howl para buscar una solución a su problema. Para ello se embarca en un viaje fantástico en el castillo ambulante del mago, habitado por personajes de lo más curioso. Sophie necesita ayuda pero quizás sea Howl el que realmente está en apuros.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p8EARnEw8KPZzlZg3vkseYVMczu.jpg"
-        },
-        {
-            "Titulo": "Star Wars: El imperio contraataca",
-            "Fecha de salida": "2 de noviembre de 1980",
-            "Duracion": "124 min",
-            "Genero": "Aventura, Acción, Ciencia ficción",
-            "Director": "Irvin Kershner",
-            "Sinopsis": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zsZwahm4ktZPKX0B494CxqhbBhu.jpg"
-        },
-        {
-            "Titulo": "El señor de los anillos: La comunidad del anillo",
-            "Fecha de salida": "19 de diciembre de 2001",
-            "Duracion": "45 min",
-            "Genero": "Animación, Fantasía, Acción",
-            "Director": "Peter Jackson",
-            "Sinopsis": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p6QjtBmO6U105l44U0qMDSLxT0L.jpg"
-        },
-        {
-            "Titulo": "La ventana indiscreta",
-            "Fecha de salida": "3 de octubre ",
-            "Duracion": "92 min",
-            "Genero": "Suspense, Misterio",
-            "Director": "Cornell Woolrich",
-            "Sinopsis": "Un reportero fotográfico se ve obligado a permanecer en reposo con una pierna escayolada. A pesar de la compañía de su novia y de su enfermera, procura escapar al tedio, observando desde la ventana de su apartamento con unos prismáticos lo que ocurre en las viviendas de enfrente. Debido a una serie de extrañas circunstancias empieza a sospechar de un vecino cuya mujer ha desaparecido.",
-            "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg"
-        }
-    ]
-}
+[
+    {
+        "Titulo": "Avatar",
+        "Fecha de salida": "18 de diciembre de 2009",
+        "Duracion": "162 min",
+        "Genero": "Acción, Aventura, Fantasía",
+        "Director": "James Cameron",
+        "Sinopsis": "Entramos en el mundo Avatar de la mano de Jake Sully, un ex-Marine en silla de ruedas, que ha sido reclutado para viajar a Pandora, donde existe un mineral raro y muy preciado que puede solucionar la crisis energética existente en la Tierra.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tXmTHdrZgNsULqCbThK2Dt2X9Wt.jpg"
+    },
+    {
+        "Titulo": "ONE PIECE FILM RED",
+        "Fecha de salida": "3 de noviembre de 2022",
+        "Duracion": "115 min",
+        "Genero": "Animación, Aventura, Acción, Fantasía",
+        "Director": "Goro Taniguchi",
+        "Sinopsis": "Uta — la cantante más querida del mundo. Su voz, con la que canta mientras oculta su verdadera identidad, ha sido descrita como de otro mundo. Ella aparecerá en público por primera vez en un concierto en vivo. A medida que el lugar se llena con todo tipo de fanáticos de Uta: piratas emocionados, la Armada observando de cerca y los Sombreros de Paja liderados por Luffy que simplemente vinieron a disfrutar de su actuación sonora, la voz que todo el mundo ha estado esperando está a punto de resonar. La historia comienza con el impactante hecho de que ella es la hija de Shanks.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4ovEtMHpv1UKDJB6Wq69DB4q8xG.jpg"
+    },
+    {
+        "Titulo": "Pesadilla antes de Navidad",
+        "Fecha de salida": "2 de diciembre de 1994",
+        "Duracion": "75 min",
+        "Genero": "Fantasía, Animación, Familia",
+        "Director": "Henry Selick",
+        "Sinopsis": "Cuando Jack Skellington, el Señor de Halloween, descubre la Navidad, se queda fascinado y decide mejorarla. Sin embargo, su visión de la festividad es totalmente contraria al espíritu navideño. Sus planes incluyen el secuestro de Santa Claus y la introducción de cambios bastante macabros. Sólo su novia Sally es consciente del error que está cometiendo.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fRrhrNBQzsppxOpN8GO1RFIxp6X.jpg"
+    },
+    {
+        "Titulo": "Black Adam",
+        "Fecha de salida": "21 de noviembre de 2022",
+        "Duracion": "124 min",
+        "Genero": "Acción, Fantasía, Ciencia ficción",
+        "Director": "Jaume Collet-Serra",
+        "Sinopsis": "Casi 5.000 años después de haber sido dotado de los poderes omnipotentes de los antiguos dioses -y encarcelado con la misma rapidez-, Black Adam es liberado de su tumba terrenal, listo para desatar su forma única de justicia en el mundo moderno.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mPTzXksC8HcAj6EM6WjZFJVJEzF.jpg"
+    },
+    {
+        "Titulo": "Dragon Ball Super Super Hero",
+        "Fecha de salida": "2 de septiembre de 2022",
+        "Duracion": "100 min",
+        "Genero": "Animación, Ciencia ficción, Acción",
+        "Director": "Tetsuro Kodama",
+        "Sinopsis": "Son Goku destruyó en su momento al Ejército Red Ribbon. Ahora, ciertos individuos han decidido continuar con su legado y han creado a los androides definitivos: Gamma 1 y Gamma 2. Estos dos androides se autoproclaman superhéroes y deciden atacar a Piccolo y a Gohan. ¿Cuál es el objetivo del Nuevo Ejército Red Ribbon? Ante un peligro inminente, ¡llega el momento del despertar del Superhéroe!",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg"
+    },
+    {
+        "Titulo": "Sonic La pelicula",
+        "Fecha de salida": "1 de febrero de 2022",
+        "Duracion": "122 min",
+        "Genero": "Acción, Aventura, Familia, Comedia",
+        "Director": "Jeff Fowler",
+        "Sinopsis": "Después de establecerse en Green Hills, Sonic se muere por demostrar que tiene madera de auténtico héroe, pero Robotnik regresa con nuevo compañero Knuckles, en busca de una esmeralda que tiene el poder de destruir civilizaciones, pero Sonic no está solo, le ayudará Tails.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJiHVM0A3OXDVxl4Z6a7ihMPHfm.jpg"
+    },
+    {
+        "Titulo": "Guardianes de la Noche Tren infinito",
+        "Fecha de salida": "23 de abril de 2021",
+        "Duracion": "117 min",
+        "Genero": "Animación, Acción, Aventura, Fantasía",
+        "Director": "Haruo Sotozaki",
+        "Sinopsis": "Tanjiro y sus compañeros se unen al Pilar de las Llamas Kyojuro Rengoku para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8t29MfbEkEZixjVbjRkqI5NyFR4.jpg"
+    },
+    {
+        "Titulo": "Venom Habra Matanza",
+        "Fecha de salida": "15 de noviembre de 2021",
+        "Duracion": "97 min",
+        "Genero": "Ciencia ficción, Acción, Aventura",
+        "Director": "Andy Serkis",
+        "Sinopsis": "Eddie Brock y su simbionte Venom todavía están intentando descubrir cómo vivir juntos cuando un preso que está en el corredor de la muerte se infecta con un simbionte propio.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0j9rHYpRML7dKm5xw9e97HTDJF.jpg"
+    },
+    {
+        "Titulo": "Harry Potter y la piedra filosofal",
+        "Fecha de salida": "30 de noviembre de 2001",
+        "Duracion": "152 min",
+        "Genero": "Aventura, Fantasía",
+        "Director": "Chris Columbus",
+        "Sinopsis": "Harry Potter es un huérfano que vive con sus desagradables tíos, los Dursley, y su repelente primo Dudley. Se acerca su undécimo cumpleaños y tiene pocas esperanzas de recibir algún regalo, ya que nunca nadie se acuerda de él. Sin embargo, pocos días antes de su cumpleaños, una serie de misteriosas cartas dirigidas a él y escritas con una estridente tinta verde rompen la monotonía de su vida: Harry es un mago y sus padres también lo eran.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/roKMM6S9DRGFNujmvqlk8l5YbN3.jpg"
+    },
+    {
+        "Titulo": "Black Panther",
+        "Fecha de salida": "16 de febrero de 2018",
+        "Duracion": "134 min",
+        "Genero": "Acción, Aventura, Ciencia ficción",
+        "Director": "Ryan Coogler",
+        "Sinopsis": "Después de los acontecimientos de Capitán América: Civil War, T'Challa vuelve a casa, la nación aislada y muy avanzada tecnológicamente de Wakanda, para ser proclamado Rey. Pero la reaparición de un viejo enemigo pone a prueba el temple de T'Challa como Rey y Black Panther ya que se ve arrastrado a un conflicto que pone en peligro todo el destino de Wakanda y del mundo.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qjarBufG0iUqr1IvJUK8AJnpTIR.jpg"
+    },
+    {
+        "Titulo": "SpiderMan No Way Home",
+        "Fecha de salida": "16 de diciembre de 2021",
+        "Duracion": "148 min",
+        "Genero": "Acción, Aventura, Ciencia ficción",
+        "Director": "Jon Watts",
+        "Sinopsis": "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/miZFgV81xG324rpUknQX8dtXuBl.jpg"
+    },
+    {
+        "Titulo": "Bleach",
+        "Fecha de salida": "5 de octubre de 2004",
+        "Duracion": "24-25 min/episodio",
+        "Genero": "Acción, Aventura, Animación, Ciencia ficción, Fantasía",
+        "Director": "Pierrot",
+        "Sinopsis": "La serie narra las aventuras de Ichigo Kurosaki, un adolescente que tiene la facultad de interactuar con los espíritus. Una noche, Ichigo se encuentra con una shinigami —personificación japonesa del Dios de la muerte— llamada Rukia Kuchiki, quien se sorprende que pueda verla. Sin embargo, su conversación es interrumpida por la aparición de un hollow, un espíritu maligno. Después de que Rukia fuera gravemente herida al tratar de proteger a Ichigo, esta intenta traspasarle parte de sus poderes a Ichigo para que pueda enfrentarse al hollow en igualdad de condiciones. No obstante, Ichigo sin darse cuenta los absorbe casi por completo y logra vencer con facilidad al espíritu.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg"
+    },
+    {
+        "Titulo": "Smallville",
+        "Fecha de salida": "16 de octubre de 2001",
+        "Duracion": "43 min/episodio",
+        "Genero": "Ciencia ficción, Fantasía, Acción, Aventura, Drama",
+        "Director": "Warner",
+        "Sinopsis": "Serie que narra los inicios de Superman -Clark Kent- en su pueblo natal, Smallville. Allí vivía con sus padres, estudiaba en el instituto local y conoció a su primera novia, Lana Lang, y a su futuro rival, Lex Luthor.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUhJGETy2sec4vEkiqJ9eGeIywc.jpg"
+    },
+    {
+        "Titulo": "La Casa de Papel",
+        "Fecha de salida": "2 de mayo de 2017",
+        "Duracion": "70 min/episodio",
+        "Genero": "Crimen, Drama",
+        "Director": "Álex Pina",
+        "Sinopsis": "Un enigmático personaje llamado el Profesor planea algo grande: llevar a cabo el mayor atraco de la historia. Para ello recluta una banda de ocho personas que reúnen un único requisito, ninguno tiene nada que perder. Cinco meses de reclusión memorizando cada paso, cada detalle, cada probabilidad… y por fin, once días de encierro en la Fábrica Nacional de Moneda, rodeados de cuerpos de policía y con decenas de rehenes en su poder para saber si su apuesta suicida será todo o nada.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z01Dc0Ly2GmCpLe6Scx4d3dPP1S.jpg"
+    },
+    {
+        "Titulo": "Modern Family",
+        "Fecha de salida": "23 de septiembre de 2009",
+        "Duracion": "25 min/episodio",
+        "Genero": "Comedia",
+        "Director": "Christopher Lloyd,Steven Levitan",
+        "Sinopsis": "Narrada desde la perspectiva de un documental, la serie ofrece un panorama honesto y divertido sobre la vida de varias familias, en donde se presentan la relación entre padres e hijos, diferencias generacionales y culturales.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gabjqvbqXsg4KL5JaBoPKPipiys.jpg"
+    },
+    {
+        "Titulo": "The Big Bang Theory",
+        "Fecha de salida": "24 de septiembre de 2007",
+        "Duracion": "22 min/episodio",
+        "Genero": "Comedia",
+        "Director": "Chuck Lorre",
+        "Sinopsis": "Leonard y Sheldon son dos cerebros privilegiados que comparten piso. Aunque los dos, doctores en Física, son capaces de calcular las probabilidades de existencia de otros mundos, no saben cómo relacionarse con los demás, especialmente con las chicas. Penny, una vecina recién llegada, es el polo opuesto a los dos amigos, de modo que su llegada altera la tranquila vida sentimental de Leonard y el desorden obsesivo-compulsivo de Sheldon.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2bDQWCvFxRGhdvThTJvVxueEoLl.jpg"
+    },
+    {
+        "Titulo": "Arcane",
+        "Fecha de salida": "6 de noviembre de 2021",
+        "Duracion": "39 min/episodio",
+        "Genero": "Animación, Ciencia ficción, Fantasía, Acción, Aventura, Drama",
+        "Director": "Christian Linke,Alex Yee",
+        "Sinopsis": "Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg"
+    },
+    {
+        "Titulo": "Soy leyenda",
+        "Fecha de salida": "14 de diciembre de 2007",
+        "Duracion": "101 min",
+        "Genero": "Drama, Horror, Ciencia Ficción",
+        "Director": "Francis Lawrence",
+        "Sinopsis": "Año 2012. Robert Neville es un brillante científico, que, sin embargo, no ha podido impedir la expansión de un incurable virus creado por el hombre. Neville, inexplicablemente inmune al contagio, es el último superviviente humano de la ciudad de Nueva York y, quizá, del mundo. Pero Neville no está completamente solo. Víctimas mutantes de la plaga merodean en las sombras, vigilando cada uno de los movimientos del científico y esperando que cometa un error fatal para beber su sangre.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pO1SrJgf5BumqcIRkYviSGIFdmX.jpg"
+    },
+    {
+        "Titulo": "Vengadores",
+        "Fecha de salida": "04 de mayo de 2012",
+        "Duracion": "143 min",
+        "Genero": "Acción, Ciencia Ficción, Thriller",
+        "Director": "Joss Whedon",
+        "Sinopsis": "El Director de la Agencia SHIELD decide reclutar a un equipo para salvar al mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ugX4WZJO3jEvTOerctAWJLinujo.jpg"
+    },
+    {
+        "Titulo": "Interstellar",
+        "Fecha de salida": "07 de noviembre de 2014",
+        "Duracion": "169 min",
+        "Genero": "Aventura, Drama, Ciencia Ficción",
+        "Director": "Christopher Nolan",
+        "Sinopsis": "Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg"
+    },
+    {
+        "Titulo": "Juego de Tronos",
+        "Fecha de salida": "17 de abril de 2011",
+        "Duracion": "56 min/episodio",
+        "Genero": "Aventura, Drama, Fantasía",
+        "Director": "David Benioff, D.B. Weiss",
+        "Sinopsis": "Juego de tronos es la historia de la lucha por un trono, el trono de hierro, forjado con las espadas de los enemigos vencidos. Siete son los reinos de Poniente y muchas las casas que se disputarán la corona: los herederos, los exiliados, los despojados y los actuales regentes.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z9gCSwIObDOD2BEtmUwfasar3xs.jpg"
+    },
+    {
+        "Titulo": "Beetlejuice",
+        "Fecha de salida": "26 de febrero de 1987",
+        "Duracion": "97 min",
+        "Genero": "Comedia, Aventura",
+        "Director": "Tim Burton",
+        "Sinopsis": "Un matrimonio de fantasmas contrata a Beetlejuice, un especialista en asustar mortales, para que ahuyente a los nuevos propietarios de su casa.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Ap36MvDZbfX0vzPsNeYqYv29rrK.jpg"
+    },
+    {
+        "Titulo": "Cocodrilo Dundee",
+        "Fecha de salida": "22 de julio de 1988",
+        "Duracion": "92 min",
+        "Genero": "Comedia, Fantasía",
+        "Director": "Tim Burton",
+        "Sinopsis": "Michael Dundee es un rudo cazador de cocodrilos que, por su original filosofía de la vida, es considerado como un héroe. Sue Charlton, una reportera de Nueva York, decide ir a Australia para visitarle.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q0Msbpvpe6yuvIUCyJuBbQ9UhUj.jpg"
+    },
+    {
+        "Titulo": "Valkyrie",
+        "Fecha de salida": "25 de diciembre de 2008",
+        "Duracion": "121 min",
+        "Genero": "Drama, Thriller, Histórica",
+        "Director": "Bryan Singer",
+        "Sinopsis": "El coronel Claus Von Stauffenberg, un aristócrata alemán, regresa de África gravemente herido en combate y, tras unirse a la resistencia alemana, se convierte en el cerebro de la Operación Valkiria, cuyo objetivo es derrocar el régimen nazi.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jDARt52DH7Tiw5jL0xrrDnqPFZp.jpg"
+    },
+    {
+        "Titulo": "Ratatouille",
+        "Fecha de salida": "3 de agosto de 2007",
+        "Duracion": "111 min",
+        "Genero": "Animación, Comedia, Familiar",
+        "Director": "Brad Bird, Jan Pinkava",
+        "Sinopsis": "Remy es una rata que aprecia la buena comida y tiene un paladar bastante sofisticado. Su sueño es convertirse algún día en un gran chef francés a pesar de la oposición de su familia. El destino lleva a Remy a las alcantarillas de París, donde su situación no puede ser mejor, ya que se encuentra justo debajo de uno de los restaurantes más finos de París. El roedor se sentirá en el lugar perfecto para convertir su sueño en una realidad.",
+        "Imagen": "https://www.lavanguardia.com/peliculas-series/images/movie/poster/2007/6/w1280/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg"
+    },
+    {
+        "Titulo": "Memento",
+        "Fecha de salida": "19 de enero de 2001",
+        "Duracion": "113 min",
+        "Genero": "Misterio, Thriller",
+        "Director": "Christopher Nolan",
+        "Sinopsis": "Leonard es un investigador de una agencia de seguros cuya memoria está irreversiblemente dañada por culpa de un golpe en la cabeza, al intentar evitar el asesinato de su mujer: éste es el último hecho que recuerda del pasado. A causa del golpe, ha perdido la memoria reciente, los hechos cotidianos desaparecen de su mente en unos minutos. Así pues, para investigar y vengar el asesinato de su esposa tiene que recurrir a la ayuda de una cámara instantánea y a las notas tatuadas en su cuerpo.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neHrQLVfT3KPqvv30pNPyRb6chQ.jpg"
+    },
+    {
+        "Titulo": "Stardust",
+        "Fecha de salida": "26 de octubre de 2007",
+        "Duracion": "127 min",
+        "Genero": "Aventura, Familiar, Fantasía",
+        "Director": "Matthew Vaughn",
+        "Sinopsis": "El adolescente Tristán atraviesa un muro que le lleva al reino mágico de Stormhold para regalar a su amada una estrella caída del firmamento.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/73JmdwtJyFQyKem7QHlDzmadNef.jpg"
+    },
+    {
+        "Titulo": "Django desencadenado",
+        "Fecha de salida": "18 de enero de 2013",
+        "Duracion": "165 min",
+        "Genero": "Drama, Western",
+        "Director": "Quentin Tarantino",
+        "Sinopsis": "Un antiguo esclavo une sus fuerzas con un cazador de recompensas alemán que lo libera y ayuda a cazar a los criminales más buscados del Sur, todo ello con la esperanza de encontrar a su esposa perdida hace mucho tiempo.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/naaYX64yMGzEFsATOFQDaxxQWbJ.jpg"
+    },
+    {
+        "Titulo": "Pulp Fiction",
+        "Fecha de salida": "13 de enero de 1995",
+        "Duracion": "154 min",
+        "Genero": "Drama, Crimen",
+        "Director": "Quentin Tarantino",
+        "Sinopsis": "Historias de dos matones, un boxeador y una pareja de atracadores de poca monta envueltos en una violencia espectacular e irónica.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg"
+    },
+    {
+        "Titulo": "Mad Max: Furia en la carretera",
+        "Fecha de salida": "15 de mayo de 2015",
+        "Duracion": "120 min",
+        "Genero": "Acción, Aventura, Ciencia ficción",
+        "Director": "George Miller",
+        "Sinopsis": "Tras la guerra termonuclear que ha convertido a la Tierra en un páramo, el antiguo policía Max Rockatansky, atormentado por los espíritus de aquellos a los que no pudo proteger, se ha convertido en un hombre con un solo instinto: sobrevivir. Sin embargo, se ve arrastrado a formar parte de un grupo que huye a través del desierto en un War Rig. Enfurecido, el Señor de la Guerra moviliza a todas sus bandas y persigue implacablemente a Max.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3Q5WUmVGMyiTDHA83koBoKpTtx3.jpg"
+    },
+    {
+        "Titulo": "R.I.P.D 2: La rebelion de los condenados",
+        "Fecha de salida": "15 de noviembre de 2022",
+        "Duracion": "102 min",
+        "Genero": "Fantasía, Acción, Comedia, Crimen ",
+        "Director": "Paul Leyden",
+        "Sinopsis": "Tras perder la vida en un enfrentamiento con una banda de matones, el sheriff Roy Pulsipher recibe una segunda oportunidad al unirse al Departamento de Descanso en Paz, que se encarga de enviar las almas perdidas al infierno.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oJJWjiMKExSi241NpKUqVIxWfH6.jpg"
+    },
+    {
+        "Titulo": "El viaje de Chihiro",
+        "Fecha de salida": "25 de noviembre de 2002",
+        "Duracion": "122 min",
+        "Genero": " Animación, Familia, Fantasía ",
+        "Director": "Hayao Miyazaki",
+        "Sinopsis": "Chihiro es una niña de diez años caprichosa y testaruda que cree que el universo entero debe someterse a sus deseos. Camino de su nuevo hogar junto a sus padres, una idea que la enfurece, la familia se equivoca de camino y aparece al final de un misterioso callejón sin salida, donde topan con un extraño edificio con un largo pasaje que los conduce a un pueblo fantasmal donde los espera un magnífico banquete.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vlsi5iZcfDChKNGNvRp7Zp3SULH.jpg"
+    },
+    {
+        "Titulo": "La milla verde",
+        "Fecha de salida": "12 de febrero de 2000",
+        "Duracion": "189 min",
+        "Genero": "Fantasía, Drama, Crimen",
+        "Director": "Frank Darabont",
+        "Sinopsis": "Paul Edgecomb es un funcionario de prisiones que vigila \"la milla verde\", el pasillo de linóleo que los condenados a muerte recorren hasta llegar a la silla eléctrica. John Coffey, un gigantesco convicto acusado de violar y asesinar a dos niñas de nueve años, está esperando su inminente ejecución. Tras una personalidad ingenua, John esconde un don sobrenatural con el que contagia su sentido de espiritualidad y humanidad a todos sus compañeros de prisión.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aBQiJRxGRrX0mXFMjxyzWYFtEnf.jpg"
+    },
+    {
+        "Titulo": "Breaking Bad",
+        "Fecha de salida": "20 de enero de 2008",
+        "Duracion": "45 min/episodio",
+        "Genero": "Drama",
+        "Director": "Vince Gilligan",
+        "Sinopsis": "Tras cumplir 50 años, Walter White (Bryan Cranston), un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable. Casado con Skyler (Anna Gunn) y con un hijo discapacitado (RJ Mitte), la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno (Aaron Paul), fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg"
+    },
+    {
+        "Titulo": "Fullmetal Alchemist: Brotherhood",
+        "Fecha de salida": "5 de abril de 2009",
+        "Duracion": "25 min/episodio",
+        "Genero": "Acción, Aventura, Animación, Ciencia ficción, Fantasía",
+        "Director": "Yasuhiro Irie",
+        "Sinopsis": "Edward y Alphonse Elric son dos hermanos en busca de la piedra filosofal. Viven en un mundo donde la alquimia se utiliza como arma. Una dolorosa pérdida empuja a los hermanos Elric a realizar un prohibido experimento que acaba de forma inesperada y llevándose por el camino el cuerpo de Alphonse y algunas partes del de Edward. Así, con el alma del primero a salvo en una armadura y las extremidades del segundo convertidas en metal, los hermanos confían en que la piedra filosofal les otorgará el poder y las respuestas necesarias para recuperar lo perdido.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iAld03IP69UEpqQbVWoRBvjqkqX.jpg"
+    },
+    {
+        "Titulo": "El bueno, el feo y el malo",
+        "Fecha de salida": "7 de agosto de 1968",
+        "Duracion": "161 min",
+        "Genero": "Western",
+        "Director": "Sergio Leone",
+        "Sinopsis": "Durante la Guerra de Secesión, tres cazadores de recompensas se lanzan a la búsqueda de un tesoro que ninguno de los tres truhanes puede localizar sin la ayuda de los otros dos. Tuco sabe que el tesoro se encuentra en un cementerio, mientras que Joe conoce el nombre inscrito en la tumba que lo esconde. Mientras tanto, Sentenza no duda en matar a mujeres y niños para conseguir su meta. De esta forma, los tres hombres colaboran en apariencia, pero al final intentarán eliminarse mutuamente.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/71HKV5F9bfm05ZZnjGmRuFpUVCo.jpg"
+    },
+    {
+        "Titulo": "Forrest Gump",
+        "Fecha de salida": "23 de septiembre de 1994",
+        "Duracion": "142 min",
+        "Genero": "Comedia, Drama, Romance",
+        "Director": "Robert Zemeckis",
+        "Sinopsis": "Forrest Gump es un chico con deficiencias mentales no muy profundas y con alguna incapacidad motora que, a pesar de todo, llegará a convertirse, entre otras cosas, en un héroe durante la Guerra del Vietnam. Su persistencia y bondad le llevarán a conseguir una gran fortuna, ser objeto del clamor popular y a codearse con las más altas esferas sociales y políticas del país. Siempre sin olvidar a Jenny, su gran amor desde que era niño.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/azV6hV99lYkdhydsQbJCI6FqMl4.jpg"
+    },
+    {
+        "Titulo": "El señor de los anillos: El retorno del rey",
+        "Fecha de salida": "17 de diciembre de 2003",
+        "Duracion": "202 min",
+        "Genero": "Aventura, Fantasía, Acción",
+        "Director": "Peter Jackson",
+        "Sinopsis": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg"
+    },
+    {
+        "Titulo": "La vida es bella",
+        "Fecha de salida": "26 de febrero de 1999",
+        "Duracion": "117 min",
+        "Genero": "Comedia, Drama",
+        "Director": "Roberto Benigni",
+        "Sinopsis": "En 1939, a punto de estallar la Segunda Guerra Mundial (1939-1945), el extravagante Guido llega a Arezzo, en la Toscana, con la intención de abrir una librería. Allí conoce a la encantadora Dora y, a pesar de que es la prometida del fascista Rodolfo, se casa con ella y tiene un hijo. Al estallar la guerra, los tres son internados en un campo de exterminio, donde Guido hará lo imposible para hacer creer a su hijo que la terrible situación que están padeciendo es tan sólo un juego.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a1B39Y1yAo3BE9ULkzkk6hOknBQ.jpg"
+    },
+    {
+        "Titulo": "La tumba de las luciernagas",
+        "Fecha de salida": "10 de octubre de 2003",
+        "Duracion": "95 min",
+        "Genero": "Animación, Drama, Bélica",
+        "Director": "Isao Takahata",
+        "Sinopsis": "Verano de 1945. La aviación estadounidense somete las ciudades japonesas a continuos ataques aéreos. En uno de ellos, una incursión con bombas incendiarias convierte la ciudad de Kōbe en un infierno humeante, para los dos protagonistas (Seita, de 14 años, y su hermanita Setsuko, de 5). El joven Seita y su pequeña hermana Setsuko son hijos de un oficial de la marina japonesa. Durante la Segunda Guerra Mundial, ambos viven con su madre, pero un día, tras un bombardeo, ellos se retrasan y no consiguen llegar al búnker donde ella los espera.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ufXfPXN5Yr4tS1oawcXdTr3oXw4.jpg"
+    },
+    {
+        "Titulo": "Alguien volo sobre el nido del cuco",
+        "Fecha de salida": "7 de octubre de 1976",
+        "Duracion": "133 min",
+        "Genero": "Drama",
+        "Director": "Miloš Forman",
+        "Sinopsis": "Randle McMurphy (Jack Nicholson), un violador de espíritu libre, que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dZkOmsEXqce6KgH84ibIW9xJhb6.jpg"
+    },
+    {
+        "Titulo": "Spider-Man: Un nuevo universo",
+        "Fecha de salida": "21 de diciembre de 2018",
+        "Duracion": "133 min",
+        "Genero": "Acción, Aventura, Animación, Ciencia ficción",
+        "Director": "Rodney Rothman",
+        "Sinopsis": "En un universo paralelo donde Peter Parker ha muerto, un joven de secundaria llamado Miles Morales es el nuevo Spider-Man. Sin embargo, cuando el líder mafioso Wilson Fisk (a.k.a Kingpin) construye el \"Super Colisionador\" trae a una versión alternativa de Peter Parker que tratará de enseñarle a Miles como ser un mejor Spider-Man. Pero no será el único Spider Man en entrar a este universo: 4 versiones alternas de Spider-Man aparecerán y buscarán regresar a su universo antes de que toda la realidad se colapse.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xRMZikjAHNFebD1FLRqgDZeGV4a.jpg"
+    },
+    {
+        "Titulo": "En el bosque de la luz de las luciernagas",
+        "Fecha de salida": "17 de septiembre de 2011",
+        "Duracion": "45 min",
+        "Genero": "Romance, Animación, Fantasía",
+        "Director": "Takahiro Omori",
+        "Sinopsis": "Cuando era pequeña, Hotaru se perdió en el bosque cerca del lugar donde va todos los veranos, la casa de su tío. Allí tuvo un extraño encuentro con Gin que la ayuda a encontrar el camino de vuelta. Gin es un joven que lleva una máscara blanca y que, debido a un hechizo, no puede ser tocado por ningún humano. Ella empieza a visitarlo todos los veranos según va creciendo, mientras espera la llegada del verano, para que su tiempo juntos continúe.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xE763r1dnYji0gOxrSxBtzyouSf.jpg"
+    },
+    {
+        "Titulo": "El castillo ambulante",
+        "Fecha de salida": "3 de abril de 2006",
+        "Duracion": "120 min",
+        "Genero": "Fantasía, Animación, Aventura",
+        "Director": "Hayao Miyazaki",
+        "Sinopsis": "Sophie es una joven de 18 años que trabaja sin descanso en la tienda de sombreros de la familia. En uno de sus frecuentes paseos conoce al enigmático mago Howl, lo que despierta la ira de la Bruja del Páramo, que odia a Howl con todas sus fuerzas. Cuando Sophie vuelve a la tienda, la Bruja se hace pasar por una clienta para acercarse a ella y lanzarle un hechizo… ¡que convierte a Sophie en una anciana de 90 años! Sophie, que no puede revelar su auténtica identidad, recurre a Howl para buscar una solución a su problema. Para ello se embarca en un viaje fantástico en el castillo ambulante del mago, habitado por personajes de lo más curioso. Sophie necesita ayuda pero quizás sea Howl el que realmente está en apuros.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p8EARnEw8KPZzlZg3vkseYVMczu.jpg"
+    },
+    {
+        "Titulo": "Star Wars: El imperio contraataca",
+        "Fecha de salida": "2 de noviembre de 1980",
+        "Duracion": "124 min",
+        "Genero": "Aventura, Acción, Ciencia ficción",
+        "Director": "Irvin Kershner",
+        "Sinopsis": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zsZwahm4ktZPKX0B494CxqhbBhu.jpg"
+    },
+    {
+        "Titulo": "El señor de los anillos: La comunidad del anillo",
+        "Fecha de salida": "19 de diciembre de 2001",
+        "Duracion": "45 min",
+        "Genero": "Animación, Fantasía, Acción",
+        "Director": "Peter Jackson",
+        "Sinopsis": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p6QjtBmO6U105l44U0qMDSLxT0L.jpg"
+    },
+    {
+        "Titulo": "La ventana indiscreta",
+        "Fecha de salida": "3 de octubre ",
+        "Duracion": "92 min",
+        "Genero": "Suspense, Misterio",
+        "Director": "Cornell Woolrich",
+        "Sinopsis": "Un reportero fotográfico se ve obligado a permanecer en reposo con una pierna escayolada. A pesar de la compañía de su novia y de su enfermera, procura escapar al tedio, observando desde la ventana de su apartamento con unos prismáticos lo que ocurre en las viviendas de enfrente. Debido a una serie de extrañas circunstancias empieza a sospechar de un vecino cuya mujer ha desaparecido.",
+        "Imagen": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fH1MipE8PXGg0rlI5cUdzxKnyA2.jpg"
+    }
+]

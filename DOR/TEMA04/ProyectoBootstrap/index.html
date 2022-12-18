@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif">
+    <link rel="stylesheet" type="text/css" href=" ">
+    <title>Proyecto Bootstrap</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default fixed-top navbar-dark navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <!-- LOGO NAVBAR -->
+            <img src="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif" alt="Icono Navbar"
+                style="width: 3rem;" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- CONTENIDO NAVBAR -->
+            <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- INICIO -->
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-items-center" aria-current="page" href="./index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                            </svg>
+                            Inicio
+                        </a>
+                    </li>
+                    <!-- DROPDOWN MARCAS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-car-front-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                            </svg>
+                            Coches
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
+                                        src="./img/volkswagen-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Volkswagen" />Volkswagen</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
+                                        src="./img/ford-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Ford" />Ford</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#citroen"><img
+                                        src="./img/citroen-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Citroën" />Citroën</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
+                                        src="./img/ferrari-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Ferrari" />Ferrari</a>
+                            </li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
+                                        src="./img/jaguar-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Jaguar" />Jaguar</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="#"><img
+                                        src="./img/renault-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Renault" />Renault</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- CONTACTO -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" aria-current="page" href="./contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-fill me-1" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                            Contacto</a>
+                    </li>
+                    <!-- AYUDA -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" aria-current="page" href="./contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-question-circle-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                            </svg>
+                            Ayuda</a>
+                    </li>
+                </ul>
+                <button class="btn btn-sm btn-outline-warning me-3 mb-3 mb-lg-0" type="button" id="button-addon2">
+                    Iniciar Sesión
+                </button>
+                <form class="d-flex" role="search">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar..."
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="row bg-dark text-light d-flex align-items-center mx-0" style="height: 80vh; margin-top: 55px;">
+        <div class="text-center h1">
+            Bienvenidos amantes del motor
+            <div class="h4 mt-5">
+                Hoy haremos un repaso por aquellos modelos míticos de entre los 60 y los 80.
+            </div>
+        </div>
+    </div>
+
+    <!-- CARRUSEL -->
+    <div class="row d-flex justify-content-around mx-0 bg-dark pb-4">
+        <div id="carouselExampleControls" class="carousel slide w-75 rounded-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/citroen-ds.jpg" class="d-block w-100 rounded-4 border border-2 border-light"
+                        alt="Citroën DS">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/ferrari-250-gto-1962.jpg"
+                        class="d-block w-100 rounded-4 border border-2 border-light" alt="Ferrari 250 GTO">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/ford-mustang67.jpg" class="d-block w-100 rounded-4 border border-2 border-light"
+                        alt="Ford Mustang GT-500">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/jaguar-e-type.jpg" class="d-block w-100 rounded-4 border border-2 border-light"
+                        alt="Jaguar E-Type">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/renault_alpineA110.jpg" class="d-block w-100 rounded-4 border border-2 border-light"
+                        alt="Renault Alpine A110">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/volkswagen-sp2-1974.jpg"
+                        class="d-block w-100 rounded-4 border border-2 border-light" alt="Volkswagen SP">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+    <div style="height: 20px; background-image: linear-gradient(180deg, #212529 0%, #ffffff 100%);"></div>
+
+    <!-- TEXTO INTRODUCTORIO -->
+    <div class="mt-4 mb-5 h5" style="line-height: 30px;">
+        <div class="mx-auto w-75 h2">
+            Clasicos entre los 60 y 80.-
+        </div>
+        <div class="mx-auto w-75 text-justify" style="text-indent: 3rem; text-align: justify;">
+            De nuevo nos encontramos con el gran problema de tener que “nominar” a seis modelos nacidos en los años 60
+            y 80. Hoy, los que se quedan fuera también son grandes modelos y quizás las elecciones de esta vez son mucho
+            más personales.
+        </div>
+        <div class="mx-auto mt-4 w-75 text-justify" style="text-indent: 3rem; text-align: justify;">
+            En estos 30 años se pusieron a la venta modelos tan carismáticos como el Alpine A110, Ford
+            Capri-GT40-Escort, AC Cobra, Ferrari 250 GTO, Lamborghini Miura, Volkswagen SP, Jaguar E-Type, Fiat 600…
+            aunque por
+            encima de todos destacan dos nombres que aún siguen en el mercado como es el caso del Porsche 911 y del
+            Volkswagen Golf.
+        </div>
+    </div>
+
+    <div style="height: 10px; background-image: linear-gradient(180deg, #ffffff 0%, #212529 100%);"></div>
+    <div class="row mx-0 bg-dark">
+        <div class="col text-center text-warning display-6">
+            SELECCIONADOS
+        </div>
+    </div>
+    <div style="height: 10px; background-image: linear-gradient(180deg, #212529 0%, #ffffff 100%);"></div>
+
+    <!-- CITROEN DS-->
+    <div class="row w-75 mx-auto mt-3" id="citroen">
+        <div class="col-12 h4 p-0">
+            Citroën DS23.-
+        </div>
+        <div class="accordion p-0 col-6" id="accordionCitroen">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaCitroen">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCitroenOne" aria-expanded="true" aria-controls="collapseCitroenOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseCitroenOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionCitroen">
+                    <div class="accordion-body" style="text-align: justify;">
+                        El DS consiguió avances en las normas automovilísticas tales como la comodidad de conducción, la
+                        seguridad y el frenado. Durante su producción en serie, que duró 20 años, Citroën vendió 1,5
+                        millones de unidades de este automóvil. El DS consiguió el tercer puesto en el certamen del
+                        Automóvil del Siglo, en el que se reconoció a los diseños automovilísticos con más influencia, y
+                        también fue nombrado el coche más bello de la historia por la revista Classic & Sports Car.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasCitroen">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCitroenTwo" aria-expanded="false" aria-controls="collapseCitroenTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseCitroenTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionCitroen">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 4 cilindros en línea y 8 válvulas de inyección</li>
+                            <li>Cilindrada: 2347 cm³</li>
+                            <li>Potencia máxima: 130 CV a 5250 rpm (máxima 6400 rpm)</li>
+                            <li>Par máximo: 195 Nm a 2500 rpm</li>
+                            <li>Ratios: 55 CV/L - 83 Nm/L</li>
+                            <li>Caja de cambios: manual de 4 velocidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/citroen-ds.jpg" alt="Citroën DS23" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- FERRARI 250 GTO-->
+    <div class="row w-75 mx-auto mt-3" id="ferrari">
+        <div class="col-12 h4 p-0">
+            Ferrari 250 GTO.-
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/ferrari-250-gto-1962.jpg" alt="Ferrari 250 GTO" class="img-fluid">
+        </div>
+        <div class="accordion p-0 col-6" id="accordionFerrari">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaFerrari">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFerrariOne" aria-expanded="true" aria-controls="collapseFerrariOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseFerrariOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionFerrari">
+                    <div class="accordion-body" style="text-align: justify;">
+                        <p>El Ferrari 250 GTO es un automóvil deportivo y de competición construido por Ferrari entre
+                            los
+                            años 1962 y 1964; es considerado como uno de los mejores automóviles de alto rendimiento
+                            construido y actualmente (2021), el más caro del mundo.</p>
+                        <p>El número 250 hace referencia a la capacidad en centímetros cúbicos, de cada cilindro del
+                            motor.
+                            Las siglas GTO significan en italiano: "Gran Turismo Omologata" (Gran Turismo Homologado).
+                        </p>
+                        <p>En 2004, la revista Sports Car International nombró al 250 GTO número 8 en la lista de
+                            "Mejores
+                            Automóviles Deportivos" de los años 1960, en la lista de los mejores automóviles deportivos
+                            de
+                            todos los tiempos. Del mismo modo, la revista Motor Trend Classic nombró al 250 GTO como
+                            número
+                            1 en su lista de los "Grandes Ferraris de todos los tiempos".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasFerrari">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingCaracteristicasFerrari" data-bs-parent="#accordionFerrari">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 12 cilindros en V a 60° y 24 válvulas</li>
+                            <li>Cilindrada: 2953 cm³</li>
+                            <li>Potencia máxima: 300 CV a 7400 rpm (máxima 8000 rpm)</li>
+                            <li>Par máximo: 294 Nm a 5500 rpm</li>
+                            <li>Ratios: 102 CV/L - 100 Nm/L</li>
+                            <li>Caja de cambios: manual de 5 velocidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORD MUSTANG GT 500 -->
+    <div class="row w-75 mx-auto mt-3" id="ford">
+        <div class="col-12 h4 p-0">
+            Ford Shelby Mustang GT 500 del 67.-
+        </div>
+        <div class="accordion p-0 col-6" id="accordionFord">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaFord">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFordOne" aria-expanded="true" aria-controls="collapseFordOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseFordOne" class="accordion-collapse collapse show" aria-labelledby="headingFordOne"
+                    data-bs-parent="#accordionFord">
+                    <div class="accordion-body" style="text-align: justify;">
+                        Este ejemplar es bien conocido por todos los aficionados y coleccionistas del Mustang, pues se
+                        trata de un ejemplar único, el único prototipo fabricado del Shelby GT500 Super Snake '67. Un
+                        modelo tan radical y potente que incluso para Shelby, que en ese momento se encontraba en pleno
+                        auge del programa "Total Performance" de Ford, resultó demasiado caro y por tanto nunca llegó a
+                        producción.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasFord">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFordTwo" aria-expanded="false" aria-controls="collapseFordTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseFordTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingCaracteristicasFord" data-bs-parent="#accordionFord">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 8 cilindros en V y 16 válvulas</li>
+                            <li>Cilindrada: 7016 cm³</li>
+                            <li>Potencia máxima: 360 CV a 5400 rpm (máxima 6000 rpm)</li>
+                            <li>Par máximo: 571 Nm a 3200 rpm</li>
+                            <li>Ratios: 51 CV/L - 81 Nm/L</li>
+                            <li>Caja de cambios: automática de 3 velocidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/ford-mustang67.jpg" alt="Ford Shelby Mustang GT 500" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- VOLKSWAGEN SP -->
+    <div class="row w-75 mx-auto mt-3" id="volkswagen">
+        <div class="col-12 h4 p-0">
+            Volkswagen SP2.-
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/volkswagen-sp2-1974.jpg" alt="Volkswagen SP2" class="img-fluid">
+        </div>
+        <div class="accordion p-0 col-6" id="accordionVolkswagen">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaVolkswagen">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseVolkswagenOne" aria-expanded="true"
+                        aria-controls="collapseVolkswagenOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseVolkswagenOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionVolkswagen">
+                    <div class="accordion-body" style="text-align: justify;">
+                        La Serie Volkswagen SP fue una serie de vehículos deportivos desarrollados por la Volkswagen do
+                        Brasil para el mercado interno y el de gran parte de América Latina, Islas Canarias, Portugal,
+                        así como para algunos países de África y Oriente Medio; Desde 1972 hasta 1976; el nombre
+                        supuestamente es un acrónimo de la palabra São Paulo. Otras fuentes atribuyen estas siglas al
+                        término Special Project o Sport Prototype.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasVolkswagen">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseVolkswagenTwo" aria-expanded="false"
+                        aria-controls="collapseVolkswagenTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseVolkswagenTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingCaracteristicasVolkswagen" data-bs-parent="#accordionVolkswagen">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 4 cilindros bóxer y 8 válvulas</li>
+                            <li>Cilindrada: 1679 cm³</li>
+                            <li>Potencia máxima: 65 CV a 3000 rpm (máxima 4000 rpm)</li>
+                            <li>Par máximo: 113 Nm a 2400 rpm</li>
+                            <li>Ratios: 31 CV/L - 61 Nm/L</li>
+                            <li>Caja de cambios: manual de 4 velocidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAGUAR E-TYPE -->
+    <div class="row w-75 mx-auto mt-3" id="jaguar">
+        <div class="col-12 h4 p-0">
+            Jaguar E-Type.-
+        </div>
+        <div class="accordion p-0 col-6" id="accordionJaguar">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaJaguar">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseJaguarOne" aria-expanded="true" aria-controls="collapseJaguarOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseJaguarOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionJaguar">
+                    <div class="accordion-body" style="text-align: justify;">
+                        <p>El Jaguar E-Type, conocido en Estados Unidos como el Jaguar XK-E, es un automóvil deportivo
+                            producido por el fabricante inglés Jaguar Cars entre los años 1961 y 1975. Fue exhibido en
+                            el
+                            Salón del Automóvil de Ginebra en marzo de 1961. La buena recepción del E-Type evocó el
+                            lanzamiento realizado en Inglaterra, en 1948, del modelo XK120. Pocas semanas después, hacía
+                            acto de presencia en el Salón del Automóvil de Nueva York. Las revistas británicas
+                            especializadas del automóvil habían organizado varias pruebas con los prototipos de
+                            pre-lanzamiento.</p>
+
+                        <p>En su lanzamiento el 15 de marzo de 1961, Enzo Ferrari lo llamó "el automóvil más bello jamás
+                            fabricado". En 2004, la revista Sports Car International colocó al E-Type en el número uno
+                            de
+                            su lista de los mejores autos deportivos de la década de 1960. En marzo de 2008, el Jaguar
+                            E-Type ocupó el primer lugar en la lista en línea de The Daily Telegraph de los "100 autos
+                            más
+                            hermosos" del mundo de todos los tiempos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasJaguar">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseJaguarTwo" aria-expanded="false" aria-controls="collapseJaguarTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseJaguarTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingCaracteristicasJaguar" data-bs-parent="#accordionJaguar">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 6 cilindros en línea y 12 válvulas</li>
+                            <li>Cilindrada: 4235 cm³</li>
+                            <li>Potencia máxima: 265 CV a 5000 rpm (máxima 5500 rpm)</li>
+                            <li>Par máximo: 385 Nm a 4000 rpm</li>
+                            <li>Ratios: 63 CV/L - 91 Nm/L</li>
+                            <li>Caja de cambios: manual de 4 velocidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/jaguar-e-type.jpg" alt="Jaguar E-Type" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- RENAULT ALPINE A110 -->
+    <div class="row w-75 mx-auto mt-3" id="renault">
+        <div class="col-12 h4 p-0">
+            Renault Alpine A110.-
+        </div>
+        <div class="accordion p-0 col-6" id="accordionRenault">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHistoriaRenault">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseRenaultOne" aria-expanded="true" aria-controls="collapseRenaultOne">
+                        Historia
+                    </button>
+                </h2>
+                <div id="collapseRenaultOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionRenault">
+                    <div class="accordion-body" style="text-align: justify;">
+                        <p>El Alpine A110 diseñado por Giovanni Michelotti, fue presentado en 1961 como una evolución
+                        del A108, y fue equipado con varios motores Renault.</p>
+
+                        <p>Al igual que otros Alpine vendidos al público, el A110 usaba muchas piezas de Renault. Sin
+                        embargo, mientras que el A108 fue diseñado sobre la mecánica del Dauphine, el A110 utilizaba
+                        piezas del Renault 8. A diferencia del A108, que primero había sido vendido como cabriolet y
+                        después como coupé, el A110 primero fue ofrecido como "berlinetta" y después como descapotable.
+                        La principal diferencia entre el A110 y el A108 coupé fue la re estilización de la parte trasera
+                        en función de los motores mayores, lo que le dio al automóvil un aspecto más agresivo.Al igual
+                        que el A108, el A110 tenía un chasis de acero tubular con carrocería de fibra de vidrio.
+                        Esta configuración fue inspirada en el Lotus Elan, siendo Colin Chapman una importante fuente
+                        de inspiración para los diseñadores de Alpine en la época.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCaracteristicasRenault">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseRenaultTwo" aria-expanded="false" aria-controls="collapseRenaultTwo">
+                        Características
+                    </button>
+                </h2>
+                <div id="collapseRenaultTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingCaracteristicasRenault" data-bs-parent="#accordionRenault">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Motor: delantero longitudinal de 4 cilindros en línea y 16 válvulas de inyección directa</li>
+                            <li>Cilindrada: 1798 cm³</li>
+                            <li>Potencia máxima: 252 CV a 6000 rpm (máxima 6700 rpm)</li>
+                            <li>Par máximo: 320 Nm a 5000 rpm</li>
+                            <li>Ratios: 140 CV/L - 178 Nm/L</li>
+                            <li>Caja de cambios: automática de 7 velocidades con modo secuencial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <img src="./img/renault_alpineA110.jpg" alt="Renault Alpine A110" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="text-center fw-bold mt-5 mb-2">
+        Created by: <a href="https://github.com/GuillermoSH" class="text-decoration-none text-warning">@GuillermoSH</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
