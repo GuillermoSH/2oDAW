@@ -83,7 +83,7 @@
                     </li>
                     <!-- AYUDA -->
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" aria-current="page" href="./contact.html">
+                        <a class="nav-link d-flex align-items-center" aria-current="page" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-question-circle-fill me-1" viewBox="0 0 16 16">
                                 <path
@@ -92,14 +92,17 @@
                             Ayuda</a>
                     </li>
                 </ul>
-                <button class="btn btn-sm btn-outline-warning me-3 mb-3 mb-lg-0" type="button" id="button-addon2">
+                <!-- BOTON LOGIN -->
+                <button type="button" class="btn btn-sm btn-outline-warning me-2 mb-2 mb-lg-0" data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">
                     Iniciar Sesión
                 </button>
+                <!-- FORMULARIO BUSQUEDA -->
                 <form class="d-flex" role="search">
                     <div class="input-group input-group-sm">
                         <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar..."
-                            aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            aria-describedby="liveToastBtn">
+                        <button class="btn btn-outline-secondary" type="button" id="liveToastBtn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search" viewBox="0 0 16 16">
                                 <path
@@ -199,7 +202,7 @@
             <div class="col-12 h4 p-0">
                 Citroën DS23.-
             </div>
-            <div class="accordion p-0 col-6" id="accordionCitroen">
+            <div class="accordion p-0 col-12 col-lg-6 order-1 order-lg-0 mt-3 mt-lg-0" id="accordionCitroen">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaCitroen">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -244,20 +247,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center order-0 order-lg-1">
                 <img src="./img/citroen-ds.jpg" alt="Citroën DS23" class="img-fluid">
             </div>
         </div>
 
         <!-- FERRARI 250 GTO-->
-        <div class="row w-75 mx-auto mt-3" id="ferrari">
+        <div class="row w-75 mx-auto mt-5" id="ferrari">
             <div class="col-12 h4 p-0">
                 Ferrari 250 GTO.-
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/ferrari-250-gto-1962.jpg" alt="Ferrari 250 GTO" class="img-fluid">
             </div>
-            <div class="accordion p-0 col-6" id="accordionFerrari">
+            <div class="accordion p-0 col-12 col-lg-6 mt-3 mt-lg-0" id="accordionFerrari">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaFerrari">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -315,11 +318,11 @@
         </div>
 
         <!-- FORD MUSTANG GT 500 -->
-        <div class="row w-75 mx-auto mt-3" id="ford">
+        <div class="row w-75 mx-auto mt-5" id="ford">
             <div class="col-12 h4 p-0">
                 Ford Shelby Mustang GT 500 del 67.-
             </div>
-            <div class="accordion p-0 col-6" id="accordionFord">
+            <div class="accordion p-0 col-12 col-lg-6 order-1 order-lg-0 mt-3 mt-lg-0" id="accordionFord">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaFord">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -364,20 +367,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 mt-3 d-flex align-items-center order-0 order-lg-1">
                 <img src="./img/ford-mustang67.jpg" alt="Ford Shelby Mustang GT 500" class="img-fluid">
             </div>
         </div>
 
         <!-- VOLKSWAGEN SP -->
-        <div class="row w-75 mx-auto mt-3" id="volkswagen">
+        <div class="row w-75 mx-auto mt-5" id="volkswagen">
             <div class="col-12 h4 p-0">
                 Volkswagen SP2.-
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/volkswagen-sp2-1974.jpg" alt="Volkswagen SP2" class="img-fluid">
             </div>
-            <div class="accordion p-0 col-6" id="accordionVolkswagen">
+            <div class="accordion p-0 col-12 col-lg-6 mt-3 mt-lg-0" id="accordionVolkswagen">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaVolkswagen">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -426,11 +429,11 @@
         </div>
 
         <!-- JAGUAR E-TYPE -->
-        <div class="row w-75 mx-auto mt-3" id="jaguar">
+        <div class="row w-75 mx-auto mt-5" id="jaguar">
             <div class="col-12 h4 p-0">
                 Jaguar E-Type.-
             </div>
-            <div class="accordion p-0 col-6" id="accordionJaguar">
+            <div class="accordion p-0 col-12 col-lg-6 order-1 order-lg-0 mt-3 mt-lg-0" id="accordionJaguar">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaJaguar">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -489,20 +492,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 mt-3 d-flex align-items-center order-0 order-lg-1">
                 <img src="./img/jaguar-e-type.jpg" alt="Jaguar E-Type" class="img-fluid">
             </div>
         </div>
 
         <!-- RENAULT ALPINE A110 -->
-        <div class="row w-75 mx-auto mt-3" id="renault">
+        <div class="row w-75 mx-auto mt-5" id="renault">
             <div class="col-12 h4 p-0">
                 Renault Alpine A110.-
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
                 <img src="./img/renault_alpineA110.jpg" alt="Renault Alpine A110" class="img-fluid">
             </div>
-            <div class="accordion p-0 col-6" id="accordionRenault">
+            <div class="accordion p-0 col-12 col-lg-6 mt-3 mt-lg-0" id="accordionRenault">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingHistoriaRenault">
                         <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
@@ -563,6 +566,54 @@
             </div>
         </div>
 
+        <!-- MODAL -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginpLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 w-100 text-center" id="staticBackdropLabel">Iniciar Sesión</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-lock-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                                </svg></span>
+                            <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Iniciar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOAST -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast bg-black" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-black">
+                    <img src="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif" class="rounded me-2 img-fluid" alt="Logo" style="width: 1.5rem;">
+                    <strong class="me-auto text-warning">Proyecto Bootstrap</strong>
+                    <small>1s ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body text-light">
+                    Esta función no está implementada aún.
+                </div>
+            </div>
+        </div>
+
         <!-- FOOTER -->
         <div class="text-center fw-bold mt-5 mb-2">
             Created by: <a href="https://github.com/GuillermoSH"
@@ -573,6 +624,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
