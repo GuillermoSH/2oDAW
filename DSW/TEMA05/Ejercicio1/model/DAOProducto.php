@@ -56,7 +56,7 @@ class DAOProducto
         if ($resultado->num_rows == 0) {
             return null;
         }
-        return Producto::getProducto($resultado->fetch_assoc);
+        return Producto::getProducto($resultado->fetch_assoc());
     }
 
     /**
@@ -92,8 +92,20 @@ class DAOProducto
         return intval($resultado->fetch_assoc()['numProductos']);
     }
 
+    /**
+     * Devuelve el número de páginas que se necesitarán para mostrar todos los productos.
+     * 
+     * @param int tamPag el número de productos por página
+     * 
+     * @return int El número de páginas que se necesitarán para mostrar todos los productos.
+     */
     public static function numPags(int $tamPag): int
     {
         return ceil(DAOProducto::numProductos() / $tamPag);
+    }
+
+    public static function maxNumProducto(): int
+    {
+        
     }
 }

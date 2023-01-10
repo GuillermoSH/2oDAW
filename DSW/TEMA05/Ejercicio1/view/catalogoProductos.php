@@ -93,6 +93,12 @@ require_once("../model/DAOProducto.php");
             );
             window.location.reload();
         }
+
+        function recargarPagina() {
+            let pag = document.querySelector("#pag").value;
+            let tamPag = document.querySelector("#tamPag").value;
+            document.location = "?pag=" + pag + "&tamPag=" + tamPag;
+        }
     </script>
 </head>
 
@@ -100,8 +106,28 @@ require_once("../model/DAOProducto.php");
     <h1>Catálogo de Productos - Imprenta S.A.</h1>
     <div id="controlPag">
         <label for="pag">Pág:</label>
-        <select id="pag" name="pag" value="<?=$pag;?>">
-            
+        <select onchange="recargarPagina()" id="pag" name="pag" value="<?= $pag; ?>">
+            <?php
+            for ($i = 1; $i <= $numPaginas; $i++) {
+                if ($i == $pag) {
+                    echo "<option selected>$i</option>";
+                } else {
+                    echo "<option>$i</option>";
+                }
+            }
+            ?>
+        </select>
+        <label for="tamPag">Tamaño de la página:</label>
+        <select onchange="recargarPagina()" id="tamPag" name="tamPag" value="">
+            <?php
+            for ($i = 10; $i <= 50; $i += 5) {
+                if ($i == $tamPag) {
+                    echo "<option selected>$i</option>";
+                } else {
+                    echo "<option>$i</option>";
+                }
+            }
+            ?>
         </select>
     </div>
     <table>
@@ -118,13 +144,23 @@ require_once("../model/DAOProducto.php");
                     <td><input type='text' value='$producto->id' maxlength='6' size='6' readonly='readonly'/></td>
                     <td><input type='text' value='$producto->descripcion' maxlength='512' size='50' readonly='readonly'/></td>
                     <td><input type='text' value='$producto->nombre' maxlength='40' size='30' readonly='readonly'/></td>
-                    <td><input type='number' value='$producto->precio' maxlength='11' size='10' readonly='readonly'/></td>
+                    <td><input type='number' value='$producto->precio' maxlength='11' size='10' readonly='readonly' step='0.01'/></td>
                     <td><input type='text' value='$producto->imagen' maxlength='40' size='20' readonly='readonly'/></td>
                     <td><button onclick='eliminarProducto(\"$producto->id\")'>Eliminar</button></td>
                     <td><button onclick='modificarGuardarProducto(\"$producto->id\")'>Modificar</button></td>
                 </tr>";
         }
         ?>
+        <form action="productos/insertar.php" method="post" enctype="multipart/form-data">
+            <tr>
+                <td><input type='text' name="id" maxlength='6' size='6' readonly='readonly' value="<?= $siguienteProducto;?>"/></td>
+                <td><input type='text' name="descripcion" maxlength='512' size='50' /></td>
+                <td><input type='text' name="nombre" maxlength='40' size='30' /></td>
+                <td><input type='number' name="precio" maxlength='11' size='10' step='0.01'/></td>
+                <td><input type='text' name="imagen" maxlength='40' size='20' /></td>
+                <td><button type='submit' >Nuevo Producto</button></td>
+            </tr>
+        </form>
     </table>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

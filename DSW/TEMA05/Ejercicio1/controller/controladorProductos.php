@@ -10,5 +10,12 @@
     if (isset($_GET['tamPag'])) {
         $pag=intval($_GET['tamPag']);
     }
+    
+    $numPaginas=DAOProducto::numPags($tamPag);
+
+    if ($pag > $numPaginas) {
+        $pag = $numPaginas;
+    }
 
     $paginaProductos = DAOProducto::getPaginaProducto($pag, $tamPag);
+    $maxNumProducto=DAOProducto::maxNumProducto() + 1;
