@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>AUT4_01_Practica SIMS</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="personas" id="container-personas">
+            <table>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Carlos</td>
+                </tr>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Gonzalo</td>
+                </tr>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Luisa</td>
+                </tr>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Fernando</td>
+                </tr>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Amacio</td>
+                </tr>
+                <tr>
+                    <td onclick="cambiarPersona(this.textContent)">Carolina</td>
+                </tr>
+            </table>
+        </div>
+        <div class="habitaciones" id="habitaciones">
+            <table>
+                <tr>
+                    <td><button onclick="guardarAccion(this.textContent.toLowerCase())">Salon</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="guardarAccion(this.textContent.toLowerCase())">Cocina</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="guardarAccion(this.textContent.toLowerCase())">Baño</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="guardarAccion(this.textContent.toLowerCase())">Dormitorio</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="logs" id="containerLogs">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
