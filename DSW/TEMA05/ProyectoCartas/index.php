@@ -15,16 +15,18 @@ require_once("./Carta.php");
         <div class="container-interface">
             <?php
                 $cartas = [];
-                for ($i = 0; $i < $numParejas; $i++) {
-                    $newCarta = Carta::getCarta();
+                $numParejas = 10;
+                for ($i = 0; $i < $numParejas;) {
+                    $newCarta = Carta::generarCarta();
                     if (!in_array($newCarta, $cartas)) {
                         array_push($cartas, $newCarta);
+                        $i++;
                     }
                 }
                 $cartas = array_merge($cartas, $cartas);
                 shuffle($cartas);
                 foreach ($cartas as $carta) {
-                    echo "<div>$carta</div>";
+                    echo "<div><img src='./barajaEspa/".$carta[0]."/".implode($carta).".png'/></div>";
                 }
             ?>
         </div>
