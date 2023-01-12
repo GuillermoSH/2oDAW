@@ -1,4 +1,6 @@
 <?php
+use DAOProducto as GlobalDAOProducto;
+
 require_once(__DIR__."/BaseDAO.php");
 require_once(__DIR__."/Producto.php");
 

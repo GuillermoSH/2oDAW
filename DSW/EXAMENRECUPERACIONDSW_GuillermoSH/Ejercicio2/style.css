@@ -1,0 +1,32 @@
+body {
+    margin:0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.naranja {
+    background-color: orange !important;
+}
+
+tr td, tr th {
+    border: 1px solid black;
+}
+
+tr td:nth-child(n+5) {
+    text-align: center;
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(98, 214, 98);
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(120, 206, 206);
+}

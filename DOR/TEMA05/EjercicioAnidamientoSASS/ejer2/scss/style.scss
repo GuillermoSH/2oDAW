@@ -1,0 +1,18 @@
+$color-fondo: #0000ff;
+$color-article: lighten($color-fondo, 30%);
+$color-hover: complement($color-fondo);
+
+section {
+    background-color: $color-fondo;
+    padding: 10px;
+
+    article {
+        background-color: $color-article;
+        margin: 5px;
+        padding: 5px;
+
+        &:hover {
+            background-color: $color-hover;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+// Sistema de botones
+
+//Colores de base
+$color-error: #ff0000;
+$color-warning: #ffff5d;
+$color-accepted: #007c00;
+$color-normal: #0000ff;
+$color-shadow: #000000;
+
+//Valor del radio para redondear los botones
+$border-radius: 0.4rem;
+
+//Mapa del que cogeremos los nombres para interpolarlos y los valores de los colores
+$btn-colors: (
+  "error": $color-error,
+  "warning": $color-warning,
+  "accepted": $color-accepted,
+  "normal": $color-normal
+);
+
+//Elemento botón general
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; 
+  border-radius: $border-radius;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: $border-radius/2 $border-radius/2 $color-shadow;
+  }
+//Cuando se pulse el boton tendra fondo naranja y color de letra blanco
+  &:active {
+    background-color: #ffa600;
+    color: #ffffff;
+  }
+}
+
+//Clase adicional que le da color
+//Realizar una estructura EACH para recorrer el mapa de $btn-colors 
+//asignando a cada btn-xxxxx el background-color asignado en el mapa
+
+@each $btn, $color in $btn-colors {
+  .btn-#{$btn} {
+    background-color: $color;
+  }
+} 
+
+//Estilos genreales para la tabla
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid $color-shadow;
+  padding: 1rem;
+}
+
+//Colores para los columnas
+$color-col-pares: #ccc;
+$color-col-impares: #808080;
+
+//Realizar una función colum-color que cuando reciba un numero devuelva el color de fondo par o
+// impar de las columnas dependiendo de si ese numero es par o impar usando dentro de la función
+// una estructura if-else
+
+@function colum-color($num) {
+  @if ($num%2==0) {
+    @return $color-col-pares;
+  } @else {
+    @return  $color-col-impares;
+  }
+} 
+
+
+//Establezco el número máximo de columnas
+$inicio: 1;
+$fin: 10;
+
+
+@for $num from $inicio to $fin {
+  tbody tr td:nth-child(#{$num}) {
+    background-color: colum-color($num);
+  }
+}
+
+//Sistema de maquetación
+
+//Padre de cada fila
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+//Les doy un tamaño y un borde para distinguirlos
+//Sólo válida para el ejemplo
+.row > * {
+  border: 1px solid black;
+  height: 150px;
+}
+
+//Número de elementos máximos que voy a tener
+$num_elementos: 8;
+
+//Realizar una función anchura-col que pasado el numero de columna te devuelve la anchura 
+// correspondiente a ese numero
+
+@function anchura-col($num) {
+  @return ($num/$num_elementos)*100;
+}
+
+//Bucle para generar las clases
+@for $i from 1 through $num_elementos {
+.row > .col-#{$i} {
+    padding: 1rem;
+    width: #{anchura_col($i)}+ "%";
+  }
+}

@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once("./Carta.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +13,22 @@ declare(strict_types=1);
 <body>
     <div class="container" id="container">
         <div class="container-interface">
-
+            <?php
+                $cartas = [];
+                $numParejas = 10;
+                for ($i = 0; $i < $numParejas; ) {
+                    $newCarta = Carta::generarCarta();
+                    if (!in_array($newCarta, $cartas)) {
+                        array_push($cartas, $newCarta);
+                        $i++;
+                    }
+                }
+                $cartas = array_merge($cartas, $cartas);
+                shuffle($cartas);
+                foreach ($cartas as $carta) {
+                    echo "<div><img src='./barajaEspa/".$carta[0]."/".implode($carta).".png'/></div>";
+                }
+            ?>
         </div>
     </div>
 </body>

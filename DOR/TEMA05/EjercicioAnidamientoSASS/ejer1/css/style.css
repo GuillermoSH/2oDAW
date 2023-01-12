@@ -1,0 +1,14 @@
+section {
+  background-color: #0000ff;
+  padding: 10px;
+}
+section article {
+  background-color: #add8e6;
+  margin: 5px;
+  padding: 5px;
+}
+section article:hover {
+  background-color: #ffff00;
+}
+
+/*# sourceMappingURL=style.css.map */
