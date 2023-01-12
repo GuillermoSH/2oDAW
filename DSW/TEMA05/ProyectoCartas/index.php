@@ -16,7 +16,7 @@ require_once("./Carta.php");
             <?php
                 $cartas = [];
                 $numParejas = 10;
-                for ($i = 0; $i < $numParejas;) {
+                for ($i = 0; $i < $numParejas; ) {
                     $newCarta = Carta::generarCarta();
                     if (!in_array($newCarta, $cartas)) {
                         array_push($cartas, $newCarta);
