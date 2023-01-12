@@ -10,29 +10,17 @@
 
 <body>
     <div class="container" id="container">
-        <div class="personas" id="container-personas">
-            <table>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Carlos</td>
-                </tr>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Gonzalo</td>
-                </tr>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Luisa</td>
-                </tr>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Fernando</td>
-                </tr>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Amacio</td>
-                </tr>
-                <tr>
-                    <td onclick="cambiarPersona(this.textContent)">Carolina</td>
-                </tr>
-            </table>
+        <div class="personas centrado" id="container-personas">
+            <select name="convivientes" id="convivientes" multiple class="selectPersonas">
+                <option>Carlos</option>
+                <option>Gonzalo</option>
+                <option>Luisa</option>
+                <option>Fernando</option>
+                <option>Amacio</option>
+                <option>Carolina</option>
+            </select>
         </div>
-        <div class="habitaciones" id="habitaciones">
+        <div class="habitaciones centrado" id="habitaciones">
             <table>
                 <tr>
                     <td><button onclick="guardarAccion(this.textContent.toLowerCase())">Salon</button></td>
@@ -48,8 +36,10 @@
                 </tr>
             </table>
         </div>
-        <div class="logs" id="containerLogs">
+        <div class="containerLogs centrado">
+            <div class="logs" id="containerLogs">
 
+            </div>
         </div>
     </div>
 

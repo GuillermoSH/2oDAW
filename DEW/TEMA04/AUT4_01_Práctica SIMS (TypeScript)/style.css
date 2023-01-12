@@ -5,27 +5,82 @@ body {
 .container {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 1fr 10vh;
+}
+
+.containerLogs {
+    grid-row: 2/3;
 }
 
 .logs {
-    width: 20vw;
+    width: 25vw;
     height: 30vh;
     overflow: scroll;
+    background-color: #3a5eff;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    color: white;
 }
 
-td:active {
-    background-color: blue;
+.habitaciones {
+    margin-inline: 8vw;
+    
+    grid-row: 2/3;
 }
 
 .habitaciones button {
-    height: 33px;
+    font-weight: bold;
+    height: 35px;
     width: 150px;
+    margin-block: 5px;
+    font-size: 18px;
+    background-color: #3a5eff;
+    border: 2px solid lightblue;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.466);
+    
 }
 
-.logs {
-    background-color: grey;
-    padding: 1rem;
+.habitaciones button:hover {
+    box-shadow: 4px 4px 8px 0px black;
+    background-color: white;
+    border-color: #3a5eff;
+    color: #3a5eff;
+    transition: transform 8ms ease-in;
+    transform: scale(1.05);
+}
+
+.habitaciones button:active {
+    transition: transform 8ms ease-in;
+    transform: scale(0.95)
+}
+
+.personas {
+    grid-row: 2/3;
+}
+
+.selectPersonas {
+    height: 150px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #3a5eff;
+    border: 2px solid black;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.466);
+    color: white;
+    font-weight: bolder;
+}
+
+.selectPersonas::marker {
+    background-color: red;
+}
+
+.centrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
