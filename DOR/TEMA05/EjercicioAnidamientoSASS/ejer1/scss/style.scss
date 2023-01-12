@@ -1,0 +1,18 @@
+$color-fondo: #0000ff;
+$color-article: #add8e6;
+$color-hover: #ffff00;
+
+section {
+    background-color: $color-fondo;
+    padding: 10px;
+
+    article {
+        background-color: $color-article;
+        margin: 5px;
+        padding: 5px;
+
+        &:hover {
+            background-color: $color-hover;
+        }
+    }
+}
