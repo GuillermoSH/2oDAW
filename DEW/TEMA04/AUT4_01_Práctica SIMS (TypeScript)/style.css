@@ -64,7 +64,7 @@ body {
 }
 
 .selectPersonas {
-    height: 150px;
+    height: 180px;
     width: 200px;
     text-align: center;
     border-radius: 10px;
@@ -73,10 +73,11 @@ body {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.466);
     color: white;
     font-weight: bolder;
+    font-size: 20px;
 }
 
-.selectPersonas::marker {
-    background-color: red;
+.selectPersonas option:checked {
+    background-color: #ffdb3a;
 }
 
 .centrado {
