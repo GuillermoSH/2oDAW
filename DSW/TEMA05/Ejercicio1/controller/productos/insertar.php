@@ -1,7 +1,7 @@
 <?php
     require_once("../../model/DAOProducto.php");
     if ($_POST) {
-        $id=$_POST['id'];
+        //$id=$_POST['id'];
         $descripcion=$_POST['descripcion'];
         $nombre=$_POST['nombre'];
         $precio=$_POST['precio'];

@@ -28,11 +28,15 @@ class BaseDAO
      */
     public static function consulta(string $sql):bool | mysqli_result
     {
-        $conexion = self::getConexion();
-        $resultado = $conexion->query($sql);
-        self::$lastAffectedRows = $conexion->affected_rows;
-        $conexion->close();
-        return $resultado;
+        try {
+            $conexion = self::getConexion();
+            $resultado = $conexion->query($sql);
+            //self::$lastAffectedRows = $conexion->affected_rows;
+            $conexion->close();
+            return $resultado;
+        } catch (Exception $ex) {
+            exit("Error en consulta");
+        }
     }
 
     /**

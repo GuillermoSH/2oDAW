@@ -52,9 +52,30 @@ class DAOProducto
         return BaseDAO::consulta($sql);
     }
 
+    /**
+     * Devuelve un objeto Producto si el id existe en la base de datos, de lo contrario devuelve nulo
+     * 
+     * @param int id El id del producto que desea buscar.
+     */
     public static function buscarProducto(int $id): ?Producto
     {
         $resultado = BaseDAO::consulta("SELECT * FROM producto WHERE id='$id'");
+        if ($resultado->num_rows == 0) {
+            return null;
+        }
+        return Producto::getProducto($resultado->fetch_assoc());
+    }
+
+    
+    /**
+     * Devuelve un objeto de producto si el producto existe en la base de datos; de lo contrario,
+     * devuelve nulo
+     * 
+     * @param string nombre El nombre del producto.
+     */
+    public static function buscarProductoNombre(string $nombre): ?Producto
+    {
+        $resultado = BaseDAO::consulta("SELECT * FROM producto WHERE nombre='$nombre'");
         if ($resultado->num_rows == 0) {
             return null;
         }
