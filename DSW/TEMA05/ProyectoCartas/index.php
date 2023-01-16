@@ -16,11 +16,11 @@ require_once("./Carta.php");
             <?php
                 $cartas = [];
                 $numParejas = 10;
-                for ($i = 0; $i < $numParejas; ) {
-                    $newCarta = Carta::generarCarta();
+                while (count($cartas) < $numParejas) {
+                    $newCarta = new Carta();
+                    $newCarta=$newCarta::generarCarta();
                     if (!in_array($newCarta, $cartas)) {
                         array_push($cartas, $newCarta);
-                        $i++;
                     }
                 }
                 $cartas = array_merge($cartas, $cartas);

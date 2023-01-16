@@ -101,7 +101,7 @@ class DAOProducto
             $listaProductos[$producto['id']] = Producto::getProducto($producto);
         }
 
-        return  $listaProductos;
+        return $listaProductos;
     }
 
     /**
@@ -125,10 +125,5 @@ class DAOProducto
     public static function numPags(int $tamPag): int
     {
         return ceil(DAOProducto::numProductos() / $tamPag);
-    }
-
-    public static function maxNumProducto(): int
-    {
-        
     }
 }

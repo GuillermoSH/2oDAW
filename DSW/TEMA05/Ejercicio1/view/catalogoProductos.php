@@ -158,7 +158,7 @@ require_once("../model/DAOProducto.php");
                 <td><input type='text' name="nombre" maxlength='40' size='30' /></td>
                 <td><input type='number' name="precio" maxlength='11' size='10' step='0.01'/></td>
                 <td><input type='text' name="imagen" maxlength='40' size='20' /></td>
-                <td><button type='submit' >Nuevo Producto</button></td>
+                <td><button type='submit'>Nuevo Producto</button></td>
             </tr>
         </form>
     </table>
