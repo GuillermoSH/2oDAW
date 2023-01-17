@@ -1,4 +1,11 @@
-.container-interface {
-    display:flex;
-    flex-wrap: wrap;
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 1fr;
+
+    height: 100vh;
 }
