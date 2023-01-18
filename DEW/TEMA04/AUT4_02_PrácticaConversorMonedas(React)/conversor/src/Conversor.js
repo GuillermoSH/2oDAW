@@ -24,19 +24,19 @@ class Conversor extends React.Component {
     let monedaConvertir;
     console.log(this.state.moneda1,this.state.moneda2,this.state.cantidad)
     if (this.state.moneda1 == "Euro" && this.state.moneda2 == "Dolar") {
-      monedaConvertir = (this.state.cantidad * 0.9) / 1;
+      monedaConvertir = Number(this.state.cantidad * 0.9) / 1;
     } else if (this.moneda1 == "Euro" && this.moneda2 == "Yen") {
-      monedaConvertir = (this.state.cantidad * 138) / 1;
+      monedaConvertir = Number(this.state.cantidad * 138) / 1;
     } else if (this.moneda1 == "Dolar" && this.moneda2 == "Euro") {
-      monedaConvertir = this.state.cantidad / 0.9;
+      monedaConvertir = Number(this.state.cantidad) / 0.9;
     } else if (this.moneda1 == "Dolar" && this.moneda2 == "Yen") {
-      monedaConvertir = (this.state.cantidad * 138) / 0.9;
+      monedaConvertir = Number(this.state.cantidad * 138) / 0.9;
     } else if (this.moneda1 == "Yen" && this.moneda2 == "Dolar") {
-      monedaConvertir = (this.state.cantidad * 0.9) / 138;
+      monedaConvertir = Number(this.state.cantidad * 0.9) / 138;
     } else if (this.moneda1 == "Yen" && this.moneda2 == "Euro") {
-      monedaConvertir = this.state.cantidad / 138;
+      monedaConvertir = Number(this.state.cantidad) / 138;
     } else {
-      monedaConvertir = this.state.cantidad;
+      monedaConvertir = Number(this.state.cantidad);
     }
     this.setState({ conversion: monedaConvertir });
     this.render(
@@ -63,7 +63,7 @@ class Conversor extends React.Component {
             <option>Dolar</option>
             <option>Yen</option>
           </select>
-          <input type="text" name="cantidad" onChange={this.handleChange}></input>
+          <input type="number" name="cantidad" onChange={this.handleChange}></input>
           <button onClick={this.conversionMoneda}>Convertir</button>
         </div>
         <p>

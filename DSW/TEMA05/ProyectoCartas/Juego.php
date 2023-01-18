@@ -3,6 +3,7 @@ require_once("Carta.php");
 
 class Juego
 {
+    private static $mesa;
     private static function generarMesa(int $numParejas)
     {
         $cartas = [];
@@ -16,15 +17,26 @@ class Juego
         $cartas = array_merge($cartas, $cartas);
         shuffle($cartas);
         $_SESSION['mesa'] = $cartas;
+        self::$mesa = $cartas;
     }
 
     public static function imprimirMesa(int $numParejas)
     {
-        self::generarMesa($numParejas);
+        $cartas = [];
+        if ($_GET['numParejas']) {
+            self::generarMesa($numParejas);
+            $cartas = self::$mesa;
+        } else {
+            $cartas = $_SESSION['mesa'];
+        }
         $i = 0;
-        foreach ($_SESSION['mesa'] as $carta) {
+        foreach ($cartas as $carta) {
             //echo "<div><img src='./barajaEspa/" . $carta[0] . "/" . implode($carta) . ".png'/></div>";
-            echo "<div><button name='carta' value='$i'><img src='./barajaEspa/bocaabajo.png'/></button></div>";
+            echo "<div>
+            <button name='carta$i' value='$carta'>
+                <img src='./barajaEspa/bocaabajo.png'/>
+            </button>
+            </div>";
             $i++;
         }
     }
