@@ -83,7 +83,7 @@ require_once("./Mesa.php");
                 <div><strong>Parejas acertadas:</strong> " . intval($_COOKIE['numParejasAcertadas']) . "</div>
                 </div>";
             ?>
-            <form method="get" action="./" enctype="multipart/form-data">
+            <form method="get" action="" enctype="multipart/form-data">
                 <button type="submit" name="btnInicio">IR AL INICIO</button>
             </form>
         </div>
@@ -92,6 +92,11 @@ require_once("./Mesa.php");
             echo "<form method='post' action=''";
             Mesa::imprimirMesa(intval($_COOKIE['numParejas']));
             echo "</form>";
+
+            if (isset($_GET['btnInicio'])) {
+                session_destroy();
+                header("Location: ./");
+            }
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $eleccion1 = "";

@@ -52,14 +52,10 @@ session_start();
             if (isset($_POST['btnNumParejas']) || isset($_POST['numParejas'])) {
                 $numParejas = $_POST['numParejas'];
                 if ($numParejas >= 2 && $numParejas <= 48 && $numParejas != null) {
-                    unset($_COOKIE['mesa']);
-                    unset($_COOKIE['numParejas']);
-                    unset($_COOKIE['numMovimientos']);
-                    unset($_COOKIE['numParejasAcertadas']);
-                    setcookie('numParejas', $_POST['numParejas']);
-                    setcookie('numParejasAcertadas', "0");
-                    setcookie('numMovimientos', "0");
-                    setcookie('mesa', "");
+                    $_SESSION['numParejas'] = $_POST['numParejas'];
+                    $_SESSION['numParejasAcertadas'] = 0;
+                    $_SESSION['numMovimientos'] = 0;
+                    $_SESSION['mesa'] = null;
                     header("Location: ./Juego.php");
                 } else {
                     echo "<script>alert('No se pueden generar menos de 2 parejas y más de 48 parejas.')</script>";

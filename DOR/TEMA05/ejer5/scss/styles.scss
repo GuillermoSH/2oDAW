@@ -1,0 +1,17 @@
+$reduxColor: 0%;
+$reduxLetra: 80;
+$tamLetra: 5rem;
+$numTitulos: 6;
+
+@mixin funcionMixin($nombre, $color, $tamLetra, $porcRedux) {
+    .#{$nombre} {
+        color: $color;
+        font-size: $tamLetra;
+    }
+}
+
+@for $i from 1 through $numTitulos {
+    $reduxColor: $reduxColor + 5%;
+    @include funcionMixin("miclase h"+$i, darken(#cc3366, $reduxColor), $tamLetra, $reduxLetra);
+    $tamLetra: $tamLetra * $reduxLetra / 100;
+}
