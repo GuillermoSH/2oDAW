@@ -1,74 +1,55 @@
 import React from 'react';
 import './Conversor.css';
 
+/**
+ * Toma tres parámetros, dos cadenas y un número, y devuelve un número
+ * @param moneda1 - La moneda desde la que desea convertir.
+ * @param moneda2 - La moneda a la que desea convertir.
+ * @param cantidad - La cantidad de dinero a convertir.
+ * @returns el valor de la variable monedaConvertir.
+ */
+function conversionMoneda(moneda1, moneda2, cantidad) {
+  let monedaConvertir = 0;
+  if (moneda1 == "Euro" && moneda2 == "Dolar") {
+    monedaConvertir = (Number(cantidad) * 0.9) / 1;
+  } else if (moneda1 == "Euro" && moneda2 == "Yen") {
+    monedaConvertir = (Number(cantidad) * 138) / 1;
+  } else if (moneda1 == "Dolar" && moneda2 == "Euro") {
+    monedaConvertir = Number(cantidad) / 0.9;
+  } else if (moneda1 == "Dolar" && moneda2 == "Yen") {
+    monedaConvertir = (Number(cantidad) * 138) / 0.9;
+  } else if (moneda1 == "Yen" && moneda2 == "Dolar") {
+    monedaConvertir = (Number(cantidad) * 0.9) / 138;
+  } else if (moneda1 == "Yen" && moneda2 == "Euro") {
+    monedaConvertir = Number(cantidad) / 138;
+  } else {
+    monedaConvertir = Number(cantidad);
+  }
+  return monedaConvertir.toFixed(2);
+}
+
+/* La clase Conversor es un componente de React que genera un párrafo con la conversión de la cantidad
+de dinero de una moneda a otra. */
 class Conversor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { moneda1: props.moneda1, moneda2: props.moneda2, cantidad: props.cantidad, conversion: 0 };
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      moneda1: props.moneda1,
+      moneda2: props.moneda2,
+      cantidad: props.cantidad,
+    };
   }
-
-  handleChange(e) {
-    let valor = e.target.value;
-    let nombre = e.target.name;
-    if (nombre == "moneda1") {
-      this.setState({ moneda1: valor });
-    } else if (nombre == "moneda2") {
-      this.setState({ moneda2: valor });
-    } else if (nombre == "cantidad") {
-      this.setState({ cantidad: valor });
-    }
-  }
-
-  conversionMoneda = () => {
-    let monedaConvertir;
-    console.log(this.state.moneda1,this.state.moneda2,this.state.cantidad)
-    if (this.state.moneda1 == "Euro" && this.state.moneda2 == "Dolar") {
-      monedaConvertir = Number(this.state.cantidad * 0.9) / 1;
-    } else if (this.moneda1 == "Euro" && this.moneda2 == "Yen") {
-      monedaConvertir = Number(this.state.cantidad * 138) / 1;
-    } else if (this.moneda1 == "Dolar" && this.moneda2 == "Euro") {
-      monedaConvertir = Number(this.state.cantidad) / 0.9;
-    } else if (this.moneda1 == "Dolar" && this.moneda2 == "Yen") {
-      monedaConvertir = Number(this.state.cantidad * 138) / 0.9;
-    } else if (this.moneda1 == "Yen" && this.moneda2 == "Dolar") {
-      monedaConvertir = Number(this.state.cantidad * 0.9) / 138;
-    } else if (this.moneda1 == "Yen" && this.moneda2 == "Euro") {
-      monedaConvertir = Number(this.state.cantidad) / 138;
-    } else {
-      monedaConvertir = Number(this.state.cantidad);
-    }
-    this.setState({ conversion: monedaConvertir });
-    this.render(
-      <p>
-        La conversión de {this.state.cantidad} {this.state.moneda1} son{" "}
-        {this.state.conversion} {this.state.moneda2}
-      </p>
-    );
-  };
 
   render() {
     return (
-      <div class="container">
-        <h1>Conversor de monedas.-</h1>
-        <div class="formulario">
-          <select name="moneda1" onChange={this.handleChange} value={this.state.moneda1}>
-            <option>Euro</option>
-            <option>Dolar</option>
-            <option>Yen</option>
-          </select>
-          <div>a</div>
-          <select name="moneda2" onChange={this.handleChange} value={this.state.moneda2}>
-            <option>Euro</option>
-            <option>Dolar</option>
-            <option>Yen</option>
-          </select>
-          <input type="number" name="cantidad" onChange={this.handleChange}></input>
-          <button onClick={this.conversionMoneda}>Convertir</button>
-        </div>
+      <div>
         <p>
-          La conversión de {this.state.cantidad} {this.state.moneda1} son{" "}
-          {this.state.conversion} {this.state.moneda2}
+          El paso de <strong>{this.state.cantidad} {this.state.moneda1}</strong> a <strong>{this.state.moneda2}</strong> es <strong>{" "}
+          {conversionMoneda(
+            this.state.moneda1,
+            this.state.moneda2,
+            this.state.cantidad
+          )}{" "}</strong>
         </p>
       </div>
     );
