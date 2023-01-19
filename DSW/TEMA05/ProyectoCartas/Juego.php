@@ -79,8 +79,8 @@ require_once("./Mesa.php");
         <div class="container-menu">
             <?php
             echo "<div class='movimientos'>
-                <div><strong>Movimientos:</strong> " . intval($_COOKIE['numMovimientos']) . "</div>
-                <div><strong>Parejas acertadas:</strong> " . intval($_COOKIE['numParejasAcertadas']) . "</div>
+                <div><strong>Movimientos:</strong> " . $_SESSION['numMovimientos'] . "</div>
+                <div><strong>Parejas acertadas:</strong> " . $_SESSION['numAciertos'] . "</div>
                 </div>";
             ?>
             <form method="get" action="" enctype="multipart/form-data">
@@ -88,25 +88,42 @@ require_once("./Mesa.php");
             </form>
         </div>
         <div class="container-interface">
-            <?php
-            echo "<form method='post' action=''";
-            Mesa::imprimirMesa(intval($_COOKIE['numParejas']));
-            echo "</form>";
+            <form method='post' action=''>
+                <?php
+                Mesa::imprimirMesa($_SESSION['numParejas']);
+                ?>
+            </form>
 
+            <?php
             if (isset($_GET['btnInicio'])) {
                 session_destroy();
-                header("Location: ./");
+                header("Location: ./index.php");
             }
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $eleccion1 = "";
-                for ($i = 0; $i < count($_COOKIE['mesa']); $i++) {
+                $eleccion = "";
+                for ($i = 0; $i < count($_SESSION['mesa']); $i++) {
                     if (isset($_POST['carta' . $i])) {
-                        $eleccion1 = $_POST['carta' . $i];
+                        $eleccion = $_POST['carta' . $i];
+                        if ($_SESSION['eleccion1'] == $eleccion) {
+                            $_SESSION['eleccion1'] = "";
+                            array_push($_SESSION['mesaAciertos'], "carta".$i);
+                            if ($_SESSION['numAciertos'] != $_SESSION['numParejas']) {
+                                $_SESSION['numAciertos']++;
+                            } else {
+                                echo "<script>alert('HAS GANADO')</script>";
+                            }
+                        } elseif ($_SESSION['eleccion1']!="" && $eleccion != $_SESSION['eleccion1']) {
+                            unset($_SESSION['mesaAciertos'][array_search($_SESSION['eleccion1'], $_SESSION['mesaAciertos'])]);
+                            $_SESSION['eleccion1'] = "";
+                            $_SESSION['numMovimientos']++;
+                        } elseif ($_SESSION['eleccion1']=="") {
+                            $_SESSION['eleccion1'] = $eleccion;
+                            array_push($_SESSION['mesaAciertos'], "carta".$i);
+                        }
+                        header("Location: ./Juego.php");
                     }
                 }
-                $_COOKIE['eleccion1'] = $eleccion1;
-                echo "<script>alert('" . $_COOKIE['eleccion1'] . "')</script>";
             }
             ?>
         </div>

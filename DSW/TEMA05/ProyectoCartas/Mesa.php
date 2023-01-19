@@ -21,19 +21,27 @@ class Mesa
     public static function imprimirMesa(int $numParejas)
     {
         $cartas = [];
-        if ($_COOKIE['mesa']!="") {
-            $cartas = unserialize($_COOKIE['mesa'], ["allowed_classes" => false]);
+        if ($_SESSION['mesa'] != null) {
+            $cartas = $_SESSION['mesa'];
         } else {
             $cartas = self::generarMesa($numParejas);
-            setcookie('mesa', serialize($cartas));
+            $_SESSION['mesa'] = $cartas;
         }
         $i = 0;
         foreach ($cartas as $carta) {
             //echo "<div><img src='./barajaEspa/" . $carta[0] . "/" . implode($carta) . ".png'/></div>";
-            echo "<div>
-            <button name='carta$i' value='$carta'>
-                <img src='./barajaEspa/bocaabajo.png'/>
-            </button>
+            
+            if (in_array("carta".$i, $_SESSION['mesaAciertos'])) {
+                echo "<div>
+                <button disabled name='carta$i' value='" . implode("", $carta) . "'>";
+                echo "<img src='./barajaEspa/" . $carta[0] . "/" . implode($carta) . ".png'/>";
+            } else {
+                echo "<div>
+                <button name='carta$i' value='" . implode("", $carta) . "'>";
+                echo "<img src='./barajaEspa/bocaabajo.png'/>";
+            }
+
+            echo "</button>
             </div>";
             $i++;
         }
