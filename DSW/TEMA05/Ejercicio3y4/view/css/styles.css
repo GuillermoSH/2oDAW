@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlPag {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-productList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-newProduct {
+    padding-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
