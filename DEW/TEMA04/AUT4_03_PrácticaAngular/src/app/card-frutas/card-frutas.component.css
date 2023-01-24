@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    border: 2px solid blue;
+    width: 20vw;
+    padding-block: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    height: 25vh;
+}

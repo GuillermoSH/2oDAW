@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px 1fr 60px;
+}
+
+header {
+    flex-direction: column;
+
+    text-align: center;
+    margin-inline: 2rem;
+
+    grid-row: 1/2;
+}
+
+main {
+    grid-row: 2/3;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    border-radius: 0.6rem;
+    border: 2px solid #00ff8c;
+    background-color: #117749;
+    color: #00ff8c;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 5px 5px 10px 5px #9c9c9c;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 5px #9c9c9c, inset 0px 0px 5px 0px #00ff8c;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px 5px #9c9c9c, inset 0px 0px 5px 0px #00ff8c;
+    cursor: grabbing;
+}
+
+.container-resultado {
+    
+}
+
+footer {
+    grid-row: 3/4;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.centrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
