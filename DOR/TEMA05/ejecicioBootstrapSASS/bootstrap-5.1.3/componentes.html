@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <title>Componentes Bootstrap</title>
+    <style>
+      .centrado{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .derecha{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      .little{
+        height: 10em;
+        width: 10em;
+      }
+      .pie{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      @media screen and (max-width: 768px){
+        .pie{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;    
+        }
+      }  
+      @media screen and (min-width: 768px) and (max-width: 1200px){
+        .pie{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        <strong>Hola Usuarios</strong> Para acceder a la version canaria pulsar el siguiente <a href="#" class="alert-link">enlace</a> .
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
+      <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <div class="container-fluid">
+          <img src="dist/img/laliga.png" width="30" height="30">
+          <a class="navbar-brand ms-2" href="#">La Liga</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Historia</a>
+              </li>
+              <li class="nav-item dropend">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Equipos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Primera</a></li>
+                  <li><a class="dropdown-item" href="#">Segunda</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Aficionados</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Cesta<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg></a>                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Notificaciones  <span class="badge bg-secondary">4</span></a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+            <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Login
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuario" >
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="row my-3">
+        <div class="col-6">
+          <nav aria-label="breadcrumb" class="mt-2">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Historia</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Equipos</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-6 derecha">
+          <button class="btn btn-primary " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Offcanvas a la derecha</button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Offcanvas a la derecha</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              Este es nuestro Offcanvas, espero que les guste
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="row">
+            <div class="col-6 col-xl-3 centrado">
+              <div class="card" style="width: 18rem;">
+                <img src="dist/img/barcelona.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                  <p class="card-text ">FC Barcelona</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-3 centrado">
+              <div class="card" style="width: 18rem;">
+                <img src="dist/img/realmadrid.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Real Madrid</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-3 centrado">
+              <div class="card" style="width: 18rem;">
+                <img src="dist/img/tenerife.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">CD Tenerife</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-3 centrado">
+              <div class="card" style="width: 18rem;">
+                <img src="dist/img/laspalmas.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Las Palmas</p>
+                </div>
+              </div>
+            </div>               
+          </div>         
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div id="carouselExampleCaptions" class="carousel slide mb-3" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="dist/img/barcelona.jpg" class="d-block w-100 img-fluid">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Primera Division</h5>
+                  <p>FC Barcelona</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="dist/img/realmadrid.jpg" class="d-block w-100 img-fluid">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Primera Division</h5>
+                  <p>Real Madrid CF</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="dist/img/tenerife.jpg" class="d-block w-100 img-fluid" >
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Segunda Divisionl</h5>
+                  <p>CD Tenerife</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="dist/img/laspalmas.jpg" class="d-block w-100 img-fluid" >
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Segunda Division</h5>
+                  <p>UD Las Palmas</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">@laliga.es</span>
+          </div>
+
+          <label for="" class="form-label">Elije tu Equipo - Select</label>
+          <select class="form-select mb-3" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">Barcelona</option>
+            <option value="2">Real Madrid</option>
+            <option value="3">Tenerife</option>
+            <option value="4">Las Palmas</option>
+          </select>
+
+          <label for="exampleDataList" class="form-label ">Elije tu Equipo - DataList</label>
+          <input class="form-control mb-3" list="datalistOptions" id="exampleDataList" placeholder="Equipo...">
+          <datalist id="datalistOptions">
+            <option value="Barcelona">
+            <option value="Real Madrid">
+            <option value="Tenerife">
+            <option value="Las Palmas">
+          </datalist>        
+          
+          <div class="d-inline-flex mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Hombre
+              </label>
+            </div>
+            <div class="form-check mx-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Mujer
+              </label>
+            </div>
+          </div>
+
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Peninsular</label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Canario</label>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Observaciones</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Observaciones" rows="3"></textarea>
+          </div>
+          
+        </div>
+        <div class="col-12 col-xl-4">
+          <div class="row mb-3">
+            <div class="col-3 offset-xl-3"> 
+              <img src="dist/img/barcelona.jpg" class="img-fluid little rounded rounded-circle ">
+            </div>   
+            <div class="col-3 d-none d-md-block"> 
+              <img src="dist/img/barcelona.jpg" class="img-fluid little rounded rounded-circle">
+            </div>     
+            <div class="wd-100 d-none d-xl-block"></div>     
+            <div class="col-3 d-none d-md-block"> 
+              <img src="dist/img/realmadrid.jpg" class="img-fluid little rounded rounded-circle ">
+            </div>   
+            <div class="col-3 offset-xl-6"> 
+              <img src="dist/img/realmadrid.jpg" class="img-fluid little rounded rounded-circle">
+            </div>          
+          </div>
+          <div class="row mb-3">
+            <div class="col-3 d-none d-md-block"> 
+              <img src="dist/img/tenerife.jpg" class="img-fluid little rounded rounded-circle ">
+            </div>   
+            <div class="col-3"> 
+              <img src="dist/img/tenerife.jpg " class="img-fluid little rounded rounded-circle">
+            </div>        
+            <div class="col-3 d-none d-md-block"> 
+              <img src="dist/img/laspalmas.jpg" class="img-fluid little rounded rounded-circle ">
+            </div>   
+            <div class="col-3"> 
+              <img src="dist/img/laspalmas.jpg" class="img-fluid little rounded rounded-circle">
+            </div>         
+          </div>
+         
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="pie bg-secondary">
+          <div class="fw-bold order-md-3">Examen Bootstrap</div>
+          <div class="text-decoration-underline order-md-2">Nombre Alumno</div>
+          <div class="fst-italic order-md-1">2º DAW - DOR</div>
+        </div>
+      </footer>
+
+    </div>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
