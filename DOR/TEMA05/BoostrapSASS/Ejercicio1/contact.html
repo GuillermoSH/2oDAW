@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif">
+    <link rel="stylesheet" type="text/css" href=" ">
+    <title>Proyecto Bootstrap</title>
+</head>
+
+<body class="bg-dark">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default fixed-top navbar-dark navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <!-- LOGO NAVBAR -->
+            <img src="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif" alt="Icono Navbar"
+                style="width: 3rem;" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- CONTENIDO NAVBAR -->
+            <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- INICIO -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" aria-current="page" href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                            </svg>
+                            Inicio
+                        </a>
+                    </li>
+                    <!-- DROPDOWN MARCAS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-car-front-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                            </svg>
+                            Coches
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#volkswagen"><img
+                                        src="./img/volkswagen-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Volkswagen" />Volkswagen</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#ford"><img
+                                        src="./img/ford-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Ford" />Ford</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#citroen"><img
+                                        src="./img/citroen-logo.png" class="me-2" style="width: 1.3rem"
+                                        alt="Logo Citroën" />Citroën</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#ferrari"><img
+                                        src="./img/ferrari-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Ferrari" />Ferrari</a>
+                            </li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#jaguar"><img
+                                        src="./img/jaguar-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Jaguar" />Jaguar</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="index.html#renault"><img
+                                        src="./img/renault-logo.png" class="me-2"
+                                        style="width: 1.3rem; transform: scale(1.4)" alt="Logo Renault" />Renault</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- CONTACTO -->
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-items-center" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-fill me-1" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                            Contacto</a>
+                    </li>
+                    <!-- AYUDA -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-question-circle-fill me-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z" />
+                            </svg>
+                            Ayuda</a>
+                    </li>
+                </ul>
+                <!-- BOTON LOGIN -->
+                <button type="button" class="btn btn-sm btn-outline-warning me-2 mb-2 mb-lg-0" data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">
+                    Iniciar Sesión
+                </button>
+                <!-- FORMULARIO BUSQUEDA -->
+                <form class="d-flex" role="search">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar..."
+                            aria-describedby="liveToastBtn">
+                        <button class="btn btn-outline-secondary" type="button" id="liveToastBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mx-0" style="margin-top: 55px;">
+        <div class="row">
+            <div class="offset-2 col mt-4 text-light">
+                <h1>Contacto.-</h1>
+            </div>
+        </div>
+        <div class="row mt-3 mb-5">
+            <div class="offset-3 col-6 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Antonio</h5>
+                        <p class="card-text">Fotógrafo</p>
+                        <p class="card-text">Es mu bueno en su trabajo <br/><a href="lempi.harve3@yahoo.com">lempi.harve3@yahoo.com</a></p>
+                        <a href="#" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-3 offset-md-0 col-6 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Daniela</h5>
+                        <p class="card-text">Desarrolladora Web</p>
+                        <p class="card-text">Es mu buena en su trabajo <br/><a href="haleigh2002@hotmail.com">haleigh2002@hotmail.com</a></p>
+                        <a href="#" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="text-center fw-bold text-light" style="margin-top: 9%">
+            Created by: <a href="https://github.com/GuillermoSH"
+                class="text-decoration-none text-warning">@GuillermoSH</a>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginpLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 w-100 text-center" id="staticBackdropLabel">Iniciar Sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                            </svg></span>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast bg-black" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-black">
+                <img src="https://media.giphy.com/media/3o6gDX1M3uWd1CN87S/giphy.gif" class="rounded me-2 img-fluid"
+                    alt="Logo" style="width: 1.5rem;">
+                <strong class="me-auto text-warning">Proyecto Bootstrap</strong>
+                <small>1s ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-light">
+                Esta función no está implementada aún.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

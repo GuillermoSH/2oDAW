@@ -10,17 +10,17 @@ import './Conversor.css';
  */
 function conversionMoneda(moneda1, moneda2, cantidad) {
   let monedaConvertir = 0;
-  if (moneda1 == "Euro" && moneda2 == "Dolar") {
+  if (moneda1 == "Euros" && moneda2 == "Dolars") {
     monedaConvertir = (Number(cantidad) * 0.9) / 1;
-  } else if (moneda1 == "Euro" && moneda2 == "Yen") {
+  } else if (moneda1 == "Euros" && moneda2 == "Yenes") {
     monedaConvertir = (Number(cantidad) * 138) / 1;
-  } else if (moneda1 == "Dolar" && moneda2 == "Euro") {
+  } else if (moneda1 == "Dolares" && moneda2 == "Euros") {
     monedaConvertir = Number(cantidad) / 0.9;
-  } else if (moneda1 == "Dolar" && moneda2 == "Yen") {
+  } else if (moneda1 == "Dolares" && moneda2 == "Yenes") {
     monedaConvertir = (Number(cantidad) * 138) / 0.9;
-  } else if (moneda1 == "Yen" && moneda2 == "Dolar") {
+  } else if (moneda1 == "Yenes" && moneda2 == "Dolares") {
     monedaConvertir = (Number(cantidad) * 0.9) / 138;
-  } else if (moneda1 == "Yen" && moneda2 == "Euro") {
+  } else if (moneda1 == "Yenes" && moneda2 == "Euros") {
     monedaConvertir = Number(cantidad) / 138;
   } else {
     monedaConvertir = Number(cantidad);
