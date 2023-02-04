@@ -1,0 +1,15 @@
+:host {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 40px;
+}
+
+.navbar {
+    background-color: black;
+    border-bottom: 5px solid #F0131E;
+    width: 100vw;
+}

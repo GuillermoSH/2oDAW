@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-top: 3px solid #f0131f;
+    font-weight: bolder;
+}
+
+div {
+    font-size: 14px;
+    color: #f0131f;
+}
+
+a {
+    color: #f0131f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}

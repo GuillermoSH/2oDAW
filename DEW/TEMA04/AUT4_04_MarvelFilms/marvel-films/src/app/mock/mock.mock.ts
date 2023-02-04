@@ -40,7 +40,7 @@ export let Mock: Pelicula[] =
     {
       "id": 6,
       "name": "Black Panther",
-      "poster": "https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/60037.jpg",
+      "poster": "https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg?region=0%2C0%2C540%2C810",
       "releaseDate": "",
       "description": ""
     },

@@ -22,7 +22,15 @@ export class ApiPeliculasService {
     return peliculas;
   }
 
+  getDetallesMock(id : number): Pelicula{
+    return Mock[id - 1];
+  }
+
   getPeliculasApi(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>('https://www.qando.es/docs/films.php');
+  }
+
+  getDetallesApi(id : number): Observable<Pelicula[]>{
+    return this.http.get<Pelicula[]>('https://www.qando.es/docs/films.php?id='+id)
   }
 }

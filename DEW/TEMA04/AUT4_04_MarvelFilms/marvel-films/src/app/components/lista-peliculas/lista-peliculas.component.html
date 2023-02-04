@@ -1,9 +1,10 @@
-<ul *ngFor="let pelicula of peliculas">
-    <div>
+<div class="movies-container">
+    <div class="movie-card" *ngFor="let pelicula of peliculas">
         <img src="{{pelicula.poster}}" alt="Poster {{pelicula.name}}">
-        <p>{{pelicula.id}}</p>
         <p>{{pelicula.name}}</p>
-        <p>{{pelicula.releaseDate}}</p>
-        <p>{{pelicula.description}}</p>
+        <div class="btn-container">
+            <button class="btn">Detalles</button>
+            <button class="btn">Modificar</button>
+        </div>
     </div>
-</ul>
+</div>
