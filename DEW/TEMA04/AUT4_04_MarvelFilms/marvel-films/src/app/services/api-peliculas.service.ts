@@ -11,20 +11,18 @@ import { Mock } from '../mock/mock.mock';
 })
 
 export class ApiPeliculasService {
-  private peliculas: Pelicula[] = [];
-  constructor(private http: HttpClient, private mock: Mock) { }
+  constructor(private http: HttpClient) { }
 
-  getPeliculas(): any {
-    if (this.mock.getMock().length != 0) {
-      for (let id = 1; id <= 9; id++) {
-        this.http.get<Pelicula>('https://www.qando.es/docs/films.php?id=' + id).subscribe(
-          (pelicula: Pelicula) => this.peliculas.push(pelicula)
-        )
-        this.mock.setMock(this.peliculas);
-      }
-    } else {
-      this.peliculas = this.mock.getMock();
-    }
-    return this.peliculas;
+  getPeliculasMock(): any {
+    let peliculas: Pelicula[] = [];
+    Mock.forEach(pelicula => {
+      peliculas.push(pelicula);
+    });
+
+    return peliculas;
+  }
+
+  getPeliculasApi(): Observable<Pelicula[]> {
+    return this.http.get<Pelicula[]>('https://www.qando.es/docs/films.php');
   }
 }

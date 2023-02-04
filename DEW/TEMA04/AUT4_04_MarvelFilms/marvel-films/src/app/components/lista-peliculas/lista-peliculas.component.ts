@@ -14,6 +14,8 @@ export class ListaPeliculasComponent implements OnInit {
   constructor(private peliculasService: ApiPeliculasService) { }
 
   ngOnInit() {
-    this.peliculas = this.peliculasService.getPeliculas()
+    this.peliculas = this.peliculasService.getPeliculasMock();
+    // this.peliculas = this.peliculasService.getPeliculasApi();
+    this.peliculas.sort(pelicula => pelicula.id);
   }
 }
