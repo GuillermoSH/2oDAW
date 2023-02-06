@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.img-container img {
+    height: 60px;
+}
+
 .button-container {
     grid-column: 3/4;
 

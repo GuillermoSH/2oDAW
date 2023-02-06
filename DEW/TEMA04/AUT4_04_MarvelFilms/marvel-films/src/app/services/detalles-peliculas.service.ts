@@ -8,20 +8,14 @@ import { Mock } from '../mock/mock.mock';
 @Injectable({
   providedIn: 'root'
 })
-
-export class ApiPeliculasService {
+export class DetallesPeliculasService {
   constructor(private http: HttpClient) { }
 
-  getPeliculasMock(): any {
-    let peliculas: Pelicula[] = [];
-    Mock.forEach(pelicula => {
-      peliculas.push(pelicula);
-    });
-
-    return peliculas;
+  getDetallesMock(id : string): Pelicula{
+    return Mock[Number(id) - 1];
   }
 
-  getPeliculasApi(): Observable<Pelicula[]> {
-    return this.http.get<Pelicula[]>('https://www.qando.es/docs/films.php');
+  getDetallesApi(id : string): Observable<Pelicula>{
+    return this.http.get<Pelicula>('https://www.qando.es/docs/films.php?id='+id)
   }
 }

@@ -1,10 +1,10 @@
 <div class="movies-container">
     <div class="movie-card" *ngFor="let pelicula of peliculas">
         <img src="{{pelicula.poster}}" alt="Poster {{pelicula.name}}">
-        <p>{{pelicula.name}}</p>
+        <p>{{pelicula.name | textTransform}}</p>
         <div class="btn-container">
-            <button class="btn">Detalles</button>
-            <button class="btn">Modificar</button>
+            <a routerLink="/{{pelicula.id}}" class="btn">Detalles</a>
+            <a class="btn">Modificar</a>
         </div>
     </div>
 </div>
