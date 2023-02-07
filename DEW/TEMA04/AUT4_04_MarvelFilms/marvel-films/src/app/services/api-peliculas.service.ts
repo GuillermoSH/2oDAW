@@ -4,13 +4,16 @@ import { Pelicula } from '../model/pelicula.model';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Mock } from '../mock/mock.mock';
+import { DetallesPeliculasService } from './detalles-peliculas.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ApiPeliculasService {
-  constructor(private http: HttpClient) { }
+  listaPelis: Pelicula[] = [];
+  pelis: Pelicula[] = [];
+  constructor(private http: HttpClient, private detallesService: DetallesPeliculasService) { }
 
   getPeliculasMock(): any {
     let peliculas: Pelicula[] = [];

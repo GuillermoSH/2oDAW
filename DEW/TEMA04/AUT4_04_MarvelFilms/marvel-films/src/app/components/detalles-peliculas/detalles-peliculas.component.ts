@@ -17,8 +17,30 @@ export class DetallesPeliculasComponent implements OnInit {
     this.peliculaService = peliculasService;
   }
 
+  eliminarPeliculaMock() {
+    Mock.splice(this.detallesPelicula.id -1);
+    alert("Se ha borrado correctamente");
+    this.router.navigate(['']);
+  }
+
+  eliminarPeliculaApi() {
+    let listaPelis = localStorage.getItem("listaPelis");
+    if (listaPelis != null) {
+      let jsonListaPelis: Pelicula[] = JSON.parse(listaPelis);
+      jsonListaPelis.splice(jsonListaPelis.indexOf(this.detallesPelicula));
+      localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
+      alert("Se ha borrado correctamente");
+      this.router.navigate(['']);
+    }
+  }
+
+  expandirTexto() {
+    let sinopsis = (<HTMLElement>document.getElementById("sinopsis"));
+    sinopsis.innerHTML = "<strong style='color: #f0131f; text-transform: uppercase;'>Sinopsis: </strong>" + this.detallesPelicula.description;
+  }
+
   ngOnInit() {
-    //this.peliculasService.getDetallesApi(this.router.url.replace("/","")).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
-    this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.replace("/",""));
+    this.peliculasService.getDetallesApi(this.router.url.replace("/","")).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
+    //this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.replace("/",""));
   }
 }

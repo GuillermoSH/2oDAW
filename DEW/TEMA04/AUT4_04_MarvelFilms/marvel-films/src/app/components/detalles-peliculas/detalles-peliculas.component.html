@@ -5,10 +5,10 @@
     <h1>{{detallesPelicula.name | textTransform}}</h1>
     <p><strong>Fecha lanzamiento: </strong>{{detallesPelicula.releaseDate}}</p>
     <p><strong>Fase: </strong>{{detallesPelicula.releaseDate | phaseCalculator}}</p>
-    <p><strong>Sinopsis: </strong>{{detallesPelicula.description | shortenText}} <a>Leer más.</a></p>
+    <p id="sinopsis"><strong>Sinopsis: </strong>{{detallesPelicula.description | shortenText}} <a class="linkTexto" (click)=expandirTexto()>Leer más.</a></p>
 </div>
 <div class="actions-container">
-    <button class="btn centered">
+    <button class="btn centered" (click)=eliminarPeliculaApi()>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash3-fill"
             viewBox="0 0 16 16">
             <path
@@ -16,7 +16,7 @@
         </svg>
         Eliminar
     </button>
-    <button class="btn centered">
+    <button class="btn centered" routerLink="/modify/{{detallesPelicula.id}}">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square"
             viewBox="0 0 16 16">
             <path

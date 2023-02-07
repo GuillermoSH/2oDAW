@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Modificar {{detallesPelicula.name}}.-</h1>
+    <form (submit)=modificarPeliculaMock() class="form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" value={{detallesPelicula.name}} required>
+        <label for="poster">Poster:</label>
+        <input type="text" id="poster" value={{detallesPelicula.poster}} required>
+        <label for="releaseDate">Fecha lanzamiento:</label>
+        <input type="date" id="releaseDate" value="{{detallesPelicula.releaseDate | formatDate}}" required>
+        <label for="description">Sinopsis:</label>
+        <textarea cols="50" rows="10" id="description" required>{{detallesPelicula.description}}</textarea>
+        <button type="submit" class="btn btn-register centered">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+              </svg>
+            Modificar
+        </button>
+        <a class="btn centered" routerLink="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-house-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+            </svg>
+            Volver al inicio
+        </a>
+    </form>
+</div>

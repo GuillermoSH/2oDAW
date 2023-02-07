@@ -10,12 +10,25 @@ import { ApiPeliculasService } from '../../services/api-peliculas.service';
 
 export class ListaPeliculasComponent implements OnInit {
   peliculas: Pelicula[] = [];
-  
+
   constructor(private peliculasService: ApiPeliculasService) { }
 
+  getListaPelis() {
+    let listaPelis = localStorage.getItem("listaPelis");
+    if (listaPelis != null) {
+      this.peliculas = JSON.parse(listaPelis);
+    } else {
+      this.peliculasService.getPeliculasApi().subscribe(peliculas => this.inicializarStorage(peliculas));
+    }
+  }
+
+  inicializarStorage(peliculas: Pelicula[]) {
+    localStorage.setItem("listaPelis", JSON.stringify(peliculas));
+    this.peliculas = peliculas;
+  }
+
   ngOnInit() {
-    this.peliculas = this.peliculasService.getPeliculasMock();
-    // this.peliculas = this.peliculasService.getPeliculasApi();
-    this.peliculas.sort(pelicula => pelicula.id);
+    //this.peliculas = this.peliculasService.getPeliculasMock();
+    this.getListaPelis();
   }
 }
