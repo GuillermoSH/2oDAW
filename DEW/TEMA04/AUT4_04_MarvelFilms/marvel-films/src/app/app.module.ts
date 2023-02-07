@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { DetallesPeliculasComponent } from './components/detalles-peliculas/detalles-peliculas.component';
+import { PhaseCalculatorPipe } from './pipes/phase-calculator.pipe';
+import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DetallesPeliculasComponent } from './components/detalles-peliculas/deta
     NavbarComponent,
     FooterComponent,
     MainComponent,
-    DetallesPeliculasComponent
+    DetallesPeliculasComponent,
+    PhaseCalculatorPipe,
+    ShortenTextPipe
   ],
   imports: [
     BrowserModule,

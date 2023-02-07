@@ -43,7 +43,7 @@
 }
 
 .btn {
-    padding: 0.3rem 0.9rem;
+    padding: 0.3rem 3.6rem;
     border: 2px solid #f0131f;
     color: #f0131f;
     font-family: 'Comic Neue', cursive;
@@ -54,6 +54,7 @@
     font-size: 12px;
     border-radius: 1rem;
     background: none;
+    cursor: pointer;
 }
 
 .btn:hover {

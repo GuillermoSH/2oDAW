@@ -11,11 +11,11 @@ import { Mock } from '../mock/mock.mock';
 export class DetallesPeliculasService {
   constructor(private http: HttpClient) { }
 
-  getDetallesMock(id : string): Pelicula{
+  getDetallesMock(id : string): Pelicula {
     return Mock[Number(id) - 1];
   }
 
-  getDetallesApi(id : string): Observable<Pelicula>{
+  getDetallesApi(id : string): Observable<Pelicula> {
     return this.http.get<Pelicula>('https://www.qando.es/docs/films.php?id='+id)
   }
 }

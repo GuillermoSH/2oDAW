@@ -18,6 +18,7 @@ export class DetallesPeliculasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.peliculasService.getDetallesApi(this.router.url.replace("/","")).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
+    //this.peliculasService.getDetallesApi(this.router.url.replace("/","")).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
+    this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.replace("/",""));
   }
 }
