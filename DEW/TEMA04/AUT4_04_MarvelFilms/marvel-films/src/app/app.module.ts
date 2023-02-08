@@ -15,6 +15,7 @@ import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 import { CrearPeliculaComponent } from './components/crear-pelicula/crear-pelicula.component';
 import { EditarPeliculasComponent } from './components/editar-peliculas/editar-peliculas.component';
 import { FormatDatePipe } from './pipes/format-date.pipe';
+import { InfoMarvelComponent } from './components/info-marvel/info-marvel.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormatDatePipe } from './pipes/format-date.pipe';
     ShortenTextPipe,
     CrearPeliculaComponent,
     EditarPeliculasComponent,
-    FormatDatePipe
+    FormatDatePipe,
+    InfoMarvelComponent
   ],
   imports: [
     BrowserModule,

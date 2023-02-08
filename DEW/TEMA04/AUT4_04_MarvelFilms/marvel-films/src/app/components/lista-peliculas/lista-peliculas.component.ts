@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetallesPeliculasService } from 'src/app/services/detalles-peliculas.service';
 import { Pelicula } from '../../model/pelicula.model';
 import { ApiPeliculasService } from '../../services/api-peliculas.service';
 
@@ -11,7 +12,7 @@ import { ApiPeliculasService } from '../../services/api-peliculas.service';
 export class ListaPeliculasComponent implements OnInit {
   peliculas: Pelicula[] = [];
 
-  constructor(private peliculasService: ApiPeliculasService) { }
+  constructor(private peliculasService: ApiPeliculasService, private detallesService: DetallesPeliculasService) { }
 
   getListaPelis() {
     let listaPelis = localStorage.getItem("listaPelis");

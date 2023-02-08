@@ -1,5 +1,5 @@
-import { Component, destroyPlatform } from '@angular/core';
-import { Router, ActivatedRoute, Route } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Mock } from 'src/app/mock/mock.mock';
 import { Pelicula } from 'src/app/model/pelicula.model';
 
@@ -9,16 +9,23 @@ import { Pelicula } from 'src/app/model/pelicula.model';
   styleUrls: ['./crear-pelicula.component.css']
 })
 export class CrearPeliculaComponent {
-  newFilmBtn: any = document.getElementById("btnNewFilm");
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
+
+  private formatDate(date: string): string {
+    let dia = date.split("-")[2];
+    let mes = date.split("-")[1];
+    let anio = date.split("-")[0];
+
+    return dia + "/" + mes + "/" + anio;
+  }
 
   registrarPeliculaMock() {
     let name = (<HTMLInputElement>document.getElementById("name")).value;
     let poster = (<HTMLInputElement>document.getElementById("poster")).value;
-    let releaseDate = (<HTMLInputElement>document.getElementById("releaseDate")).value;
+    let releaseDate = this.formatDate((<HTMLInputElement>document.getElementById("releaseDate")).value);
     let description = (<HTMLInputElement>document.getElementById("description")).value;
-    let id = Mock.length + 1;
+    let id = Mock[Mock.length + 1].id + 1;
 
     Mock.push(new Pelicula(id, name, poster, releaseDate, description));
     alert("Se ha registrado correctamente.")
@@ -26,6 +33,20 @@ export class CrearPeliculaComponent {
   }
 
   registrarPeliculaApi() {
+    let name = (<HTMLInputElement>document.getElementById("name")).value;
+    let poster = (<HTMLInputElement>document.getElementById("poster")).value;
+    let releaseDate = this.formatDate((<HTMLInputElement>document.getElementById("releaseDate")).value);
+    let description = (<HTMLInputElement>document.getElementById("description")).value;
 
+    let listaPelis = localStorage.getItem("listaPelis");
+
+    if (listaPelis != null) {
+      let jsonListaPelis = JSON.parse(listaPelis);
+      let id = jsonListaPelis[jsonListaPelis.length - 1].id + 1;
+      jsonListaPelis.push(new Pelicula(id, name, poster, releaseDate, description));
+      localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
+      alert("Se ha registrado correctamente.")
+      this.router.navigate(['']);
+    }
   }
 }

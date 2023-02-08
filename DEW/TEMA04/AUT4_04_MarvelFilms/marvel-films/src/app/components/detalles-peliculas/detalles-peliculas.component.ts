@@ -4,6 +4,7 @@ import { TextTransformPipe } from 'src/app/pipes/text-transform.pipe';
 import { Mock } from 'src/app/mock/mock.mock';
 import { Route, Router } from '@angular/router';
 import { DetallesPeliculasService } from 'src/app/services/detalles-peliculas.service';
+import { ApiPeliculasService } from 'src/app/services/api-peliculas.service';
 @Component({
   selector: 'app-detalles-peliculas',
   templateUrl: './detalles-peliculas.component.html',
@@ -11,14 +12,11 @@ import { DetallesPeliculasService } from 'src/app/services/detalles-peliculas.se
 })
 export class DetallesPeliculasComponent implements OnInit {
   detallesPelicula: any = null;
-  private peliculaService: DetallesPeliculasService;
 
-  constructor(private peliculasService: DetallesPeliculasService, private router: Router) {
-    this.peliculaService = peliculasService;
-  }
+  constructor(private detallesService: DetallesPeliculasService, private peliculasService: ApiPeliculasService, private router: Router) { }
 
   eliminarPeliculaMock() {
-    Mock.splice(this.detallesPelicula.id -1);
+    Mock.splice(this.detallesPelicula.id - 1);
     alert("Se ha borrado correctamente");
     this.router.navigate(['']);
   }
@@ -27,11 +25,24 @@ export class DetallesPeliculasComponent implements OnInit {
     let listaPelis = localStorage.getItem("listaPelis");
     if (listaPelis != null) {
       let jsonListaPelis: Pelicula[] = JSON.parse(listaPelis);
-      jsonListaPelis.splice(jsonListaPelis.indexOf(this.detallesPelicula));
+      for (let i = 0; i < jsonListaPelis.length; i++) {
+        if (jsonListaPelis[i].id == this.detallesPelicula.id) {
+          jsonListaPelis.splice(i, 1);
+        }
+      }
       localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
       alert("Se ha borrado correctamente");
       this.router.navigate(['']);
     }
+  }
+
+  setDetallesPeli(jsonListaPelis: Pelicula[], id: number, pelicula: Pelicula) {
+    jsonListaPelis[id - 1] = pelicula;
+    console.log(pelicula)
+
+    this.detallesPelicula = jsonListaPelis[id - 1];
+    
+    localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
   }
 
   expandirTexto() {
@@ -40,7 +51,19 @@ export class DetallesPeliculasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.peliculasService.getDetallesApi(this.router.url.replace("/","")).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
-    //this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.replace("/",""));
+    let listaPelis = localStorage.getItem("listaPelis");
+    let idPeli = Number(this.router.url.replace("/", ""));
+
+    if (listaPelis != null) {
+      let jsonListaPelis: Pelicula[] = JSON.parse(listaPelis);
+
+      if (jsonListaPelis[idPeli - 1].releaseDate == null || jsonListaPelis[idPeli - 1].description == null) {
+        this.detallesService.getDetallesApi(idPeli + "").subscribe(pelicula => this.setDetallesPeli(jsonListaPelis, idPeli, pelicula));
+      } else {
+        this.detallesPelicula = this.detallesService.getDetallesStorage(idPeli + "");
+      }
+    }
+    // this.detallesPelicula = this.detallesService.getDetallesStorage(this.router.url.replace("/", ""));
+    // this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.replace("/",""));
   }
 }

@@ -43,7 +43,7 @@ export class EditarPeliculasComponent {
   }
 
   ngOnInit() {
-    //this.peliculasService.getDetallesApi(this.router.url.split("/")[2]).subscribe((peliculasAPI: Pelicula) => this.detallesPelicula = peliculasAPI);
-    this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.split("/")[2]);
+    this.detallesPelicula = this.peliculasService.getDetallesStorage(this.router.url.split("/")[2]);
+    //this.detallesPelicula = this.peliculasService.getDetallesMock(this.router.url.split("/")[2]);
   }
 }

@@ -18,4 +18,18 @@ export class DetallesPeliculasService {
   getDetallesApi(id : string): Observable<Pelicula> {
     return this.http.get<Pelicula>('https://www.qando.es/docs/films.php?id='+id)
   }
+
+  getDetallesStorage(id: string): any {
+    let listaPelis = localStorage.getItem("listaPelis");
+
+    if (listaPelis != null) {
+      let jsonListaPelis: Pelicula[] = JSON.parse(listaPelis);
+      
+      for (const pelicula of jsonListaPelis) {
+        if (pelicula.id == Number(id)) {
+          return pelicula;
+        }
+      }
+    }
+  }
 }
