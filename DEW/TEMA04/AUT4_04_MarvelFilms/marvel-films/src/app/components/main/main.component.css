@@ -1,5 +1,5 @@
 :host {
-    background-image: url("../../imgs/marvel-wallpaper.jpg");
+    background-image: linear-gradient(0deg, #0000007d 0%, #0000007d 100%) ,url("../../imgs/marvel-wallpaper.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

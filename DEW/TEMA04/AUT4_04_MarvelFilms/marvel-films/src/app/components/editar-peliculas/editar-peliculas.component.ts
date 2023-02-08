@@ -16,7 +16,7 @@ export class EditarPeliculasComponent {
   constructor(private peliculasService: DetallesPeliculasService, private router: Router) {
     this.peliculaService = peliculasService;
   }
-
+  //TODO: modificar no modifica
   private formatDate(date: string): string {
     let dia = date.split("-")[2];
     let mes = date.split("-")[1];
