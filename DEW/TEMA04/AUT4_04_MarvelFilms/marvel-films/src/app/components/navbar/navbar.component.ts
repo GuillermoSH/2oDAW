@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, Route } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,10 @@ export class NavbarComponent {
 
   constructor(private router: Router) {}
 
+  /**
+   * Si la ruta actual no es la ruta marvel-info, navegue hasta la ruta marvel-info. Si la ruta actual
+   * es la ruta marvel-info, navegue a la ruta de inicio
+   */
   cambiarRuta() {
     if (this.router.url != "/marvel-info") {
       this.router.navigate(['/marvel-info']);
@@ -19,6 +23,9 @@ export class NavbarComponent {
     }
   }
 
+  /**
+   * Limpia el almacenamiento local y vuelve a cargar la página.
+   */
   reiniciarLista() {
     localStorage.clear();
     window.location.reload();

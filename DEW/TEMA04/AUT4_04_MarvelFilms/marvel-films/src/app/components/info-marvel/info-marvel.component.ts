@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './info-marvel.component.html',
   styleUrls: ['./info-marvel.component.css']
 })
-export class InfoMarvelComponent {
 
-}
+export class InfoMarvelComponent {}

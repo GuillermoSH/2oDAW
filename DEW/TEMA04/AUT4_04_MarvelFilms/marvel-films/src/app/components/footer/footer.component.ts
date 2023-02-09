@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
+
 export class FooterComponent {
   profileUrl: string = "https://github.com/GuillermoSH";
 }
