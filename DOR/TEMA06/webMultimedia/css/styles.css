@@ -1,0 +1,144 @@
+:root {
+    --primario: #222831;
+    --secundario: #00ADB5;
+    --sombra: #393E46;
+    --luz: #EEEEEE;
+}
+
+/* Utility classes */
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    font-weight: 900;
+    gap: 5px;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.link--outline {
+    border: 2px solid var(--secundario);
+    color: var(--secundario);
+}
+
+.link--outline:hover {
+    border: 2px solid var(--luz);
+    background: var(--secundario);
+    color: var(--luz);
+}
+
+.link--solid {
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+    color: var(--primario);
+}
+
+.link--solid:hover {
+    background: var(--primario);
+    color: var(--secundario);
+    border: 2px solid var(--secundario);
+}
+
+/* Main classes */
+.container {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+
+    display: grid;
+    grid-template-rows: 90px 1fr 50px;
+    grid-template-columns: 1fr;
+
+    color: var(--luz)
+}
+
+.navbar {
+    grid-row: 1/2;
+    flex-direction: column;
+    background: var(--primario);
+    gap: 10px;
+    border-bottom: 4px solid var(--secundario);
+}
+
+.navbar h2 {
+    margin: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.option-container {
+    gap: 40px;
+}
+
+.main {
+    grid-row: 2/3;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-block: 10px;
+
+    color: var(--primario);
+}
+
+.images-main, .video-main, .audio-main {
+    flex-direction: column;
+}
+
+.img-container, .video-container, .audio-container {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 30vw;
+    border-radius: 5px;
+    box-shadow: 6px 6px 15px -3px var(--sombra);
+}
+
+.video {
+    width: 40vw;
+    border-radius: 5px;
+    box-shadow: 6px 6px 15px -3px var(--sombra);
+}
+
+.audio {
+    
+}
+
+.card {
+    flex-direction: column;
+    height: 400px;
+    background: var(--luz);
+    padding: 0px 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px -4px var(--sombra);
+}
+
+.card img {
+    min-width: 220px;
+    max-width: 30vw;
+}
+
+.card picture {
+    height: 250px;
+}
+
+.footer {
+    grid-row: 3/4;
+    background: var(--primario);
+    border-top: 4px solid var(--secundario);
+}
+
+.git-link {
+    padding: 0;
+    color: var(--luz);
+    font-weight: normal;
+}
+
+.git-link:hover {
+    color: var(--secundario);
+}

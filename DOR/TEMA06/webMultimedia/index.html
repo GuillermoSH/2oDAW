@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Web de prueba multimedia</title>
+</head>
+
+<body class="container">
+    <div class="navbar centered">
+        <h2>Web de prueba multimedia</h2>
+        <div class="option-container centered">
+            <a class="link link--outline centered" href="./views/imagenes.html">
+                Imagenes
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera2"
+                    viewBox="0 0 16 16">
+                    <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4z" />
+                    <path
+                        d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.972 5.972 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1zM2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0zM14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0z" />
+                </svg>
+            </a>
+            <a class="link link--outline centered" href="./views/videos.html">
+                Videos
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
+                </svg>
+            </a>
+            <a class="link link--outline centered" href="./views/audios.html">
+                Audios
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-mic-fill" viewBox="0 0 16 16">
+                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                    <path
+                        d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="main centered">
+        <div class="card centered">
+            <h1>Imagenes</h1>
+            <picture class="centered">
+                <source media="(min-width: 600px)" 
+                srcset="https://media4.giphy.com/media/SmJVNXpTsoqh8DgCOe/200.webp?cid=ecf05e47lvmhca7fi8k5gsdbj7tpqgzzg77gj95f1nykgjct&rid=200.webp&ct=g"/>
+                <source media="(min-width: 300px) and (max-width: 600px)" 
+                srcset="https://media2.giphy.com/media/d8tvSl96N8p7Yrg0uJ/200.webp?cid=ecf05e47l4zmetmyji27kjvi2b1wxp6k6ywphge4vi6gxmvy&rid=200.webp&ct=g"/>
+                <source media="(max-width: 50px)" 
+                srcset="https://media2.giphy.com/media/21k7RRczNjrcwtgrqL/200w.webp?cid=ecf05e470f4u4yaudq814qzqocjb0430l78ao4a29pf90ckt&rid=200w.webp&ct=g"/>
+                <img src="https://media1.giphy.com/media/A1oBMukTqFfkoY1HiH/giphy.gif?cid=ecf05e47lvmhca7fi8k5gsdbj7tpqgzzg77gj95f1nykgjct&rid=giphy.gif&ct=g" alt="Kermit The Frog Smile GIF By Muppet Wiki"/>
+            </picture>
+            <a class="link link--solid centered" href="./views/imagenes.html">
+                Ir a imagenes
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                </svg>
+            </a>
+        </div>
+        <div class="card centered">
+            <h1>Videos</h1>
+            <picture class="centered">
+                <source media="(min-width: 600px)" 
+                srcset="https://media1.giphy.com/media/As1k5ljM2DjSa738Cn/200w.webp?cid=ecf05e474rqjlvcteq9iaiuh1us29oqunqo0euzthbhu5p65&rid=200w.webp&ct=g"/>
+                <source media="(min-width: 300px) and (max-width: 600px)" 
+                srcset="https://media0.giphy.com/media/zl4KswsYHmsoIzh5h3/200w.webp?cid=ecf05e474rqjlvcteq9iaiuh1us29oqunqo0euzthbhu5p65&rid=200w.webp&ct=g"/>
+                <source media="(max-width: 50px)" 
+                srcset="https://media4.giphy.com/media/3onUigL0hMxv4tjOcl/200w.webp?cid=ecf05e47pb10gc6dz1je2hudqnwbauhlnvw6ov7d91zpm89z&rid=200w.webp&ct=g"/>
+                <img src="https://media1.giphy.com/media/Ut0m10wdIkVJXuBbsk/giphy.gif?cid=ecf05e474rqjlvcteq9iaiuh1us29oqunqo0euzthbhu5p65&rid=giphy.gif&ct=g" alt="Camera Man Movie GIF By 522 Productions">
+            </picture>
+            <a class="link link--solid centered" href="./views/videos.html">
+                Ir a videos
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                </svg>
+            </a>
+        </div>
+        <div class="card centered">
+            <h1>Audios</h1>
+            <picture class="centered">
+                <source media="(min-width: 600px)" 
+                srcset="https://media4.giphy.com/media/J2grP3ZpWGUz7lYso3/200w.webp?cid=ecf05e47kawvoem3t3pnn1nw9uh3yb3e8u3nq4m8nj5eus7i&rid=200w.webp&ct=g"/>
+                <source media="(min-width: 300px) and (max-width: 600px)" 
+                srcset="https://media1.giphy.com/media/d34IP6MRZsnK1e3imC/200w.webp?cid=ecf05e47kawvoem3t3pnn1nw9uh3yb3e8u3nq4m8nj5eus7i&rid=200w.webp&ct=g"/>
+                <source media="(max-width: 50px)" 
+                srcset="https://media1.giphy.com/media/z2Hm20FD4wk7prP46i/200w.webp?cid=ecf05e47h3hj5z6qmw92nta103yw559s7n422qi3ctuizgag&rid=200w.webp&ct=g"/>
+                <img src="https://media4.giphy.com/media/7Tx46o1mpct64Macet/giphy.gif?cid=ecf05e47kawvoem3t3pnn1nw9uh3yb3e8u3nq4m8nj5eus7i&rid=giphy.gif&ct=g" alt="Turn Up Dancing GIF By VH1">
+            </picture>
+            <a class="link link--solid centered" href="./views/audios.html">
+                Ir a audios
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="footer centered">
+        <p>
+            <strong>Created by: </strong>
+            <a href="https://github.com/GuillermoSH" class="link git-link">GuillermoSH</a>
+        </p>
+    </div>
+</body>
+
+</html>
