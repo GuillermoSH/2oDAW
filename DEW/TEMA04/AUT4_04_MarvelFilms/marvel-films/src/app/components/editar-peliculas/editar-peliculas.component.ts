@@ -62,7 +62,6 @@ export class EditarPeliculasComponent {
         }
       }
       localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
-      alert("Se ha borrado correctamente");
       this.router.navigate(['']);
     }
 

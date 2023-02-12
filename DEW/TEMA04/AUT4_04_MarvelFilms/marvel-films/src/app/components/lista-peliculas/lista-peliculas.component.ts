@@ -20,9 +20,9 @@ export class ListaPeliculasComponent implements OnInit {
    * almacenamiento local.
    */
   getListaPelis() {
-    let listaPelis = localStorage.getItem("listaPelis");
-    if (listaPelis != null) {
-      this.peliculas = JSON.parse(listaPelis);
+    let listaPelis = this.peliculasService.getPeliculasStorage();
+    if (listaPelis != undefined) {
+      this.peliculas = listaPelis;
     } else {
       this.peliculasService.getPeliculasApi().subscribe(peliculas => this.inicializarStorage(peliculas));
     }

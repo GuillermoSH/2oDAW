@@ -5,7 +5,10 @@
     <h1>{{detallesPelicula.name | textTransform}}</h1>
     <p><strong>Fecha lanzamiento: </strong>{{detallesPelicula.releaseDate}}</p>
     <p [releaseDate]="detallesPelicula.releaseDate" appPhaseCalculator></p>
-    <p id="sinopsis"><strong>Sinopsis: </strong>{{detallesPelicula.description | shortenText}} <a class="linkTexto" (click)=expandirTexto()>Leer más.</a></p>
+    <p id="sinopsis">
+        <strong>Sinopsis: </strong>{{detallesPelicula.description | shortenText}} 
+        <a id="leermas" class="linkTexto" (click)=expandirTexto()>Leer más.</a>
+    </p>
 </div>
 <div class="actions-container">
     <button class="btn centered" (click)=eliminarPeliculaApi()>

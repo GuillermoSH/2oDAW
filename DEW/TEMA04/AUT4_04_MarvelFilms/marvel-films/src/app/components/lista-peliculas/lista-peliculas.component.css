@@ -1,3 +1,7 @@
+:host {
+    color: white;
+}
+
 .movies-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +28,10 @@
 .movie-card img {
     height: 260px;
     border-radius: 1rem;
+    background-color: black;
 }
+
+.movie-card img
 
 .movie-card p {
     color: #f0131f;

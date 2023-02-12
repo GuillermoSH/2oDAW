@@ -12,6 +12,11 @@ export class CrearPeliculaComponent {
 
   constructor(private router: Router) { }
 
+  /**
+   * Toma una fecha en el formato AAAA-MM-DD y la devuelve en el formato DD/MM/AAAA.
+   * @param {string} date - La fecha a formatear.
+   * @returns La fecha en el formato dd/mm/aaaa.
+   */
   private formatDate(date: string): string {
     let dia = date.split("-")[2];
     let mes = date.split("-")[1];
@@ -20,6 +25,9 @@ export class CrearPeliculaComponent {
     return dia + "/" + mes + "/" + anio;
   }
 
+  /**
+   * Toma los valores del formulario y los inserta en el mock
+   */
   registrarPeliculaMock() {
     let name = (<HTMLInputElement>document.getElementById("name")).value;
     let poster = (<HTMLInputElement>document.getElementById("poster")).value;
@@ -28,11 +36,14 @@ export class CrearPeliculaComponent {
     let id = Mock[Mock.length + 1].id + 1;
 
     Mock.push(new Pelicula(id, name, poster, releaseDate, description));
-    alert("Se ha registrado correctamente.")
     this.router.navigate(['']);
   }
 
-  registrarPeliculaApi() {
+  /**
+   * Toma los valores del formulario y crea un nuevo objeto Pelicula, luego lo inserta en la matriz
+   * listaPelis y lo guarda en localStorage.
+   */
+  registrarPeliculaStorage() {
     let name = (<HTMLInputElement>document.getElementById("name")).value;
     let poster = (<HTMLInputElement>document.getElementById("poster")).value;
     let releaseDate = this.formatDate((<HTMLInputElement>document.getElementById("releaseDate")).value);
@@ -45,7 +56,6 @@ export class CrearPeliculaComponent {
       let id = jsonListaPelis[jsonListaPelis.length - 1].id + 1;
       jsonListaPelis.push(new Pelicula(id, name, poster, releaseDate, description));
       localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
-      alert("Se ha registrado correctamente.")
       this.router.navigate(['']);
     }
   }

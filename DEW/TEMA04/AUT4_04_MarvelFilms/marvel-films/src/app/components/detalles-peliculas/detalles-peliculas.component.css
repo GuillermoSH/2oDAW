@@ -9,6 +9,10 @@
     margin: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 .centered {
     display: flex;
     align-items: center;
@@ -42,6 +46,7 @@ strong {
 
 .left-container img {
     width: 65%;
+    
 }
 
 .actions-container {

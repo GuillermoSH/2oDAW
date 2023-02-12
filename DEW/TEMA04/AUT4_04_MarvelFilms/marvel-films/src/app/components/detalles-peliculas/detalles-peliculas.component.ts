@@ -21,7 +21,6 @@ export class DetallesPeliculasComponent implements OnInit {
    */
   eliminarPeliculaMock() {
     Mock.splice(this.detallesPelicula.id - 1);
-    alert("Se ha borrado correctamente");
     this.router.navigate(['']);
   }
 
@@ -39,7 +38,6 @@ export class DetallesPeliculasComponent implements OnInit {
         }
       }
       localStorage.setItem("listaPelis", JSON.stringify(jsonListaPelis));
-      alert("Se ha borrado correctamente");
       this.router.navigate(['']);
     }
   }
@@ -55,8 +53,11 @@ export class DetallesPeliculasComponent implements OnInit {
    * el usuario.
    */
   setDetallesPeli(jsonListaPelis: Pelicula[], id: number, pelicula: Pelicula) {
-    jsonListaPelis[id - 1] = pelicula;
-    console.log(pelicula)
+    for (const peli of jsonListaPelis) {
+      if (peli.id == id) {
+        jsonListaPelis[id - 1] = pelicula;
+      }
+    }
 
     this.detallesPelicula = jsonListaPelis[id - 1];
     
@@ -90,6 +91,21 @@ export class DetallesPeliculasComponent implements OnInit {
       } else {
         this.detallesPelicula = this.detallesService.getDetallesStorage(idPeli + "");
       }
+    }
+
+    this.leerMasVisibility(); 
+  }
+
+  /**
+   * Oculta o muestra el link de "Leer Mas" dependiendo de si tiene la sinopsis más de 300 caracteres o no
+   */
+  leerMasVisibility() {
+    let leerMas: HTMLElement = <HTMLElement>document.getElementById("leermas");
+
+    if (this.detallesPelicula.description.length > 300) {
+      leerMas.classList.remove("hidden");
+    } else {
+      leerMas.classList.add("hidden");
     }
   }
   
