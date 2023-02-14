@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Utility classes */
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+  border-radius: 1rem;
+  font-family: "Shrikhand", cursive;
+  outline: none;
+  transition: all 0.3s;
+}
+.btn-outline {
+  border-style: solid;
+  border-width: 2px;
+  background: transparent;
+}
+.btn-outline-viol {
+  color: #F806CC;
+  border-color: #F806CC;
+}
+.btn-outline-viol:hover, .btn-outline-viol:focus {
+  box-shadow: 0px 0px 10px 2px #A91079, 0px 0px 10px 2px #A91079 inset;
+  background-color: #570A57;
+  transform: translateY(-5px) scale(1.02);
+}
+.btn-outline-viol:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+.btn-outline-blue {
+  color: #DFF6FF;
+  border-color: #DFF6FF;
+}
+.btn-outline-blue:hover, .btn-outline-blue:focus {
+  box-shadow: 0px 0px 10px 2px #47B5FF, 0px 0px 10px 2px #47B5FF inset;
+  background-color: #1363DF;
+  transform: translateY(-5px) scale(1.02);
+}
+.btn-outline-blue:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+.btn-outline-yell {
+  color: #F7FD04;
+  border-color: #F7FD04;
+}
+.btn-outline-yell:hover, .btn-outline-yell:focus {
+  box-shadow: 0px 0px 10px 2px #F9B208, 0px 0px 10px 2px #F9B208 inset;
+  background-color: #FC5404;
+  transform: translateY(-5px) scale(1.02);
+}
+.btn-outline-yell:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+.btn-solid {
+  border-style: solid;
+  border-width: 2px;
+}
+.btn-solid-viol {
+  color: #F806CC;
+  border-color: #F806CC;
+  background: #570A57;
+}
+.btn-solid-viol:hover, .btn-solid-viol:focus {
+  box-shadow: 0px 0px 10px 2px #A91079, 0px 0px 10px 2px #A91079 inset;
+  background-color: transparent;
+  color: #F806CC;
+  transform: translateY(-5px);
+}
+.btn-solid-viol:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+.btn-solid-blue {
+  color: #DFF6FF;
+  border-color: #DFF6FF;
+  background: #1363DF;
+}
+.btn-solid-blue:hover, .btn-solid-blue:focus {
+  box-shadow: 0px 0px 10px 2px #47B5FF, 0px 0px 10px 2px #47B5FF inset;
+  background-color: transparent;
+  color: #DFF6FF;
+  transform: translateY(-5px);
+}
+.btn-solid-blue:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+.btn-solid-yell {
+  color: #F7FD04;
+  border-color: #F7FD04;
+  background: #FC5404;
+}
+.btn-solid-yell:hover, .btn-solid-yell:focus {
+  box-shadow: 0px 0px 10px 2px #F9B208, 0px 0px 10px 2px #F9B208 inset;
+  background-color: transparent;
+  transform: translateY(-5px);
+}
+.btn-solid-yell:active {
+  transition: transform 100ms;
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Animations */
+/* Main classes */
+.container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #0a0b15;
+}
+
+.btn-container {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

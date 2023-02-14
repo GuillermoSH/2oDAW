@@ -1,0 +1,10 @@
+COMANDOS CREACIÓN ELEMENTOS ANGULAR.-
+
+Crear módulo:                               ng g m nombre_modulo
+Crear componente (CON directorio propio):   ng g c nombre_componente
+Crear componente (SIN directorio propio):   ng g c nombre_componente --flat
+Crear modelo:                               ng g class ruta/nombre_modelo --type=model
+Crear mock:                                 ng g class ruta/nombre_mock --type=mock
+Crear servicio:                             ng g service ruta/nombre_servicio
+Crear pipe:                                 ng g pipe ruta/nombre_pipe
+Crear directiva:                            ng g directive ruta/nombre_directiva
