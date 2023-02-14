@@ -1,0 +1,7 @@
+:host {
+    background: linear-gradient(0deg, #000000b4 0%, #000000b4 100%) ,url("../../imgs/desktop-1920x1080.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

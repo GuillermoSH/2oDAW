@@ -1,0 +1,30 @@
+Los componentes son los siguientes:
+
+- Main: contenedor de la lista de personajes.
+- Navbar: el "header" de la página.
+- Footer: el footer de la página.
+- Character-details: el cuál llama al servicio "characters-details" para mostrar los detalles del personaje
+    seleccionado a partir del mock o de la api.
+- Character-list: el cuál llama al servicio "characters-list" para mostrar los personajes a partir del mock
+    o de la api.
+
+
+Los servicios son los siguientes:
+
+- Characters-details: hace la llamada al mock y devuelve los detalles del personajes o llama a la api y
+    devuelve un observable del http.get especifico del personaje por id.
+- Characters-list: hace la llamada al mock y devuelve la lista de personajes o llama a la api y devuelve
+    un observable del http.get.
+
+
+Los pipes son los siguientes:
+
+- Gender-color: obtiene el género e inserta una etiqueta <span> con el color deseado. Para el hover en
+    negrita se hizo mediante el css del propio componente "character-details".
+
+
+El routing es el siguiente:
+
+- Vacío: va al componente de "characters-list" para mostrar la lista de personajes
+- ":id": va al componente de "characters-details" y muestra los detalles del personaje seleccionado por el
+    routerLink introducido.

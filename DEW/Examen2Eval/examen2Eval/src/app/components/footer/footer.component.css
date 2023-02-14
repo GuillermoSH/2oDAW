@@ -1,0 +1,19 @@
+:host {
+    background: #1a6823;
+    border-top: 4px solid #9CFF2E;
+    color: #9CFF2E;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #071f35;
+    font-weight: 900;
+}
+
+a:hover {
+    color: #2192FF;
+}
