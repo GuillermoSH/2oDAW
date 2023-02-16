@@ -1,0 +1,130 @@
+/* CLASES HELPER */
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.btn-solid {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.btn-solid-orange {
+    color: #112B3C;
+    border-color: #112B3C;
+    background: #F66B0E;
+}
+
+.btn-solid-orange:hover,
+.btn-solid-orange:focus {
+    box-shadow: 0px 0px 15px -2px #ff9130;
+    transform: scale(1.10);
+}
+
+.btn-solid-orange:active {
+    transition: transform 100ms;
+    transform: scale(0.98);
+}
+
+.btn-rounded {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.btn-rounded-special {
+    border-radius: 50%;
+    padding: 6px 10px;
+}
+
+.btn-outline {
+    border-style: solid;
+    border-width: 2px;
+    background: transparent;
+}
+
+.btn-outline-orange {
+    color: #F66B0E;
+    border-color: #F66B0E;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:focus {
+    box-shadow: 0px 0px 15px -2px #FF7700, 0px 0px 15px -2px #FF7700 inset;
+    border-color: #ff9130;
+    background-color: #E04D01;
+    color: #112B3C;
+    transform: scale(1.03);
+}
+
+.btn-outline-orange:active {
+    transform: scale(0.97);
+}
+
+/* CLASES PRINCIPALES */
+.container {
+    background: #efefef;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    background-color: #112B3C;
+    color: #efefef;
+}
+
+.login-container {
+    gap: 10px;
+}
+
+.login-container span {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+strong {
+    color: #112B3C;
+}
+
+table {
+    text-align: justify;
+}
+
+.cell-title {
+    width: 200px;
+    padding-block: 3px;
+    vertical-align: top;
+}
+
+.main-title {
+    padding-inline: 20px;
+    padding-block: 8px;
+    background: #205375;
+    color: #EFEFEF;
+    font-weight: bolder;
+    font-size: 20px;
+    border-bottom: 4px solid #F66B0E;
+}
+
+.main table {
+    padding-inline: 20px;
+    margin-top: 10px;
+}

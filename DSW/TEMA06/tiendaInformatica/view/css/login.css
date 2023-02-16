@@ -1,0 +1,95 @@
+.container {
+    background: #efefef;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #112B3C;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px -2px #112B3CB7;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem;
+    color: #efefef;
+    gap: 10px;
+    width: 250px;
+    height: 300px;
+}
+
+.login-title {
+    margin: 0;
+}
+
+.login-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #F66B0E;
+    background: inherit;
+    border-radius: 10px;
+    padding: 10px 8px;
+    outline: none;
+}
+
+input {
+    color: #efefef;
+}
+
+label {
+    color: #F66B0E;
+}
+
+.btn, .login-title {
+    align-self: center;
+    margin: 15px;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+    outline: none;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-outline {
+    border-style: solid;
+    border-width: 2px;
+    background: transparent;
+}
+
+.btn-outline-orange {
+    color: #F66B0E;
+    border-color: #F66B0E;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:focus {
+    box-shadow: 0px 0px 15px -2px #FF7700, 0px 0px 15px -2px #FF7700 inset;
+    border-color: #ff9130;
+    background-color: #E04D01;
+    color: #112B3C;
+    transform: translateY(-4px) scale(1.03);
+}
+
+.btn-outline-orange:active {
+    transform: translateY(0px) scale(0.97);
+}
