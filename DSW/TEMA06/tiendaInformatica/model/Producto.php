@@ -16,16 +16,19 @@
             }
         }
 
-        public function __set(string $atributo, string | float | null $valor)  {
+        public function __set(string $atributo, string | float | null $valor)
+        {
             $this->atributos[$atributo] = $valor;
         }
 
-        public function __get(string $atributo) {
+        public function __get(string $atributo)
+        {
             return $this->atributos[$atributo];
         }
 
         // Metodos factory, por si llamamos a fetch_assoc o fetch
-        public static function getProdFromAssoc(array $datosProd) : Producto {
+        public static function getProdFromAssoc(array $datosProd) : Producto
+        {
             $p = new Producto();
             foreach ($datosProd as $atributo => $valor) {
             // haciendo esto llamo al __set entonces asi puedo asignar
@@ -34,7 +37,8 @@
             return $p;
         }
 
-        public static function getProdFromStd(stdClass $p) : Producto {
+        public static function getProdFromStd(stdClass $p) : Producto
+        {
             return new Producto($p->cod, $p->nombre, $p->nombre_corto, $p->descripcion, $p->PVP, $p->familia);
         }
 

@@ -5,14 +5,16 @@
     require_once("../model/Producto.php");
     require_once("../model/Ordenador.php");
 
-    class DAOProducto {
-
+    class DAOProducto
+    {
         // Creamos esto para evitar estar poniendo constantemente toda la linea
-        public static function consulta(string $sql) : PDOStatement | int {
+        public static function consulta(string $sql) : PDOStatement | int
+        {
             return BasePDO::consulta($sql, "tiendinfor", "mysql", "tiendinfor", "tiendinfor2023");
         }
 
-        public static function getPaginaProducto(int $numPag, int $tamPag = 10) : array {
+        public static function getPaginaProducto(int $numPag, int $tamPag = 10) : array
+        {
             // lista será asociativa 
             $listaProductos = [];
             $indice = $tamPag * ($numPag - 1);
@@ -20,39 +22,42 @@
             $sql = "SELECT * FROM producto LEFT JOIN ordenador ON cod=codProd LIMIT $indice, $tamPag";
             // llamo a la funcion de esta clase
             $resultado = self::consulta($sql);
-            while(($prod = $resultado -> fetchObject()) != null) { 
-                if ($prod->codProd == null) { //el producto no es un ordenador. Un ordenador tiene el codProd != null
-                $listaProductos[$prod->cod] = Producto::getProdFromStd($prod);
+            while (($prod = $resultado -> fetchObject()) != null) { 
+                if ($prod->codProd == null) { // si el producto no es un ordenador
+                    $listaProductos[$prod->cod] = Producto::getProdFromStd($prod);
                 } else {
-                $listaProductos[$prod->cod] = Ordenador::getProdFromStd($prod);
+                    $listaProductos[$prod->cod] = Ordenador::getProdFromStd($prod);
                 }
             }
             return $listaProductos;
         }
 
-        public static function getFamilias() : array {
+        public static function getFamilias() : array
+        {
             // lista será asociativa 
             $listaFamilias = [];
             $sql = "SELECT * FROM familia";
             $resultado = self::consulta($sql);
-            while(($familia = $resultado -> fetchObject()) != null) { 
+            while (($familia = $resultado -> fetchObject()) != null) { 
                 $listaFamilias[$familia->cod] = $familia->nombre;
             }
             return $listaFamilias;
         }
 
-        public static function getDetallesProducto(string $codProducto) : array {
+        public static function getDetallesProducto(string $codProducto) : array
+        {
             // lista será asociativa 
             $listaDetalles = [];
             $sql = "SELECT * FROM producto LEFT JOIN ordenador ON cod=codProd WHERE codProd = '$codProducto'";
             $resultado = self::consulta($sql);
-            if(($detalles = $resultado -> fetchObject()) != null) { 
+            if (($detalles = $resultado -> fetchObject()) != null) { 
                 $listaDetalles[$detalles->cod] = Ordenador::getProdFromStd($detalles);
             }
             return $listaDetalles;
         }
 
-        public static function getProductosPorFamilia(int $numPag = 1, int $tamPag = 10, string $familia) : array {
+        public static function getProductosPorFamilia(int $numPag = 1, int $tamPag = 10, string $familia) : array 
+        {
             // lista será asociativa 
             $listaProductos = [];
             $indice = $tamPag * ($numPag - 1);
@@ -60,11 +65,11 @@
                 $sql = "SELECT * FROM producto LEFT JOIN ordenador ON cod=codProd WHERE familia = '$familia' LIMIT $indice, $tamPag";
                 // llamo a la funcion de esta clase
                 $resultado = self::consulta($sql);
-                while(($prod = $resultado -> fetchObject()) != null) { 
-                    if ($prod->codProd == null) { //el producto no es un ordenador. Un ordenador tiene el codProd != null
-                    $listaProductos[$prod->cod] = Producto::getProdFromStd($prod);
+                while (($prod = $resultado -> fetchObject()) != null) { 
+                    if ($prod->codProd == null) { // si el producto no es un ordenador
+                        $listaProductos[$prod->cod] = Producto::getProdFromStd($prod);
                     } else {
-                    $listaProductos[$prod->cod] = Ordenador::getProdFromStd($prod);
+                        $listaProductos[$prod->cod] = Ordenador::getProdFromStd($prod);
                     }
                 }
                 return $listaProductos;
@@ -78,15 +83,14 @@
          * @param int $id id del producto
          * @return ?Producto Devuelve null o un objeto de la clase Producto
          */
-        public static function buscarProducto(string $cod) : Producto | Ordenador | null { // con la ? le decimos que puede ser null o de la clase producto lo que va a devolver
+        public static function buscarProducto(string $cod) : Producto | Ordenador | null
+        {
             $resultado = self::consulta("SELECT * FROM producto LEFT JOIN ordenador ON cod=codProd WHERE cod = '$cod'");
             if ($resultado->rowCount() == 0) {
-                echo "a";
                 return null;
             }
             if (($prod = $resultado -> fetchObject()) != null) {
-                if ($prod->codProd == null) { //el producto no es un ordenador. Un ordenador tiene el codProd != null
-                    //print_r(Producto::getProdFromStd($prod));
+                if ($prod->codProd == null) { // el producto no es un ordenador. Un ordenador tiene el codProd != null
                     return Producto::getProdFromStd($prod);
                 } else {
                     return Ordenador::getProdFromStd($prod);
@@ -94,21 +98,22 @@
             }
         }
 
-        public static function comprobarUsuario(string $usuario, string $password) : bool {
+        public static function comprobarUsuario(string $usuario, string $password) : bool
+        {
             $resultado = self::consulta("SELECT * FROM usuarios WHERE usuario = '$usuario'");
             if (($datos = $resultado ->fetchObject()) != null) { // si existe
-                if (password_verify($password, $datos->contrasena)) {
-                    return true;
-                }
+                return password_verify($password, $datos->contrasena);
+            } else {
+                return false;
             }
-            return false;
         }
 
         /**
          * Funcion que devuelve el numero de productos
          * @return int Numero de productos
          */
-        public static function numProductos() : int {
+        public static function numProductos() : int
+        {
             $resultado = self::consulta("SELECT count(*) as numProds FROM producto");
              //return intval($resultado->fetch(PDO::FETCH_ASSOC)['numProds']); tambien sirve
             return intval($resultado->fetchObject()->numProds);
@@ -119,7 +124,8 @@
          * @param int $tamPag tamaño de página
          * @return int número de páginas
          */
-        public static function numPags(int $tamPag)  {
+        public static function numPags(int $tamPag)
+        {
             return ceil(self::numProductos() / $tamPag); // devuelve el entero por encima
         }
 
@@ -127,7 +133,8 @@
          * Funcion que devuelve el máximo número de productos
          * @return int Numero de productos
          */
-        public static function maxNumProducto() : int {
+        public static function maxNumProducto() : int
+        {
             $resultado = self::consulta("SELECT max(cod) as max FROM producto");
             return intval($resultado->fetchObject()->max);
         }

@@ -69,8 +69,8 @@
                 </tr>
             {/foreach}
             </table>
-            <div class="centered" style="margin-top: 10px;">
-                <button class="btn btn-solid btn-solid-orange centered" onclick="history.back();">Volver atrás</button>
+            <div class="centered" style="margin-block: 20px;">
+                <button class="btn btn-solid btn-solid-orange centered" onclick="history.back()">Volver atrás</button>
             </div>
         </div>
     </div>

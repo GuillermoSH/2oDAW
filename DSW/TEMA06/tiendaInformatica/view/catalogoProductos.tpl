@@ -10,12 +10,12 @@
     <script>
     {literal}
         function recargarPagina() {
-            var pag = document.querySelector("#pag").value;
-            var tamPag = document.querySelector("#tamPag").value;
+            let pag = document.querySelector("#pag").value;
+            let tamPag = document.querySelector("#tamPag").value;
             document.location="?pag="+pag+"&tamPag="+tamPag;
         }
         function filtrarFamilia() {
-            var seleccion = document.getElementById("familia").value;
+            let seleccion = document.getElementById("familia").value;
             document.location="?familia="+seleccion;
         }
     {/literal}
@@ -99,7 +99,7 @@
                                 </button>
                             </td>
                             <td><span><a href="Detalles.php?cod={$producto->cod}" >{$producto->nombre_corto}</a></td>
-                            <td><span>{$producto->PVP} €</td>
+                            <td><span>{number_format($producto->PVP, 2, '.', '')} €</td>
                         </tr>
                     {else}
                         <tr id='producto_{$producto->cod}'>
@@ -112,7 +112,7 @@
                                 </button>
                             </td>
                             <td><span>{$producto->nombre_corto}</td>
-                            <td><span>{$producto->PVP} €</td>
+                            <td><span>{number_format($producto->PVP, 2, '.', '')} €</td>
                         </tr>
                     {/if}
                     </form>
@@ -149,13 +149,13 @@
                     </p>
                     <p>
                         <strong>Precio: </strong>
-                        {$articuloCarro->PVP} €
+                        {number_format($articuloCarro->PVP, 2, '.', '')} €
                     </p>
                 </div>
             </form>
         {/foreach}
         {* imprimimos el total del carrito *}
-        <p class="h5 text-end"><strong style="color: #f66b0e">TOTAL:</strong> {$carro -> getCosteTotal()} €</p>
+        <p class="h5 text-end"><strong style="color: #f66b0e">TOTAL:</strong> {number_format($carro->getCosteTotal(), 2, '.', '')} €</p>
     </div>
 </body>
 </html>

@@ -34,9 +34,9 @@
         {
             // Para evitar el error de "duplicate entry", generamos un try-catch
             try {                
-                //Comprobamos si la sql pasada por parametro contiene la palabra "SELECT"
                 $conexion = self::getConexion($dbname, $driver, $user, $pass); 
-
+                
+                //Comprobamos si la sql pasada por parametro contiene la palabra "SELECT"
                 if (str_starts_with(strtolower(trim($sql)), "select")) {
                     $resultado = $conexion->query($sql);    // pDOStatement  
                 } else {

@@ -1,13 +1,15 @@
 <?php
     declare(strict_types = 1);
     
-    class Carro {
+    class Carro
+    {
         private $listaProductos = [];
 
         /**
          * Función que añade un artículo a la cesta
          */
-        function aniadir(Ordenador | Producto $p, int $cantidad = 1) {
+        public function aniadir(Ordenador | Producto $p, int $cantidad = 1)
+        {
             // si esta en el carro, se incrementa en 1, si no pues se añade
             if (isset($this -> listaProductos[$p -> cod])) {
                 // Incrementar la cantidad del que teniamos guardado en la lista
@@ -23,7 +25,8 @@
         /**
          * Función que borra un artículo de la cesta
          */
-        function borrar(Ordenador | Producto $p) : bool {
+        public function borrar(Ordenador | Producto $p) : bool
+        {
             // como minimo habria una cantidad de ese producto
             if (isset($this-> listaProductos[$p -> cod])) {
                 unset($this -> listaProductos[$p -> cod]);
@@ -35,7 +38,8 @@
         /**
          * Función que resta un artículo de la cesta
          */
-        function restar(Ordenador | Producto $p, $cantidad) : bool {
+        public function restar(Ordenador | Producto $p, $cantidad) : bool
+        {
             // si el producto estaba ya en el carro
             if (isset($this-> listaProductos[$p -> cod])) {
                 // referencia al producto
@@ -54,9 +58,9 @@
         /**
          * Función que obtiene el coste total de la cesta
          */
-        function getCosteTotal() : float {
+        public function getCosteTotal() : float
+        {
             $total = 0;
-
             // Recorro cada producto del carro
             foreach ($this -> listaProductos as $cod => $producto) {
                 $total += $producto -> PVP * $producto -> cantidad;
@@ -67,11 +71,13 @@
         /**
          * Función que devuelve la lista de productos
          */
-        function getListaProductos() {
+        public function getListaProductos()
+        {
             return $this->listaProductos;
         }
 
-        public function __toString() {
+        public function __toString()
+        {
             return json_encode($this->listaProductos, JSON_UNESCAPED_UNICODE);
         }
     }
